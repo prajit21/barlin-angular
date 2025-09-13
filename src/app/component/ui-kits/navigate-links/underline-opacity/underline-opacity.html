@@ -1,0 +1,8 @@
+<div class="card-wrapper border rounded-3 h-100">
+  <h6 class="sub-title">Underline Opacity</h6>
+  <div class="underline-opacity-wrapper">
+    @for (item of data; track item) {
+    <p><a class="link-offset-2 link-underline" [class]="item.class" href="javascript:void(0)">{{item.title}}</a></p>
+    }
+  </div>
+</div>

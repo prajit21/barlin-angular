@@ -1,0 +1,139 @@
+@if (editContactDetails) {
+<form>
+  <div class="row g-2">
+    <div class="mt-0 mb-3 col-md-12">
+      <label>Name</label>
+      <div class="row">
+        <div class="col-sm-6">
+          <input class="form-control" id="first_name" type="text" required="" placeholder="First Name"
+            [value]="editContactDetails.firstName">
+        </div>
+        <div class="col-sm-6">
+          <input class="form-control" id="last_name" type="text" required="" placeholder="Last Name"
+            [value]="editContactDetails.lastName">
+        </div>
+      </div>
+    </div>
+    <div class="mt-0 mb-3 col-md-12">
+      <label>Email Address</label>
+      <input class="form-control" id="email_add" type="text" required="" autocomplete="off"
+        [value]="editContactDetails.email">
+    </div>
+    <div class="mt-0 mb-3 col-md-12">
+      <label>Phone</label>
+      <div class="row">
+        <div class="col-sm-6">
+          <input class="form-control" id="mobile_num" type="text" required="" autocomplete="off"
+            [value]="editContactDetails.mobile">
+        </div>
+        <div class="col-sm-6">
+          <select class="form-control">
+            <option>Mobile</option>
+            <option>Work</option>
+            <option>Others</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row g-2 more-data">
+    <div class="mt-0 mb-3 col-md-12">
+      <label>URLS</label>
+      <div class="row">
+        <div class="col-lg-6 col-sm-6">
+          <input class="form-control" id="url_add" type="text" required="" [value]="editContactDetails.website">
+        </div>
+        <div class="col-lg-6 col-sm-6">
+          <select class="js-example-basic-single form-select">
+            <option value="pw" selected>Personal web address</option>
+            <option value="cw">Company web address</option>
+            <option value="fb">Facebook URL</option>
+            <option value="tw">Twitter URL</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="mt-0 mb-3 col-md-12">
+      <label>Personal</label>
+      <div class="d-block">
+        <label class="me-3" for="edo-ani">
+          <input class="radio_animated" id="edo-ani" type="radio" name="rdo-ani" checked=""><span>Male</span>
+        </label>
+        <label for="edo-ani1">
+          <input class="radio_animated" id="edo-ani1" type="radio" name="rdo-ani"><span>Female</span>
+        </label>
+      </div>
+    </div>
+    <div class="mt-0 mb-3 col-md-12">
+      <div class="row">
+        <div class="col-lg-2 col-sm-4">
+          <select class="form-control" id="birth_day">
+            <option class="f-w-600">Day</option>
+            @for (day of days; track day) {
+            <option [value]="day">{{ day }}</option>
+            }
+          </select>
+        </div>
+        <div class="col-lg-3 col-sm-4">
+          <select class="form-control" id="birth_month">
+            <option class="f-w-600">Month</option>
+            @for (month of months; track month) {
+            <option [value]="month">{{ month }}</option>
+            }
+          </select>
+        </div>
+        <div class="col-lg-3 col-sm-4">
+          <input class="form-control" id="birth_year" type="text">
+        </div>
+      </div>
+    </div>
+    <div class="mt-0 mb-3 col-md-12">
+      <div class="row">
+        <div class="col-sm-6">
+          <label>Personality</label>
+          <input class="form-control" id="personality" type="text" required="" autocomplete="off"
+            [value]="editContactDetails.personality">
+        </div>
+        <div class="col-sm-6">
+          <label>Interest</label>
+          <input class="form-control" id="interest" type="text" required="" autocomplete="off"
+            [value]="editContactDetails.personality">
+        </div>
+      </div>
+    </div>
+    <div class="mb-3 col-md-12">
+      <label>Home Address</label>
+      <div class="row">
+        <div class="col-12">
+          <div class="mb-2">
+            <input class="form-control" type="text" placeholder="Address">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="mb-2">
+            <input class="form-control" id="city" type="text" placeholder="City" [value]="editContactDetails.city">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="mb-2">
+            <input class="form-control" type="text" placeholder="State">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div>
+            <input class="form-control" type="text" placeholder="Country">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div>
+            <input class="form-control" type="text" placeholder="Pin Code">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><a class="ps-0 edit-information" (click)="editMoreInfo()"
+    [ngStyle]="{ 'display' : editMore ? 'none' : 'block' }">Edit more information</a>
+  <button class="btn btn-secondary update-contact me-2" type="button">Save</button>
+  <button class="btn btn-primary" type="button" (click)="showDetails()">Cancel</button>
+</form>
+}

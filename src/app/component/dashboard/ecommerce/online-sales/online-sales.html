@@ -1,0 +1,25 @@
+<div class="card online-order">
+    <div class="card-header pb-0">
+        <div class="d-flex">
+            <div class="order bg-light-primary">
+                <app-common-svg-icons [icon]="'basket'" />
+            </div>
+            <div class="arrow-chart">
+                <app-common-svg-icons [icon]="'arrow-chart-up'" />
+                <span class="font-success">+5.4%</span>
+            </div>
+        </div>
+        <div class="online">
+            <span>Online Sales</span>
+            <h4 class="num-counter">36,256</h4>
+        </div>
+    </div>
+    <div class="card-body pt-0 ps-2 pe-2">
+        <div id="online-chart">
+            <apx-chart [series]="onlineSales.series" [chart]="onlineSales.chart"
+                [plotOptions]="onlineSales.plotOptions" [dataLabels]="onlineSales.dataLabels"
+                [grid]="onlineSales.grid" [xaxis]="onlineSales.xaxis" [legend]="onlineSales.legend"
+                [yaxis]="onlineSales.yaxis" [colors]="onlineSales.colors" />
+        </div>
+    </div>
+</div>

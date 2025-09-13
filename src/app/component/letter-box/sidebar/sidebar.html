@@ -1,0 +1,31 @@
+<div class="md-sidebar" (clickOutside)="isOpen = false">
+  <a class="btn btn-primary md-sidebar-toggle" href="javascript:void(0)" (click)="isOpen =!isOpen">email filter</a>
+  <div class="md-sidebar-aside job-left-aside custom-scrollbar" [class.open]="isOpen">
+    <div class="email-left-aside">
+      <div class="card">
+        <div class="card-body">
+          <div class="email-app-sidebar">
+            <button class="btn btn-primary emailbox" type="button" (click)="compose()"><i class="fa fa-plus"></i>Compose
+              Email</button>
+            <ul class="nav nav-pills main-menu email-category" id="email-pills-tab" role="tablist">
+              @for (item of letterBoxFilterData; track item) {
+              <li class="nav-item" (click)="chnageData(item)">
+                <a class="nav-link" [class.active]="item.status">
+                   <app-common-svg-icons [class]="item.class" [icon]="item.icon" />
+                  <div>{{item.title}}
+                    @if (item.badge) {
+                      <span class="badge">{{item.badge}}</span>
+                    }
+                  </div>
+                </a>
+              </li>
+              }
+              <li class="nav-item"><a class="nav-link btn" (click)="addlabel()"><i class="fa fa-plus"></i>Add Label</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

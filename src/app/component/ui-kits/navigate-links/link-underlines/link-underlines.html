@@ -1,0 +1,12 @@
+<div class="card height-equal">
+  <div class="card-header pb-0">
+    <h4>Link Underlines </h4>
+    <p class="f-m-light mt-1">Use <code>link-underline-* </code>classes to link underlines. Change the underline's color
+      independent of the link text color.</p>
+  </div>
+  <div class="card-body">
+    @for (item of data; track item) {
+    <p><a [class]="item.class" href="javascript:void(0)">{{item.title}}</a></p>
+    }
+  </div>
+</div>

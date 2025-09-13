@@ -1,0 +1,21 @@
+<div class="card">
+  <div class="card-header pb-0">
+    <h4>Initial Progress Bars</h4>
+    <p class="f-m-light mt-1">
+      Progress components are built with two HTML elements, some CSS to set the width, and a few attributes.
+      We use the <code> progress </code>as a wrapper to indicate the max value of the progress bar. The
+      <code> progress-bar </code>requires an inline style, utility class, or custom CSS to set their width.
+    </p>
+  </div>
+  <div class="card-body progress-showcase">
+    <div class="row">
+      <div class="col">
+        <ngb-progressbar type="" [showValue]="true" [value]="0" />
+        <ngb-progressbar type="primary" [showValue]="true" [value]="25" />
+        <ngb-progressbar type="secondary" [showValue]="true" [value]="50" />
+        <ngb-progressbar type="success" [showValue]="true" [value]="75" />
+        <ngb-progressbar type="info" [showValue]="true" [value]="100" />
+      </div>
+    </div>
+  </div>
+</div>

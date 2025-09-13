@@ -1,0 +1,52 @@
+<div class="header-faq">
+      <h4 class="mb-0 f-w-600">Browse articles by category</h4>
+</div>
+<div class="row">
+      <div class="col-sm-12">
+            <div class="card">
+                  <div class="card-header pb-0">
+                        <h4>Browse Articles</h4>
+                  </div>
+                  <div class="card-body">
+                        <div class="row browse g-sm-4 g-3">
+                              @for (item of browseArticlesData; track item) {
+                              <div class="col-xl-4" [class]="item.colClass">
+                                    <div class="browse-articles">
+                                          <h5>
+                                                <span>
+                                                      <app-feather-icon [icon]="'archive'" />
+                                                </span>
+                                                {{item.title}}
+                                          </h5>
+                                          <ul>
+                                                @for (items of item.data; track items) {
+                                                <li>
+                                                      <a href="javascript:void(0)">
+                                                            <span>
+                                                                  <app-feather-icon [icon]="'file-text'" />
+                                                            </span>
+                                                            <span>{{items.listData}}</span>
+                                                            @if (items.tagTitle) {
+                                                            <span
+                                                                  class="badge badge-primary pull-right">{{items.tagTitle}}</span>
+                                                            }
+                                                      </a>
+                                                </li>
+                                                }
+                                                <li>
+                                                      <a class="f-w-500 font-primary" href="javascript:void(0)">
+                                                            <span>
+                                                                  <app-feather-icon [icon]="'arrow-right'" />
+                                                            </span>
+                                                            <span>See More ({{item.seeMore}})</span>
+                                                      </a>
+                                                </li>
+                                          </ul>
+                                    </div>
+                              </div>
+                              }
+                        </div>
+                  </div>
+            </div>
+      </div>
+</div>

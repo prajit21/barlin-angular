@@ -1,0 +1,24 @@
+<div class="card height-equal">
+  <div class="card-header pb-0"> 
+    <h4>Left Border Alert</h4>
+    <p class="f-m-light mt-1">
+       Use <code>border-left-*</code> class to add left border to alert.</p>
+  </div>
+  <div class="card-body live-dark">
+    <div class="alert alert-light-dark light alert-dismissible fade show txt-dark border-left-dark" [class.show]="isDark" role="alert">
+      <app-feather-icon [icon]="'help-circle'" class="me-2" />
+      <p class="text-dark">Dark Alert: border-left-wrapper</p>
+      <button class="btn-close" type="button" (click)="isDark = false"></button>
+    </div>
+    <div class="alert alert-light-secondary light alert-dismissible fade show txt-secondary border-left-secondary" [class.show]="isSecondary"  role="alert">
+      <app-feather-icon [icon]="'alert-octagon'" class="me-2" />
+      <p class="txt-secondary">Secondary Alert: border-left-secondary</p>
+      <button class="btn-close" type="button" (click)="isSecondary = false"></button>
+    </div>
+    <div class="alert alert-light-success light alert-dismissible fade show txt-success border-left-success mb-0" [class.show]="isSuccess" role="alert">
+      <app-feather-icon [icon]="'check-square'" class="me-2" />
+      <p class="txt-success">Success Alert: border-left-success</p>
+      <button class="btn-close" type="button" (click)="isSuccess = false"></button>
+    </div>
+  </div>
+</div>

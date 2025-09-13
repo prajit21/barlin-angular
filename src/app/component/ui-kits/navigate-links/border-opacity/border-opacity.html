@@ -1,0 +1,11 @@
+<div class="card height-equal">
+    <div class="card-header pb-0">
+      <h4>Border Opacity</h4>
+      <p class="f-m-light mt-1">Use <code>border-opacity-* (10,25,50,75)</code> class to border opacity links.</p>
+    </div>
+    <div class="card-body border-opacity-wrapper">
+      @for (item of data; track item) {
+        <div class="border p-2" [class]="item.class"> <a href="javascript:void(0)">{{item.title}}</a></div>
+      }
+    </div>
+  </div>

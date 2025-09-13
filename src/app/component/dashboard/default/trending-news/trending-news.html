@@ -1,0 +1,25 @@
+<div class="card news-update">
+    <div class="card-header pb-0">
+        <div class="header-top">
+            <h4>Trending News</h4>
+            <app-dropdown [data]="dropdownList" />
+        </div>
+    </div>
+    <div class="card-body">
+        <ul>
+            @for (item of trendingNews; track item) {
+            <li class="d-flex align-items-center gap-3">
+                <div class="flex-shrink-0">
+                    <img [src]="item.image_url" alt="update">
+                </div>
+                <div class="flex-grow-1">
+                    <a [routerLink]="['/search-result']">
+                        <h6>{{item.news}}</h6>
+                    </a>
+                    <span>{{item.time}}</span>
+                </div>
+            </li>
+            }
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h4>Sales Overview</h4>
+    </div>
+  </div>  
+  <div class="card-body">
+    <div class="chart-container progress-chart">
+      <div id="sales-overview-2" style="min-height: 335px;">
+        <apx-chart [series]="salesOverview.series"
+         [chart]="salesOverview.chart"
+         [stroke]="salesOverview.stroke" 
+         [grid]="salesOverview.grid"
+         [labels]="salesOverview.labels"
+         [markers]="salesOverview.markers"  
+         [tooltip]="salesOverview.tooltip"
+         [legend]="salesOverview.legend"
+         [colors]="salesOverview.colors"
+         [fill]="salesOverview.fill"
+         [xaxis]="salesOverview.xaxis"
+         [yaxis]="salesOverview.yaxis"
+          />
+      </div>
+    </div>
+  </div>
+</div>

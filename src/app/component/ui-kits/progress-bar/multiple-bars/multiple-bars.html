@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card-header pb-0">
+    <h4>Multiple Bars</h4>
+    <p class="f-m-light mt-1">Include multiple progress bars in a progress component if you need.</p>
+  </div>
+  <div class="card-body progress-showcase">
+    <div class="row">
+      <div class="col">
+        <ngb-progressbar-stacked>
+          <ngb-progressbar type="primary" [value]="30" />
+          <ngb-progressbar type="secondary" [value]="20" />
+          <ngb-progressbar type="success" [value]="15" />
+        </ngb-progressbar-stacked>
+        <ngb-progressbar-stacked class="mt-2">
+          <ngb-progressbar type="primary" [value]="10" />
+          <ngb-progressbar type="secondary" [value]="10" />
+          <ngb-progressbar type="success" [value]="10" />
+          <ngb-progressbar type="info" [value]="10" />
+          <ngb-progressbar type="warning" [value]="10" />
+          <ngb-progressbar type="danger" [value]="10" />
+          <ngb-progressbar type="primary" [value]="10" />
+          <ngb-progressbar type="light" [value]="10" />
+        </ngb-progressbar-stacked>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="card">
+    <div class="card-header pb-0">
+        <div class="header-top">
+            <h4>Higher Revenue</h4>
+             <app-dropdown [data]="dropdownList" />
+        </div>
+    </div>
+    <div class="card-body revenue-growth">
+        <ul class="d-flex align-item-center gap-2">
+            <li> <span class="bg-primary"> </span>Offline Sale</li>
+            <li> <span class="bg-secondary"> </span>Online Sale</li>
+        </ul>
+        <div class="row align-items-center gy-2">
+            <div class="col-lg-9 col-md-8 px-0">
+                <div id="revenuegrowth">
+                    <apx-chart [series]="higherRevenue.series" 
+                    [colors]="higherRevenue.colors"
+                    [chart]="higherRevenue.chart" 
+                    [fill]="higherRevenue.fill" 
+                    [markers]="higherRevenue.markers"
+                    [legend]="higherRevenue.legend" 
+                    [stroke]="higherRevenue.stroke"
+                    [dataLabels]="higherRevenue.dataLabels" 
+                    [grid]="higherRevenue.grid"
+                    [xaxis]="higherRevenue.xaxis" 
+                    [yaxis]="higherRevenue.yaxis"
+                    [responsive]="higherRevenue.responsive" />
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <div class="growth-details"><span>Total Revenue</span>
+                    <h5>
+                        $<span class="num-counter">7,56,841</span></h5>
+                </div>
+                <div class="growth-details"><span>Total Sold </span>
+                    <h5>
+                        $<span class="num-counter">4,35,165</span></h5>
+                </div>
+                <div class="growth-details"><span>Total Refunds</span>
+                    <h5>
+                        $<span class="num-counter">6,18,974</span></h5>
+                </div>
+                <div class="growth-details"><span>Total Orders</span>
+                    <h5>
+                        $<span class="num-counter">3,51,743</span></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

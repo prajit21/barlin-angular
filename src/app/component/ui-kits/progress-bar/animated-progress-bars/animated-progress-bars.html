@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="card-header pb-0">
+        <h4>Animated Progress Bars</h4>
+        <p class="f-m-light mt-1">The striped gradient can also be animated. Add <code> progress-bar-animated</code>
+            to<code> progress-bar</code> to animate the stripes right to left via CSS3 animations.</p>
+    </div>
+    <div class="card-body progress-showcase">
+        <div class="row">
+            <div class="col">
+                <ngb-progressbar type="primary" [value]="10" [striped]="true" [animated]="true" />
+                <ngb-progressbar type="warning" [value]="25" [striped]="true" [animated]="true" />
+                <ngb-progressbar type="danger" [value]="50" [striped]="true" [animated]="true" />
+                <ngb-progressbar type="success" [value]="75" [striped]="true" [animated]="true" />
+            </div>
+        </div>
+    </div>
+</div>

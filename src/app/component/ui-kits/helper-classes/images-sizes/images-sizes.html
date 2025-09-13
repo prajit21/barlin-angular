@@ -1,0 +1,31 @@
+<div class="card height-equal">
+    <div class="card-header card-no-border pb-0">
+        <h4>Images sizes</h4>
+        <p class="f-m-light mt-1">
+            Use <code>img-h-* </code>& <code> img-* </code> for image height and border radius for use
+            <code>rounded-* / b-r-* / and rounded-pill </code>for border-radius images.
+        </p>
+    </div>
+    <div class="card-body">
+        <div class="row g-3">
+            <div class="col-12">
+                <div class="card-wrapper border rounded-3 h-100">
+                    <div class="gradient-border gap-3">
+                        @for (item of imageSizeData; track item) {
+                            <img [class]="item.imgClass" [src]="item.img" [alt]="item.alt">
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card-wrapper border rounded-3 h-100">
+                    <div class="gradient-border gap-3">
+                        @for (item of imageSizeDataRounded; track item) {
+                            <img [class]="item.imgClass" [src]="item.img" [alt]="item.alt">
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

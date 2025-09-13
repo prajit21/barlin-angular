@@ -1,0 +1,35 @@
+// bootstrap
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+//owl-carousel-o
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+// calendar
+@import "../../../node_modules/angular-calendar/scss/angular-calendar.scss";
+//bar-rating
+@import 'ngx-bar-rating/themes/br-horizontal-theme';
+@import 'ngx-bar-rating/themes/br-vertical-theme';
+@import 'ngx-bar-rating/themes/br-default-theme';
+@import 'ngx-bar-rating/themes/br-stars-theme';
+@import 'ngx-bar-rating/themes/br-movie-theme';
+@import 'ngx-bar-rating/themes/br-square-theme';
+// Select2
+@import "../../../node_modules/@ng-select/ng-select/scss/default.theme.scss";
+// leaflet Map
+@import 'leaflet/dist/leaflet.css';
+
+@import "../scss/components/datatable";
+//toast
+@import 'ngx-toastr/toastr';
+//todo 
+@import "./todo";
+//chart-list
+@import "./chartist.scss";
+//Light Box 
+@import '@angular/cdk/overlay-prebuilt.css';
+//font
+@import "./font-awasome.scss";
+@import "./whether_icon";
+@import "./flag-icon.scss";
+@import "./ico-font.scss";
+@import "./themify.scss";
+@import "./style.scss";

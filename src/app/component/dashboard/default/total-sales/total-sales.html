@@ -1,0 +1,36 @@
+<div class="card">
+    <div class="card-header pb-0">
+        <div class="header-top">
+            <h4>Total Sales</h4>
+              <app-dropdown [data]="dropdownList" />
+        </div>
+    </div>
+    <div class="card-body pb-0">
+        <div class="d-flex align-items-center gap-2 flex-wrap">
+            <h5 class="txt-secondary f-w-600">96.675%</h5><span>( Compare to last year )</span>
+        </div>
+        <div id="total-sale">
+            <apx-chart [series]="totalSales.series" 
+            [chart]="totalSales.chart"
+            [states]="totalSales.states" 
+            [plotOptions]="totalSales.plotOptions" 
+            [dataLabels]="totalSales.dataLabels"
+            [grid]="totalSales.grid" 
+            [xaxis]="totalSales.xaxis" 
+            [yaxis]="totalSales.yaxis" 
+            [fill]="totalSales.fill"
+            [legend]="totalSales.legend" 
+            [responsive]="totalSales.responsive" />
+        </div>
+    </div>
+    <div class="card-footer total-earning">
+        <ul>
+            <li>
+                <p class="mb-0">Daily Income</p><span>80.80%</span>
+            </li>
+            <li>
+                <p class="mb-0">Monthly Income </p><span>85.34%</span>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="card active-task">
+    <div class="card-header pb-0">
+        <div class="header-top">
+            <h4>Tasks List</h4>
+              <app-dropdown [data]="dropdownList" />
+        </div>
+    </div>
+    <div class="card-body">
+        <ul>
+             @for (item of tasksList; track item ; let index = $index) {
+                <li class="d-flex align-items-center gap-3"><span [ngClass]="index%2 ? 'bg-secondary':'bg-primary'"></span>
+                    <div class="flex-shrink-0">
+                        <div class="checkbox-checked">
+                            <input class="form-check-input" type="checkbox" value="">
+                        </div>
+                    </div>
+                    <div class="flex-grow-1"><a [routerLink]="['/tasks']">
+                            <h6>{{item.title}} </h6>
+                        </a>
+                        <p [innerHTML]="item.description"></p>
+                    </div>
+                    <app-dropdown [data]="dropdownList" />
+                </li>
+             }
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="card">
+    <div class="card-header pb-0">
+        <div class="header-top">
+            <h4>Support Mailbox</h4>
+            <app-dropdown [data]="dropdownList" />
+        </div>
+    </div>
+    <div class="card-body support-box-card">
+        @for (item of currentActivity; track item;let index = $index) {
+        <div class="d-flex gap-3">
+            <div class="flex-shrink-0">
+                <img [src]="item.image_url" alt="user">
+            </div>
+            <div class="flex-grow-1">
+                <a [routerLink]="['/user/users-profile']">
+                    <h6>{{item.user}}</h6>
+                </a>
+                <p>{{item.mail}}</p>
+            </div>
+            <button [ngClass]="index%2 ?'bg-light-secondary txt-secondary':'bg-light-primary txt-primary'" class="btn f-w-500">{{item.time}}</button>
+        </div>
+        }
+    </div>
+</div>

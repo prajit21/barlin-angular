@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-header pb-0">
+    <h4>SVG Tooltips</h4>
+    <p class="f-m-light mt-1">
+      Use<code> bg-light-* </code> to change light background color and <code>stroke-*</code>to change SVG colors.</p>
+  </div>
+  <div class="card-body svg-tooltip light-bg-tooltip">
+    <div class="common-flex">
+      <div class="bg-light-info" placement="top" ngbTooltip="Notification">
+        <app-common-svg-icons [icon]="'email-box'" [class]="'stroke-info'" />
+      </div>
+      <div class="bg-light-danger" placement="top" ngbTooltip="Like">
+        <app-common-svg-icons [icon]="'stroke-bookmark'" [class]="'stroke-danger'" />
+      </div>
+      <div class="bg-light-success" placement="top" ngbTooltip="Comment">
+        <app-common-svg-icons [icon]="'stroke-msg'" [class]="'stroke-success'" />
+      </div>
+      <div class="bg-light-primary" placement="top" ngbTooltip="Share">
+        <app-common-svg-icons [icon]="'stroke-button'" [class]="'stroke-primary'" />
+      </div>
+    </div>
+  </div>
+</div>

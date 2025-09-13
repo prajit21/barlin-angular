@@ -1,0 +1,15 @@
+ @for (item of data(); track item) {
+    <div class="card">
+        <div class="card-header pb-0">
+            <h4>{{item.title}}</h4>
+            <p class="f-m-light mt-1" [innerHTML]="item.short_desc"></p>
+        </div>
+        <div class="card-body">
+            <div class="helper-common-box helper-p-wrapper">
+                @for (items of item.button; track items) {
+                    <div class="border-common-box" [class]="items.border_style">{{items.label}}</div>
+                }
+            </div>
+        </div>
+    </div>
+ }

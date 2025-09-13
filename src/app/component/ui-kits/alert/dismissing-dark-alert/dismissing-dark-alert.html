@@ -1,0 +1,13 @@
+<div class="card">
+    <div class="card-header pb-0">
+      <h4>Dismissing Dark Alert</h4>
+      <p class="f-m-light mt-1">Use <code>alert-*</code> class can be used to generate a dark alerts and<code> alert-dismissible</code> utility class to remove the alerts.</p>
+    </div>
+    <div class="card-body">
+      <div class="alert alert-secondary dark alert-dismissible fade show mb-0" [class.show]="isShow" role="alert">
+        <app-feather-icon [icon]="'heart'" class="me-2" />
+        <p class="txt-light">The <a class="alert-link txt-light">"alert-secondary" </a>class can be used to create an alert like this one.</p>
+        <button class="btn-close" type="button" (click)="isShow = false"></button>
+      </div>
+    </div>
+  </div>

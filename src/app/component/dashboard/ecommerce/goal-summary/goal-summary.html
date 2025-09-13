@@ -1,0 +1,37 @@
+<div class="card goal-view">
+    <div class="card-header pb-0">
+        <div class="header-top">
+            <h4>Goal Summary</h4>
+            <app-dropdown [data]="dropdownList" />
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="goal-chart">
+            <div class="shape-block">
+                <div class="rounded-shape"><i></i><i></i><i></i></div>
+            </div>
+            <div id="goal">
+                <apx-chart [series]="goal.series" 
+                [chart]="goal.chart" 
+                [plotOptions]="goal.plotOptions" 
+                [responsive]="goal.responsive" 
+                [colors]="goal.colors"
+                [stroke]="goal.stroke" 
+                [tooltip]="goal.tooltip" />
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <ul>
+            <li>
+                <h5 class="f-w-600">$4,68,258</h5><span class="f-w-500">Goal Archive</span>
+            </li>
+            <li>
+                <h5 class="f-w-600">$5,25,367</h5><span class="f-w-500">Total Goal</span>
+            </li>
+            <li>
+                <h5 class="f-w-600">6 Months</h5><span class="f-w-500">Duration</span>
+            </li>
+        </ul>
+    </div>
+</div>

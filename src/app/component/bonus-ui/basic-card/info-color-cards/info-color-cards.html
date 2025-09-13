@@ -1,0 +1,12 @@
+<div class="card height-equal">
+  <div class="card-header" [class]="data()?.headerClass">
+    <h4 [class]="data()?.headingClass">{{data()?.heading}}</h4>
+  </div>
+  <div class="card-body" [class]="data()?.bodyClass">
+    <h5 class="pb-2" [class]="data()?.textClassHeading"> {{data()?.title}} </h5>
+    <p class="mb-0"> {{data()?.desc}}</p>
+  </div>
+  <div class="card-footer" [class]="data()?.footerClass">
+    <h6 class="mb-0 text-end" [class]="data()?.textClass">Berlin Theme</h6>
+  </div>
+</div>

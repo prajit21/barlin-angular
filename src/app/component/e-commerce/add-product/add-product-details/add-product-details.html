@@ -1,0 +1,29 @@
+<form class="row g-2" novalidate [formGroup]="productForm" (ngSubmit)="next()">
+  <label class="form-label col-12 m-0" for="productTitle1">Product Title <span class="txt-danger"> *</span></label>
+  <div class="col-12 custom-input">
+    <input class="form-control" id="productTitle1" type="text" formControlName="productTitle"
+      [ngClass]="{ 'is-invalid' : (productTitle?.touched || validate) && productTitle?.errors, 'is-valid' : !productTitle?.errors}">
+    @if (productTitle?.errors) {
+    <div class="invalid-feedback">A product name is required and recommended to be unique.</div>
+    } @else {
+    <div class="valid-feedback">Looks good!</div>
+    }
+  </div>
+  <div class="col-12">
+    <div class="toolbar-box">
+      <div class="NgxEditor__Wrapper">
+        <ngx-editor-menu [editor]="editor" />
+        <ngx-editor [editor]="editor" name="editor" [ngModel]="html" [disabled]="false" [placeholder]="'Type here...'"
+          name="editor" />
+      </div>
+    </div>
+    <p class="f-light">Improve product visibility by adding a compelling description.</p>
+  </div>
+  <div class="product-buttons">
+    <button class="btn">
+      <div class="d-flex align-items-center gap-sm-2 gap-1">Next
+        <app-common-svg-icons [icon]="'front-arrow'" />
+      </div>
+    </button>
+  </div>
+</form>

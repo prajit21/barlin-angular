@@ -1,0 +1,76 @@
+<div class="container-fluid">
+    <!-- Chart widget top Start-->
+    <div class="row">
+      <div class="col-lg-4 col-md-6 box-col-4">
+       <app-top-chart [data]="totalSale" />
+      </div>
+      <div class="col-lg-4 col-md-6 box-col-4">
+        <app-top-chart [data]="totalProject" />
+      </div>
+      <div class="col-lg-4 col-md-12 box-col-4">
+        <app-top-chart [data]="totalProduct" />
+      </div>
+    </div>
+    <!-- Chart widget top Ends-->
+    <!-- Chart widget with bar chart Start-->
+    <div class="row">
+      <div class="col-xl-6 col-lg-12 box-col-6 xl-50">
+         <app-project-created />
+      </div>
+      <div class="col-xl-6 col-lg-12 box-col-6 xl-50">
+          <app-sales-overview />
+      </div>
+      <div class="col-md-12 box-col-12">
+         <app-monthly-history />
+      </div>
+    </div>
+    <!-- Chart widget with bar chart Ends-->
+    <!-- small widgets Start-->
+    <div class="row">
+      <!-- Live Product chart widget Start-->
+      <div class="xl-50 col-xl-7 col-lg-12">
+      <app-live-products />
+      </div>
+      <!-- Live Product chart widget Ends-->
+      <!-- Turnover chart widget Start-->
+      <div class="xl-50 col-xl-5 col-lg-12">
+         <app-turn-over />
+      </div>
+      <!-- Turnover chart widget Ends-->
+      <!-- Crypto price chart Start-->
+      <div class="xl-50 col-xl-6 col-lg-12">
+       <app-cryptocurrency-prices />
+      </div>
+      <!-- Crypto price chart end-->
+      <div class="xl-50 col-xl-6 col-lg-12">
+         <app-crypto-annotations />
+      </div>
+      <!-- small widgets Ends-->
+      <!-- Browser uses and website visiter widget Start-->
+    </div>
+    <div class="row">
+      <!-- browser uses widget chart Start-->
+      <div class="col-sm-12 box-col-12">
+         <app-stock-market />
+      </div>
+      <!-- browser uses widget chart Endss-->
+      <!-- status widget Start-->
+      <div class="col-xl-5 col-lg-12 box-col-5">
+         <app-finance />
+      </div>
+      <div class="col-xl-7 col-lg-12 box-col-7">
+          <app-order-status-processes />
+      </div>
+      <!-- status widget Ends-->
+      <!-- Monthly Sale chart widget Start-->
+      <div class="xl-50 col-xl-5 col-lg-12 box-col-5">
+          <app-monthly-sales />
+      </div>
+      <!-- Monthly Sale chart widget Ends-->
+      <!-- Uses chart widget Start-->
+      <div class="xl-50 col-xl-7 col-lg-12 box-col-7">
+        <app-uses />
+      </div>
+      <!-- Uses chart widget Ends-->
+    </div>
+  </div>

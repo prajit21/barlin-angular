@@ -1,0 +1,31 @@
+<div class="card">
+  <div class="card-header pb-0">
+    <h4>Divider dropdowns</h4>
+    <p class="f-m-light mt-1">Use <code>dropdown-divider </code>class through separate groups of related menu items with a divider.</p>
+  </div>
+  <div class="card-body rtl-dropdown">
+    <div class="common-flex">
+      @for (allData of dividerDropdownData; track allData) {
+      <div class="btn-group" ngbDropdown>
+        <button class="btn btn-{{allData.colorClass}} rounded-pill dropdown-toggle" type="button"
+          ngbDropdownToggle>{{allData.title}}</button>
+        <ul class="dropdown-menu dropdown-block" ngbDropdownMenu>
+          @for (items of allData.dropdownItem; track items) {
+          <li>
+            <a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>{{items.item}} </a>
+          </li>
+          }
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          @for (items of allData.dividerItem; track items) {
+          <li>
+            <a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>{{items.item}}</a>
+          </li>
+          }
+        </ul>
+      </div>
+      }
+    </div>
+  </div>
+</div>

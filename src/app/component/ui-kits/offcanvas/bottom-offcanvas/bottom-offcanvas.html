@@ -1,0 +1,53 @@
+<button class="btn btn-warning" type="button" (click)="openBottom(content)">Bottom Offcanvas</button>
+<ng-template #content let-offcanvas>
+<div class="offcanvas offcanvas-bottom top-offcanvas">
+  <div class="offcanvas-header">
+    <h4 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas Bottom</h4>
+    <button class="btn-close" type="button" (click)="offcanvas.dismiss('Cross click')"></button>
+  </div>
+  <div class="offcanvas-body custom-scrollbar">
+    <form class="row g-3">
+      <div class="col-md-4">
+        <label class="form-label" for="validationDefault06">First name</label>
+        <input class="form-control" id="validationDefault06" type="text" value="Mark" required="">
+      </div>
+      <div class="col-md-4">
+        <label class="form-label" for="validationDefault07">Last name</label>
+        <input class="form-control" id="validationDefault07" type="text" value="Otto" required="">
+      </div>
+      <div class="col-md-4">
+        <label class="form-label" for="validationDefaultUsername2">Username</label>
+        <div class="input-group"><span class="input-group-text" id="inputGroupPrepend3">&#64;</span>
+          <input class="form-control" id="validationDefaultUsername2" type="text" aria-describedby="inputGroupPrepend3" required="">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label" for="validationDefault08">City</label>
+        <input class="form-control" id="validationDefault08" type="text" required="">
+      </div>
+      <div class="col-md-3">
+        <label class="form-label" for="validationDefault09">Country</label>
+        <select class="form-select" id="validationDefault09" required="">
+          <option selected="" disabled="" value="">Choose...</option>
+          <option>US </option>
+          <option>UK </option>
+          <option>Africa</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <label class="form-label" for="validationDefault10">Zip</label>
+        <input class="form-control" id="validationDefault10" type="text" required="">
+      </div>
+      <div class="col-12">
+        <div class="form-check checkbox-checked">
+          <input class="form-check-input" id="invalidCheck3" type="checkbox" value="" required="">
+          <label class="form-check-label" for="invalidCheck3">Agree to terms and conditions</label>
+        </div> 
+      </div> 
+      <div class="col-12"> 
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+</ng-template>

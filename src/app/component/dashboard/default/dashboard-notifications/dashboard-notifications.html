@@ -1,0 +1,50 @@
+<div class="card notification-card">
+    <div class="card-header pb-0">
+        <div class="header-top">
+            <h4>Notifications</h4>
+             <app-dropdown [data]="dropdownList" />
+        </div>
+    </div>
+    <div class="card-body px-0">
+        <div class="d-flex bg-light gap-3">
+            <div class="flex-shrink-0"> <img class="img-40 b-r-6" src="assets/images/dashboard/user/8.png"
+                    alt="Use1"></div>
+            <div class="flex-grow-1"><a [routerLink]="['/user/users-profile']">
+                    <h6>Elsa edited Contact page</h6>
+                </a><span>20 mins ago . Web design</span></div>
+            <div class="circle-dot-primary"><span></span></div>
+        </div>
+        <div class="d-flex gap-3">
+            <div class="flex-shrink-0"> <span class="bg-secondary">WD</span></div>
+            <div class="flex-grow-1"><a [routerLink]="['/user/users-profile']">
+                    <h6>Wade left a comment on ACME 2.5</h6>
+                </a><span>2 hours ago . ACME</span></div>
+        </div>
+        <div class="d-flex gap-3">
+            <div class="flex-shrink-0"> <img class="img-40 b-r-6" src="assets/images/dashboard/user/9.png"
+                    alt="Use2"></div>
+            <div class="flex-grow-1"><a [routerLink]="['/user/users-profile']">
+                    <h6>Jade shared the file isometric 2.0</h6>
+                </a><span>4 hours ago . Web Design</span>
+                <div class="d-flex gap-2 p-0 mt-2">
+                    <button class="btn btn-outline-dark">Decline</button>
+                    <button class="btn btn-primary">Accept</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex gap-3 bg-light">
+            <div class="flex-shrink-0"> <span class="bg-primary">FT</span></div>
+            <div class="flex-grow-1"><a [routerLink]="['/user/users-profile']">
+                    <h6>Fred Tels edited ACME 2.4</h6>
+                </a><span>6 hours ago . ACME</span></div>
+            <div class="circle-dot-primary"><span></span></div>
+        </div>
+        <div class="d-flex gap-3">
+            <div class="flex-shrink-0"> <img class="img-40 b-r-6" src="assets/images/dashboard/user/10.png"
+                    alt="Use3"></div>
+            <div class="flex-grow-1"><a [routerLink]="['/user/users-profile']">
+                    <h6>Helena created user-card page</h6>
+                </a><span>9 hours ago . Blank</span></div>
+        </div>
+    </div>
+</div>

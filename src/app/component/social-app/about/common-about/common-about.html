@@ -1,0 +1,28 @@
+@for (item of data(); track item) {
+<div class="card">
+  <div class="card-header social-header pb-0">
+    <h4>
+      <span>{{item.heading}}</span>
+      <span class="pull-right">
+      <app-feather-icon [icon]="'more-vertical'" />
+    </span>
+    </h4>
+  </div>
+  <div class="card-body">
+    <div class="row details-about">
+      @for (items of item.data; track items) {
+      <div class="col-sm-6">
+        <div class="your-details"><span class="mb-2 d-block">
+          {{items.title}}
+        </span>
+         @if (items.year) {
+           <p>{{items.year}}</p>
+        }
+          <p>{{items.desc}}</p>
+        </div>
+      </div>
+    }
+    </div>
+  </div>
+</div>
+}

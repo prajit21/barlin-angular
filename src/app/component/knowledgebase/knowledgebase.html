@@ -1,0 +1,21 @@
+<div class="container-fluid knowledgebase">
+  <div class="row">
+    <div class="col-12">
+      <app-top-banner />
+    </div>
+    @for (item of commanData; track item) {
+    <div class="col-xl-4" [class]="item.class">
+      <app-comman-data [data]="item" />
+    </div>
+    }
+    <div class="col-sm-12">
+       <app-browser-article />
+    </div>
+    <div class="col-lg-12">
+      <app-featured-tutorials [data]="featuredTutorialData" />
+    </div>
+    <div class="col-lg-12 faq-articles">
+      <app-latest-articles-videos [data]="articlesAndVideosData" />
+    </div>
+  </div>
+</div>

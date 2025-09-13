@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card-header pb-0">
+    <h4>Image Badges</h4>
+    <p class="f-m-light mt-1">
+      Use<code> image-badges </code>class to set image sizes. </p>
+  </div>
+  <div class="card-body">
+    <div class="badge-spacing image-badges">
+      @for (item of imageBadges; track item) {
+      <span class="badge common-align txt-{{item.class}} rounded-pill badge-l-{{item.class}} rounded-pill border border-{{item.class}}">
+        <img class="rounded-circle me-1" [src]="item.image_url" alt="user">{{item.class | titlecase}} </span>
+      }
+    </div>
+  </div>
+</div>

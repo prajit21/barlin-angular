@@ -1,0 +1,58 @@
+<div class="card">
+    <div class="card-header pb-0">
+        <div class="header-top">
+            <h4>Top Selling Products</h4>
+            <app-dropdown [data]="dropdownList" />
+        </div>
+    </div>  
+    <div class="card-body last-order px-0">
+        <div class="table-responsive custom-scrollbar">
+            <table class="table display" id="last-orders">
+                <thead>
+                    <tr>
+                        <th class="checkbox-checked">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="">
+                            </div>
+                        </th>
+                        <th>Product Name</th>
+                        <th>Date & Time </th>
+                        <th>Customer</th>
+                        <th>Price </th>
+                        <th>Status</th>
+                        <th>Action </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (item of topSellingProduct; track item) {
+                        <tr>
+                            <td class="checkbox-checked">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0"><img
+                                            [src]="item.image" alt="product"></div>
+                                    <div class="flex-grow-1"><a [routerLink]="['/ecommerce/products']">
+                                            <h6>{{item.product_name}}</h6><span>{{item.product_id}}</span>
+                                        </a></div>
+                                </div>
+                            </td>
+                            <td>
+                                <h6>{{item.date}}</h6><span>{{item.time}}</span>
+                            </td>
+                            <td>{{item.customer}}</td>
+                            <td>$ {{item.price}}</td>
+                            <td [ngClass]="item.status === 'Succeed'?'txt-success':'txt-danger'" [class.txt-warning]="item.status === 'Waiting'">{{item.status}}</td>
+                            <td>
+                                <app-dropdown [data]="dropdownList" />
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

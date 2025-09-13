@@ -1,0 +1,31 @@
+<div class="cart-box" (click)="isOpen =!isOpen">
+  <app-common-svg-icons [icon]="'Buy'" />
+</div>
+<div class="cart-dropdown onhover-show-div" [class.active]="isOpen">
+  <h6 class="f-18 mb-0 dropdown-title">Cart</h6>
+  <ul>
+    <li>
+      <div class="d-flex"><img class="img-fluid b-r-5 img-50" src="assets/images/ecommerce/06.jpg" alt="">
+        <div class="flex-grow-1"><a [routerLink]="['/ecommerce/products']"> <span>Men Jacket</span></a>
+          <h6>1 X $ 299.00</h6>
+        </div>
+        <div class="close-circle"><a href="javascript:void(0)"><app-feather-icon [icon]="'x'" /></a>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="d-flex"><img class="img-fluid b-r-5 img-50" src="assets/images/ecommerce/02.jpg" alt="">
+        <div class="flex-grow-1"><a [routerLink]="['/ecommerce/products']"> <span>Women Top</span></a>
+          <h6>2 X $ 150.00</h6>
+        </div>
+        <div class="close-circle"><a href="javascript:void(0)"><app-feather-icon [icon]="'x'" /></a>
+        </div>
+      </div>
+    </li>
+    <li class="total">
+      <h5 class="mb-0">Subtotal :<span class="f-right">$350.00</span></h5>
+    </li>
+    <li class="d-flex gap-2"><a class="view-cart btn btn-primary w-100" [routerLink]="['/ecommerce/cart']">View Cart</a><a
+        class="view-checkout btn btn-primary w-100" [routerLink]="['/ecommerce/checkout']">Checkout</a></li>
+  </ul>
+</div>

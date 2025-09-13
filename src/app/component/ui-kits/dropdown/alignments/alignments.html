@@ -1,0 +1,66 @@
+<div class="card">
+  <div class="card-header pb-0">
+    <h4>Alignment Options</h4>
+    <p class="f-m-light mt-1">Use<code> dropdown-menu-lg-start / dropstart / dropup / dropend</code> this classes through change dropdown directions.</p>
+  </div>
+  <div class="card-body rtl-dropdown">
+    <div class="common-flex">
+      <div class="btn-group" ngbDropdown>
+        <button class="btn btn-dark dropdown-toggle" type="button" ngbDropdownToggle>Dropdown</button>
+        <ul class="dropdown-menu" ngbDropdownMenu>
+          <li><a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Menu item</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Menu item</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Menu item</a></li>
+        </ul>
+      </div>
+      <div class="btn-group" ngbDropdown [placement]="'right bottom'">
+        <button class="btn btn-dark dropdown-toggle" type="button" ngbDropdownToggle >Right-aligned menu</button>
+        <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+          <li><a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Menu item</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Menu item</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Menu item</a></li>
+        </ul>
+      </div>
+      <div class="btn-group" ngbDropdown placement="bottom-right">
+        <button class="btn btn-dark dropdown-toggle" type="button" ngbDropdownToggle>Left-aligned, right-aligned lg</button>
+        <ul class="dropdown-menu dropdown-menu-lg-end" ngbDropdownMenu>
+          <li><a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Menu item</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Menu item</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Menu item</a></li>
+        </ul>
+      </div>
+      <div class="btn-group" ngbDropdown placement="bottom-left">
+        <button class="btn btn-dark dropdown-toggle" type="button" ngbDropdownToggle>Right-aligned, left-aligned lg</button>
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start" ngbDropdownMenu>
+          <li><a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Menu item</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Menu item</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Menu item</a></li>
+        </ul>
+      </div>
+      <div class="btn-group dropstart" ngbDropdown placement="start">
+        <button class="btn btn-dark dropdown-toggle" type="button" ngbDropdownToggle >Dropstart</button>
+        <ul class="dropdown-menu" ngbDropdownMenu>
+          <li><a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Menu item</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Menu item</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Menu item</a></li>
+        </ul>
+      </div>
+      <div class="btn-group dropend" ngbDropdown placement="end">
+        <button class="btn btn-dark dropdown-toggle" type="button" ngbDropdownToggle >Dropend</button>
+        <ul class="dropdown-menu" ngbDropdownMenu>
+          <li><a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Menu item</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Menu item</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Menu item</a></li>
+        </ul>
+      </div>
+      <div class="btn-group dropup" ngbDropdown  placement="top">
+        <button class="btn btn-dark dropdown-toggle" type="button" ngbDropdownToggle >Dropup</button>
+        <ul class="dropdown-menu" ngbDropdownMenu>
+          <li><a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Menu item</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Menu item</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Menu item</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

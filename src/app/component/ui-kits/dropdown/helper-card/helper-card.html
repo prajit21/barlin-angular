@@ -1,0 +1,22 @@
+<div class="card">
+    <div class="card-header pb-0">
+        <h4>Helper cards</h4>
+        <p class="f-m-light mt-1">Each dropdown uses  <code>data-bs-toggle='dropdown' </code>attribute, which you can use to create helper class.</p>
+    </div>
+    <div class="card-body rtl-dropdown">
+        <div class="common-flex">
+            @for (item of helperCardData; track item) {
+                <div class="btn-group" ngbDropdown>
+                    <button class="btn btn-{{item.colorClass}} dropdown-toggle" type="button"
+                        ngbDropdownToggle>{{item.title}}</button>
+                    <ul class="dropdown-menu dropdown-block p-3 dark-form" ngbDropdownMenu>
+                        <li ngbDropdownItem>
+                            <h6 class="fs-6 pb-2">{{item.tagData}}</h6>
+                            <p class="dropdown-item helper-truncate" href="javascript:void(0)">{{ item.desc }}</p>
+                        </li>
+                    </ul>
+                </div>
+            }
+        </div>
+    </div>
+</div>

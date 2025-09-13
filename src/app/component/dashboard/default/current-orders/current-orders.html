@@ -1,0 +1,58 @@
+<div class="card">
+    <div class="card-header pb-0">
+        <div class="header-top">
+            <h4>Current Orders</h4>
+               <app-dropdown [data]="dropdownList" />
+        </div>
+    </div>
+    <div class="card-body px-0 recent-order">
+        <div class="table-responsive custom-scrollbar">
+            <table class="table display" id="recent-order">
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="">
+                            </div>
+                        </th>
+                        <th>Customers name</th>
+                        <th>Order Date</th>
+                        <th>items Name</th>
+                        <th>Price</th>
+                        <th>Status </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (item of currentOrders; track item) {
+                    <tr>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <img [src]="item.image_url" alt="">
+                                </div>
+                                <div class="flex-grow-1"><a [routerLink]="['/user/users-profile']" >
+                                        <h6>{{item.customer}}</h6><span>{{item.customer_id}}</span>
+                                    </a></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h6>{{item.date}}</h6><span>{{item.time}}</span>
+                        </td>
+                        <td>{{item.item_name}}</td>
+                        <td>${{item.price}}</td>
+                        <td>
+                            <button class="btn" [ngClass]="{ 'bg-light-primary txt-primary' : item.status === 'Paid',' bg-light-secondary txt-secondary' : item.status === 'Pending','bg-light-warning txt-warning' : item.status === 'Overdue'}" 
+                           >{{item.status}}</button>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

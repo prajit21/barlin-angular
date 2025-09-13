@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <div class="row effective-card">
+    <div class="col-xxl-3 col-sm-6 box-col-4 xl-4">
+      <app-card-one />
+    </div>
+    <div class="col-xxl-6 col-sm-6 box-col-4 xl-4">
+      <app-card-two />
+    </div>
+    <div class="col-xxl-3 box-col-4 xl-4">
+      <app-card-three />
+    </div>
+    <div class="col-12 col-md-6">
+      <app-border-left />
+    </div>
+    <div class="col-12 col-md-6">
+      <app-border-light />
+    </div>
+    <div class="col-12 col-md-6">
+      <app-border-top />
+    </div>
+    <div class="col-12 col-md-6">
+      <app-border-bottom />
+    </div>
+    <div class="col-xxl-4 col-md-6">
+      <app-border-primary-state />
+    </div>
+    <div class="col-xxl-4 col-md-6">
+      <app-border-warning-state />
+    </div>
+    <div class="col-xxl-4 col-12">
+      <app-border-secondary-state />
+    </div>
+    @for (data of commonAbsoluteCardData; track data) {
+    <div class="col-sm-12 col-xl-6">
+      <app-absolute-card [data]="data" />
+    </div>
+    }
+  </div>

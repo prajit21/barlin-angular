@@ -1,0 +1,35 @@
+<div class="card discount-product">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-xl-6 xl-100 col-md-12 col-sm-6 box-col-12">
+                <h4 class="f-w-600">Add Product</h4>
+                <div class="d-flex align-items-center gap-2">
+                    <div class="main-box border-primary">
+                        <app-common-svg-icons [class]="'fill-primary'" [icon]="'shopping-bag'" />
+                    </div>
+                    <p class="flex-grow-1">Easily get inventory by adding products. </p>
+                </div>
+                <div class="details-box bg-light-primary">
+                    <h5>Create a new Product</h5><a class="btn btn-primary" [routerLink]="['/ecommerce/add-products']"
+                        >Create
+                        <app-feather-icon [icon]="'plus'" [class]="'ms-2'" />
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-6 col-md-12 col-sm-6 apply-discount">
+                <h4 class="f-w-600">Add Discount</h4>
+                <div class="d-flex align-items-center gap-2">
+                    <div class="main-box border-secondary">
+                        <app-common-svg-icons [class]="'fill-secondary'" [icon]="'Product-discount'" />
+                    </div>
+                    <p class="flex-grow-1">Special savings by adding discount.</p>
+                </div>
+                <div class="details-box bg-light-secondary">
+                    <h5>Apply a new Discount</h5><a class="btn btn-secondary" [routerLink]="['/dashboard/default']">Apply
+                           <app-feather-icon [icon]="'plus'" [class]="'ms-2'" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

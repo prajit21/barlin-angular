@@ -1,0 +1,11 @@
+<div class="card height-equal">
+  <div class="card-header pb-0">
+    <h4>Background Color Opacity</h4>
+    <p class="f-m-light mt-1">Use <code>bg-opacity-* (10,25,50,75)</code> class to background opacity links.</p>
+  </div>
+  <div class="card-body bg-opacity-wrapper">
+    @for (item of data; track item) {
+    <div [class]="item.class"><a href="javascript:void(0)">{{item.title}}</a></div>
+    }
+  </div>
+</div>

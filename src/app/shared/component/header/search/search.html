@@ -1,0 +1,46 @@
+<div class="left-menu-header">
+    <ul class="header-left" (clickOutside)="clickOutside()">
+        <li>
+            <div class="form-group w-100">
+                <div class="Typeahead Typeahead--twitterUsers">
+                    <div class="u-posRelative d-flex">
+                        <div class="header-dropdown" (clickOutside)="isOpen = false">
+                            <div class="d-flex gap-2" (click)="isOpen =!isOpen">
+                                <h6>Easy Quick</h6><i class="fa fa-angle-down"></i>
+                            </div>
+                            <ul class="header-menu" [class.active]="isOpen">
+                                <li><a [routerLink]="['/dashboard/default']">Default Dashboard</a></li>
+                                <li><a [routerLink]="['/dashboard/ecommerce']"> Ecommerce Dashboard</a></li>
+                                <li><a [routerLink]="['/widgets/general']"> General Widgets </a></li>
+                            </ul>
+                        </div>
+                        <input class="demo-input py-0 Typeahead-input form-control-plaintext w-100" type="text"
+                            placeholder="Enter your search..." [(ngModel)]="text"
+                            name="search" (keyup)="searchTerm(text)">
+                        <app-common-svg-icons [class]="'search-bg svg-color'" [icon]="'search'" />
+                    </div>
+                </div>
+            </div>
+            <div class="Typeahead-menu custom-scrollbar" [class.is-open]="searchResult" [class.open]="open">
+                @for(menuItem of menuItems | slice : 0 : 8; track menuItem){
+                <div class="ProfileCard u-cf" [routerLink]="menuItem.path">
+                    <div class="ProfileCard-details">
+                        <div class="ProfileCard-realName">
+                            <div class="ProfileCard-avatar">
+                                <app-svg-icon [icon]="menuItem.icon" />
+                            </div>
+                            <a class="realname" (click)="removeFix()">{{ menuItem.title }}</a>
+                          
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+            <div class="Typeahead-menu is-open" [class.is-open]="searchResultEmpty">
+                <div class="tt-dataset tt-dataset-0">
+                    <div class="EmptyMessage">Opps!! There are no result found.</div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

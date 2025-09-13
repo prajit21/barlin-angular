@@ -1,0 +1,34 @@
+<div class="card">
+  <div class="card-header pb-0">
+    <h4>Outline Dark and Light Alerts</h4>
+    <p class="f-m-light mt-1">Use<code> border-* </code>utility class to provide matching border and border-width within any alert<code> [solid/double/inset/outset]</code>.</p>
+  </div>
+  <div class="card-body outline-alerts">
+    <div class="row gy-3"> 
+      <div class="col-xl-6">
+          <div class="alert txt-primary border-primary alert-dismissible fade show" [class.show]="isPrimary" role="alert">
+              <app-feather-icon [icon]="'clock'" class="me-2" />
+            <p class="txt-primary">The <b>"border-primary" </b>class has the ability to generate on its own alerts.</p>
+            <button class="btn-close" type="button" (click)="isPrimary = false"></button>
+          </div>
+        <div class="alert txt-success border-success outline-2x alert-dismissible fade show alert-icons" [class.show]="isSuccess" role="alert">
+          <app-feather-icon [icon]="'thumbs-up'" class="me-2" />
+          <p class="txt-success">The <b class="txt-success">"border-success" </b>with <b class="txt-success">"outline-2x" </b>class has ability to generate on its own alerts.</p>
+          <button class="btn-close" type="button" (click)="isSuccess = false"></button>
+        </div>
+      </div>
+      <div class="col-xl-6">
+        <div class="alert txt-warning double-border border-warning alert-dismissible fade show alert-icons" [class.show]="iswarning" role="alert">
+          <app-feather-icon [icon]="'alert-triangle'" class="me-2" />
+          <p class="txt-warning">The <b class="txt-warning">"double-border"</b>&<b class="txt-warning">"border-warning" </b>class has the ability to generate on its own alerts.</p>
+          <button class="btn-close" type="button" (click)="iswarning = false"></button>
+        </div>
+        <div class="alert txt-danger inset-border border-danger outline-2x alert-dismissible fade show alert-icons" [class.show]="isDanger" role="alert">
+          <app-feather-icon [icon]="'alert-octagon'" class="me-2" />
+          <p class="txt-danger">The <b class="txt-danger">"inset-border" </b>with <b class="txt-danger">"border-danger" </b>class has the ability to generate on its own alerts.</p>
+          <button class="btn-close" type="button" (click)="isDanger = false"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

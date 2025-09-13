@@ -1,0 +1,30 @@
+<div class="page-wrapper" [class]="layoutService.config.settings.sidebar_type">
+    <!-- Page Header Start-->
+    <div class="page-header" [class.close_icon]="navigationService.collapseSidebar"
+        [ngStyle]="{ 'display' : hideScrollNavService.headerFixed ? 'none' : 'block'}">
+        <app-header />
+    </div>
+    <!-- Page Header Ends -->
+    <!-- Page Body Start-->
+    <div class="page-body-wrapper" [class.scorlled]="hideScrollNavService.headerFixed">
+        <!-- Page Sidebar Start-->
+        <div class="sidebar-wrapper" [class.close_icon]="navigationService.collapseSidebar">
+            <app-sidebar />
+        </div>
+        <!-- Page Sidebar Ends-->
+        <div class="page-body">
+            <div class="container-fluid">
+                <app-breadcrumb />
+            </div>
+            <!-- Container-fluid starts-->
+            <router-outlet />
+            <!-- Container-fluid Ends-->
+        </div>
+        <!-- footer start-->
+        <footer class="footer" [class.footer-dark]="footerDark" [class.footer-light]="footerLight"
+            [class.footer-fix]="footerFix">
+            <app-footer />
+        </footer>
+    </div>
+</div>
+<app-customiser />

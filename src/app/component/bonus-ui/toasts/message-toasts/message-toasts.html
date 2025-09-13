@@ -1,0 +1,42 @@
+<div class="card">
+    <div class="card-header pb-0">
+      <h4>Message Toasts</h4>
+      <p class="f-m-light mt-1">
+         Use the <code>.position-fixed</code>  class through <code> [top/end/start/bottom]</code> toasts.</p>
+    </div>
+    <div class="card-body common-flex common-toasts">
+      <button class="btn btn-success" type="button" (click)="isSuccess = true">Success Toast</button>
+      <div class="toast-container position-fixed top-0 end-0 p-3 toast-index toast-rtl">
+        <div class="toast" [class.show]="isSuccess">
+          <div class="d-flex justify-content-between align-items-center alert-light-success">
+            <div class="toast-body">
+                <app-feather-icon [icon]="'check-square'" [class]="'close-search stroke-success'" />
+              Success: We've updated your info</div>
+            <button class="me-2 m-auto btn-close" type="button" (click)="isSuccess = false"></button>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-warning" type="button" (click)="isWarning = true">Warning Toast</button>
+      <div class="toast-container position-fixed top-50 end-0 p-3 toast-index toast-rtl">
+        <div class="toast" [class.show]="isWarning">
+          <div class="d-flex justify-content-between align-items-center alert-light-warning">
+            <div class="toast-body">
+               <app-feather-icon [icon]="'alert-triangle'" [class]="'close-search stroke-warning'" />
+              Software drivers needed to be updated in advance</div>
+            <button class="me-2 m-auto btn-close" type="button" (click)="isWarning = false"></button>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-danger" type="button" (click)="isError = true">Error Toast</button>
+      <div class="toast-container position-fixed bottom-0 end-0 p-3 toast-index toast-rtl">
+        <div class="toast" [class.show]="isError">
+          <div class="d-flex justify-content-between align-items-center alert-light-danger">
+            <div class="toast-body">
+              <app-feather-icon [icon]="'x-circle'" [class]="'close-search stroke-danger'" />
+              A database connection error has occurred</div>
+            <button class="me-2 m-auto btn-close" type="button" (click)="isError = false"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

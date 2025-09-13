@@ -1,0 +1,23 @@
+<div class="card height-equal">
+    <div class="card-header pb-0">
+        <h4>Custom Alert Popup</h4>
+        <p class="f-m-light mt-1">
+            Use<code> alert </code>class can be used to generate a custom alert.</p>
+    </div>
+    <div class="card-body">
+        <div class="alert-box">
+            <div class="alert alert-dismissible justify-content-center p-0 fade show" [class.show]="isShow" role="alert">
+                <div class="alert-body">
+                     <app-common-svg-icons [icon]="'alert-popup'" />
+                    <h5 class="mb-1">A Crucial Update is Now Available</h5>
+                    <p>For improved security and functionality, install the most recent version right away.</p>
+                    <div class="button-box">
+                        <button class="btn light-background">Later</button>
+                        <button class="btn btn-warning">Right Now</button>
+                    </div>
+                </div>
+                <button class="btn-close" type="button" (click)="isShow = false"></button>
+            </div>
+        </div>
+    </div>
+</div>

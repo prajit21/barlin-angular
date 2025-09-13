@@ -1,0 +1,29 @@
+<div class="card">
+  <div class="card-header pb-0">
+    <h4>Offset</h4>
+    <p class="mt-1 f-m-light">Move columns to the right using <code>.offset-sm-* </code>classes. These classes increase the left margin of a column by <code>* </code>columns.</p>
+  </div>
+  <div class="card-body grid-showcase">
+    <div class="row g-2">
+      @for (data of offsetGridData; track data) {
+      <div [class]="data.class"><span>{{data.text}}</span></div>
+      }
+    </div>
+  </div>
+  <div class="card-footer"> 
+    <div class="table-responsive grid-footer">
+      <table class="w-100">
+        <tbody>
+          <tr>
+            <th> Class</th>
+            <th>Value of the class</th>
+          </tr>
+          <tr>
+            <td><code>.offset-*-*</code></td>
+            <td> 1 / 2 / ... / 10 / 11</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
