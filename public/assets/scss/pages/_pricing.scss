@@ -125,11 +125,11 @@
     }
   }
 }
-@media (max-width:1470px) {
+@media (max-width: 1470px) {
   .pricing-block {
-    >div {
+    > div {
       flex: 50%;
-      &:nth-child(n+3) {
+      &:nth-child(n + 3) {
         margin-top: 30px;
       }
     }
@@ -147,8 +147,8 @@
     }
   }
   .pricing-block {
-    >div {
-      &:nth-child(n+2) {
+    > div {
+      &:nth-child(n + 2) {
         margin-top: 20px;
       }
     }
@@ -163,7 +163,7 @@
     }
   }
   .pricing-block {
-    >div {
+    > div {
       flex: 100%;
     }
   }

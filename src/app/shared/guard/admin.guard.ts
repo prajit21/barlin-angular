@@ -1,10 +1,14 @@
-import { Injectable, inject } from '@angular/core';
-import { ActivatedRouteSnapshot, Router, RouterStateSnapshot } from '@angular/router';
+import { Injectable, inject } from "@angular/core";
+import {
+  ActivatedRouteSnapshot,
+  Router,
+  RouterStateSnapshot,
+} from "@angular/router";
 
-import { Observable } from 'rxjs';
+import { Observable } from "rxjs";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class AdminGuard {
   public router = inject(Router);
@@ -14,13 +18,13 @@ export class AdminGuard {
     _state: RouterStateSnapshot,
   ): Observable<boolean> | Promise<boolean> | boolean {
     // Guard for user is login or not
-    let user = JSON.parse(localStorage.getItem('user') || '{}');
+    let user = JSON.parse(localStorage.getItem("user") || "{}");
     if (!user || user === null) {
-      this.router.navigate(['/auth/login']);
+      this.router.navigate(["/auth/login"]);
       return true;
     } else if (user) {
       if (!Object.keys(user).length) {
-        this.router.navigate(['/auth/login']);
+        this.router.navigate(["/auth/login"]);
         return true;
       }
     }

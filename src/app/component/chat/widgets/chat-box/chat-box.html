@@ -14,10 +14,17 @@
     }
   </div>
   <form class="msger-inputarea" (clickOutside)="isShow = false">
-    <div class="dropdown-form dropdown-toggle" role="main" (click)="isShow =!isShow">
+    <div
+      class="dropdown-form dropdown-toggle"
+      role="main"
+      (click)="isShow =!isShow"
+    >
       <i class="icon-plus"></i>
-      <div class="chat-icon dropdown-menu dropdown-menu-start" [class.show]="isShow"
-        [ngStyle]="{'position': 'absolute','inset': 'auto auto 0px 0px','margin': '0px','transform': 'translate(0px, -43px)'}">
+      <div
+        class="chat-icon dropdown-menu dropdown-menu-start"
+        [class.show]="isShow"
+        [ngStyle]="{'position': 'absolute','inset': 'auto auto 0px 0px','margin': '0px','transform': 'translate(0px, -43px)'}"
+      >
         <div class="dropdown-item mb-2">
           <app-common-svg-icons [icon]="'camera'" />
         </div>
@@ -26,10 +33,16 @@
         </div>
       </div>
     </div>
-    <input class="msger-input two uk-textarea" type="text" placeholder="Type Message here..">
+    <input
+      class="msger-input two uk-textarea"
+      type="text"
+      placeholder="Type Message here.."
+    />
     <div class="open-emoji">
       <div class="second-btn uk-button"></div>
     </div>
-    <button class="msger-send-btn" type="submit"><i class="fa fa-location-arrow"></i></button>
+    <button class="msger-send-btn" type="submit">
+      <i class="fa fa-location-arrow"></i>
+    </button>
   </form>
 </div>

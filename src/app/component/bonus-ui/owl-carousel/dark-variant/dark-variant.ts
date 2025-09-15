@@ -1,17 +1,17 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { CarouselModule } from 'ngx-owl-carousel-o';
+import { CarouselModule } from "ngx-owl-carousel-o";
 
 import {
   darkVariantData,
   withIndicatorOptions,
-} from '../../../../shared/data/data/bonus-ui/owl-carousel';
+} from "../../../../shared/data/data/bonus-ui/owl-carousel";
 
 @Component({
-  selector: 'app-dark-variant',
+  selector: "app-dark-variant",
   imports: [CarouselModule],
-  templateUrl: './dark-variant.html',
-  styleUrls: ['./dark-variant.scss'],
+  templateUrl: "./dark-variant.html",
+  styleUrls: ["./dark-variant.scss"],
 })
 export class DarkVariant {
   public darkVariantData = darkVariantData;

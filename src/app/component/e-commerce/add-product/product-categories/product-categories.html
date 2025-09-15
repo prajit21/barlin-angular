@@ -5,24 +5,31 @@
         <div class="col-sm-6">
           <div class="row g-2">
             <div class="col-12">
-              <label class="form-label m-0" for="validationDefault04">Add Category</label>
+              <label class="form-label m-0" for="validationDefault04"
+                >Add Category</label
+              >
             </div>
             <div class="col-12">
-              <select class="form-select" id="validationDefault04" required="" formControlName="add_Category"
-                [ngClass]="{ 'is-invalid' : (addCategory?.touched || validate) && addCategory?.errors, 'is-valid' : !addCategory?.errors}">
+              <select
+                class="form-select"
+                id="validationDefault04"
+                required=""
+                formControlName="add_Category"
+                [ngClass]="{ 'is-invalid' : (addCategory?.touched || validate) && addCategory?.errors, 'is-valid' : !addCategory?.errors}"
+              >
                 <option selected="" value="">--plese select--</option>
                 <option>Toys & games</option>
-                <option>Sportswear </option>
-                <option>Jewellery </option>
+                <option>Sportswear</option>
+                <option>Jewellery</option>
                 <option>Furniture and Decor</option>
                 <option>Health, Personal Care, and Beauty</option>
-                <option>Auto and Parts </option>
+                <option>Auto and Parts</option>
                 <option>Baby Care Products</option>
               </select>
               @if (addCategory?.errors) {
-                <div class="invalid-feedback">Add Category Required</div>
+              <div class="invalid-feedback">Add Category Required</div>
               } @else {
-                <div class="valid-feedback">Looks good!</div>
+              <div class="valid-feedback">Looks good!</div>
               }
               <p class="f-light">A product can be added to a category</p>
             </div>
@@ -34,12 +41,17 @@
               <label class="form-label d-block m-0">Add Tag</label>
             </div>
             <div class="col-12">
-              <tag-input [(ngModel)]="items" [editable]="true" formControlName="add_Tag" class="form-control"
-                [ngClass]="{ 'is-invalid' : (addTag?.touched || validate) && addTag?.errors, 'is-valid' : !addTag?.errors}" />
+              <tag-input
+                [(ngModel)]="items"
+                [editable]="true"
+                formControlName="add_Tag"
+                class="form-control"
+                [ngClass]="{ 'is-invalid' : (addTag?.touched || validate) && addTag?.errors, 'is-valid' : !addTag?.errors}"
+              />
               @if (addTag?.errors) {
-                <div class="invalid-feedback">Add Tag Required</div>
+              <div class="invalid-feedback">Add Tag Required</div>
               } @else {
-                <div class="valid-feedback">Looks good!</div>
+              <div class="valid-feedback">Looks good!</div>
               }
               <p class="f-light">Products can be tagged</p>
             </div>
@@ -47,8 +59,12 @@
         </div>
         <div class="col-12">
           <div class="category-buton">
-            <a class="btn button-primary bg-light-primary font-primary" (click)="category()">
-              <i class="me-2 fa fa-plus"></i>Create New Category </a>
+            <a
+              class="btn button-primary bg-light-primary font-primary"
+              (click)="category()"
+            >
+              <i class="me-2 fa fa-plus"></i>Create New Category
+            </a>
           </div>
         </div>
       </div>
@@ -58,18 +74,25 @@
         <div class="col-sm-6">
           <div class="row">
             <div class="col-12">
-              <label class="form-label" for="validationServer01">Publish Status</label>
-              <select class="form-select" id="validationDefault04" required="" formControlName="publish_Status"
-                [ngClass]="{ 'is-invalid' : (publishStatus?.touched || validate) && publishStatus?.errors, 'is-valid' : !publishStatus?.errors}">
+              <label class="form-label" for="validationServer01"
+                >Publish Status</label
+              >
+              <select
+                class="form-select"
+                id="validationDefault04"
+                required=""
+                formControlName="publish_Status"
+                [ngClass]="{ 'is-invalid' : (publishStatus?.touched || validate) && publishStatus?.errors, 'is-valid' : !publishStatus?.errors}"
+              >
                 <option selected="" value="">--plese select--</option>
                 <option>Publish</option>
                 <option>Drafts</option>
                 <option>Unpublish</option>
               </select>
               @if (publishStatus?.errors) {
-                <div class="invalid-feedback">Publish Status Required</div>
+              <div class="invalid-feedback">Publish Status Required</div>
               } @else{
-                <div class="valid-feedback">Looks good!</div>
+              <div class="valid-feedback">Looks good!</div>
               }
               <p class="f-light">Choose the status</p>
             </div>
@@ -78,15 +101,22 @@
         <div class="col-sm-6">
           <div class="row">
             <div class="col-12">
-              <label class="form-label" for="validationServer01">Publish Date & Time</label>
+              <label class="form-label" for="validationServer01"
+                >Publish Date & Time</label
+              >
               <div class="input-group flatpicker-calender product-date">
-                <input class="form-control" id="datetime-local1" type="date" formControlName="publish_Date_Tile"
-                  [ngClass]="{ 'is-invalid' : (publishDateTile?.touched || validate) && publishDateTile?.errors, 'is-valid' : !publishDateTile?.errors}">
-                    @if (publishDateTile?.errors) {
-                      <div class="invalid-feedback">Publish Date & Time Required</div>
-                    } @else {
-                      <div class="valid-feedback">Looks good!</div>
-                    }
+                <input
+                  class="form-control"
+                  id="datetime-local1"
+                  type="date"
+                  formControlName="publish_Date_Tile"
+                  [ngClass]="{ 'is-invalid' : (publishDateTile?.touched || validate) && publishDateTile?.errors, 'is-valid' : !publishDateTile?.errors}"
+                />
+                @if (publishDateTile?.errors) {
+                <div class="invalid-feedback">Publish Date & Time Required</div>
+                } @else {
+                <div class="valid-feedback">Looks good!</div>
+                }
               </div>
             </div>
           </div>
@@ -102,7 +132,8 @@
       </div>
     </button>
     <button class="btn" (click)="next()">
-      <div class="d-flex align-items-center gap-sm-2 gap-1">Next
+      <div class="d-flex align-items-center gap-sm-2 gap-1">
+        Next
         <app-common-svg-icons [icon]="'front-arrow'" />
       </div>
     </button>

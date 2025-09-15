@@ -1,23 +1,23 @@
-import { Routes } from '@angular/router';
+import { Routes } from "@angular/router";
 
-import { Chart } from './chart/chart';
-import { General } from './general/general';
+import { Chart } from "./chart/chart";
+import { General } from "./general/general";
 
 export default [
   {
-    path: 'general',
+    path: "general",
     component: General,
     data: {
-      title: 'General',
-      breadcrumb: 'General',
+      title: "General",
+      breadcrumb: "General",
     },
   },
   {
-    path: 'chart',
+    path: "chart",
     component: Chart,
     data: {
-      title: 'Chart',
-      breadcrumb: 'Chart',
+      title: "Chart",
+      breadcrumb: "Chart",
     },
   },
 ] as Routes;

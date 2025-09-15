@@ -1,18 +1,18 @@
-import { Component, inject, viewChild } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, inject, viewChild } from "@angular/core";
+import { RouterModule } from "@angular/router";
 
-import { BarRatingModule } from 'ngx-bar-rating';
+import { BarRatingModule } from "ngx-bar-rating";
 
-import { Products } from '../../../../shared/modal/product.model';
-import { ProductDataService } from '../../../../shared/service/product-data.service';
-import { ProductService } from '../../../../shared/service/product.service';
-import { QuickView } from '../quick-view/quick-view';
+import { Products } from "../../../../shared/modal/product.model";
+import { ProductDataService } from "../../../../shared/service/product-data.service";
+import { ProductService } from "../../../../shared/service/product.service";
+import { QuickView } from "../quick-view/quick-view";
 
 @Component({
-  selector: 'app-product-show',
+  selector: "app-product-show",
   imports: [BarRatingModule, RouterModule, QuickView],
-  templateUrl: './product-show.html',
-  styleUrls: ['./product-show.scss'],
+  templateUrl: "./product-show.html",
+  styleUrls: ["./product-show.scss"],
 })
 export class ProductShow {
   private productDataServices = inject(ProductDataService);
@@ -20,7 +20,7 @@ export class ProductShow {
 
   public getProductData: Products[] = [];
 
-  readonly viewModel = viewChild<QuickView>('viewModel');
+  readonly viewModel = viewChild<QuickView>("viewModel");
 
   public sidebaron: boolean = false;
   public listView: boolean = false;
@@ -37,7 +37,7 @@ export class ProductShow {
   public active: boolean = false;
 
   ngOnInit(): void {
-    this.productDataServices.products().subscribe(data => {
+    this.productDataServices.products().subscribe((data) => {
       if (data) {
         this.getProductData = data;
       }

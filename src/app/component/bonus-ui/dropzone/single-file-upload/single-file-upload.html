@@ -1,11 +1,19 @@
 <div class="card">
   <div class="card-header">
     <h4>Single File Upload</h4>
-    <p class="f-m-light mt-1"></p>Use the <code>.dropzone </code> class through create upload
-    files.<code>[https://www.dropzone.dev/].</code>
+    <p class="f-m-light mt-1"></p>
+    Use the <code>.dropzone </code> class through create upload files.<code
+      >[https://www.dropzone.dev/].</code
+    >
   </div>
-  <div class="card-body ">
-    <dropzone [className]="'custom-dropzone'" body [config]="imageConfig" (error)="onUploadError($event)"
-      (success)="onUploadSuccess($event)" [message]="text" />
+  <div class="card-body">
+    <dropzone
+      [className]="'custom-dropzone'"
+      body
+      [config]="imageConfig"
+      (error)="onUploadError($event)"
+      (success)="onUploadSuccess($event)"
+      [message]="text"
+    />
   </div>
 </div>

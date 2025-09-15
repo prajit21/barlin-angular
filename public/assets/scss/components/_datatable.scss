@@ -81,11 +81,11 @@ div {
   button {
     font-size: 14px;
     font-weight: 500;
-    background-color: #F5F6F9;
+    background-color: #f5f6f9;
     padding: 6px 20px;
     border-radius: 0;
   }
-  &+.dataTables_wrapper {
+  & + .dataTables_wrapper {
     margin-top: 20px;
   }
   .dataTables_paginate {
@@ -172,7 +172,7 @@ table {
     background-color: $white;
   }
   .box {
-    >div {
+    > div {
       padding: 5px 15px;
       background-color: var(--theme-default);
       display: inline-block;
@@ -191,7 +191,7 @@ table {
       right: 0 !important;
       z-index: 99;
       left: 260px !important;
-      [dir = "rtl"] & {
+      [dir="rtl"] & {
         left: 0 !important;
         right: 260px !important;
       }
@@ -340,29 +340,29 @@ code {
     div.dt-button.btn-danger,
     a.dt-button.btn-danger {
       background-color: $danger-color;
-      border-color: $danger-color
+      border-color: $danger-color;
     }
     table.dataTable th.focus,
     table.dataTable td.focus {
       outline: 3px solid var(--theme-default);
     }
-    table.dataTable.display tbody>tr.odd.selected>.sorting_1,
-    table.dataTable.order-column.stripe tbody>tr.odd.selected>.sorting_1 {
-      background-color: lighten($primary-color , 38%);
+    table.dataTable.display tbody > tr.odd.selected > .sorting_1,
+    table.dataTable.order-column.stripe tbody > tr.odd.selected > .sorting_1 {
+      background-color: lighten($primary-color, 38%);
     }
-    table.dataTable.stripe tbody>tr.odd.selected,
-    table.dataTable.stripe tbody>tr.odd>.selected,
-    table.dataTable.display tbody>tr.odd.selected,
-    table.dataTable.display tbody>tr.odd>.selected {
-      background-color: lighten($primary-color , 38%);
+    table.dataTable.stripe tbody > tr.odd.selected,
+    table.dataTable.stripe tbody > tr.odd > .selected,
+    table.dataTable.display tbody > tr.odd.selected,
+    table.dataTable.display tbody > tr.odd > .selected {
+      background-color: lighten($primary-color, 38%);
     }
-    table.dataTable.display tbody>tr.even.selected>.sorting_1,
-    table.dataTable.order-column.stripe tbody>tr.even.selected>.sorting_1 {
-      background-color: lighten($primary-color , 38%);
+    table.dataTable.display tbody > tr.even.selected > .sorting_1,
+    table.dataTable.order-column.stripe tbody > tr.even.selected > .sorting_1 {
+      background-color: lighten($primary-color, 38%);
     }
-    table.dataTable tbody>tr.selected,
-    table.dataTable tbody>tr>.selected {
-      background-color: lighten($primary-color , 38%);
+    table.dataTable tbody > tr.selected,
+    table.dataTable tbody > tr > .selected {
+      background-color: lighten($primary-color, 38%);
     }
   }
 }
@@ -372,8 +372,8 @@ td.highlight {
 td.details-control {
   text-align: center;
   cursor: pointer;
-  font-family: 'themify';
-  &:before{
+  font-family: "themify";
+  &:before {
     content: "\e61a";
     border: 1px solid var(--theme-default);
     padding: 3px;
@@ -382,7 +382,7 @@ td.details-control {
   }
 }
 .dataTables_scroll {
-  &~.dataTables_paginate {
+  & ~ .dataTables_paginate {
     margin-top: 20px !important;
   }
 }
@@ -404,7 +404,7 @@ table {
       tbody {
         tr {
           &.odd {
-            >.sorting_1 {
+            > .sorting_1 {
               background-color: $light;
             }
             .badge {

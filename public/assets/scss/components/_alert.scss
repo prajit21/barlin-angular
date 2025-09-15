@@ -27,12 +27,12 @@
   .progress {
     margin-top: $alert-padding;
   }
-  [data-notify='icon'] {
+  [data-notify="icon"] {
     margin-right: 10px;
     line-height: 20px;
     position: absolute;
   }
-  [data-notify='message'] {
+  [data-notify="message"] {
     display: inline-block;
     width: 100%;
   }
@@ -94,7 +94,7 @@
       margin-right: 4px;
       position: absolute;
       top: 18px;
-      &~p {
+      & ~ p {
         padding-left: 20px;
       }
     }
@@ -102,26 +102,14 @@
 }
 strong {
   display: inline-block;
-  &~p {
+  & ~ p {
     display: inline-block;
   }
 }
-$alert-name: primary,
-  secondary,
-  success,
-  danger,
-  warning,
-  info,
-  light,
-  dark;
-$alert-color : $primary-color,
-$secondary-color,
-$success-color,
-$danger-color,
-$warning-color,
-$info-color,
-$light-color,
-$dark-color;
+$alert-name: primary, secondary, success, danger, warning, info, light, dark;
+$alert-color:
+  $primary-color, $secondary-color, $success-color, $danger-color,
+  $warning-color, $info-color, $light-color, $dark-color;
 @each $var in $alert-name {
   $i: index($alert-name, $var);
   .alert-#{$var} {
@@ -141,11 +129,11 @@ $dark-color;
     }
     .alert-link {
       color: nth($alert-color, $i);
-      @if($var =="light") {
+      @if ($var == "light") {
         color: $dark-color;
       }
     }
-    @if($var =="light") {
+    @if ($var == "light") {
       color: $dark-color;
       background-color: $light-color;
       .btn-close {
@@ -171,7 +159,7 @@ $dark-color;
       }
     }
   }
-  // touchspin 
+  // touchspin
   .touchspin-wrapper {
     .btn-touchspin {
       &.touchspin-#{$var} {
@@ -185,7 +173,7 @@ $dark-color;
         color: nth($alert-color, $i);
       }
     }
-    input[type='number'] {
+    input[type="number"] {
       &.spin-outline-#{$var} {
         outline: 1px solid nth($alert-color, $i);
         border: none;
@@ -242,7 +230,7 @@ $dark-color;
     .btn-check {
       &.radio-light-#{$var} {
         &:focus {
-          +.btn {
+          + .btn {
             box-shadow: 0 0 0 4px rgba(nth($alert-color, $i), 0.55);
           }
         }
@@ -253,8 +241,8 @@ $dark-color;
   .fill-radios {
     .radio {
       &.radio-#{$var} {
-        input[type='radio']:checked {
-          &+label {
+        input[type="radio"]:checked {
+          & + label {
             &::before {
               border: 10px solid nth($alert-color, $i);
             }
@@ -267,8 +255,8 @@ $dark-color;
     }
   }
   .list-group {
-    .form-check-input[type=checkbox],
-    [type=radio] {
+    .form-check-input[type="checkbox"],
+    [type="radio"] {
       &.checkbox-#{$var} {
         background-color: unset;
         border-color: nth($alert-color, $i);
@@ -289,14 +277,14 @@ $dark-color;
     .alert-#{$var}.dark {
       .alert-link {
         color: $white;
-        @if($var =="light") {
+        @if ($var == "light") {
           color: $dark-color;
         }
       }
       background-color: nth($alert-color, $i);
       border-color: nth($alert-color, $i);
       color: $auth-bg-color;
-      @if($var =="light") {
+      @if ($var == "light") {
         color: $dark-color;
       }
     }
@@ -308,7 +296,7 @@ $dark-color;
       .btn-close {
         filter: unset;
       }
-      @if($var =="light") {
+      @if ($var == "light") {
         color: $dark-color;
       }
     }
@@ -371,22 +359,11 @@ $dark-color;
     filter: none;
   }
 }
-$alert-light-name: primary,
-  secondary,
-  success,
-  warning,
-  info,
-  light,
-  danger,
-  dark;
-$alert-light-color: $light-primary,
-  $light-secondary,
-  $light-success,
-  $light-warning,
-  $light-info,
-  $light-white,
-  $light-danger,
-  $light-dark;
+$alert-light-name:
+  primary, secondary, success, warning, info, light, danger, dark;
+$alert-light-color:
+  $light-primary, $light-secondary, $light-success, $light-warning, $light-info,
+  $light-white, $light-danger, $light-dark;
 @each $var in $alert-light-name {
   $i: index($alert-light-name, $var);
   .alert-light-#{$var} {
@@ -405,13 +382,13 @@ $alert-light-color: $light-primary,
   }
 }
 .ellipsis.content {
-  @media (max-width:576px) {
+  @media (max-width: 576px) {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     max-width: 294px;
   }
-  @media (max-width:575px) {
+  @media (max-width: 575px) {
     max-width: 180px;
   }
 }
@@ -431,7 +408,7 @@ $alert-light-color: $light-primary,
 // Icon with alerts
 .alerts-icon {
   .alert {
-    >div {
+    > div {
       width: 30px;
       height: 30px;
       border-radius: 50%;
@@ -441,7 +418,7 @@ $alert-light-color: $light-primary,
       align-items: center;
       margin-right: 10px;
       flex-shrink: 0;
-      [dir = "rtl"] & {
+      [dir="rtl"] & {
         margin-right: unset;
         margin-left: 10px;
       }
@@ -479,7 +456,7 @@ $alert-light-color: $light-primary,
       button {
         &:first-child {
           margin-right: 6px;
-          [dir = "rtl"] & {
+          [dir="rtl"] & {
             margin-right: unset;
             margin-left: 6px;
           }

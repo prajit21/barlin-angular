@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { LabelType, NgxSliderModule, Options } from '@angular-slider/ngx-slider';
+import {
+  LabelType,
+  NgxSliderModule,
+  Options,
+} from "@angular-slider/ngx-slider";
 
 @Component({
-  selector: 'app-customisedslider',
+  selector: "app-customisedslider",
   imports: [NgxSliderModule],
-  templateUrl: './customisedslider.html',
-  styleUrl: './customisedslider.scss',
+  templateUrl: "./customisedslider.html",
+  styleUrl: "./customisedslider.scss",
 })
 export class Customisedslider {
   minValue: number = 100;
@@ -17,11 +21,11 @@ export class Customisedslider {
     translate: (value: number, label: LabelType): string => {
       switch (label) {
         case LabelType.Low:
-          return '<b>Min price:</b> $' + value;
+          return "<b>Min price:</b> $" + value;
         case LabelType.High:
-          return '<b>Max price:</b> $' + value;
+          return "<b>Max price:</b> $" + value;
         default:
-          return '$' + value;
+          return "$" + value;
       }
     },
   };

@@ -64,9 +64,9 @@ table {
 .no {
   &-gutter {
     .row {
-      [class*='col-'],
-      [class*='col-sm-'],
-      [class*='col-md-'],
+      [class*="col-"],
+      [class*="col-sm-"],
+      [class*="col-md-"],
       .col {
         div {
           background-color: var(--light-background);

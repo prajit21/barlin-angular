@@ -1,16 +1,16 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { DropzoneConfigInterface, DropzoneModule } from 'ngx-dropzone-wrapper';
+import { DropzoneConfigInterface, DropzoneModule } from "ngx-dropzone-wrapper";
 
 @Component({
-  selector: 'app-single-file-upload',
+  selector: "app-single-file-upload",
   imports: [DropzoneModule],
-  templateUrl: './single-file-upload.html',
-  styleUrls: ['./single-file-upload.scss'],
+  templateUrl: "./single-file-upload.html",
+  styleUrls: ["./single-file-upload.scss"],
 })
 export class SingleFileUpload {
   public imageConfig: DropzoneConfigInterface = {
-    url: 'https://httpbin.org/post',
+    url: "https://httpbin.org/post",
     clickable: true,
     uploadMultiple: false,
     addRemoveLinks: true,

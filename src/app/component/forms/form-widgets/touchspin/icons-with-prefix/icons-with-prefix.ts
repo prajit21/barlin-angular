@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-icons-with-prefix',
+  selector: "app-icons-with-prefix",
   imports: [],
-  templateUrl: './icons-with-prefix.html',
-  styleUrls: ['./icons-with-prefix.scss'],
+  templateUrl: "./icons-with-prefix.html",
+  styleUrls: ["./icons-with-prefix.scss"],
 })
 export class IconsWithPrefix {
   public value: number[] = [0, 0];

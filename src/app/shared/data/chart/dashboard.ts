@@ -1,20 +1,51 @@
-var primary_color = localStorage.getItem('primary_color') || '#2A5699';
-var secondary_color = localStorage.getItem('secondary_color') || '#EA6F4E';
+import {
+  ApexAxisChartSeries,
+  ApexChart,
+  ApexFill,
+  ApexMarkers,
+  ApexLegend,
+  ApexStroke,
+  ApexDataLabels,
+  ApexGrid,
+  ApexXAxis,
+  ApexYAxis,
+  ApexResponsive,
+  ApexPlotOptions,
+  ApexStates,
+  ApexTooltip,
+} from "ng-apexcharts";
 
-export let higherRevenue: any = {
+var primary_color = localStorage.getItem("primary_color") || "#2A5699";
+var secondary_color = localStorage.getItem("secondary_color") || "#EA6F4E";
+
+export interface HigherRevenueChart {
+  series: ApexAxisChartSeries;
+  chart: ApexChart;
+  colors: string[];
+  fill: ApexFill;
+  markers: ApexMarkers;
+  legend: ApexLegend;
+  stroke: ApexStroke;
+  dataLabels: ApexDataLabels;
+  grid: ApexGrid;
+  xaxis: ApexXAxis;
+  yaxis: ApexYAxis;
+  responsive: ApexResponsive[];
+}
+export let higherRevenue: HigherRevenueChart = {
   series: [
     {
-      name: 'Online Sale',
+      name: "Online Sale",
       data: [120, 150, 250, 145, 130, 250, 200, 200, 300, 175, 155, 200],
     },
     {
-      name: 'Marketing Sale',
+      name: "Marketing Sale",
       data: [80, 105, 35, 65, 110, 45, 90, 145, 45, 65, 90, 90],
     },
   ],
   colors: [primary_color, secondary_color],
   chart: {
-    type: 'area',
+    type: "area",
     height: 314,
     toolbar: {
       tools: {
@@ -38,162 +69,162 @@ export let higherRevenue: any = {
       {
         seriesIndex: 0,
         dataPointIndex: 1,
-        fillColor: '#fff',
+        fillColor: "#fff",
         strokeColor: primary_color,
         size: 3,
-        shape: 'circle',
+        shape: "circle",
       },
       {
         seriesIndex: 0,
         dataPointIndex: 2,
-        fillColor: '#fff',
+        fillColor: "#fff",
         strokeColor: primary_color,
         size: 3,
-        shape: 'circle',
+        shape: "circle",
       },
       {
         seriesIndex: 0,
         dataPointIndex: 3,
-        fillColor: '#fff',
+        fillColor: "#fff",
         strokeColor: primary_color,
         size: 3,
-        shape: 'circle',
+        shape: "circle",
       },
       {
         seriesIndex: 0,
         dataPointIndex: 4,
-        fillColor: '#fff',
+        fillColor: "#fff",
         strokeColor: primary_color,
         size: 3,
-        shape: 'circle',
+        shape: "circle",
       },
       {
         seriesIndex: 0,
         dataPointIndex: 5,
-        fillColor: '#fff',
+        fillColor: "#fff",
         strokeColor: primary_color,
         size: 3,
-        shape: 'circle',
+        shape: "circle",
       },
       {
         seriesIndex: 0,
         dataPointIndex: 6,
-        fillColor: '#fff',
+        fillColor: "#fff",
         strokeColor: primary_color,
         size: 3,
-        shape: 'circle',
+        shape: "circle",
       },
       {
         seriesIndex: 0,
         dataPointIndex: 7,
-        fillColor: '#fff',
+        fillColor: "#fff",
         strokeColor: primary_color,
         size: 3,
-        shape: 'circle',
+        shape: "circle",
       },
       {
         seriesIndex: 0,
         dataPointIndex: 8,
-        fillColor: '#fff',
+        fillColor: "#fff",
         strokeColor: primary_color,
         size: 3,
-        shape: 'circle',
+        shape: "circle",
       },
       {
         seriesIndex: 0,
         dataPointIndex: 9,
-        fillColor: '#fff',
+        fillColor: "#fff",
         strokeColor: primary_color,
         size: 3,
-        shape: 'circle',
+        shape: "circle",
       },
       {
         seriesIndex: 0,
         dataPointIndex: 10,
-        fillColor: '#fff',
+        fillColor: "#fff",
         strokeColor: primary_color,
         size: 3,
-        shape: 'circle',
+        shape: "circle",
       },
       {
         seriesIndex: 1,
         dataPointIndex: 1,
-        fillColor: '#fff',
+        fillColor: "#fff",
         strokeColor: secondary_color,
         size: 3,
-        shape: 'circle',
+        shape: "circle",
       },
       {
         seriesIndex: 1,
         dataPointIndex: 2,
-        fillColor: '#fff',
+        fillColor: "#fff",
         strokeColor: secondary_color,
         size: 3,
-        shape: 'circle',
+        shape: "circle",
       },
       {
         seriesIndex: 1,
         dataPointIndex: 3,
-        fillColor: '#fff',
+        fillColor: "#fff",
         strokeColor: secondary_color,
         size: 3,
-        shape: 'circle',
+        shape: "circle",
       },
       {
         seriesIndex: 1,
         dataPointIndex: 4,
-        fillColor: '#fff',
+        fillColor: "#fff",
         strokeColor: secondary_color,
         size: 3,
-        shape: 'circle',
+        shape: "circle",
       },
       {
         seriesIndex: 1,
         dataPointIndex: 5,
-        fillColor: '#fff',
+        fillColor: "#fff",
         strokeColor: secondary_color,
         size: 3,
-        shape: 'circle',
+        shape: "circle",
       },
       {
         seriesIndex: 1,
         dataPointIndex: 6,
-        fillColor: '#fff',
+        fillColor: "#fff",
         strokeColor: secondary_color,
         size: 3,
-        shape: 'circle',
+        shape: "circle",
       },
       {
         seriesIndex: 1,
         dataPointIndex: 7,
-        fillColor: '#fff',
+        fillColor: "#fff",
         strokeColor: secondary_color,
         size: 3,
-        shape: 'circle',
+        shape: "circle",
       },
       {
         seriesIndex: 1,
         dataPointIndex: 8,
-        fillColor: '#fff',
+        fillColor: "#fff",
         strokeColor: secondary_color,
         size: 3,
-        shape: 'circle',
+        shape: "circle",
       },
       {
         seriesIndex: 1,
         dataPointIndex: 9,
-        fillColor: '#fff',
+        fillColor: "#fff",
         strokeColor: secondary_color,
         size: 3,
-        shape: 'circle',
+        shape: "circle",
       },
       {
         seriesIndex: 1,
         dataPointIndex: 10,
-        fillColor: '#fff',
+        fillColor: "#fff",
         strokeColor: secondary_color,
         size: 3,
-        shape: 'circle',
+        shape: "circle",
       },
     ],
   },
@@ -201,7 +232,7 @@ export let higherRevenue: any = {
     show: false,
   },
   stroke: {
-    curve: 'stepline',
+    curve: "stepline",
     width: 2,
   },
   dataLabels: {
@@ -210,7 +241,7 @@ export let higherRevenue: any = {
   grid: {
     show: true,
     strokeDashArray: 3,
-    borderColor: ['var(--chart-border)'],
+    // borderColor: ["var(--chart-border)"],
     xaxis: {
       lines: {
         show: true,
@@ -224,34 +255,34 @@ export let higherRevenue: any = {
   },
   xaxis: {
     categories: [
-      'Jan',
-      'Feb',
-      'Mar',
-      'Apr',
-      'May',
-      'June',
-      'July',
-      'Aug',
-      'Sep',
-      'Oct',
-      'Nov',
-      'Dec',
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "June",
+      "July",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
     ],
     labels: {
       style: {
         colors: [
-          'var(--body-font-color)',
-          'var(--body-font-color)',
-          'var(--body-font-color)',
-          'var(--body-font-color)',
-          'var(--body-font-color)',
-          'var(--body-font-color)',
-          'var(--body-font-color)',
-          'var(--body-font-color)',
-          'var(--body-font-color)',
-          'var(--body-font-color)',
-          'var(--body-font-color)',
-          'var(--body-font-color)',
+          "var(--body-font-color)",
+          "var(--body-font-color)",
+          "var(--body-font-color)",
+          "var(--body-font-color)",
+          "var(--body-font-color)",
+          "var(--body-font-color)",
+          "var(--body-font-color)",
+          "var(--body-font-color)",
+          "var(--body-font-color)",
+          "var(--body-font-color)",
+          "var(--body-font-color)",
+          "var(--body-font-color)",
         ],
       },
     },
@@ -265,9 +296,9 @@ export let higherRevenue: any = {
   yaxis: {
     labels: {
       style: {
-        colors: ['var(--body-font-color)'],
+        colors: ["var(--body-font-color)"],
       },
-      formatter: (value: any) => {
+      formatter: (value: number) => {
         return `${value}$`;
       },
     },
@@ -278,11 +309,11 @@ export let higherRevenue: any = {
       options: {
         series: [
           {
-            name: 'Online Sale',
+            name: "Online Sale",
             data: [100, 155, 175, 160, 200, 200, 250],
           },
           {
-            name: 'Marketing Sale',
+            name: "Marketing Sale",
             data: [45, 75, 85, 45, 145, 90, 45],
           },
         ],
@@ -291,19 +322,32 @@ export let higherRevenue: any = {
   ],
 };
 
-export let totalSales: any = {
+export interface TotalSalesChart {
+  series: ApexAxisChartSeries;
+  chart: ApexChart;
+  plotOptions: ApexPlotOptions;
+  dataLabels: ApexDataLabels;
+  grid: ApexGrid;
+  xaxis: ApexXAxis;
+  yaxis: ApexYAxis;
+  fill: ApexFill;
+  legend: ApexLegend;
+  states: ApexStates;
+  responsive: ApexResponsive[];
+}
+export let totalSales: TotalSalesChart = {
   series: [
     {
-      name: 'Earning',
+      name: "Earning",
       data: [50, 40, 20, 30, 35, 60, 30, 35, 65, 25, 40, 35],
     },
     {
-      name: 'Earning',
+      name: "Earning",
       data: [25, 20, 30, 10, 15, 10, 15, 13, 12, 10, 25, 40],
     },
   ],
   chart: {
-    type: 'bar',
+    type: "bar",
     height: 302,
     stacked: true,
     toolbar: {
@@ -313,7 +357,7 @@ export let totalSales: any = {
   states: {
     hover: {
       filter: {
-        type: 'darken',
+        type: "darken",
         value: 1,
       },
     },
@@ -321,9 +365,9 @@ export let totalSales: any = {
   plotOptions: {
     bar: {
       horizontal: false,
-      s̶t̶a̶r̶t̶i̶n̶g̶S̶h̶a̶p̶e̶: 'flat',
-      e̶n̶d̶i̶n̶g̶S̶h̶a̶p̶e̶: 'flat',
-      columnWidth: '20%',
+      // s̶t̶a̶r̶t̶i̶n̶g̶S̶h̶a̶p̶e̶: "flat",
+      // e̶n̶d̶i̶n̶g̶S̶h̶a̶p̶e̶: "flat",
+      columnWidth: "20%",
     },
   },
   responsive: [
@@ -348,23 +392,23 @@ export let totalSales: any = {
   },
   xaxis: {
     categories: [
-      'Jan',
-      'Feb',
-      'Mar',
-      'Apr',
-      'May',
-      'Jun',
-      'Jul',
-      'Aug',
-      'Sep',
-      'Oct',
-      'Nov',
-      'Dec',
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
     ],
     offsetX: 0,
     offsetY: 0,
     axisBorder: {
-      low: 0,
+      // low: 0,
       offsetX: 0,
       show: false,
     },
@@ -374,9 +418,9 @@ export let totalSales: any = {
   },
   yaxis: {
     show: false,
-    dataLabels: {
-      enabled: true,
-    },
+    // dataLabels: {
+    //   enabled: true,
+    // },
   },
   fill: {
     opacity: 1,
@@ -387,74 +431,87 @@ export let totalSales: any = {
   },
 };
 
-export let learningSummary: any = {
+export interface LearningSummaryChart {
+  series: ApexAxisChartSeries;
+  chart: ApexChart;
+  grid: ApexGrid;
+  colors: string[];
+  stroke: ApexStroke;
+  markers: ApexMarkers;
+  tooltip: ApexTooltip;
+  xaxis: ApexXAxis;
+  fill: ApexFill;
+  yaxis: ApexYAxis;
+  legend: ApexLegend;
+}
+export let learningSummary: LearningSummaryChart = {
   series: [
     {
-      name: 'growth',
-      type: 'line',
+      name: "growth",
+      type: "line",
       data: [25, 30, 43, 25, 38, 25, 33, 25],
     },
     {
-      name: 'growth',
-      type: 'line',
+      name: "growth",
+      type: "line",
       data: [25, 30, 41, 25, 36, 25, 31, 25],
     },
     {
-      name: 'growth',
-      type: 'line',
+      name: "growth",
+      type: "line",
       data: [25, 29, 37, 25, 34, 25, 29, 25],
     },
     {
-      name: 'growth',
-      type: 'line',
+      name: "growth",
+      type: "line",
       data: [25, 28, 34, 25, 32, 25, 28, 25],
     },
     {
-      name: 'growth',
-      type: 'line',
+      name: "growth",
+      type: "line",
       data: [25, 27, 30, 25, 28, 25, 27, 25],
     },
     {
-      name: 'growth',
-      type: 'line',
+      name: "growth",
+      type: "line",
       data: [25, 26, 24, 25, 24, 25, 24, 25],
     },
     {
-      name: 'growth',
-      type: 'line',
+      name: "growth",
+      type: "line",
       data: [25, 26, 20, 25, 21, 25, 23, 25],
     },
     {
-      name: 'growth',
-      type: 'line',
+      name: "growth",
+      type: "line",
       data: [25, 24, 16, 25, 18, 25, 22, 25],
     },
     {
-      name: 'growth',
-      type: 'line',
+      name: "growth",
+      type: "line",
       data: [25, 23, 12, 25, 15, 25, 21, 25],
     },
     {
-      name: 'growth',
-      type: 'line',
+      name: "growth",
+      type: "line",
       data: [25, 23, 10, 25, 13, 25, 19, 25],
     },
     {
-      name: 'growth',
-      type: 'area',
+      name: "growth",
+      type: "area",
       data: [25, 28, 37, 25, 33, 25, 27, 25],
     },
   ],
   chart: {
     height: 275,
-    type: 'line',
+    type: "line",
     toolbar: {
       show: false,
     },
   },
   grid: {
     show: true,
-    borderColor: 'var(--chart-border)',
+    borderColor: "var(--chart-border)",
     xaxis: {
       lines: {
         show: true,
@@ -476,7 +533,7 @@ export let learningSummary: any = {
   ],
   stroke: {
     width: 1.5,
-    curve: 'smooth',
+    curve: "smooth",
   },
   markers: {
     discrete: [
@@ -484,21 +541,21 @@ export let learningSummary: any = {
         seriesIndex: 0,
         dataPointIndex: 0,
         fillColor: primary_color,
-        strokeColor: '#fff',
+        strokeColor: "#fff",
         size: 6,
       },
       {
         seriesIndex: 1,
         dataPointIndex: 5,
         fillColor: primary_color,
-        strokeColor: '#fff',
+        strokeColor: "#fff",
         size: 6,
       },
       {
         seriesIndex: 2,
         dataPointIndex: 3,
         fillColor: primary_color,
-        strokeColor: '#fff',
+        strokeColor: "#fff",
         size: 6,
       },
     ],
@@ -508,14 +565,23 @@ export let learningSummary: any = {
     intersect: false,
   },
   xaxis: {
-    type: 'category',
-    categories: ['Sep 5', 'Sep 8', 'Sep 12', 'Sep 16', 'Sep 18', 'Sep 17', 'Sep 23', 'Sep 26'],
+    type: "category",
+    categories: [
+      "Sep 5",
+      "Sep 8",
+      "Sep 12",
+      "Sep 16",
+      "Sep 18",
+      "Sep 17",
+      "Sep 23",
+      "Sep 26",
+    ],
     tickAmount: 12,
     labels: {
       style: {
-        colors: 'var(--chart-text-color)',
-        fontSize: '12px',
-        fontFamily: 'Rubik, sans-serif',
+        colors: "var(--chart-text-color)",
+        fontSize: "12px",
+        fontFamily: "Rubik, sans-serif",
         fontWeight: 400,
       },
     },
@@ -531,21 +597,21 @@ export let learningSummary: any = {
   },
   fill: {
     type: [
-      'solid',
-      'solid',
-      'solid',
-      'solid',
-      'solid',
-      'solid',
-      'solid',
-      'solid',
-      'solid',
-      'solid',
-      'gradient',
+      "solid",
+      "solid",
+      "solid",
+      "solid",
+      "solid",
+      "solid",
+      "solid",
+      "solid",
+      "solid",
+      "solid",
+      "gradient",
     ],
     gradient: {
-      shade: 'light',
-      type: 'vertical',
+      shade: "light",
+      type: "vertical",
       shadeIntensity: 0.5,
       opacityFrom: 0.5,
       opacityTo: 0,
@@ -558,9 +624,9 @@ export let learningSummary: any = {
     tickAmount: 5,
     labels: {
       style: {
-        colors: 'var(--chart-text-color)',
-        fontSize: '12px',
-        fontFamily: 'Rubik, sans-serif',
+        colors: "var(--chart-text-color)",
+        fontSize: "12px",
+        fontFamily: "Rubik, sans-serif",
         fontWeight: 400,
       },
     },
@@ -570,16 +636,27 @@ export let learningSummary: any = {
   },
 };
 
-export let onlineSales: any = {
+export interface OnlineSalesChart {
+  series: ApexAxisChartSeries;
+  chart: ApexChart;
+  plotOptions: ApexPlotOptions;
+  dataLabels: ApexDataLabels;
+  grid: ApexGrid;
+  xaxis: ApexXAxis;
+  yaxis: ApexYAxis;
+  legend: ApexLegend;
+  colors: string[];
+}
+export let onlineSales: OnlineSalesChart = {
   series: [
     {
-      name: 'Activity',
+      name: "Activity",
       data: [42, 44, 55, 66, 55, 86, 52, 44, 44, 66, 55, 86, 52, 44, 44],
     },
   ],
   chart: {
     height: 100,
-    type: 'bar',
+    type: "bar",
     toolbar: {
       show: false,
     },
@@ -591,7 +668,7 @@ export let onlineSales: any = {
     bar: {
       distributed: true,
       borderRadius: 3,
-      columnWidth: '40%',
+      columnWidth: "40%",
     },
   },
   dataLabels: {
@@ -614,33 +691,48 @@ export let onlineSales: any = {
     },
   },
   colors: [
-    '#e9f2ff',
-    '#e9f2ff',
-    '#e9f2ff',
-    '#e9f2ff',
-    '#e9f2ff',
+    "#e9f2ff",
+    "#e9f2ff",
+    "#e9f2ff",
+    "#e9f2ff",
+    "#e9f2ff",
     primary_color,
-    '#e9f2ff',
-    '#e9f2ff',
-    '#e9f2ff',
-    '#e9f2ff',
-    '#e9f2ff',
-    '#e9f2ff',
-    '#e9f2ff',
-    '#e9f2ff',
-    '#e9f2ff',
+    "#e9f2ff",
+    "#e9f2ff",
+    "#e9f2ff",
+    "#e9f2ff",
+    "#e9f2ff",
+    "#e9f2ff",
+    "#e9f2ff",
+    "#e9f2ff",
+    "#e9f2ff",
   ],
 };
 
-export let offlineSales: any = {
+export interface OfflineSalesChart {
+  series: ApexAxisChartSeries;
+  chart: ApexChart;
+  colors: string[];
+  fill: ApexFill;
+  dataLabels: ApexDataLabels;
+  grid: ApexGrid;
+  xaxis: ApexXAxis;
+  yaxis: ApexYAxis;
+  stroke: ApexStroke;
+  markers: ApexMarkers;
+}
+export let offlineSales: OfflineSalesChart = {
   series: [
     {
-      name: 'Desktops',
-      data: [50, 50, 50, 25, 25, 25, 2, 2, 2, 25, 25, 25, 62, 62, 62, 35, 35, 35, 66, 66],
+      name: "Desktops",
+      data: [
+        50, 50, 50, 25, 25, 25, 2, 2, 2, 25, 25, 25, 62, 62, 62, 35, 35, 35, 66,
+        66,
+      ],
     },
   ],
   chart: {
-    type: 'area',
+    type: "area",
     offsetY: 30,
     height: 140,
     zoom: {
@@ -653,7 +745,7 @@ export let offlineSales: any = {
       enabled: true,
       top: 5,
       left: 0,
-      bottom: 3,
+      // bottom: 3,
       blur: 2,
       color: secondary_color,
       opacity: 0.2,
@@ -661,7 +753,7 @@ export let offlineSales: any = {
   },
   colors: [secondary_color],
   fill: {
-    type: 'gradient',
+    type: "gradient",
     gradient: {
       shadeIntensity: 1,
       opacityFrom: 0.5,
@@ -690,7 +782,7 @@ export let offlineSales: any = {
     show: false,
   },
   stroke: {
-    curve: 'straight',
+    curve: "straight",
     width: 2,
   },
   markers: {
@@ -699,23 +791,35 @@ export let offlineSales: any = {
         seriesIndex: 0,
         dataPointIndex: 12,
         fillColor: secondary_color,
-        strokeColor: '#fff',
+        strokeColor: "#fff",
         size: 5,
-        shape: 'circle',
+        shape: "circle",
       },
     ],
   },
 };
 
-export let totalProfit: any = {
+export interface TotalProfitChart {
+  series: ApexAxisChartSeries;
+  chart: ApexChart;
+  colors: string[];
+  fill: ApexFill;
+  dataLabels: ApexDataLabels;
+  grid: ApexGrid;
+  xaxis: ApexXAxis;
+  yaxis: ApexYAxis;
+  stroke: ApexStroke;
+  markers: ApexMarkers;
+}
+export let totalProfit: TotalProfitChart = {
   series: [
     {
-      name: 'Desktops',
+      name: "Desktops",
       data: [15, 14, 11, 20, 10, 15, 11],
     },
   ],
   chart: {
-    type: 'area',
+    type: "area",
     height: 123,
     offsetY: 10,
     zoom: {
@@ -728,15 +832,15 @@ export let totalProfit: any = {
       enabled: true,
       top: 5,
       left: 0,
-      bottom: 3,
+      // bottom: 3,
       blur: 2,
-      color: '#58b232',
+      color: "#58b232",
       opacity: 0.2,
     },
   },
-  colors: ['#58b232'],
+  colors: ["#58b232"],
   fill: {
-    type: 'gradient',
+    type: "gradient",
     gradient: {
       shadeIntensity: 1,
       opacityFrom: 0.6,
@@ -765,7 +869,7 @@ export let totalProfit: any = {
     show: false,
   },
   stroke: {
-    curve: 'smooth',
+    curve: "smooth",
     width: 2,
   },
   markers: {
@@ -773,31 +877,47 @@ export let totalProfit: any = {
       {
         seriesIndex: 0,
         dataPointIndex: 3,
-        fillColor: '#58b232',
-        strokeColor: '#fff',
+        fillColor: "#58b232",
+        strokeColor: "#fff",
         size: 6,
-        shape: 'circle',
+        shape: "circle",
       },
     ],
   },
 };
 
-export let saleStatistic: any = {
+export interface SaleStatisticChart {
+  series: ApexAxisChartSeries;
+  chart: ApexChart;
+  stroke: ApexStroke;
+  grid: ApexGrid;
+  plotOptions: ApexPlotOptions;
+  colors: string[];
+  fill: ApexFill;
+  labels: string[];
+  xaxis: ApexXAxis;
+  markers: ApexMarkers;
+  legend: ApexLegend;
+  yaxis: ApexYAxis;
+  tooltip: ApexTooltip;
+  responsive: ApexResponsive[];
+}
+export let saleStatistic: SaleStatisticChart = {
   series: [
     {
-      name: 'Earning',
-      type: 'line',
+      name: "Earning",
+      type: "line",
       data: [330, 60, 370, 240, 250, 70, 280, 60, 185, 60],
     },
     {
-      name: 'Order',
-      type: 'line',
+      name: "Order",
+      type: "line",
       data: [70, 330, 60, 200, 100, 250, 100, 350, 110, 300],
     },
   ],
   chart: {
     height: 304,
-    type: 'line',
+    type: "line",
     stacked: false,
     toolbar: {
       show: false,
@@ -807,13 +927,13 @@ export let saleStatistic: any = {
       top: 2,
       left: 0,
       blur: 4,
-      color: '#000',
+      color: "#000",
       opacity: 0.08,
     },
   },
   stroke: {
     width: [2, 2, 2],
-    curve: 'smooth',
+    curve: "smooth",
   },
   grid: {
     show: false,
@@ -826,24 +946,35 @@ export let saleStatistic: any = {
   },
   plotOptions: {
     bar: {
-      columnWidth: '20%',
+      columnWidth: "20%",
     },
   },
   colors: [primary_color, secondary_color],
   fill: {
     opacity: 1,
-    type: 'solid',
+    type: "solid",
   },
-  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+  labels: [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+  ],
   xaxis: {
-    type: 'category',
+    type: "category",
     tickAmount: 8,
-    tickPlacement: 'between',
+    tickPlacement: "between",
     tooltip: {
       enabled: false,
     },
     axisBorder: {
-      color: 'var(--chart-border)',
+      color: "var(--chart-border)",
     },
     axisTicks: {
       show: false,
@@ -855,9 +986,9 @@ export let saleStatistic: any = {
         seriesIndex: 0,
         dataPointIndex: 3,
         fillColor: primary_color,
-        strokeColor: 'var(--white)',
+        strokeColor: "var(--white)",
         size: 6,
-        sizeOffset: 2,
+        // sizeOffset: 2,
       },
     ],
     hover: {
@@ -871,10 +1002,10 @@ export let saleStatistic: any = {
   yaxis: {
     min: 0,
     tickAmount: 4,
-    tickPlacement: 'between',
+    // tickPlacement: "between",
     labels: {
-      formatter: function (val: any) {
-        return val + 'K';
+      formatter: function (val: number) {
+        return val + "K";
       },
       offsetX: -5,
     },
@@ -903,11 +1034,20 @@ export let saleStatistic: any = {
   ],
 };
 
-export let goal: any = {
+export interface GoalChart {
+  series: number[];
+  chart: ApexChart;
+  plotOptions: ApexPlotOptions;
+  responsive: ApexResponsive[];
+  colors: string[];
+  stroke: ApexStroke;
+  tooltip: ApexTooltip;
+}
+export let goal: GoalChart = {
   series: [80],
   chart: {
     height: 345,
-    type: 'radialBar',
+    type: "radialBar",
     toolbar: {
       show: false,
     },
@@ -917,7 +1057,7 @@ export let goal: any = {
       startAngle: -135,
       endAngle: 135,
       hollow: {
-        size: '78%',
+        size: "78%",
         dropShadow: {
           enabled: false,
         },
@@ -929,8 +1069,8 @@ export let goal: any = {
         },
         value: {
           color: primary_color,
-          fontSize: '36px',
-          fontWeight: '700',
+          fontSize: "36px",
+          fontWeight: "700",
           show: true,
         },
       },
@@ -948,7 +1088,7 @@ export let goal: any = {
   ],
   colors: [primary_color],
   stroke: {
-    lineCap: 'round',
+    lineCap: "round",
   },
   tooltip: {
     enabled: false,

@@ -3,7 +3,7 @@
 ==========================**/
 .nav-pills {
   .nav-link.active,
-  .show>.nav-link {
+  .show > .nav-link {
     background-color: var(--theme-default);
   }
 }
@@ -24,24 +24,11 @@
 .nav-right {
   justify-content: flex-end;
 }
-$nav-name: theme,
-  primary,
-  secondary,
-  success,
-  danger,
-  info,
-  light,
-  dark,
-  warning;
-$nav-color: var(--theme-default),
-  var(--theme-default),
-  $secondary-color,
-  $success-color,
-  $danger-color,
-  $info-color,
-  $light-color,
-  $dark-color,
-  $warning-color;
+$nav-name:
+  theme, primary, secondary, success, danger, info, light, dark, warning;
+$nav-color:
+  var(--theme-default), var(--theme-default), $secondary-color, $success-color,
+  $danger-color, $info-color, $light-color, $dark-color, $warning-color;
 @each $var in $nav-name {
   $i: index($label-name, $var);
   .nav-#{$var},
@@ -50,7 +37,7 @@ $nav-color: var(--theme-default),
       color: nth($nav-color, $i);
     }
     .nav-link.active,
-    .show>.nav-link {
+    .show > .nav-link {
       background-color: nth($nav-color, $i);
       color: $white;
     }
@@ -66,7 +53,7 @@ $nav-color: var(--theme-default),
   }
 }
 .tab-content {
-  ~.nav-tabs {
+  ~ .nav-tabs {
     &.border-tab {
       margin-bottom: 0;
       margin-top: 30px;
@@ -111,7 +98,7 @@ $nav-color: var(--theme-default),
     color: $dark-color;
   }
   .nav-link.active,
-  .show>.nav-link {
+  .show > .nav-link {
     background-color: transparent;
     border-left-color: var(--theme-default);
     color: var(--theme-default);
@@ -127,7 +114,7 @@ $nav-color: var(--theme-default),
     text-align: right;
   }
   .nav-link.active,
-  .show>.nav-link {
+  .show > .nav-link {
     background-color: transparent;
     border-right-color: var(--theme-default);
     color: var(--theme-default);
@@ -135,24 +122,11 @@ $nav-color: var(--theme-default),
     transition: all 0.3s ease;
   }
 }
-$m-nav-name: theme,
-  primary,
-  secondary,
-  success,
-  danger,
-  info,
-  light,
-  dark,
-  warning;
-$nav-color: var(--theme-default),
-  var(--theme-default),
-  $secondary-color,
-  $success-color,
-  $danger-color,
-  $info-color,
-  $light-color,
-  $dark-color,
-  $warning-color;
+$m-nav-name:
+  theme, primary, secondary, success, danger, info, light, dark, warning;
+$nav-color:
+  var(--theme-default), var(--theme-default), $secondary-color, $success-color,
+  $danger-color, $info-color, $light-color, $dark-color, $warning-color;
 @each $var in $m-nav-name {
   $i: index($label-name, $var);
   .border-tab.nav-#{$var} {
@@ -182,14 +156,14 @@ $nav-color: var(--theme-default),
   }
   .border-tab.nav-left.nav-#{$var} {
     .nav-link.active,
-    .show>.nav-link {
+    .show > .nav-link {
       border-left-color: nth($nav-color, $i);
       color: nth($nav-color, $i);
     }
   }
   .border-tab.nav-right.nav-#{$var} {
     .nav-link.active,
-    .show>.nav-link {
+    .show > .nav-link {
       border-right-color: nth($nav-color, $i);
       color: nth($nav-color, $i);
     }
@@ -198,7 +172,7 @@ $nav-color: var(--theme-default),
 .flex-space {
   display: flex;
   gap: 16px;
-  @media (max-width:576px) {
+  @media (max-width: 576px) {
     justify-content: center;
   }
 }
@@ -236,7 +210,7 @@ $nav-color: var(--theme-default),
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
-  @media (max-width:1400px) {
+  @media (max-width: 1400px) {
     gap: calc(14px + (35 - 14) * ((100vw - 320px) / (1400 - 320)));
   }
   .designer-profile {
@@ -304,7 +278,7 @@ $nav-color: var(--theme-default),
       padding-bottom: 6px;
       border-bottom: 1px solid var(--light-border);
       align-items: center;
-      @media (max-width:630px) {
+      @media (max-width: 630px) {
         align-items: unset;
       }
     }
@@ -313,22 +287,10 @@ $nav-color: var(--theme-default),
 .tab-space {
   font-size: 14px;
 }
-$tabs-name: primary,
-  secondary,
-  success,
-  danger,
-  warning,
-  info,
-  light,
-  dark;
-$tab-color : $primary-color,
-$secondary-color,
-$success-color,
-$danger-color,
-$warning-color,
-$info-color,
-$light-color,
-$dark-color;
+$tabs-name: primary, secondary, success, danger, warning, info, light, dark;
+$tab-color:
+  $primary-color, $secondary-color, $success-color, $danger-color,
+  $warning-color, $info-color, $light-color, $dark-color;
 @each $var in $tabs-name {
   $i: index($tabs-name, $var);
   #bottom-tab {
@@ -352,7 +314,7 @@ $dark-color;
     display: inline-block;
     position: relative;
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       display: inline-block;
@@ -361,8 +323,12 @@ $dark-color;
       border-bottom: 1px solid;
       margin-top: 10px;
       opacity: 0;
-      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-      transition: opacity 0.35s, transform 0.35s;
+      -webkit-transition:
+        opacity 0.35s,
+        -webkit-transform 0.35s;
+      transition:
+        opacity 0.35s,
+        transform 0.35s;
       transform: scale(0, 1);
     }
     &:hover {
@@ -402,7 +368,7 @@ $dark-color;
 .material-wrapper {
   display: flex;
   gap: 12px;
-  @media (max-width:576px) {
+  @media (max-width: 576px) {
     flex-direction: column;
     align-items: center;
   }
@@ -449,7 +415,7 @@ $dark-color;
       justify-content: flex-start;
       .nav-item {
         clip-path: polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%);
-        [dir = "rtl"] & {
+        [dir="rtl"] & {
           clip-path: polygon(15% 0%, 0% 50%, 15% 100%, 100% 100%, 100% 0%);
         }
         .nav-link {
@@ -489,7 +455,7 @@ $dark-color;
             margin-right: 8px;
             filter: grayscale(1);
             transition: all 0.3s ease;
-            [dir = "rtl"] & {
+            [dir="rtl"] & {
               margin-right: unset;
               margin-left: 8px;
             }
@@ -526,7 +492,11 @@ $dark-color;
 .horizontal-icons-tab {
   .nav-tabs {
     margin: 0;
-    background-image: linear-gradient(135deg, var(--light-bg) 0%, var(--light-bg) 100%);
+    background-image: linear-gradient(
+      135deg,
+      var(--light-bg) 0%,
+      var(--light-bg) 100%
+    );
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -553,7 +523,7 @@ $dark-color;
           color: var(--body-font-color);
           opacity: 0.8;
           z-index: 2;
-          [dir = "rtl"] & {
+          [dir="rtl"] & {
             margin-right: unset;
             margin-left: 10px;
           }
@@ -562,7 +532,11 @@ $dark-color;
           }
         }
         &::before {
-          background-image: linear-gradient(135deg, var(--theme-default) 0%, $info-color 100%);
+          background-image: linear-gradient(
+            135deg,
+            var(--theme-default) 0%,
+            $info-color 100%
+          );
           content: "";
           width: 100%;
           height: 0px;

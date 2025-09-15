@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-personal-details',
+  selector: "app-personal-details",
   imports: [],
-  templateUrl: './personal-details.html',
-  styleUrls: ['./personal-details.scss'],
+  templateUrl: "./personal-details.html",
+  styleUrls: ["./personal-details.scss"],
 })
 export class PersonalDetails {
   public date = new Array();

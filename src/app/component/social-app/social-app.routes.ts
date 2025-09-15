@@ -1,14 +1,14 @@
-import { Routes } from '@angular/router';
+import { Routes } from "@angular/router";
 
-import { SocialApp } from './social-app';
+import { SocialApp } from "./social-app";
 
 export default [
   {
-    path: '',
+    path: "",
     component: SocialApp,
     data: {
-      title: 'Social App',
-      breadcrumb: 'Social App',
+      title: "Social App",
+      breadcrumb: "Social App",
     },
   },
 ] as Routes;

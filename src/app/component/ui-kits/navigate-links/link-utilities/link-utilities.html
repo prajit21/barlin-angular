@@ -1,12 +1,20 @@
 <div class="card height-equal">
   <div class="card-header pb-0">
-    <h4>Link Utilities </h4>
-    <p class="f-m-light mt-1">Colored links can also be modified by our <code>link utilities</code>.</p>
+    <h4>Link Utilities</h4>
+    <p class="f-m-light mt-1">
+      Colored links can also be modified by our <code>link utilities</code>.
+    </p>
   </div>
   <div class="card-body">
     @for (item of data; track item) {
-    <p><a class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="javascript:void(0)"
-        [class]="item.class">{{item.title}}</a></p>
+    <p>
+      <a
+        class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+        href="javascript:void(0)"
+        [class]="item.class"
+        >{{item.title}}</a
+      >
+    </p>
     }
   </div>
 </div>

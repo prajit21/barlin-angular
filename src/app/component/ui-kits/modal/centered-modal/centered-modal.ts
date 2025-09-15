@@ -1,12 +1,12 @@
-import { Component, TemplateRef, inject } from '@angular/core';
+import { Component, TemplateRef, inject } from "@angular/core";
 
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
-  selector: 'app-centered-modal',
+  selector: "app-centered-modal",
   imports: [],
-  templateUrl: './centered-modal.html',
-  styleUrls: ['./centered-modal.scss'],
+  templateUrl: "./centered-modal.html",
+  styleUrls: ["./centered-modal.scss"],
 })
 export class CenteredModal {
   private modalService = inject(NgbModal);

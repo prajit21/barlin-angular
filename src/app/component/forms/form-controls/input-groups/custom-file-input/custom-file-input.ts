@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-custom-file-input',
+  selector: "app-custom-file-input",
   imports: [],
-  templateUrl: './custom-file-input.html',
-  styleUrls: ['./custom-file-input.scss'],
+  templateUrl: "./custom-file-input.html",
+  styleUrls: ["./custom-file-input.scss"],
 })
 export class CustomFileInput {}

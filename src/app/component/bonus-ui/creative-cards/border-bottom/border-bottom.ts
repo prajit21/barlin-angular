@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-border-bottom',
+  selector: "app-border-bottom",
   imports: [],
-  templateUrl: './border-bottom.html',
-  styleUrls: ['./border-bottom.scss'],
+  templateUrl: "./border-bottom.html",
+  styleUrls: ["./border-bottom.scss"],
 })
 export class BorderBottom {}

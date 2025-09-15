@@ -1,24 +1,32 @@
 <div class="card online-order">
-    <div class="card-header pb-0">
-        <div class="d-flex">
-            <div class="order bg-light-secondary">
-                <app-common-svg-icons [icon]="'delivery'" />
-            </div>
-            <div class="arrow-chart">
-                <app-common-svg-icons [icon]="'arrow-chart'" />
-                <span class="font-danger">-4.7%</span>
-            </div>
-        </div>
-        <div class="online"><span>Offline Sales</span>
-            <h4 class="num-counter">12,341</h4>
-        </div>
+  <div class="card-header pb-0">
+    <div class="d-flex">
+      <div class="order bg-light-secondary">
+        <app-common-svg-icons [icon]="'delivery'" />
+      </div>
+      <div class="arrow-chart">
+        <app-common-svg-icons [icon]="'arrow-chart'" />
+        <span class="font-danger">-4.7%</span>
+      </div>
     </div>
-    <div class="card-body pt-0 ps-2 pe-2">
-        <div class="offline-chart" id="offline-chart">
-            <apx-chart [series]="offlineData.series" [chart]="offlineData.chart"
-             [dataLabels]="offlineData.dataLabels" [fill]="offlineData.fill"
-            [grid]="offlineData.grid" [xaxis]="offlineData.xaxis" [stroke]="offlineData.stroke"
-            [yaxis]="offlineData.yaxis" [colors]="offlineData.colors" />
-        </div>
+    <div class="online">
+      <span>Offline Sales</span>
+      <h4 class="num-counter">12,341</h4>
     </div>
+  </div>
+  <div class="card-body pt-0 ps-2 pe-2">
+    <div class="offline-chart" id="offline-chart">
+      <apx-chart
+        [series]="offlineData.series"
+        [chart]="offlineData.chart"
+        [dataLabels]="offlineData.dataLabels"
+        [fill]="offlineData.fill"
+        [grid]="offlineData.grid"
+        [xaxis]="offlineData.xaxis"
+        [stroke]="offlineData.stroke"
+        [yaxis]="offlineData.yaxis"
+        [colors]="offlineData.colors"
+      />
+    </div>
+  </div>
 </div>

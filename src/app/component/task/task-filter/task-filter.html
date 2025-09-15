@@ -1,12 +1,25 @@
 <div class="md-sidebar" (clickOutside)="isOpen = false">
-  <a class="btn btn-primary md-sidebar-toggle" href="javascript:void(0)" (click)="isOpen =!isOpen">task filter</a>
-  <div class="md-sidebar-aside job-left-aside custom-scrollbar" [class.open]="isOpen">
+  <a
+    class="btn btn-primary md-sidebar-toggle"
+    href="javascript:void(0)"
+    (click)="isOpen =!isOpen"
+    >task filter</a
+  >
+  <div
+    class="md-sidebar-aside job-left-aside custom-scrollbar"
+    [class.open]="isOpen"
+  >
     <div class="email-left-aside">
       <div class="card">
         <div class="card-body">
           <div class="email-app-sidebar left-bookmark task-sidebar">
             <div class="d-flex">
-              <div class="media-size-email"><img class="me-3 rounded-circle" src="assets/images/user/user.png" alt="">
+              <div class="media-size-email">
+                <img
+                  class="me-3 rounded-circle"
+                  src="assets/images/user/user.png"
+                  alt=""
+                />
               </div>
               <div class="flex-grow-1">
                 <h4>MARK JENCO</h4>
@@ -14,23 +27,28 @@
               </div>
             </div>
             <ul class="nav main-menu custom-scrollbar" role="tablist">
-
-              @for (item of data(); track item;let ind = $index) {
-              @if (ind === 0) {
+              @for (item of data(); track item;let ind = $index) { @if (ind ===
+              0) {
               <li class="nav-item">
-                <button class="badge-light-primary btn-block btn-mail w-100" type="button" (click)="newTasks()">
+                <button
+                  class="badge-light-primary btn-block btn-mail w-100"
+                  type="button"
+                  (click)="newTasks()"
+                >
                   <app-feather-icon [icon]="'check-circle'" />
-                  New Task</button>
+                  New Task
+                </button>
               </li>
               <li class="nav-item"><span class="main-title"> Views</span></li>
-              }
-              @if (ind === 8) {
+              } @if (ind === 8) {
               <li>
-                <hr>
+                <hr />
               </li>
               <li>
-                <span class="main-title"> Tags
-                  <span class="pull-right"><a (click)="createTasks()">
+                <span class="main-title">
+                  Tags
+                  <span class="pull-right"
+                    ><a (click)="createTasks()">
                       <app-feather-icon [icon]="'plus-circle'" />
                     </a>
                   </span>
@@ -38,8 +56,12 @@
               </li>
               }
               <li>
-                <a [ngClass]="{'active':item.status}" (click)="changeData(item)">
-                  <span class="title"> {{item.title}}</span></a>
+                <a
+                  [ngClass]="{'active':item.status}"
+                  (click)="changeData(item)"
+                >
+                  <span class="title"> {{item.title}}</span></a
+                >
               </li>
               }
             </ul>

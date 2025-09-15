@@ -1,16 +1,16 @@
-import { Component, SimpleChanges, input, inject } from '@angular/core';
+import { Component, SimpleChanges, input, inject } from "@angular/core";
 
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 
-import { FeatherIcon } from '../../../shared/component/feather-icon/feather-icon';
-import * as data from '../../../shared/data/data/bookmark';
-import { EditBookmark } from '../widgets/edit-bookmark/edit-bookmark';
+import { FeatherIcon } from "../../../shared/component/feather-icon/feather-icon";
+import * as data from "../../../shared/data/data/bookmark";
+import { EditBookmark } from "../widgets/edit-bookmark/edit-bookmark";
 
 @Component({
-  selector: 'app-bookmark-data',
+  selector: "app-bookmark-data",
   imports: [FeatherIcon],
-  templateUrl: './bookmark-data.html',
-  styleUrl: './bookmark-data.scss',
+  templateUrl: "./bookmark-data.html",
+  styleUrl: "./bookmark-data.scss",
 })
 export class BookmarkData {
   readonly selectedId = input<number>();
@@ -21,7 +21,7 @@ export class BookmarkData {
   private modal = inject(NgbModal);
 
   ngOnInit() {
-    this.data()?.map(data => {
+    this.data()?.map((data) => {
       if (data.active) {
         this.getBookmarkData = data;
       }
@@ -29,8 +29,8 @@ export class BookmarkData {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    let getId = changes['selectedId']?.currentValue;
-    this.data()?.map(data => {
+    let getId = changes["selectedId"]?.currentValue;
+    this.data()?.map((data) => {
       if (data.title_id == getId) {
         this.getBookmarkData = data;
       }
@@ -42,7 +42,10 @@ export class BookmarkData {
   }
 
   editBookmarkModel(details: data.bookmarkModel) {
-    let editBookmark = this.modal.open(EditBookmark, { size: 'lg', windowClass: 'modal-bookmark' });
+    let editBookmark = this.modal.open(EditBookmark, {
+      size: "lg",
+      windowClass: "modal-bookmark",
+    });
     editBookmark.componentInstance.bookmarkDetails = details;
   }
 }

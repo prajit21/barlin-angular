@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-custom-animation-placeholder',
+  selector: "app-custom-animation-placeholder",
   imports: [],
-  templateUrl: './custom-animation-placeholder.html',
-  styleUrl: './custom-animation-placeholder.scss',
+  templateUrl: "./custom-animation-placeholder.html",
+  styleUrl: "./custom-animation-placeholder.scss",
 })
 export class CustomAnimationPlaceholder {}

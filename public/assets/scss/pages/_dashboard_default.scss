@@ -33,7 +33,7 @@
         left: 53px;
         right: unset;
       }
-      input[type=search] {
+      input[type="search"] {
         width: 150px !important;
         height: 34px;
         border-radius: 6px;
@@ -51,15 +51,15 @@
           tr.odd,
           tr.even {
             background-color: transparent !important;
-            >.sorting_1 {
+            > .sorting_1 {
               background-color: transparent !important;
             }
           }
         }
       }
       thead {
-        >tr {
-          >th {
+        > tr {
+          > th {
             text-transform: capitalize;
             font-family: $font-poppins, $font-serif;
             font-weight: 500;
@@ -91,8 +91,8 @@
         }
       }
       tbody {
-        >tr {
-          >td {
+        > tr {
+          > td {
             font-family: $font-poppins, $font-serif;
             &:first-child {
               padding-left: 24px;
@@ -462,7 +462,7 @@
       @media (max-width: 767px) and (min-width: 576px) {
         display: none;
       }
-      >span {
+      > span {
         color: $theme-body-sub-title-color;
         margin-bottom: 2px;
         @media (max-width: 1570px) and (min-width: 768px) {
@@ -491,7 +491,7 @@
         position: relative;
         justify-content: center;
         width: 100%;
-        +li {
+        + li {
           &::before {
             position: absolute;
             content: "";
@@ -537,7 +537,7 @@
           padding-bottom: 0 !important;
         }
         &.d-flex {
-          >span {
+          > span {
             height: 48px;
             width: 3px;
             border-radius: 4px;
@@ -587,7 +587,7 @@
     .d-flex {
       align-items: center;
       padding: 14px 16px;
-      +.d-flex {
+      + .d-flex {
         border-top: 1px solid $light-gray;
       }
       @media (max-width: 1399px) and (min-width: 1200px) {
@@ -676,7 +676,7 @@
         @media (max-width: 991px) {
           min-width: 220px;
         }
-        .progress-stacked{
+        .progress-stacked {
           background-color: transparent;
         }
         .progress {
@@ -717,7 +717,7 @@
               margin-right: 4px;
               [dir="rtl"] & {
                 margin-left: 4px;
-                margin-right: unset
+                margin-right: unset;
               }
             }
             p {
@@ -725,7 +725,7 @@
               color: $theme-body-sub-title-color;
               [dir="rtl"] & {
                 padding-left: unset;
-                padding-right: 16px
+                padding-right: 16px;
               }
             }
           }

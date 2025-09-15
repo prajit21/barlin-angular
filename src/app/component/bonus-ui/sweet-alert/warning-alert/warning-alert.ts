@@ -1,36 +1,36 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 @Component({
-  selector: 'app-warning-alert',
+  selector: "app-warning-alert",
   imports: [],
-  templateUrl: './warning-alert.html',
-  styleUrls: ['./warning-alert.scss'],
+  templateUrl: "./warning-alert.html",
+  styleUrls: ["./warning-alert.scss"],
 })
 export class WarningAlert {
   warningAlert() {
     Swal.fire({
-      icon: 'warning',
-      title: 'Are you sure?',
-      text: 'Once deleted, you will not be able to recover this imaginary file!',
+      icon: "warning",
+      title: "Are you sure?",
+      text: "Once deleted, you will not be able to recover this imaginary file!",
       showCancelButton: true,
-      confirmButtonColor: 'var(--theme-default)',
+      confirmButtonColor: "var(--theme-default)",
       customClass: {
-        cancelButton: 'order-1',
-        confirmButton: 'order-2',
+        cancelButton: "order-1",
+        confirmButton: "order-2",
       },
-    }).then(result => {
+    }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire({
-          text: 'Poof! Your imaginary file has been deleted!',
-          icon: 'success',
-          confirmButtonColor: 'var(--theme-default)',
+          text: "Poof! Your imaginary file has been deleted!",
+          icon: "success",
+          confirmButtonColor: "var(--theme-default)",
         });
       } else {
         Swal.fire({
-          text: 'Your imaginary file is safe!',
-          confirmButtonColor: 'var(--theme-default)',
+          text: "Your imaginary file is safe!",
+          confirmButtonColor: "var(--theme-default)",
         });
       }
     });

@@ -12,7 +12,11 @@
             <div class="col-xxl-4 col-md-6">
               <div class="prooduct-details-box">
                 <div class="d-flex">
-                  <img class="align-self-center img-fluid img-60" [src]="items.image" alt="#">
+                  <img
+                    class="align-self-center img-fluid img-60"
+                    [src]="items.image"
+                    alt="#"
+                  />
                   <div class="flex-grow-1 ms-3">
                     <div class="product-name">
                       <h6><a href="javascript:void(0)">{{items.title}}</a></h6>
@@ -21,14 +25,22 @@
                       <bar-rating [(rate)]="items.rating" [max]="5" />
                     </div>
                     <div class="price d-flex p-0 border-0">
-                      <div class="text-muted me-2">Price</div>: {{items.price}}$
+                      <div class="text-muted me-2">Price</div>
+                      : {{items.price}}$
                     </div>
                     <div class="avaiabilty">
                       <div class="text-success">{{items.stoke}}</div>
                     </div>
-                    <a class="btn btn-{{items.color}} btn-xs" href="javascript:void(0)">{{items.status}}</a>
-                    <app-feather-icon [class]="'close'" [icon]="'x'"
-                      (click)="cancelOrder(index,items.id)" />
+                    <a
+                      class="btn btn-{{items.color}} btn-xs"
+                      href="javascript:void(0)"
+                      >{{items.status}}</a
+                    >
+                    <app-feather-icon
+                      [class]="'close'"
+                      [icon]="'x'"
+                      (click)="cancelOrder(index,items.id)"
+                    />
                   </div>
                 </div>
               </div>
@@ -47,10 +59,19 @@
         <div class="card-body">
           <div class="order-history table-responsive custom-scrollbar">
             <div class="mb-3 row">
-              <label for="table-complete-search" class="col-xs-3 col-sm-auto col-form-label">Search</label>
+              <label
+                for="table-complete-search"
+                class="col-xs-3 col-sm-auto col-form-label"
+                >Search</label
+              >
               <div class="col-xs-3 col-sm-auto">
-                <input id="table-complete-search" type="text" class="form-control" name="searchTerm"
-                  [(ngModel)]="orderHistoryService.searchTerm">
+                <input
+                  id="table-complete-search"
+                  type="text"
+                  class="form-control"
+                  name="searchTerm"
+                  [(ngModel)]="orderHistoryService.searchTerm"
+                />
               </div>
               @if (orderHistoryService.loading$ | async) {
               <span class="col col-form-label">Loading...</span>
@@ -59,13 +80,39 @@
             <table class="table table-bordernone display" id="basic-1">
               <thead>
                 <tr>
-                  <th scope="col" sortableOrder="productimg" (sort)="onSort($event)">Prdouct</th>
-                  <th scope="col" sortableOrder="product" (sort)="onSort($event)">Prdouct name</th>
-                  <th scope="col" sortableOrder="size" (sort)="onSort($event)">Size</th>
-                  <th scope="col" sortableOrder="color" (sort)="onSort($event)">Color</th>
-                  <th scope="col" sortableOrder="articleNumber" (sort)="onSort($event)">Article number</th>
-                  <th scope="col" sortableOrder="units" (sort)="onSort($event)">Units</th>
-                  <th scope="col" sortableOrder="price" (sort)="onSort($event)">Price</th>
+                  <th
+                    scope="col"
+                    sortableOrder="productimg"
+                    (sort)="onSort($event)"
+                  >
+                    Prdouct
+                  </th>
+                  <th
+                    scope="col"
+                    sortableOrder="product"
+                    (sort)="onSort($event)"
+                  >
+                    Prdouct name
+                  </th>
+                  <th scope="col" sortableOrder="size" (sort)="onSort($event)">
+                    Size
+                  </th>
+                  <th scope="col" sortableOrder="color" (sort)="onSort($event)">
+                    Color
+                  </th>
+                  <th
+                    scope="col"
+                    sortableOrder="articleNumber"
+                    (sort)="onSort($event)"
+                  >
+                    Article number
+                  </th>
+                  <th scope="col" sortableOrder="units" (sort)="onSort($event)">
+                    Units
+                  </th>
+                  <th scope="col" sortableOrder="price" (sort)="onSort($event)">
+                    Price
+                  </th>
                   <th scope="col"><i class="fa fa-angle-down"></i></th>
                 </tr>
               </thead>
@@ -73,11 +120,19 @@
                 @for (item of orderHistoryData$ | async; track item) {
                 <tr>
                   <td class="text-center">
-                    <img class="img-fluid img-30" [src]="item.productimg" alt="#">
+                    <img
+                      class="img-fluid img-30"
+                      [src]="item.productimg"
+                      alt="#"
+                    />
                   </td>
                   <td>
-                    <div class="product-name"><a href="javascript:void(0)">{{item.product}}</a>
-                      <div class="order-process"><span class="order-{{item.class}}"></span>{{item.status}}</div>
+                    <div class="product-name">
+                      <a href="javascript:void(0)">{{item.product}}</a>
+                      <div class="order-process">
+                        <span class="order-{{item.class}}"></span
+                        >{{item.status}}
+                      </div>
                     </div>
                   </td>
                   <td>{{item.size}}</td>
@@ -89,8 +144,7 @@
                     <app-feather-icon [icon]="'more-vertical'" />
                   </td>
                 </tr>
-                }
-                @if (orderList.length === 0) {
+                } @if (orderList.length === 0) {
                 <tr class="odd">
                   <td class="dataTables_empty">No matching records found</td>
                 </tr>
@@ -98,15 +152,22 @@
               </tbody>
             </table>
             <div class="d-flex justify-content-between p-2">
-              <select class="form-select" style="width: auto" name="pageSize"
-                [(ngModel)]="orderHistoryService.pageSize">
+              <select
+                class="form-select"
+                style="width: auto"
+                name="pageSize"
+                [(ngModel)]="orderHistoryService.pageSize"
+              >
                 <option [ngValue]="10">10 items per page</option>
                 <option [ngValue]="25">25 items per page</option>
                 <option [ngValue]="50">50 items per page</option>
                 <option [ngValue]="100">100 items per page</option>
               </select>
-              <ngb-pagination [collectionSize]="(total$ | async)!" [(page)]="orderHistoryService.page"
-                [pageSize]="orderHistoryService.pageSize" />
+              <ngb-pagination
+                [collectionSize]="(total$ | async)!"
+                [(page)]="orderHistoryService.page"
+                [pageSize]="orderHistoryService.pageSize"
+              />
             </div>
           </div>
         </div>

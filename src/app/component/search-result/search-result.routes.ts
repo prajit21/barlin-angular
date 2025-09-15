@@ -1,14 +1,14 @@
-import { Routes } from '@angular/router';
+import { Routes } from "@angular/router";
 
-import { SearchResult } from './search-result';
+import { SearchResult } from "./search-result";
 
 export default [
   {
-    path: '',
+    path: "",
     component: SearchResult,
     data: {
-      title: 'Search Website',
-      breadcrumb: 'Search Website',
+      title: "Search Website",
+      breadcrumb: "Search Website",
     },
   },
 ] as Routes;

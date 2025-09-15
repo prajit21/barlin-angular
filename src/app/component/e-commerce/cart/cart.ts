@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component } from "@angular/core";
+import { RouterModule } from "@angular/router";
 
-import { FeatherIcon } from '../../../shared/component/feather-icon/feather-icon';
-import * as data from '../../../shared/data/data/ecommerce/ecommerce';
+import { FeatherIcon } from "../../../shared/component/feather-icon/feather-icon";
+import * as data from "../../../shared/data/data/ecommerce/ecommerce";
 
 @Component({
-  selector: 'app-cart',
+  selector: "app-cart",
   imports: [RouterModule, FeatherIcon],
-  templateUrl: './cart.html',
-  styleUrls: ['./cart.scss'],
+  templateUrl: "./cart.html",
+  styleUrls: ["./cart.scss"],
 })
 export class Cart {
   public cartItem = data.cartItem;

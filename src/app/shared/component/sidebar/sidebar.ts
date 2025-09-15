@@ -1,20 +1,27 @@
-import { CommonModule } from '@angular/common';
-import { Component, HostListener, inject } from '@angular/core';
-import { NavigationEnd, Router, RouterModule } from '@angular/router';
+import { CommonModule } from "@angular/common";
+import { Component, HostListener, inject } from "@angular/core";
+import { NavigationEnd, Router, RouterModule } from "@angular/router";
 
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule } from "@ngx-translate/core";
 
-import { LayoutService } from '../../service/layout.service';
-import { Menu, NavigationService } from '../../service/navigation.service';
-import { CommonSvgIcons } from '../common-svg-icons/common-svg-icons';
-import { FeatherIcon } from '../feather-icon/feather-icon';
-import { SvgIcon } from '../svg-icon/svg-icon';
+import { LayoutService } from "../../service/layout.service";
+import { Menu, NavigationService } from "../../service/navigation.service";
+import { CommonSvgIcons } from "../common-svg-icons/common-svg-icons";
+import { FeatherIcon } from "../feather-icon/feather-icon";
+import { SvgIcon } from "../svg-icon/svg-icon";
 
 @Component({
-  selector: 'app-sidebar',
-  imports: [CommonModule, SvgIcon, RouterModule, FeatherIcon, CommonSvgIcons, TranslateModule],
-  templateUrl: './sidebar.html',
-  styleUrl: './sidebar.scss',
+  selector: "app-sidebar",
+  imports: [
+    CommonModule,
+    SvgIcon,
+    RouterModule,
+    FeatherIcon,
+    CommonSvgIcons,
+    TranslateModule,
+  ],
+  templateUrl: "./sidebar.html",
+  styleUrl: "./sidebar.scss",
 })
 export class Sidebar {
   public navigationService = inject(NavigationService);
@@ -29,15 +36,15 @@ export class Sidebar {
   public margin: number = 0;
   public width: number = window.innerWidth;
 
-  @HostListener('window:resize', ['$event'])
+  @HostListener("window:resize", ["$event"])
   onResize(event: { target: { innerWidth: number } }) {
     this.width = event.target.innerWidth - 500;
   }
 
   constructor() {
-    this.navigationService.items.subscribe(menuItems => {
+    this.navigationService.items.subscribe((menuItems) => {
       this.menuItemsList = menuItems;
-      this.router.events.subscribe(event => {
+      this.router.events.subscribe((event) => {
         if (event instanceof NavigationEnd) {
           this.menuItemsList.filter((items: Menu) => {
             if (items.path === event.url) {
@@ -68,7 +75,7 @@ export class Sidebar {
   }
 
   setNavActive(item: Menu) {
-    this.menuItemsList.filter(menuItem => {
+    this.menuItemsList.filter((menuItem) => {
       if (menuItem !== item) {
         menuItem.active = false;
       }
@@ -76,7 +83,7 @@ export class Sidebar {
         menuItem.active = true;
       }
       if (menuItem.children) {
-        menuItem.children.filter(submenuItems => {
+        menuItem.children.filter((submenuItems) => {
           if (submenuItems.children && submenuItems.children.includes(item)) {
             menuItem.active = true;
             submenuItems.active = true;
@@ -127,7 +134,8 @@ export class Sidebar {
   }
 
   toggleMenu() {
-    this.navigationService.collapseSidebar = !this.navigationService.collapseSidebar;
+    this.navigationService.collapseSidebar =
+      !this.navigationService.collapseSidebar;
   }
 
   scrollToLeft() {

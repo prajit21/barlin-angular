@@ -5,7 +5,11 @@
         @for (img of photosData; track img) {
         <figure class="col-xl-3 col-sm-6">
           <a href="javascript:void(0)" itemprop="contentUrl">
-            <img [src]="img.srcUrl" itemprop="thumbnail" alt="Image description">
+            <img
+              [src]="img.srcUrl"
+              itemprop="thumbnail"
+              alt="Image description"
+            />
             <div class="caption">
               <h4>{{img.name}}</h4>
               <p>{{img.text}}</p>

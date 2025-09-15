@@ -1,14 +1,14 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject } from "@angular/core";
 
-import { ToastrService } from 'ngx-toastr';
+import { ToastrService } from "ngx-toastr";
 
-import { allIcon } from '../../../shared/data/data/icons/font-awasome';
+import { allIcon } from "../../../shared/data/data/icons/font-awasome";
 
 @Component({
-  selector: 'app-ico-icon',
+  selector: "app-ico-icon",
   imports: [],
-  templateUrl: './ico-icon.html',
-  styleUrls: ['./ico-icon.scss'],
+  templateUrl: "./ico-icon.html",
+  styleUrls: ["./ico-icon.scss"],
 })
 export class IcoIcon {
   public icoIcons = allIcon.ico;
@@ -25,21 +25,25 @@ export class IcoIcon {
   }
 
   copyText(val: string) {
-    let selBox = document.createElement('textarea');
-    selBox.style.position = 'fixed';
-    selBox.style.left = '0';
-    selBox.style.top = '0';
-    selBox.style.opacity = '0';
+    let selBox = document.createElement("textarea");
+    selBox.style.position = "fixed";
+    selBox.style.left = "0";
+    selBox.style.top = "0";
+    selBox.style.opacity = "0";
     selBox.value = '<i class="icofont icofont-' + val + '"></i>';
     document.body.appendChild(selBox);
     selBox.focus();
     selBox.select();
-    document.execCommand('copy');
+    document.execCommand("copy");
     document.body.removeChild(selBox);
-    this.toastrService.show('<p class="mb-0 mt-1">Code Copied to clipboard</p>', '', {
-      closeButton: true,
-      enableHtml: true,
-      positionClass: 'toast-bottom-right',
-    });
+    this.toastrService.show(
+      '<p class="mb-0 mt-1">Code Copied to clipboard</p>',
+      "",
+      {
+        closeButton: true,
+        enableHtml: true,
+        positionClass: "toast-bottom-right",
+      },
+    );
   }
 }

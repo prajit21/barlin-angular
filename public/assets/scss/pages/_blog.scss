@@ -20,7 +20,7 @@
         display: inline-block;
         font-size: 12px;
         color: $theme-body-sub-title-color;
-        +li {
+        + li {
           padding-left: 20px;
           line-height: 1;
           padding-right: 0;
@@ -207,7 +207,7 @@
 }
 .comment-box {
   padding-top: 50px;
-  >ul {
+  > ul {
     background-color: $body-color;
     padding: 15px !important;
   }
@@ -281,9 +281,9 @@
     padding: 15px;
     p {
       margin-top: 4px;
-      color: $theme-body-sub-title-color;    
+      color: $theme-body-sub-title-color;
     }
-    .post-social{
+    .post-social {
       ul {
         gap: 10px;
         flex-wrap: wrap;
@@ -326,7 +326,7 @@
         color: $theme-body-sub-title-color;
       }
       i {
-        color: $theme-body-sub-title-color;;
+        color: $theme-body-sub-title-color;
       }
       h5 {
         margin-top: 14px;
@@ -375,7 +375,7 @@
   }
   .blog-detail {
     p {
-      color: $theme-body-sub-title-color;;
+      color: $theme-body-sub-title-color;
     }
     .card-body {
       position: relative;
@@ -402,7 +402,7 @@
         gap: 12px;
         li {
           i {
-            color: $theme-body-sub-title-color;;
+            color: $theme-body-sub-title-color;
           }
         }
       }
@@ -422,22 +422,22 @@
       margin-top: -5px;
     }
   }
-  .blog-comment  {
-    .comment-section { 
-      .d-flex{
+  .blog-comment {
+    .comment-section {
+      .d-flex {
         display: flex;
       }
       p {
-        color: $theme-body-sub-title-color;;
+        color: $theme-body-sub-title-color;
       }
-      .replay{
+      .replay {
         padding-left: 50px;
         @media (max-width: 480px) {
           padding-left: 22px;
         }
       }
-      li {        
-        &+li{
+      li {
+        & + li {
           padding-top: 20px;
           margin-top: 20px;
           border-top: 1px solid $light-gray;
@@ -456,7 +456,7 @@
           font-size: 13px;
           font-weight: 500;
           text-transform: capitalize;
-          color: $theme-body-sub-title-color;;
+          color: $theme-body-sub-title-color;
           margin-bottom: 10px;
           display: block;
         }
@@ -472,15 +472,15 @@
   p {
     color: $theme-body-sub-title-color;
   }
-  ul.tags{
-    li{
+  ul.tags {
+    li {
       display: inline-block;
       padding: 4px 8px;
       border-radius: 5px;
       margin-right: 5px;
       margin-bottom: 10px;
       border: 1px solid var(--theme-default);
-      a{
+      a {
         color: var(--theme-default);
       }
     }
@@ -502,7 +502,7 @@
           width: 70px;
           border-radius: 50%;
         }
-        .flex-grow-1{
+        .flex-grow-1 {
           h6 {
             margin-bottom: 4px;
           }

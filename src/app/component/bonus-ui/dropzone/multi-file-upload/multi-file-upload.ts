@@ -1,17 +1,17 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { DropzoneConfigInterface, DropzoneModule } from 'ngx-dropzone-wrapper';
+import { DropzoneConfigInterface, DropzoneModule } from "ngx-dropzone-wrapper";
 
 @Component({
-  selector: 'app-multi-file-upload',
+  selector: "app-multi-file-upload",
   imports: [DropzoneModule],
-  templateUrl: './multi-file-upload.html',
-  styleUrls: ['./multi-file-upload.scss'],
+  templateUrl: "./multi-file-upload.html",
+  styleUrls: ["./multi-file-upload.scss"],
 })
 export class MultiFileUpload {
   public imageConfig: DropzoneConfigInterface = {
     clickable: true,
-    url: 'https://httpbin.org/post',
+    url: "https://httpbin.org/post",
     uploadMultiple: true,
     addRemoveLinks: true,
   };

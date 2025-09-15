@@ -1,8 +1,13 @@
 <div class="card">
   <div class="card-header">
     <h5 class="mb-0">
-      <button class="btn btn-link" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed">Latest
-        Photos</button>
+      <button
+        class="btn btn-link"
+        (click)="collapse.toggle()"
+        [attr.aria-expanded]="!isCollapsed"
+      >
+        Latest Photos
+      </button>
     </h5>
   </div>
   <div class="collapse" #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
@@ -10,7 +15,9 @@
       <ul class="text-center">
         @for (item of latestPhotos; track item) {
         <li>
-          <div class="latest-post"><img class="img-fluid" alt="" [src]="item.image"></div>
+          <div class="latest-post">
+            <img class="img-fluid" alt="" [src]="item.image" />
+          </div>
         </li>
         }
       </ul>

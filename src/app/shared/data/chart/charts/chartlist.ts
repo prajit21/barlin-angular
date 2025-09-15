@@ -1,10 +1,14 @@
-import * as Chartist from 'chartist';
-import { BarChartConfiguration, LineChartConfiguration, PieChartConfiguration } from 'ng-chartist';
+import * as Chartist from "chartist";
+import {
+  BarChartConfiguration,
+  LineChartConfiguration,
+  PieChartConfiguration,
+} from "ng-chartist";
 
 export const chart1: LineChartConfiguration = {
-  type: 'Line',
+  type: "Line",
   data: {
-    labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+    labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
     series: [
       [12, 9, 7, 8, 5, 4, 6, 2, 3, 3, 4, 6],
       [4, 5, 3, 7, 3, 5, 5, 3, 4, 4, 5, 5],
@@ -23,9 +27,9 @@ export const chart1: LineChartConfiguration = {
 
 // Chart 2 SVG Path animation
 export const chart2: LineChartConfiguration = {
-  type: 'Line',
+  type: "Line",
   data: {
-    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+    labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
     series: [
       [1, 5, 2, 5, 4, 3],
       [2, 3, 4, 8, 1, 2],
@@ -43,7 +47,7 @@ export const chart2: LineChartConfiguration = {
 
 // Chart 3 Animating a Donut with Svg.animate
 export const chart3: PieChartConfiguration = {
-  type: 'Pie',
+  type: "Pie",
   data: {
     series: [10, 20, 50, 20, 5, 50, 15],
     labels: [1, 2, 3, 4, 5, 6, 7],
@@ -57,7 +61,7 @@ export const chart3: PieChartConfiguration = {
 
 // Chart 4 Bi-polar Line chart with area only
 export const chart4: LineChartConfiguration = {
-  type: 'Line',
+  type: "Line",
   data: {
     labels: [1, 2, 3, 4, 5, 6, 7, 8],
     series: [
@@ -84,7 +88,7 @@ export const chart4: LineChartConfiguration = {
 
 // Chart 5 Line chart with area
 export const chart5: LineChartConfiguration = {
-  type: 'Line',
+  type: "Line",
   data: {
     labels: [1, 2, 3, 4, 5, 6, 7, 8],
     series: [[5, 9, 7, 8, 5, 3, 5, 4]],
@@ -98,9 +102,9 @@ export const chart5: LineChartConfiguration = {
 
 // Chart 6 Bi-polar bar chart
 export const chart6: BarChartConfiguration = {
-  type: 'Bar',
+  type: "Bar",
   data: {
-    labels: ['W1', 'W2', 'W3', 'W4', 'W5', 'W6', 'W7', 'W8', 'W9', 'W10'],
+    labels: ["W1", "W2", "W3", "W4", "W5", "W6", "W7", "W8", "W9", "W10"],
     series: [[1, 2, 4, 8, 6, -2, -1, -4, -6, -2]],
   },
   options: {
@@ -117,9 +121,23 @@ export const chart6: BarChartConfiguration = {
 
 // Chart 7 Stacked bar chart
 export const chart7: BarChartConfiguration = {
-  type: 'Bar',
+  type: "Bar",
   data: {
-    labels: ['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8', 'Q9', 'Q10', 'Q11', 'Q13', 'Q14'],
+    labels: [
+      "Q1",
+      "Q2",
+      "Q3",
+      "Q4",
+      "Q5",
+      "Q6",
+      "Q7",
+      "Q8",
+      "Q9",
+      "Q10",
+      "Q11",
+      "Q13",
+      "Q14",
+    ],
     series: [
       [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300],
       [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300],
@@ -130,7 +148,7 @@ export const chart7: BarChartConfiguration = {
     stackBars: true,
     axisY: {
       labelInterpolationFnc: function (value: number) {
-        return value / 1000 + 'k';
+        return value / 1000 + "k";
       },
     },
     height: 400,
@@ -139,9 +157,17 @@ export const chart7: BarChartConfiguration = {
 
 // Chart 8 Horizontal bar chart
 export const chart8: BarChartConfiguration = {
-  type: 'Bar',
+  type: "Bar",
   data: {
-    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+    labels: [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday",
+    ],
     series: [
       [5, 4, 3, 7, 5, 10, 3],
       [3, 2, 9, 5, 4, 6, 4],
@@ -160,17 +186,17 @@ export const chart8: BarChartConfiguration = {
 
 // Chart 9 Extreme responsive configuration
 export const chart9: BarChartConfiguration = {
-  type: 'Bar',
+  type: "Bar",
   data: {
     labels: [
-      '2010-11',
-      '2011-12',
-      '2012-13',
-      '2013-13',
-      '2014-15',
-      '2015-16',
-      '2016-17',
-      '2017-18',
+      "2010-11",
+      "2011-12",
+      "2012-13",
+      "2013-13",
+      "2014-15",
+      "2015-16",
+      "2016-17",
+      "2017-18",
     ],
     series: [
       [0.9, 0.4, 1.5, 4.9, 3, 3.8, 3.8, 1.9],
@@ -190,17 +216,17 @@ export const chart9: BarChartConfiguration = {
   },
   responsiveOptions: [
     [
-      'screen and (min-width: 641px) and (max-width: 1024px) and (max-width: 768px)',
+      "screen and (min-width: 641px) and (max-width: 1024px) and (max-width: 768px)",
       {
         axisX: {
           labelInterpolationFnc: function (value: number) {
-            return 'Week ' + value;
+            return "Week " + value;
           },
         },
       },
     ],
     [
-      'screen and (max-width: 640px)',
+      "screen and (max-width: 640px)",
       {
         axisX: {
           labelInterpolationFnc: function (value: string) {
@@ -210,7 +236,7 @@ export const chart9: BarChartConfiguration = {
       },
     ],
     [
-      'screen and (max-width: 340px)',
+      "screen and (max-width: 340px)",
       {
         // Default mobile configuration
         stackBars: true,
@@ -221,7 +247,7 @@ export const chart9: BarChartConfiguration = {
               .map(function (word) {
                 return word[0];
               })
-              .join('');
+              .join("");
           },
         },
         axisY: {
@@ -234,9 +260,9 @@ export const chart9: BarChartConfiguration = {
 
 // Chart 10 Simple line chart
 export const chart10: LineChartConfiguration = {
-  type: 'Line',
+  type: "Line",
   data: {
-    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
     series: [
       [12, 9, 7, 8, 5],
       [2, 1, 3.5, 7, 3],
@@ -254,12 +280,29 @@ export const chart10: LineChartConfiguration = {
 
 //Chart11: Holes in data
 export const chart11: LineChartConfiguration = {
-  type: 'Line',
+  type: "Line",
   data: {
     labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
     series: [
       [5, 5, 10, 8, 7, 5, 4, null, null, null, 10, 10, 7, 8, 6, 9],
-      [10, 15, null, 12, null, 10, 12, 15, null, null, 12, null, 14, null, null, null],
+      [
+        10,
+        15,
+        null,
+        12,
+        null,
+        10,
+        12,
+        15,
+        null,
+        null,
+        12,
+        null,
+        14,
+        null,
+        null,
+        null,
+      ],
       [null, null, null, null, 3, 4, 1, 3, 4, 6, 7, 9, 5, null, null, null],
       [
         { x: 3, y: 3 },
@@ -284,12 +327,29 @@ export const chart11: LineChartConfiguration = {
 
 // // Chart 12 Filled holes in data
 export const chart12: LineChartConfiguration = {
-  type: 'Line',
+  type: "Line",
   data: {
     labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
     series: [
       [5, 5, 10, 8, 7, 5, 4, null, null, null, 10, 10, 7, 8, 6, 9],
-      [10, 15, null, 12, null, 10, 12, 15, null, null, 12, null, 14, null, null, null],
+      [
+        10,
+        15,
+        null,
+        12,
+        null,
+        10,
+        12,
+        15,
+        null,
+        null,
+        12,
+        null,
+        14,
+        null,
+        null,
+        null,
+      ],
       [null, null, null, null, 3, 4, 1, 3, 4, 6, 7, 9, 5, null, null, null],
       [
         { x: 3, y: 3 },

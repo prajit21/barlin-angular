@@ -1,14 +1,14 @@
-import { Routes } from '@angular/router';
+import { Routes } from "@angular/router";
 
-import { Knowledgebase } from './knowledgebase';
+import { Knowledgebase } from "./knowledgebase";
 
 export default [
   {
-    path: '',
+    path: "",
     component: Knowledgebase,
     data: {
-      title: 'Knowledgebase',
-      breadcrumb: 'Knowledgebase',
+      title: "Knowledgebase",
+      breadcrumb: "Knowledgebase",
     },
   },
 ] as Routes;

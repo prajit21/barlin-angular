@@ -1,31 +1,52 @@
 <div class="card online-order">
-    <div class="card-header pb-0">
-        <div class="d-flex">
-            <div class="order bg-light-warning">
-                <app-common-svg-icons [icon]="'feedback'" />
-            </div>
-            <div class="arrow-chart">
-                <app-common-svg-icons [icon]="'arrow-chart'" />
-                <span class="font-danger">-1.5%</span>
-            </div>
-        </div>
-        <div class="online"><span>Response</span>
-            <h4 class="num-counter">45,487</h4>
-        </div>
+  <div class="card-header pb-0">
+    <div class="d-flex">
+      <div class="order bg-light-warning">
+        <app-common-svg-icons [icon]="'feedback'" />
+      </div>
+      <div class="arrow-chart">
+        <app-common-svg-icons [icon]="'arrow-chart'" />
+        <span class="font-danger">-1.5%</span>
+      </div>
     </div>
-    <div class="card-body">
-        <div class="user-details customers">
-            <ul>
-                <li class="d-inline-block"><img class="rounded-circle" src="assets/images/dashboard-2/user/6.png"
-                        alt="user"></li>
-                <li class="d-inline-block"><img class="rounded-circle" src="assets/images/dashboard-2/user/7.png"
-                        alt="user"></li>
-                <li class="d-inline-block"><img class="rounded-circle" src="assets/images/dashboard-2/user/8.png"
-                        alt="user"></li>
-                <li class="d-inline-block"><img class="rounded-circle" src="assets/images/dashboard-2/user/9.png"
-                        alt="user"></li>
-            </ul>
-        </div>
-            <ngb-progressbar type="warning" [value]="50" />
+    <div class="online">
+      <span>Response</span>
+      <h4 class="num-counter">45,487</h4>
     </div>
+  </div>
+  <div class="card-body">
+    <div class="user-details customers">
+      <ul>
+        <li class="d-inline-block">
+          <img
+            class="rounded-circle"
+            src="assets/images/dashboard-2/user/6.png"
+            alt="user"
+          />
+        </li>
+        <li class="d-inline-block">
+          <img
+            class="rounded-circle"
+            src="assets/images/dashboard-2/user/7.png"
+            alt="user"
+          />
+        </li>
+        <li class="d-inline-block">
+          <img
+            class="rounded-circle"
+            src="assets/images/dashboard-2/user/8.png"
+            alt="user"
+          />
+        </li>
+        <li class="d-inline-block">
+          <img
+            class="rounded-circle"
+            src="assets/images/dashboard-2/user/9.png"
+            alt="user"
+          />
+        </li>
+      </ul>
+    </div>
+    <ngb-progressbar type="warning" [value]="50" />
+  </div>
 </div>

@@ -1,59 +1,59 @@
-import { Routes } from '@angular/router';
+import { Routes } from "@angular/router";
 
-import { ClipBoard } from './clip-board/clip-board';
-import { DatePicker } from './date-picker/date-picker';
-import { SelectTwo } from './select-two/select-two';
-import { Switch } from './switch/switch';
-import { Touchspin } from './touchspin/touchspin';
-import { Typeahead } from './touchspin/typeahead/typeahead';
+import { ClipBoard } from "./clip-board/clip-board";
+import { DatePicker } from "./date-picker/date-picker";
+import { SelectTwo } from "./select-two/select-two";
+import { Switch } from "./switch/switch";
+import { Touchspin } from "./touchspin/touchspin";
+import { Typeahead } from "./touchspin/typeahead/typeahead";
 
 export default [
   {
-    path: 'datepicker',
+    path: "datepicker",
     component: DatePicker,
     data: {
-      title: 'Datepicker',
-      breadcrumb: 'Datepicker',
+      title: "Datepicker",
+      breadcrumb: "Datepicker",
     },
   },
   {
-    path: 'touchspin',
+    path: "touchspin",
     component: Touchspin,
     data: {
-      title: 'Touchspin',
-      breadcrumb: 'Touchspin',
+      title: "Touchspin",
+      breadcrumb: "Touchspin",
     },
   },
   {
-    path: 'select2',
+    path: "select2",
     component: SelectTwo,
     data: {
-      title: 'Select2',
-      breadcrumb: 'Select2',
+      title: "Select2",
+      breadcrumb: "Select2",
     },
   },
   {
-    path: 'switch',
+    path: "switch",
     component: Switch,
     data: {
-      title: 'Switch',
-      breadcrumb: 'Switch',
+      title: "Switch",
+      breadcrumb: "Switch",
     },
   },
   {
-    path: 'typeahead',
+    path: "typeahead",
     component: Typeahead,
     data: {
-      title: 'Typeahead',
-      breadcrumb: 'Typeahead',
+      title: "Typeahead",
+      breadcrumb: "Typeahead",
     },
   },
   {
-    path: 'clipboard',
+    path: "clipboard",
     component: ClipBoard,
     data: {
-      title: 'Clipboard',
-      breadcrumb: 'Clipboard',
+      title: "Clipboard",
+      breadcrumb: "Clipboard",
     },
   },
 ] as Routes;

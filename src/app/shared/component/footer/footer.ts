@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { CommonSvgIcons } from '../common-svg-icons/common-svg-icons';
+import { CommonSvgIcons } from "../common-svg-icons/common-svg-icons";
 
 @Component({
-  selector: 'app-footer',
+  selector: "app-footer",
   imports: [CommonSvgIcons],
-  templateUrl: './footer.html',
-  styleUrl: './footer.scss',
+  templateUrl: "./footer.html",
+  styleUrl: "./footer.scss",
 })
 export class Footer {
   public year = new Date().getFullYear();

@@ -2,7 +2,12 @@
   <div class="row">
     <div class="col-xl-3 box-col-30">
       <div class="md-sidebar" (clickOutside)="isOpen = false">
-        <a class="btn btn-primary md-sidebar-toggle" href="javascript:void(0)" (click)="isOpen =!isOpen">file filter</a>
+        <a
+          class="btn btn-primary md-sidebar-toggle"
+          href="javascript:void(0)"
+          (click)="isOpen =!isOpen"
+          >file filter</a
+        >
         <div class="md-sidebar-aside custom-scrollbar" [class.open]="isOpen">
           <div class="file-sidebar">
             <div class="card">
@@ -10,37 +15,48 @@
                 <ul>
                   @for (item of sidebar; track item;let index =$index){
                   <li>
-                    <div [ngClass]="index === 0 ? 'btn btn-primary' : 'btn btn-light'">
+                    <div
+                      [ngClass]="index === 0 ? 'btn btn-primary' : 'btn btn-light'"
+                    >
                       <app-feather-icon [icon]="item.icon" />{{item.name}}
                     </div>
                   </li>
                   }
                 </ul>
-                <hr>
+                <hr />
                 <ul>
                   <li>
                     <div class="btn btn-outline-primary">
                       <app-feather-icon [icon]="'database'" />Storage
                     </div>
                     <div class="m-t-15">
-                      <ngb-progressbar class="mb-3 sm-progress-bar" type="primary" [value]="25" />
+                      <ngb-progressbar
+                        class="mb-3 sm-progress-bar"
+                        type="primary"
+                        [value]="25"
+                      />
                       <h6 class="f-w-500">25 GB of 100 GB used</h6>
                     </div>
                   </li>
                 </ul>
-                <hr>
+                <hr />
                 <ul>
                   <li>
-                    <div class="btn btn-outline-primary"><app-feather-icon [icon]="'grid'" />Pricing
-                      plan</div>
+                    <div class="btn btn-outline-primary">
+                      <app-feather-icon [icon]="'grid'" />Pricing plan
+                    </div>
                   </li>
                   <li>
                     <div class="pricing-plan">
-                      <h6>Trial Version </h6>
+                      <h6>Trial Version</h6>
                       <h5>FREE</h5>
                       <p>100 GB Space</p>
                       <div class="btn btn-outline-primary btn-xs">Selected</div>
-                      <img class="bg-img" src="assets/images/dashboard/folder.png" alt="">
+                      <img
+                        class="bg-img"
+                        src="assets/images/dashboard/folder.png"
+                        alt=""
+                      />
                     </div>
                   </li>
                 </ul>

@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-rounded-pagination',
+  selector: "app-rounded-pagination",
   imports: [],
-  templateUrl: './rounded-pagination.html',
-  styleUrls: ['./rounded-pagination.scss'],
+  templateUrl: "./rounded-pagination.html",
+  styleUrls: ["./rounded-pagination.scss"],
 })
 export class RoundedPagination {}

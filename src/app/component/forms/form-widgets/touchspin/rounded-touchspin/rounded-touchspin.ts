@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import * as data from '../../../../../shared/data/data/forms/form-widgets';
+import * as data from "../../../../../shared/data/data/forms/form-widgets";
 
 @Component({
-  selector: 'app-rounded-touchspin',
+  selector: "app-rounded-touchspin",
   imports: [],
-  templateUrl: './rounded-touchspin.html',
-  styleUrls: ['./rounded-touchspin.scss'],
+  templateUrl: "./rounded-touchspin.html",
+  styleUrls: ["./rounded-touchspin.scss"],
 })
 export class RoundedTouchspin {
   public roundedTouchspin = data.roundedTouchspin;

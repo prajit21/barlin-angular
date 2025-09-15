@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { NgxSliderModule, Options } from '@angular-slider/ngx-slider';
+import { NgxSliderModule, Options } from "@angular-slider/ngx-slider";
 
 @Component({
-  selector: 'app-sliderwithcustomstyle',
+  selector: "app-sliderwithcustomstyle",
   imports: [NgxSliderModule],
-  templateUrl: './sliderwithcustomstyle.html',
-  styleUrl: './sliderwithcustomstyle.scss',
+  templateUrl: "./sliderwithcustomstyle.html",
+  styleUrl: "./sliderwithcustomstyle.scss",
 })
 export class Sliderwithcustomstyle {
   value: number = 10;

@@ -1,18 +1,18 @@
-import { Component, output, inject } from '@angular/core';
+import { Component, output, inject } from "@angular/core";
 
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 
-import { CommonSvgIcons } from '../../../shared/component/common-svg-icons/common-svg-icons';
-import { letterBox, letterBoxFilter } from '../../../shared/data/data/email';
-import { ClickOutsideDirective } from '../../../shared/directive/click-outside.directive';
-import { AddLabel } from '../widgets/add-label/add-label';
-import { ComposeMessage } from '../widgets/compose-message/compose-message';
+import { CommonSvgIcons } from "../../../shared/component/common-svg-icons/common-svg-icons";
+import { letterBox, letterBoxFilter } from "../../../shared/data/data/email";
+import { ClickOutsideDirective } from "../../../shared/directive/click-outside.directive";
+import { AddLabel } from "../widgets/add-label/add-label";
+import { ComposeMessage } from "../widgets/compose-message/compose-message";
 
 @Component({
-  selector: 'app-sidebar',
+  selector: "app-sidebar",
   imports: [CommonSvgIcons, ClickOutsideDirective],
-  templateUrl: './sidebar.html',
-  styleUrl: './sidebar.scss',
+  templateUrl: "./sidebar.html",
+  styleUrl: "./sidebar.scss",
 })
 export class Sidebar {
   readonly selectedId = output<number>();
@@ -24,18 +24,18 @@ export class Sidebar {
 
   compose() {
     this.modalService.open(ComposeMessage, {
-      size: 'lg',
+      size: "lg",
     });
   }
 
   addlabel() {
     this.modalService.open(AddLabel, {
-      size: 'lg',
+      size: "lg",
     });
   }
 
   chnageData(item: letterBox) {
-    this.letterBoxFilterData.filter(element => {
+    this.letterBoxFilterData.filter((element) => {
       if (element.id === item.id) {
         this.selectedId.emit(element.id);
         element.status = true;

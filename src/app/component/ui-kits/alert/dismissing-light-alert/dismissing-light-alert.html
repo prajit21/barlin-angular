@@ -1,13 +1,30 @@
 <div class="card height-equal">
-    <div class="card-header pb-0">
-        <h4>Dismissing light alert</h4>
-        <p class="f-m-light mt-1">Use <code>alert-light-*</code> class can be used to generate a light alerts and<code> alert-dismissible</code> utility class to remove the alerts.</p>
+  <div class="card-header pb-0">
+    <h4>Dismissing light alert</h4>
+    <p class="f-m-light mt-1">
+      Use <code>alert-light-*</code> class can be used to generate a light
+      alerts and<code> alert-dismissible</code> utility class to remove the
+      alerts.
+    </p>
+  </div>
+  <div class="card-body">
+    <div
+      class="alert alert-light-warning alert-dismissible fade show mb-0"
+      role="alert"
+      [class.show]="isShow"
+    >
+      <app-feather-icon [icon]="'bell'" class="me-2" />
+      <p class="text-dark">
+        The
+        <a class="alert-link txt-warning" href="#!">"alert-light-warning" </a
+        >class can be used to create an alert like this one.
+      </p>
+      <button
+        class="btn-close"
+        type="button"
+        data-bs-dismiss="alert"
+        (click)="isShow = false"
+      ></button>
     </div>
-    <div class="card-body">
-        <div class="alert alert-light-warning alert-dismissible fade show mb-0" role="alert" [class.show]="isShow">
-            <app-feather-icon [icon]="'bell'" class="me-2" />
-            <p class="text-dark">The <a class="alert-link txt-warning" href="#!">"alert-light-warning" </a>class can be used to create an alert like this one.</p>
-            <button class="btn-close" type="button" data-bs-dismiss="alert" (click)="isShow = false"></button>
-        </div>
-    </div>
+  </div>
 </div>

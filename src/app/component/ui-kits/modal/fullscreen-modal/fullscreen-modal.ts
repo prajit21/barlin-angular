@@ -1,18 +1,18 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject } from "@angular/core";
 
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 
-import { FullscreenCommonModal } from './fullscreen-common-modal/fullscreen-common-modal';
-import { FullscreenModalFl } from './fullscreen-modal-fl/fullscreen-modal-fl';
+import { FullscreenCommonModal } from "./fullscreen-common-modal/fullscreen-common-modal";
+import { FullscreenModalFl } from "./fullscreen-modal-fl/fullscreen-modal-fl";
 
 @Component({
-  selector: 'app-fullscreen-modal',
+  selector: "app-fullscreen-modal",
   imports: [],
-  templateUrl: './fullscreen-modal.html',
-  styleUrls: ['./fullscreen-modal.scss'],
+  templateUrl: "./fullscreen-modal.html",
+  styleUrls: ["./fullscreen-modal.scss"],
 })
 export class FullscreenModal {
-  public title = '';
+  public title = "";
   private modalService = inject(NgbModal);
 
   fullscreenModal() {
@@ -20,41 +20,41 @@ export class FullscreenModal {
   }
 
   fullscreenSMModal() {
-    this.title = 'Full Screen Below sm';
+    this.title = "Full Screen Below sm";
     const modal = this.modalService.open(FullscreenCommonModal, {
-      size: 'md',
+      size: "md",
     });
     modal.componentInstance.title = this.title;
   }
 
   fullscreenMDModal() {
-    this.title = 'Full Screen Below md';
+    this.title = "Full Screen Below md";
     const modal = this.modalService.open(FullscreenCommonModal, {
-      size: 'md',
+      size: "md",
     });
     modal.componentInstance.title = this.title;
   }
 
   fullscreenLGModal() {
-    this.title = 'Full Screen Below lg';
+    this.title = "Full Screen Below lg";
     const modal = this.modalService.open(FullscreenCommonModal, {
-      size: 'lg',
+      size: "lg",
     });
     modal.componentInstance.title = this.title;
   }
 
   fullscreenXLModal() {
-    this.title = 'Full Screen Below xl';
+    this.title = "Full Screen Below xl";
     const modal = this.modalService.open(FullscreenCommonModal, {
-      size: 'xl',
+      size: "xl",
     });
     modal.componentInstance.title = this.title;
   }
 
   fullscreenXXLModal() {
-    this.title = 'Full Screen Below xxl';
+    this.title = "Full Screen Below xxl";
     const modal = this.modalService.open(FullscreenCommonModal, {
-      size: 'xxl',
+      size: "xxl",
     });
     modal.componentInstance.title = this.title;
   }

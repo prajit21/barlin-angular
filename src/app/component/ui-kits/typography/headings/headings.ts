@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-headings',
+  selector: "app-headings",
   imports: [],
-  templateUrl: './headings.html',
-  styleUrls: ['./headings.scss'],
+  templateUrl: "./headings.html",
+  styleUrls: ["./headings.scss"],
 })
 export class Headings {}

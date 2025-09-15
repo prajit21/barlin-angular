@@ -1,24 +1,24 @@
-import { Component, input, output, inject } from '@angular/core';
+import { Component, input, output, inject } from "@angular/core";
 
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 
-import { FeatherIcon } from '../../../shared/component/feather-icon/feather-icon';
-import { contacts } from '../../../shared/data/data/contacts';
-import { ClickOutsideDirective } from '../../../shared/directive/click-outside.directive';
-import { AddCategory } from '../widgets/add-category/add-category';
-import { AddContact } from '../widgets/add-contact/add-contact';
+import { FeatherIcon } from "../../../shared/component/feather-icon/feather-icon";
+import { contacts } from "../../../shared/data/data/contacts";
+import { ClickOutsideDirective } from "../../../shared/directive/click-outside.directive";
+import { AddCategory } from "../widgets/add-category/add-category";
+import { AddContact } from "../widgets/add-contact/add-contact";
 
 @Component({
-  selector: 'app-contact-sidebar',
+  selector: "app-contact-sidebar",
   imports: [ClickOutsideDirective, FeatherIcon],
-  templateUrl: './contact-sidebar.html',
-  styleUrl: './contact-sidebar.scss',
+  templateUrl: "./contact-sidebar.html",
+  styleUrl: "./contact-sidebar.scss",
 })
 export class ContactSidebar {
   readonly data = input<contacts[]>();
   public isOpen: boolean = false;
   readonly activeTabValue = output<string>();
-  public activeTab?: string = 'personal';
+  public activeTab?: string = "personal";
 
   private modal = inject(NgbModal);
 
@@ -36,9 +36,12 @@ export class ContactSidebar {
   }
 
   openModal(value: string) {
-    if (value == 'contact') {
-      this.modal.open(AddContact, { size: 'lg', windowClass: 'modal-bookmark' });
-    } else if (value == 'category') {
+    if (value == "contact") {
+      this.modal.open(AddContact, {
+        size: "lg",
+        windowClass: "modal-bookmark",
+      });
+    } else if (value == "category") {
       this.modal.open(AddCategory);
     }
   }

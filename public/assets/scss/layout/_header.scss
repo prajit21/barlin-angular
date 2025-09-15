@@ -87,9 +87,9 @@
             }
           }
         }
-        &:hover{
-          span.f-w-600{
-            &::before{
+        &:hover {
+          span.f-w-600 {
+            &::before {
               width: 120px;
               transition: all 0.5s ease-in;
             }
@@ -101,11 +101,11 @@
           justify-content: center;
           color: var(--theme-default);
           padding: 6px 18px;
-          background-color: rgba($primary-color , 0.2);
+          background-color: rgba($primary-color, 0.2);
           border-radius: 5px;
           z-index: -1;
           transition: all 0.5s ease-in-out;
-          @media (max-width: 1550px) and (min-width: 1200px){
+          @media (max-width: 1550px) and (min-width: 1200px) {
             padding: 6px 10px;
           }
         }
@@ -125,12 +125,12 @@
           }
         }
       }
-      .Typeahead-menu{
-        &.is-open{
+      .Typeahead-menu {
+        &.is-open {
           max-height: 120px;
           min-height: 227px;
           overflow: auto;
-          .ProfileCard-avatar{
+          .ProfileCard-avatar {
             left: 15px;
           }
         }
@@ -368,7 +368,7 @@
     padding: 20px;
   }
   div {
-    >div {
+    > div {
       a {
         margin-bottom: 0px;
         display: inline-block;

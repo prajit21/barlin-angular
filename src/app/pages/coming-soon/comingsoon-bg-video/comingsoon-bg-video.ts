@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-comingsoon-bg-video',
+  selector: "app-comingsoon-bg-video",
   imports: [],
-  templateUrl: './comingsoon-bg-video.html',
-  styleUrl: './comingsoon-bg-video.scss',
+  templateUrl: "./comingsoon-bg-video.html",
+  styleUrl: "./comingsoon-bg-video.scss",
 })
 export class ComingsoonBgVideo {
   public seconds: number;
@@ -20,25 +20,25 @@ export class ComingsoonBgVideo {
         const nowDate = new Date();
         const distance = currentDate.getTime() - nowDate.getTime();
 
-        document.querySelectorAll('#days').forEach(element => {
+        document.querySelectorAll("#days").forEach((element) => {
           (element as HTMLElement).innerHTML = Math.floor(
             distance / (1000 * 60 * 60 * 24),
           ).toString();
         });
 
-        document.querySelectorAll('#hours').forEach(element => {
+        document.querySelectorAll("#hours").forEach((element) => {
           (element as HTMLElement).innerHTML = Math.floor(
             (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
           ).toString();
         });
 
-        document.querySelectorAll('#minutes').forEach(element => {
+        document.querySelectorAll("#minutes").forEach((element) => {
           (element as HTMLElement).innerHTML = Math.floor(
             (distance % (1000 * 60 * 60)) / (1000 * 60),
           ).toString();
         });
 
-        document.querySelectorAll('#seconds').forEach(element => {
+        document.querySelectorAll("#seconds").forEach((element) => {
           (element as HTMLElement).innerHTML = Math.floor(
             (distance % (1000 * 60)) / 1000,
           ).toString();

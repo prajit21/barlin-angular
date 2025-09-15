@@ -1,43 +1,73 @@
 <div class="header-wrapper row m-0">
   <div class="header-logo-wrapper col-auto p-0">
-    <div class="logo-wrapper"><a [routerLink]="['/dashboard/default']">
-        <img class="img-fluid for-light" src="assets/images/logo/logo-1.png" alt="">
-        <img class="img-fluid for-dark" src="assets/images/logo/logo.png" alt=""></a></div>
-    <div class="toggle-sidebar" (click)="navigationService.collapseSidebar =!navigationService.collapseSidebar">
+    <div class="logo-wrapper">
+      <a [routerLink]="['/dashboard/default']">
+        <img
+          class="img-fluid for-light"
+          src="assets/images/logo/logo-1.png"
+          alt="" />
+        <img
+          class="img-fluid for-dark"
+          src="assets/images/logo/logo.png"
+          alt=""
+      /></a>
+    </div>
+    <div
+      class="toggle-sidebar"
+      (click)="navigationService.collapseSidebar =!navigationService.collapseSidebar"
+    >
       <app-common-svg-icons [class]="'sidebar-toggle'" [icon]="'toggle-icon'" />
     </div>
   </div>
-  <div class="left-header col-lg-5 col-md-5 col-auto box-col-5 horizontal-wrapper p-0">
+  <div
+    class="left-header col-lg-5 col-md-5 col-auto box-col-5 horizontal-wrapper p-0"
+  >
     <app-search />
   </div>
-  <div class="nav-right col-lg-7 col-md-6 col-auto box-col-6 pull-right right-header p-0 ms-auto">
+  <div
+    class="nav-right col-lg-7 col-md-6 col-auto box-col-6 pull-right right-header p-0 ms-auto"
+  >
     <ul class="nav-menus">
       <li class="serchinput" (clickOutside)="clickOutside()">
         <div class="serchbox" (click)="isSearch =!isSearch">
           <app-common-svg-icons [icon]="'fill-search'" />
         </div>
         <div class="form-group search-form" [class.open]="isSearch">
-          <input type="text" placeholder="Search here..." [(ngModel)]="text" name="search"
-            (keyup)="searchTerm(text)">
-            <div class="Typeahead-menu custom-scrollbar" [class.is-open]="searchResult" [class.open]="open">
-              @for(menuItem of menuItems | slice : 0 : 8; track menuItem){
-              <div class="ProfileCard u-cf" [routerLink]="menuItem.path">
-                <div class="ProfileCard-details">
-                  <div class="ProfileCard-realName">
-                    <a class="realname" (click)="removeFix()">{{ menuItem.title }}</a>
-                    <div class="ProfileCard-avatar">
-                      <app-svg-icon [icon]="menuItem.icon" />
-                    </div>
+          <input
+            type="text"
+            placeholder="Search here..."
+            [(ngModel)]="text"
+            name="search"
+            (keyup)="searchTerm(text)"
+          />
+          <div
+            class="Typeahead-menu custom-scrollbar"
+            [class.is-open]="searchResult"
+            [class.open]="open"
+          >
+            @for(menuItem of menuItems | slice : 0 : 8; track menuItem){
+            <div class="ProfileCard u-cf" [routerLink]="menuItem.path">
+              <div class="ProfileCard-details">
+                <div class="ProfileCard-realName">
+                  <a class="realname" (click)="removeFix()"
+                    >{{ menuItem.title }}</a
+                  >
+                  <div class="ProfileCard-avatar">
+                    <app-svg-icon [icon]="menuItem.icon" />
                   </div>
                 </div>
               </div>
-              }
             </div>
-            <div class="Typeahead-menu is-open" [class.is-open]="searchResultEmpty">
-              <div class="tt-dataset tt-dataset-0">
-                <div class="EmptyMessage">Opps!! There are no result found.</div>
-              </div>
+            }
+          </div>
+          <div
+            class="Typeahead-menu is-open"
+            [class.is-open]="searchResultEmpty"
+          >
+            <div class="tt-dataset tt-dataset-0">
+              <div class="EmptyMessage">Opps!! There are no result found.</div>
             </div>
+          </div>
         </div>
       </li>
       <li class="cart-nav onhover-dropdown">
@@ -63,7 +93,6 @@
       <li class="profile-nav onhover-dropdown p-0 m-0">
         <app-profile />
       </li>
-
     </ul>
   </div>
 </div>

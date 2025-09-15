@@ -33,7 +33,7 @@
         left: 53px;
         right: unset;
       }
-      input[type=search] {
+      input[type="search"] {
         width: 150px !important;
         height: 34px;
         border-radius: 6px;
@@ -51,15 +51,15 @@
           tr.odd,
           tr.even {
             background-color: transparent !important;
-            >.sorting_1 {
+            > .sorting_1 {
               background-color: transparent !important;
             }
           }
         }
       }
       thead {
-        >tr {
-          >th {
+        > tr {
+          > th {
             text-transform: capitalize;
             font-family: $font-poppins, $font-serif;
             font-weight: 500;
@@ -91,8 +91,8 @@
         }
       }
       tbody {
-        >tr {
-          >td {
+        > tr {
+          > td {
             font-family: $font-poppins, $font-serif;
             &:first-child {
               padding-left: 24px;
@@ -184,7 +184,7 @@
       &.customers {
         ul {
           li {
-            +li {
+            + li {
               margin-left: -14%;
               @media (max-width: 1520px) and (min-width: 1400px) {
                 margin-left: -20%;
@@ -469,7 +469,7 @@
                 }
               }
             }
-            &:first-child{
+            &:first-child {
               padding-left: 24px;
               padding-right: 0px;
             }
@@ -654,7 +654,7 @@
       }
       &:before {
         background-color: rgba($primary-color, 0.1);
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         width: 140px;
@@ -843,7 +843,7 @@
               opacity: 1;
             }
           }
-          +li {
+          + li {
             position: relative;
             &::before {
               position: absolute;
@@ -1000,8 +1000,8 @@
       }
     }
   }
-  .support-box-card{
-    .d-flex{
+  .support-box-card {
+    .d-flex {
       padding: 18px 0;
       border-bottom: 1px solid $light-gray;
       @media (max-width: 1199px) and (min-width: 992px) {
@@ -1014,23 +1014,23 @@
         gap: 8px !important;
         padding-block: 14px;
       }
-      &:last-child{
+      &:last-child {
         border-bottom: none;
         padding-bottom: 0;
       }
-      &:first-child{
+      &:first-child {
         padding-top: 0;
       }
-      .flex-shrink-0{
+      .flex-shrink-0 {
         img {
           border-radius: 6px;
         }
       }
-      .flex-grow-1{
+      .flex-grow-1 {
         h6 {
           font-size: 15px;
         }
-        p{
+        p {
           color: $theme-body-sub-title-color !important;
           text-overflow: ellipsis;
           overflow: hidden;
@@ -1089,8 +1089,8 @@
       transform: scale(2.5);
     }
   }
-  .revenue{
-    .offline-chart{
+  .revenue {
+    .offline-chart {
       margin-top: -39px;
     }
   }

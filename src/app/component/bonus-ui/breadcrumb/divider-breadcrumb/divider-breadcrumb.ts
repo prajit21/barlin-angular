@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-divider-breadcrumb',
+  selector: "app-divider-breadcrumb",
   imports: [],
-  templateUrl: './divider-breadcrumb.html',
-  styleUrls: ['./divider-breadcrumb.scss'],
+  templateUrl: "./divider-breadcrumb.html",
+  styleUrls: ["./divider-breadcrumb.scss"],
 })
 export class DividerBreadcrumb {}

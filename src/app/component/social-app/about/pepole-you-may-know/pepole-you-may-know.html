@@ -1,20 +1,23 @@
 <div class="card">
-    <div class="card-header pb-0">
-      <h4>Pepole You May Know</h4>
-    </div>
-    <div class="card-body avatar-showcase">
-      <div class="pepole-knows">
-        <ul>
-          @for (item of peopleKnowYouData; track item) {
-          <li>
-            <div class="add-friend text-center">
-              <img class="img-60 img-fluid rounded-circle" alt="" [src]="item.profile"><span
-                class="d-block">{{item.name}}</span>
-              <button class="btn btn-primary btn-xs">Add Friend</button>
-            </div>
-          </li>
-          }
-        </ul>
-      </div>
+  <div class="card-header pb-0">
+    <h4>Pepole You May Know</h4>
+  </div>
+  <div class="card-body avatar-showcase">
+    <div class="pepole-knows">
+      <ul>
+        @for (item of peopleKnowYouData; track item) {
+        <li>
+          <div class="add-friend text-center">
+            <img
+              class="img-60 img-fluid rounded-circle"
+              alt=""
+              [src]="item.profile"
+            /><span class="d-block">{{item.name}}</span>
+            <button class="btn btn-primary btn-xs">Add Friend</button>
+          </div>
+        </li>
+        }
+      </ul>
     </div>
   </div>
+</div>

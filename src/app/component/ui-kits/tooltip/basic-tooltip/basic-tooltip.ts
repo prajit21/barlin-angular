@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbTooltipModule } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
-  selector: 'app-basic-tooltip',
+  selector: "app-basic-tooltip",
   imports: [NgbTooltipModule],
-  templateUrl: './basic-tooltip.html',
-  styleUrls: ['./basic-tooltip.scss'],
+  templateUrl: "./basic-tooltip.html",
+  styleUrls: ["./basic-tooltip.scss"],
 })
 export class BasicTooltip {}

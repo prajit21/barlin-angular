@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component } from "@angular/core";
+import { RouterModule } from "@angular/router";
 
-import { CommonLoginForm } from '../widgets/common-login-form/common-login-form';
+import { CommonLoginForm } from "../widgets/common-login-form/common-login-form";
 
 @Component({
-  selector: 'app-login-image-two',
+  selector: "app-login-image-two",
   imports: [CommonLoginForm, RouterModule],
-  templateUrl: './login-image-two.html',
-  styleUrl: './login-image-two.scss',
+  templateUrl: "./login-image-two.html",
+  styleUrl: "./login-image-two.scss",
 })
 export class LoginImageTwo {}

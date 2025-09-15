@@ -1,5 +1,5 @@
-import { Component, inject } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component, inject } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 
 import {
   NgbCalendar,
@@ -7,15 +7,15 @@ import {
   NgbDateParserFormatter,
   NgbDateStruct,
   NgbDatepickerModule,
-} from '@ng-bootstrap/ng-bootstrap';
+} from "@ng-bootstrap/ng-bootstrap";
 
-import { FeatherIcon } from '../../../../shared/component/feather-icon/feather-icon';
+import { FeatherIcon } from "../../../../shared/component/feather-icon/feather-icon";
 
 @Component({
-  selector: 'app-date-picker',
+  selector: "app-date-picker",
   imports: [FormsModule, NgbDatepickerModule, FeatherIcon],
-  templateUrl: './date-picker.html',
-  styleUrls: ['./date-picker.scss'],
+  templateUrl: "./date-picker.html",
+  styleUrls: ["./date-picker.scss"],
 })
 export class DatePicker {
   private calendar = inject(NgbCalendar);
@@ -23,18 +23,18 @@ export class DatePicker {
 
   public showWeekNumbers = false;
   public model: NgbDateStruct;
-  public outsideDays = 'visible';
-  public navigation = 'select';
+  public outsideDays = "visible";
+  public navigation = "select";
   public displayMonths = 2;
   public hoveredDate: NgbDate | null = null;
   public fromDate: NgbDate | null;
   public toDate: NgbDate | null;
-  public placement = 'top';
+  public placement = "top";
   public model2: NgbDateStruct;
 
   constructor() {
     this.fromDate = this.calendar.getToday();
-    this.toDate = this.calendar.getNext(this.calendar.getToday(), 'd', 10);
+    this.toDate = this.calendar.getNext(this.calendar.getToday(), "d", 10);
   }
 
   isHovered(date: NgbDate) {
@@ -70,7 +70,12 @@ export class DatePicker {
   onDateSelection(date: NgbDate) {
     if (!this.fromDate && !this.toDate) {
       this.fromDate = date;
-    } else if (this.fromDate && !this.toDate && date && date.after(this.fromDate)) {
+    } else if (
+      this.fromDate &&
+      !this.toDate &&
+      date &&
+      date.after(this.fromDate)
+    ) {
       this.toDate = date;
     } else {
       this.toDate = null;

@@ -2,15 +2,21 @@
   <div class="card-header pb-0">
     <h4>Image with Close Badges</h4>
     <p class="f-m-light mt-1">
-      Use<code> badge-l-* </code>classes to provide background-color. and <code>vr </code>classes to partitions.
+      Use<code> badge-l-* </code>classes to provide background-color. and
+      <code>vr </code>classes to partitions.
     </p>
   </div>
   <div class="card-body">
     <div class="badge-spacing image-badges">
       @for (item of imageWithCloseBadges; track item) {
       <span
-        class="badge common-align txt-{{item.class}} rounded-pill badge-l-{{item.class}} rounded-pill border border-{{item.class}}">
-        <img class="rounded-circle me-1" [src]="item.image_url" alt="user">{{item.class}}
+        class="badge common-align txt-{{item.class}} rounded-pill badge-l-{{item.class}} rounded-pill border border-{{item.class}}"
+      >
+        <img
+          class="rounded-circle me-1"
+          [src]="item.image_url"
+          alt="user"
+        />{{item.class}}
         <span class="vr mx-2"></span>
         <a href="javascript:void(0)">
           <app-feather-icon [class]="item.iconClass" [icon]="'x-circle'" />

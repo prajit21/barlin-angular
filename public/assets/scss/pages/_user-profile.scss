@@ -58,7 +58,7 @@
         margin: 0 auto;
         font-size: 17px;
         box-shadow: 0 0 6px 3px rgba(68, 102, 242, 0.1);
-        [dir = "rtl"] & {
+        [dir="rtl"] & {
           left: unset;
           right: 51%;
         }
@@ -145,7 +145,6 @@
 
       &:first-child {
         a {
-
           &:hover,
           &:active {
             color: $danger-color;

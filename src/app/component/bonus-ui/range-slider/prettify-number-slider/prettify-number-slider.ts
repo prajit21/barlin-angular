@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { NgxSliderModule, Options } from '@angular-slider/ngx-slider';
+import { NgxSliderModule, Options } from "@angular-slider/ngx-slider";
 
 @Component({
-  selector: 'app-prettify-number-slider',
+  selector: "app-prettify-number-slider",
   imports: [NgxSliderModule],
-  templateUrl: './prettify-number-slider.html',
-  styleUrls: ['./prettify-number-slider.scss'],
+  templateUrl: "./prettify-number-slider.html",
+  styleUrls: ["./prettify-number-slider.scss"],
 })
 export class PrettifyNumberSlider {
   public value: number = 1000;

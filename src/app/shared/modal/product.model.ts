@@ -1,21 +1,27 @@
 // Product Colors
 export type ProductColor =
-  | 'white'
-  | 'black'
-  | 'red'
-  | 'green'
-  | 'purple'
-  | 'yellow'
-  | 'blue'
-  | 'gray'
-  | 'orange'
-  | 'pink';
+  | "white"
+  | "black"
+  | "red"
+  | "green"
+  | "purple"
+  | "yellow"
+  | "blue"
+  | "gray"
+  | "orange"
+  | "pink";
 
 // Product Size
-export type ProductSize = 'M' | 'L' | 'XL';
+export type ProductSize = "M" | "L" | "XL";
 
 // Product Tag
-export type ProductTags = 'Spykar' | 'Lee' | 'Hudson' | 'Denizen' | 'Levis' | 'Diesel';
+export type ProductTags =
+  | "Spykar"
+  | "Lee"
+  | "Hudson"
+  | "Denizen"
+  | "Levis"
+  | "Diesel";
 
 export interface Products {
   id: number;

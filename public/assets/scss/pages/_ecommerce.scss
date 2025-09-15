@@ -54,7 +54,7 @@
   }
 
   li {
-    &+li {
+    & + li {
       margin-top: 16px;
     }
   }
@@ -72,14 +72,12 @@
       }
     }
   }
-
-
 }
 
 .qty-box {
   .btn {
     background-color: transparent !important;
-    border-color: $light-gray  !important;
+    border-color: $light-gray !important;
     padding: 8px 12px;
 
     i {
@@ -140,7 +138,7 @@
       }
     }
 
-    &:nth-child(n+2) {
+    &:nth-child(n + 2) {
       margin-left: 10px;
 
       [dir="rtl"] & {
@@ -379,7 +377,8 @@
     margin-top: 15px;
   }
 
-  h6, h5 {
+  h6,
+  h5 {
     margin-bottom: 15px;
   }
 
@@ -465,7 +464,7 @@
         }
       }
 
-      .owl-nav [class*='owl-'] {
+      .owl-nav [class*="owl-"] {
         &:hover {
           background-color: $transparent-color;
           color: inherit;
@@ -480,7 +479,7 @@
               padding: 0 0;
             }
 
-            +.product-box {
+            + .product-box {
               margin-top: 15px;
             }
           }
@@ -530,7 +529,7 @@
   .product-details {
     padding: 15px 25px;
 
-    >a {
+    > a {
       color: $theme-body-font-color;
     }
 
@@ -564,7 +563,6 @@
       }
     }
   }
-
 
   .product-img {
     position: relative;
@@ -613,8 +611,6 @@
             i {
               color: $white;
             }
-
-
           }
         }
       }
@@ -622,7 +618,6 @@
   }
 
   &:hover {
-
     .product-hover {
       opacity: 1;
       border-radius: 0%;
@@ -681,8 +676,6 @@
   }
 }
 
-
-
 .product-page-details {
   span {
     padding-left: 15px;
@@ -691,7 +684,6 @@
 
 .br-theme-fontawesome-stars {
   .br-widget {
-
     a,
     a.br-selected:after,
     a.br-active:after {
@@ -755,13 +747,12 @@
   3.14 Ecommerce CSS End
 ==========================**/
 @media screen and (max-width: 1660px) and (min-width: 1200px) {
-
   .owl-carousel .owl-item img {
     max-width: 420px;
     margin: 0 auto;
   }
 }
-.product-box ~ .btn-close{
+.product-box ~ .btn-close {
   position: absolute;
   right: 15px;
   top: 10px;
@@ -790,7 +781,8 @@
         .product-size {
           margin: 20px 0;
           .btn-outline-light {
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
               background-color: transparent !important;
               color: $theme-body-font-color !important;
             }
@@ -819,15 +811,13 @@
               }
 
               .btn-primary {
-                background-color: $semi-dark  !important;
-                border: 1px solid $semi-dark  !important;
+                background-color: $semi-dark !important;
+                border: 1px solid $semi-dark !important;
               }
             }
           }
         }
       }
     }
-
-    
   }
 }

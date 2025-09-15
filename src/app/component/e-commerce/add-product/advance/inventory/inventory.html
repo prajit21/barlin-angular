@@ -2,7 +2,9 @@
   <form id="advance-tab">
     <div class="row g-3 custom-input">
       <div class="col-sm-6">
-        <label class="form-label" for="validationServer01">Stock Availability</label>
+        <label class="form-label" for="validationServer01"
+          >Stock Availability</label
+        >
         <select class="form-select" aria-label="Default select example">
           <option selected="">In stock</option>
           <option value="1">Out of stock</option>
@@ -20,29 +22,56 @@
         </select>
       </div>
       <div class="col-lg-3 col-sm-6">
-        <label class="form-label" for="exampleFormControlInput1">SKU <span class="txt-danger">*</span></label>
-        <input class="form-control" id="exampleFormControlInput1" type="text">
+        <label class="form-label" for="exampleFormControlInput1"
+          >SKU <span class="txt-danger">*</span></label
+        >
+        <input class="form-control" id="exampleFormControlInput1" type="text" />
       </div>
       <div class="col-lg-3 col-sm-6">
-        <label class="form-label" for="exampleFormControlInput1">Stock Quantity <span
-            class="txt-danger">*</span></label>
-        <input class="form-control" id="exampleFormControlInput1" type="number" value="7" min="0">
+        <label class="form-label" for="exampleFormControlInput1"
+          >Stock Quantity <span class="txt-danger">*</span></label
+        >
+        <input
+          class="form-control"
+          id="exampleFormControlInput1"
+          type="number"
+          value="7"
+          min="0"
+        />
       </div>
       <div class="col-lg-3 col-sm-6">
-        <label class="form-label" for="exampleFormControlInput1">Restock Date <span class="txt-danger">*</span></label>
-        <input class="form-control" id="exampleFormControlInput1" type="number">
+        <label class="form-label" for="exampleFormControlInput1"
+          >Restock Date <span class="txt-danger">*</span></label
+        >
+        <input
+          class="form-control"
+          id="exampleFormControlInput1"
+          type="number"
+        />
       </div>
       <div class="col-lg-3 col-sm-6">
-        <label class="form-label" for="exampleFormControlInput1">Pre-Order <span class="txt-danger">*</span></label>
-        <input class="form-control" id="exampleFormControlInput1" type="number">
+        <label class="form-label" for="exampleFormControlInput1"
+          >Pre-Order <span class="txt-danger">*</span></label
+        >
+        <input
+          class="form-control"
+          id="exampleFormControlInput1"
+          type="number"
+        />
       </div>
       <div class="col-12">
-        <label class="form-label" for="exampleFormControlInput1">Allow Backorders</label>
+        <label class="form-label" for="exampleFormControlInput1"
+          >Allow Backorders</label
+        >
         <div class="form-check">
-          <input class="form-check-input" id="gridCheck" type="checkbox">
-          <label class="form-check-label m-0" for="gridCheck">This is a digital Product</label>
-          <p class="f-light">Decide if the product is a digital or physical item. Shipping may
-            be necessary for real-world items.</p>
+          <input class="form-check-input" id="gridCheck" type="checkbox" />
+          <label class="form-check-label m-0" for="gridCheck"
+            >This is a digital Product</label
+          >
+          <p class="f-light">
+            Decide if the product is a digital or physical item. Shipping may be
+            necessary for real-world items.
+          </p>
         </div>
       </div>
     </div>
@@ -54,7 +83,8 @@
         </div>
       </button>
       <button class="btn">
-        <div class="d-flex align-items-center gap-sm-2 gap-1">Next
+        <div class="d-flex align-items-center gap-sm-2 gap-1">
+          Next
           <app-common-svg-icons [icon]="'front-arrow'" />
         </div>
       </button>

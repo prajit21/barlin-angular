@@ -1,16 +1,19 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject } from "@angular/core";
 
-import { NgbTypeaheadConfig, NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
-import { debounceTime, distinctUntilChanged, map } from 'rxjs';
-import { Observable } from 'rxjs/internal/Observable';
+import {
+  NgbTypeaheadConfig,
+  NgbTypeaheadModule,
+} from "@ng-bootstrap/ng-bootstrap";
+import { debounceTime, distinctUntilChanged, map } from "rxjs";
+import { Observable } from "rxjs/internal/Observable";
 
-import * as data from '../../../../../../shared/data/data/forms/form-widgets';
+import * as data from "../../../../../../shared/data/data/forms/form-widgets";
 
 @Component({
-  selector: 'app-global',
+  selector: "app-global",
   imports: [NgbTypeaheadModule],
-  templateUrl: './global.html',
-  styleUrls: ['./global.scss'],
+  templateUrl: "./global.html",
+  styleUrls: ["./global.scss"],
 })
 export class Global {
   public config = inject(NgbTypeaheadConfig);
@@ -26,11 +29,13 @@ export class Global {
     text$.pipe(
       debounceTime(200),
       distinctUntilChanged(),
-      map(term =>
+      map((term) =>
         term.length < 2
           ? []
           : this.searchData
-              .filter(v => v.toLowerCase().startsWith(term.toLocaleLowerCase()))
+              .filter((v) =>
+                v.toLowerCase().startsWith(term.toLocaleLowerCase()),
+              )
               .splice(0, 10),
       ),
     );

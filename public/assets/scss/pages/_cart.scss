@@ -2,40 +2,40 @@
     3.3 Cart CSS start
 ==========================**/
 .cart {
-	.total-amount {
-		text-align: right !important;
-		margin-top: 30px;
-	}
+  .total-amount {
+    text-align: right !important;
+    margin-top: 30px;
+  }
 
-	.amount-space {
-		margin-left: 40px;
-	}
+  .amount-space {
+    margin-left: 40px;
+  }
 
-	.cart-btn-transform {
-		text-transform: capitalize;
-	}
+  .cart-btn-transform {
+    text-transform: capitalize;
+  }
 
-	.qty-box {
-		width: 25%;
-		margin: 0 auto;
+  .qty-box {
+    width: 25%;
+    margin: 0 auto;
 
-		.input-group {
-			.btn {
-				background-color: #ddd !important;
-				border-color: #ddd !important;
-				padding: 8px 12px;
-			}
-		}
-	}
+    .input-group {
+      .btn {
+        background-color: #ddd !important;
+        border-color: #ddd !important;
+        padding: 8px 12px;
+      }
+    }
+  }
 }
 
 .cart-buttons {
-	margin-top: 30px;
+  margin-top: 30px;
 
-	.cart-btn {
-		float: right;
-		padding-right: 85px;
-	}
+  .cart-btn {
+    float: right;
+    padding-right: 85px;
+  }
 }
 
 /**=====================

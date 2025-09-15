@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { NgxSliderModule, Options } from '@angular-slider/ngx-slider';
+import { NgxSliderModule, Options } from "@angular-slider/ngx-slider";
 
 @Component({
-  selector: 'app-min-max-value-slider',
+  selector: "app-min-max-value-slider",
   imports: [NgxSliderModule],
-  templateUrl: './min-max-value-slider.html',
-  styleUrls: ['./min-max-value-slider.scss'],
+  templateUrl: "./min-max-value-slider.html",
+  styleUrls: ["./min-max-value-slider.scss"],
 })
 export class MinMaxValueSlider {
   public value: number = 100;

@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { RadioToggleButton } from '../../../../../shared/data/data/forms/chechbox-radio';
+import { RadioToggleButton } from "../../../../../shared/data/data/forms/chechbox-radio";
 
 @Component({
-  selector: 'app-radio-toggle-buttons',
+  selector: "app-radio-toggle-buttons",
   imports: [],
-  templateUrl: './radio-toggle-buttons.html',
-  styleUrls: ['./radio-toggle-buttons.scss'],
+  templateUrl: "./radio-toggle-buttons.html",
+  styleUrls: ["./radio-toggle-buttons.scss"],
 })
 export class RadioToggleButtons {
   public RadioToggleButtons = RadioToggleButton;

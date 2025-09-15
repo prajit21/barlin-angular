@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-listing-typography',
+  selector: "app-listing-typography",
   imports: [],
-  templateUrl: './listing-typography.html',
-  styleUrls: ['./listing-typography.scss'],
+  templateUrl: "./listing-typography.html",
+  styleUrls: ["./listing-typography.scss"],
 })
 export class ListingTypography {}

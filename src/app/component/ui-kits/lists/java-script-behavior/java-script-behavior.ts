@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbNavModule } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
-  selector: 'app-java-script-behavior',
+  selector: "app-java-script-behavior",
   imports: [NgbNavModule],
-  templateUrl: './java-script-behavior.html',
-  styleUrls: ['./java-script-behavior.scss'],
+  templateUrl: "./java-script-behavior.html",
+  styleUrls: ["./java-script-behavior.scss"],
 })
 export class JavaScriptBehavior {
-  public active = 'home';
+  public active = "home";
 }

@@ -1,5 +1,5 @@
-import { DecimalPipe } from '@angular/common';
-import { inject, Injectable, PipeTransform } from '@angular/core';
+import { DecimalPipe } from "@angular/common";
+import { inject, Injectable, PipeTransform } from "@angular/core";
 
 import {
   BehaviorSubject,
@@ -10,10 +10,13 @@ import {
   of,
   switchMap,
   tap,
-} from 'rxjs';
+} from "rxjs";
 
-import { supportDB, supportTicketData } from '../data/data/support-tickit';
-import { SortColumn, SortDirection } from '../directive/support-ticket.directive';
+import { supportDB, supportTicketData } from "../data/data/support-tickit";
+import {
+  SortColumn,
+  SortDirection,
+} from "../directive/support-ticket.directive";
 
 interface SearchResult {
   support: supportDB[];
@@ -28,15 +31,20 @@ interface State {
   sortDirection: SortDirection;
 }
 
-const compare = (v1: string | number, v2: string | number) => (v1 < v2 ? -1 : v1 > v2 ? 1 : 0);
+const compare = (v1: string | number, v2: string | number) =>
+  v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
 
-function sort(support: supportDB[], column: SortColumn, direction: string): supportDB[] {
-  if (direction === '' || column === '') {
+function sort(
+  support: supportDB[],
+  column: SortColumn,
+  direction: string,
+): supportDB[] {
+  if (direction === "" || column === "") {
     return support;
   } else {
     return [...support].sort((a, b) => {
       const res = compare(a[column], b[column]);
-      return direction === 'asc' ? res : -res;
+      return direction === "asc" ? res : -res;
     });
   }
 }
@@ -52,7 +60,7 @@ function matches(tickit: supportDB, term: string, pipe: PipeTransform) {
 }
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class SupportTicketService {
   private pipe = inject(DecimalPipe);
@@ -65,9 +73,9 @@ export class SupportTicketService {
   private _state: State = {
     page: 1,
     pageSize: 10,
-    searchTerm: '',
-    sortColumn: '',
-    sortDirection: '',
+    searchTerm: "",
+    sortColumn: "",
+    sortDirection: "",
   };
 
   constructor() {
@@ -79,7 +87,7 @@ export class SupportTicketService {
         delay(200),
         tap(() => this._loading$.next(false)),
       )
-      .subscribe(result => {
+      .subscribe((result) => {
         this._support$.next(result.support);
         this._total$.next(result.total);
       });
@@ -128,17 +136,23 @@ export class SupportTicketService {
   }
 
   private _search(): Observable<SearchResult> {
-    const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
+    const { sortColumn, sortDirection, pageSize, page, searchTerm } =
+      this._state;
 
     // 1. sort
     let support = sort(supportTicketData, sortColumn, sortDirection);
 
     // 2. filter
-    support = support.filter(country => matches(country, searchTerm, this.pipe));
+    support = support.filter((country) =>
+      matches(country, searchTerm, this.pipe),
+    );
     const total = support.length;
 
     // 3. paginate
-    support = support.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+    support = support.slice(
+      (page - 1) * pageSize,
+      (page - 1) * pageSize + pageSize,
+    );
     return of({ support, total });
   }
 }

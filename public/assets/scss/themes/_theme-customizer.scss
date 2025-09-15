@@ -8,7 +8,7 @@
   z-index: 5;
   transform: translate(0, -50%);
   box-shadow: 0 0 37px rgba(8, 21, 66, 0.1);
-  >.nav {
+  > .nav {
     border-radius: 8px;
     padding: 10px;
     background-color: $white;
@@ -65,15 +65,15 @@
         transition: all 0.3s ease;
       }
     }
-    &+.nav-link {
+    & + .nav-link {
       margin-bottom: 5px;
     }
-    div{
+    div {
       margin: 5px;
       width: 22px;
       height: 22px;
       text-align: center;
-    } 
+    }
     span {
       position: absolute;
       right: -60px;
@@ -184,7 +184,7 @@
       }
     }
     .tab-pane {
-      >h6 {
+      > h6 {
         &:first-child {
           padding-top: 0;
           margin-top: 0;
@@ -206,8 +206,8 @@
       margin-right: 3px;
       border: 1px solid #b8b8b8;
       padding: 3px;
-      >div {
-        background-color: #2A5699;
+      > div {
+        background-color: #2a5699;
         height: 100%;
         width: 100%;
         border-radius: 5px;
@@ -234,23 +234,23 @@
       }
       &[data-attr="color-6"] {
         div {
-          background-color: #43B9B2;
+          background-color: #43b9b2;
         }
       }
     }
     .dark {
-      >li {
+      > li {
         background-color: #2f3c4e;
       }
     }
     .main-layout {
-      >li {
+      > li {
         height: 65px;
         width: 85px;
         border: 1px solid $light-color;
         border-radius: 10px;
         display: inline-block;
-        &+li {
+        & + li {
           margin-left: 7px;
         }
       }
@@ -264,13 +264,13 @@
     }
     .sidebar-type,
     .sidebar-setting {
-      >li {
+      > li {
         height: 70px;
         width: 85px;
         border: 1px solid $light-color;
         border-radius: 5px;
         display: inline-block;
-        &+li {
+        & + li {
           margin-left: 7px;
         }
       }
@@ -311,7 +311,7 @@
     }
     .layout-types {
       margin-bottom: -30px;
-      >li {
+      > li {
         display: block;
         width: unset;
         height: unset;
@@ -333,7 +333,7 @@
 .layout-grid:not(.customizer-color) {
   li {
     padding: 5px;
-    >.header {
+    > .header {
       height: 9px;
       border-radius: 3px;
       position: relative;
@@ -341,7 +341,7 @@
         position: absolute;
         top: -8px;
         left: 5px;
-        >li {
+        > li {
           display: inline-block;
           width: 4px;
           height: 4px;
@@ -359,7 +359,7 @@
         }
       }
     }
-    >.body {
+    > .body {
       background-color: $light-color;
       height: calc(100% - 16px);
       border-radius: 3px;
@@ -367,7 +367,7 @@
       margin-top: 5px;
       text-align: center;
       line-height: 3.1;
-      >.badge {
+      > .badge {
         padding-top: 6px;
       }
       ul {
@@ -382,7 +382,7 @@
           padding: 0;
           &.compact {
             width: 12px;
-            &~.body {
+            & ~ .body {
               width: calc(100% - 19px);
             }
           }

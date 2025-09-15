@@ -1,14 +1,14 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject } from "@angular/core";
 
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 
-import { FeatherIcon } from '../../../../../shared/component/feather-icon/feather-icon';
+import { FeatherIcon } from "../../../../../shared/component/feather-icon/feather-icon";
 
 @Component({
-  selector: 'app-simple',
+  selector: "app-simple",
   imports: [FeatherIcon],
-  templateUrl: './simple.html',
-  styleUrls: ['./simple.scss'],
+  templateUrl: "./simple.html",
+  styleUrls: ["./simple.scss"],
 })
 export class Simple {
   private modal = inject(NgbModal);

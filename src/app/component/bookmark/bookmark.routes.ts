@@ -1,14 +1,14 @@
-import { Routes } from '@angular/router';
+import { Routes } from "@angular/router";
 
-import { Bookmark } from './bookmark';
+import { Bookmark } from "./bookmark";
 
 export default [
   {
-    path: '',
+    path: "",
     component: Bookmark,
     data: {
-      title: 'Bookmarks',
-      breadcrumb: 'Bookmarks',
+      title: "Bookmarks",
+      breadcrumb: "Bookmarks",
     },
   },
 ] as Routes;

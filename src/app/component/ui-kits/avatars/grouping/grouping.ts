@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { groupingData } from '../../../../shared/data/data/ui-kits/avatars';
+import { groupingData } from "../../../../shared/data/data/ui-kits/avatars";
 
 @Component({
-  selector: 'app-grouping',
+  selector: "app-grouping",
   imports: [],
-  templateUrl: './grouping.html',
-  styleUrls: ['./grouping.scss'],
+  templateUrl: "./grouping.html",
+  styleUrls: ["./grouping.scss"],
 })
 export class Grouping {
   public groupingData = groupingData;

@@ -2,18 +2,28 @@
   <div class="chart-widget-top">
     <div class="row card-body pb-0 m-0">
       <div class="col-xl-9 col-lg-8 col-9 p-0">
-        <h4 class="mb-2 f-w-600">{{data().title}}</h4>
-        <h5>{{data().price}}</h5><span>Compare to last month</span>
+        <h4 class="mb-2 f-w-600">{{data()?.title}}</h4>
+        <h5>{{data()?.price}}</h5>
+        <span>Compare to last month</span>
       </div>
       <div class="col-xl-3 col-lg-4 col-3 text-end p-0">
         <h6 class="txt-success">+65%</h6>
       </div>
     </div>
     <div>
-      <apx-chart [series]="data().chart.series" [chart]="data().chart.chart" [colors]="data().chart.colors"
-        [fill]="data().chart.fill" [dataLabels]="data().chart.dataLabels" [grid]="data().chart.grid"
-        [xaxis]="data().chart.xaxis" [yaxis]="data().chart.yaxis" [stroke]="data().chart.stroke"
-        [markers]="data().chart.markers" [plotOptions]="data().chart.plotOptions" [legend]="data().chart.legend" />
+      <apx-chart
+        [series]="data()?.chart?.series!"
+        [chart]="data()?.chart?.chart!"
+        [colors]="data()?.chart?.colors!"
+        [fill]="data()?.chart?.fill!"
+        [dataLabels]="data()?.chart?.dataLabels!"
+        [grid]="data()?.chart?.grid!"
+        [xaxis]="data()?.chart?.xaxis!"
+        [yaxis]="data()?.chart?.yaxis!"
+        [stroke]="data()?.chart?.stroke!"
+        [markers]="data()?.chart?.markers!"
+        [plotOptions]="data()?.chart?.plotOptions!"
+      />
     </div>
   </div>
 </div>

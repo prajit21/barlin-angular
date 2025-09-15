@@ -1,14 +1,14 @@
-import { Routes } from '@angular/router';
+import { Routes } from "@angular/router";
 
-import { Todo } from './todo';
+import { Todo } from "./todo";
 
 export default [
   {
-    path: '',
+    path: "",
     component: Todo,
     data: {
-      title: 'To-Do',
-      breadcrumb: 'To-Do',
+      title: "To-Do",
+      breadcrumb: "To-Do",
     },
   },
 ] as Routes;

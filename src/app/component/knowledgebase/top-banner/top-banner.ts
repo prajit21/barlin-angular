@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { FeatherIcon } from '../../../shared/component/feather-icon/feather-icon';
+import { FeatherIcon } from "../../../shared/component/feather-icon/feather-icon";
 
 @Component({
-  selector: 'app-top-banner',
+  selector: "app-top-banner",
   imports: [FeatherIcon],
-  templateUrl: './top-banner.html',
-  styleUrl: './top-banner.scss',
+  templateUrl: "./top-banner.html",
+  styleUrl: "./top-banner.scss",
 })
 export class TopBanner {}

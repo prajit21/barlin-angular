@@ -92,7 +92,7 @@
   width: 100%;
   overflow: hidden;
   background-color: $white;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .Typeahead-menu.is-open {
@@ -209,8 +209,7 @@
   height: 1rem;
 }
 
-
-// typehead new search 
+// typehead new search
 $color_1: #333;
 $color_2: #fff;
 $color_3: #aaa;
@@ -280,7 +279,6 @@ $background-color_4: #eee;
   box-shadow: 1px 0px 1px;
   padding: 7px;
 }
-
 
 /**=====================
   2.35 Typeahead-search CSS Ends

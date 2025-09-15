@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { NgApexchartsModule } from 'ng-apexcharts';
+import { NgApexchartsModule } from "ng-apexcharts";
 
-import { basicAreaChart } from '../../../../shared/data/chart/charts/apex-chart';
+import { basicAreaChart } from "../../../../shared/data/chart/charts/apex-chart";
 
 @Component({
-  selector: 'app-basic-area-chart',
+  selector: "app-basic-area-chart",
   imports: [NgApexchartsModule],
-  templateUrl: './basic-area-chart.html',
-  styleUrls: ['./basic-area-chart.scss'],
+  templateUrl: "./basic-area-chart.html",
+  styleUrls: ["./basic-area-chart.scss"],
 })
 export class BasicAreaChart {
   public basicAreaChart = basicAreaChart;

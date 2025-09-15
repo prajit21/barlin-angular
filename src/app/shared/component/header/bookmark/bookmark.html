@@ -1,5 +1,9 @@
 <app-common-svg-icons [icon]="'Bookmark'" (click)="isOpen =!isOpen" />
-<div class="onhover-show-div bookmark-flip" [class.active]="bookmarkFlip || bookmark" (clickOutside)="clickOutside()">
+<div
+  class="onhover-show-div bookmark-flip"
+  [class.active]="bookmarkFlip || bookmark"
+  (clickOutside)="clickOutside()"
+>
   <div class="flip-card">
     <div class="flip-card-inner" [class.flipped]="bookmarkFlip">
       <div class="front">
@@ -22,7 +26,12 @@
             </div>
           </li>
           <li class="text-center" (click)="flipBookMark()">
-            <a class="flip-btn btn btn-primary w-100" id="flip-btn" href="javascript:void(0)">Add New Bookmark</a>
+            <a
+              class="flip-btn btn btn-primary w-100"
+              id="flip-btn"
+              href="javascript:void(0)"
+              >Add New Bookmark</a
+            >
           </li>
         </ul>
       </div>
@@ -30,7 +39,13 @@
         <ul>
           <li>
             <div class="bookmark-dropdown flip-back-content">
-              <input type="text" placeholder="search..." [(ngModel)]="text" name="editor" (keyup)="searchTerm(text)">
+              <input
+                type="text"
+                placeholder="search..."
+                [(ngModel)]="text"
+                name="editor"
+                (keyup)="searchTerm(text)"
+              />
               <div class="Typeahead-menu custom-scrollbar is-open">
                 @for(item of menuItems | slice : 0 : 8; track item){
                 <div class="ProfileCard u-cf">
@@ -39,10 +54,15 @@
                   </div>
                   <div class="ProfileCard-details">
                     <div class="ProfileCard-realName">
-                      <a [routerLink]="item.path" (click)="removeFix()">{{ item?.title }}</a>
+                      <a [routerLink]="item.path" (click)="removeFix()"
+                        >{{ item?.title }}</a
+                      >
                       <span class="pull-right" (click)="addToBookmark(item)">
                         <a>
-                          <i class="fa fa-star-o f-18" [class.starred]="item.bookmark"></i>
+                          <i
+                            class="fa fa-star-o f-18"
+                            [class.starred]="item.bookmark"
+                          ></i>
                         </a>
                       </span>
                     </div>
@@ -50,15 +70,26 @@
                 </div>
                 }
               </div>
-              <div class="Typeahead-menu custom-scrollbar is-open" [class.is-open]="searchResultEmpty">
+              <div
+                class="Typeahead-menu custom-scrollbar is-open"
+                [class.is-open]="searchResultEmpty"
+              >
                 <div class="tt-dataset tt-dataset-0">
-                  <div class="EmptyMessage">Opps!! There are no result found.</div>
+                  <div class="EmptyMessage">
+                    Opps!! There are no result found.
+                  </div>
                 </div>
               </div>
             </div>
           </li>
           <li (click)="flipBookMark()">
-            <a class="flip-back btn btn-primary w-100" id="flip-back" href="javascript:void(0)">Back</a></li>
+            <a
+              class="flip-back btn btn-primary w-100"
+              id="flip-back"
+              href="javascript:void(0)"
+              >Back</a
+            >
+          </li>
         </ul>
       </div>
     </div>

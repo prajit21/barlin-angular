@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-padding',
+  selector: "app-padding",
   imports: [],
-  templateUrl: './padding.html',
-  styleUrls: ['./padding.scss'],
+  templateUrl: "./padding.html",
+  styleUrls: ["./padding.scss"],
 })
 export class Padding {}

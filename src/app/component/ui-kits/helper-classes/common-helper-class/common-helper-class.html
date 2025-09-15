@@ -11,9 +11,10 @@
         <div [class]="items.divClass">
           <h5 class="mb-3">{{items.title}}</h5>
           @for (datas of items.data; track datas) {
-            <div class="helper-common-box">
-              <div [class]="datas.textClass">{{datas.textC}}</div><span>{{datas.text}}</span>
-            </div>
+          <div class="helper-common-box">
+            <div [class]="datas.textClass">{{datas.textC}}</div>
+            <span>{{datas.text}}</span>
+          </div>
           }
         </div>
       </div>

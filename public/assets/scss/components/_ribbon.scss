@@ -64,7 +64,7 @@
     display: block;
     width: 0;
     height: 0;
-    content: '';
+    content: "";
     border: 15px solid $dark-color;
     border-right: 10px solid transparent;
   }
@@ -164,7 +164,6 @@
 }
 
 .ribbon-bookmark {
-
   &.ribbon-vertical-left:before,
   &.ribbon-vertical-right:before {
     top: 100%;
@@ -175,15 +174,11 @@
   }
 }
 
-@each $ribbon-name,
-$ribbon-color in (primary, $primary-color),
-(secondary, $secondary-color),
-(success, $success-color),
-(danger, $danger-color),
-(info, $info-color),
-(light, $light-color),
-(dark, $dark-color),
-(warning, $warning-color) {
+@each $ribbon-name, $ribbon-color in (primary, $primary-color),
+  (secondary, $secondary-color), (success, $success-color),
+  (danger, $danger-color), (info, $info-color), (light, $light-color),
+  (dark, $dark-color), (warning, $warning-color)
+{
   .ribbon-#{$ribbon-name} {
     background: $ribbon-color;
   }
@@ -277,7 +272,7 @@ $ribbon-color in (primary, $primary-color),
   transform: translate(20deg);
 }
 
-//  animation ribbons 
+//  animation ribbons
 .animated-ribbon {
   position: relative;
 
@@ -287,7 +282,7 @@ $ribbon-color in (primary, $primary-color),
     width: 100%;
     transform: translate(-50%, 50%);
     perspective: 50px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
     position: relative;
 
     .ribbon {
@@ -302,7 +297,7 @@ $ribbon-color in (primary, $primary-color),
         position: absolute;
         display: block;
         bottom: 0px;
-        transition: all .2s ease-in;
+        transition: all 0.2s ease-in;
 
         &.back {
           background: var(--theme-default);
@@ -311,7 +306,7 @@ $ribbon-color in (primary, $primary-color),
           left: 100%;
           transform: skewY(-30deg);
           transform-origin: 0% 100%;
-          transition-delay: .45s;
+          transition-delay: 0.45s;
         }
 
         &.front {
@@ -320,7 +315,7 @@ $ribbon-color in (primary, $primary-color),
           height: 36px;
           right: -10px;
           bottom: 11px;
-          transition-delay: .35s;
+          transition-delay: 0.35s;
         }
 
         &.fold {
@@ -331,7 +326,7 @@ $ribbon-color in (primary, $primary-color),
           bottom: 11px;
           transform: rotateY(-45deg) skewY(-40deg);
           transform-origin: 100% 0%;
-          transition-delay: .15s;
+          transition-delay: 0.15s;
         }
 
         &.foldback {
@@ -349,7 +344,7 @@ $ribbon-color in (primary, $primary-color),
           color: $white;
           text-align: center;
           padding: 3px 38px;
-          transition: all .4s ease-out;
+          transition: all 0.4s ease-out;
         }
       }
     }
@@ -365,12 +360,12 @@ $ribbon-color in (primary, $primary-color),
 
         &.front {
           width: 145px;
-          transition-delay: .15s;
+          transition-delay: 0.15s;
         }
 
         span {
           opacity: 1;
-          transition-delay: .2s;
+          transition-delay: 0.2s;
         }
       }
     }
@@ -382,12 +377,11 @@ $ribbon-color in (primary, $primary-color),
   &:hover {
     .label {
       padding-left: 1em;
-      [ dir = "rtl" ] & {
+      [dir="rtl"] & {
         padding-left: 0.75em;
         padding-right: 1em;
       }
     }
-
   }
 
   .media-image {
@@ -408,15 +402,15 @@ $ribbon-color in (primary, $primary-color),
     padding: 0 0.75em;
     border-radius: 5px 2px 2px 0px;
     text-transform: uppercase;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
     line-height: 2.35em;
     font-weight: bold;
     color: $white;
     background-color: $danger-color;
     z-index: 7;
-    box-shadow: 0px 2px 0 rgba($dark-color, .1);
+    box-shadow: 0px 2px 0 rgba($dark-color, 0.1);
     transition: all 0.1s;
-    [dir = "rtl"] & {
+    [dir="rtl"] & {
       left: unset;
       right: -24px;
       border-radius: 2px 5px 0px 2px;
@@ -449,7 +443,7 @@ $ribbon-color in (primary, $primary-color),
       left: 0;
       bottom: -4px;
       background-color: $danger-color;
-      [dir = "rtl"] & {
+      [dir="rtl"] & {
         left: unset;
         right: 0;
       }
@@ -465,7 +459,7 @@ $ribbon-color in (primary, $primary-color),
       left: 0;
       background-color: $danger-color;
       border-radius: 5px 0 0 5px;
-      [dir = "rtl"] & {
+      [dir="rtl"] & {
         left: unset;
         right: 0;
       }
@@ -481,7 +475,7 @@ $ribbon-color in (primary, $primary-color),
     .ribbon {
       left: -50px;
       transition: all 0.2s ease;
-      [ dir = "rtl"] & {
+      [dir="rtl"] & {
         direction: ltr;
       }
 
@@ -493,7 +487,6 @@ $ribbon-color in (primary, $primary-color),
         opacity: 0;
         transition: all 0.2s ease;
       }
-
     }
 
     .ribbon-bookmark {
@@ -542,7 +535,7 @@ $ribbon-color in (primary, $primary-color),
       transition: all 0.3s ease;
       opacity: 0;
 
-      >div {
+      > div {
         position: absolute;
         bottom: -2px;
         left: 36px;
@@ -570,7 +563,7 @@ $ribbon-color in (primary, $primary-color),
 .vertical-ribbon-animate {
   &:hover {
     .ribbon-vertical-right {
-      animation: shrink .3s ease;
+      animation: shrink 0.3s ease;
     }
   }
 
@@ -586,10 +579,10 @@ $ribbon-color in (primary, $primary-color),
       content: unset;
     }
 
-    >div {
+    > div {
       i {
         margin-right: 6px;
-        [dir = "rtl"] & {
+        [dir="rtl"] & {
           margin-right: unset;
           margin-left: 6px;
         }
@@ -602,19 +595,27 @@ $ribbon-color in (primary, $primary-color),
     left: 38px;
     line-height: 40px;
     border-radius: 0;
-    top: calc(-1*12px);
+    top: calc(-1 * 12px);
     border-left: 12px solid #0005;
     border-bottom: 14px solid #0000;
-    clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 14px), calc(50% + 12px/2) 100%, 12px calc(100% - 14px), 12px 12px, 0 12px);
+    clip-path: polygon(
+      12px 0,
+      100% 0,
+      100% calc(100% - 14px),
+      calc(50% + 12px / 2) 100%,
+      12px calc(100% - 14px),
+      12px 12px,
+      0 12px
+    );
   }
 }
 @keyframes shrink {
   0% {
-    transform: translateX(0em)
+    transform: translateX(0em);
   }
 
   50% {
-    transform: translateX(-1em)
+    transform: translateX(-1em);
   }
 }
 

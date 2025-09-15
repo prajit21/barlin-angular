@@ -1,5 +1,5 @@
-import { DecimalPipe } from '@angular/common';
-import { inject, Injectable, PipeTransform } from '@angular/core';
+import { DecimalPipe } from "@angular/common";
+import { inject, Injectable, PipeTransform } from "@angular/core";
 
 import {
   BehaviorSubject,
@@ -10,10 +10,16 @@ import {
   of,
   switchMap,
   tap,
-} from 'rxjs';
+} from "rxjs";
 
-import { orderTable, orderTableData } from '../data/data/ecommerce/order-history';
-import { SortColumn, SortDirection } from '../directive/order-historay-sortable.directive';
+import {
+  orderTable,
+  orderTableData,
+} from "../data/data/ecommerce/order-history";
+import {
+  SortColumn,
+  SortDirection,
+} from "../directive/order-historay-sortable.directive";
 
 interface SearchResult {
   products: orderTable[];
@@ -28,15 +34,20 @@ interface State {
   sortDirection: SortDirection;
 }
 
-const compare = (v1: string | number, v2: string | number) => (v1 < v2 ? -1 : v1 > v2 ? 1 : 0);
+const compare = (v1: string | number, v2: string | number) =>
+  v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
 
-function sort(orderHistory: orderTable[], columns: SortColumn, direction: string): orderTable[] {
-  if (direction === '' || columns === '') {
+function sort(
+  orderHistory: orderTable[],
+  columns: SortColumn,
+  direction: string,
+): orderTable[] {
+  if (direction === "" || columns === "") {
     return orderHistory;
   } else {
     return [...orderHistory].sort((c, f) => {
       const res = compare(c[columns], f[columns]);
-      return direction === 'asc' ? res : -res;
+      return direction === "asc" ? res : -res;
     });
   }
 }
@@ -55,7 +66,7 @@ function matches(orders: orderTable, term: string, pipe: PipeTransform) {
 }
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class OrderHistoryService {
   private pipe = inject(DecimalPipe);
@@ -68,9 +79,9 @@ export class OrderHistoryService {
   private _product: State = {
     page: 1,
     pageSize: 10,
-    searchTerm: '',
-    sortColumn: '',
-    sortDirection: '',
+    searchTerm: "",
+    sortColumn: "",
+    sortDirection: "",
   };
 
   constructor() {
@@ -82,7 +93,7 @@ export class OrderHistoryService {
         delay(200),
         tap(() => this._loading$.next(false)),
       )
-      .subscribe(result => {
+      .subscribe((result) => {
         this._ordersList$.next(result.products);
         this._total$.next(result.total);
       });
@@ -130,17 +141,21 @@ export class OrderHistoryService {
   }
 
   private _search(): Observable<SearchResult> {
-    const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._product;
+    const { sortColumn, sortDirection, pageSize, page, searchTerm } =
+      this._product;
 
     // 1. sort
     let products = sort(orderTableData, sortColumn, sortDirection);
 
     // 2. filter
-    products = products.filter(list => matches(list, searchTerm, this.pipe));
+    products = products.filter((list) => matches(list, searchTerm, this.pipe));
     const total = products.length;
 
     // 3. paginate
-    products = products.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+    products = products.slice(
+      (page - 1) * pageSize,
+      (page - 1) * pageSize + pageSize,
+    );
     return of({ products, total });
   }
 }

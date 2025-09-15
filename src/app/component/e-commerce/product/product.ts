@@ -1,15 +1,15 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject } from "@angular/core";
 
-import { ProductFilter } from './product-filter/product-filter';
-import { ProductShow } from './product-show/product-show';
-import { FeatherIcon } from '../../../shared/component/feather-icon/feather-icon';
-import { ProductService } from '../../../shared/service/product.service';
+import { ProductFilter } from "./product-filter/product-filter";
+import { ProductShow } from "./product-show/product-show";
+import { FeatherIcon } from "../../../shared/component/feather-icon/feather-icon";
+import { ProductService } from "../../../shared/service/product.service";
 
 @Component({
-  selector: 'app-product',
+  selector: "app-product",
   imports: [FeatherIcon, ProductFilter, ProductShow],
-  templateUrl: './product.html',
-  styleUrls: ['./product.scss'],
+  templateUrl: "./product.html",
+  styleUrls: ["./product.scss"],
 })
 export class Product {
   public listView: boolean = false;

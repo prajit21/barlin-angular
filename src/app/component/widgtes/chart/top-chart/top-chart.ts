@@ -1,13 +1,15 @@
-import { Component, input } from '@angular/core';
+import { Component, input } from "@angular/core";
 
-import { NgApexchartsModule } from 'ng-apexcharts';
+import { NgApexchartsModule } from "ng-apexcharts";
+
+import { TotalItem } from "../../../../shared/data/data/widgets";
 
 @Component({
-  selector: 'app-top-chart',
+  selector: "app-top-chart",
   imports: [NgApexchartsModule],
-  templateUrl: './top-chart.html',
-  styleUrl: './top-chart.scss',
+  templateUrl: "./top-chart.html",
+  styleUrl: "./top-chart.scss",
 })
 export class TopChart {
-  readonly data = input<any>();
+  readonly data = input<TotalItem>();
 }

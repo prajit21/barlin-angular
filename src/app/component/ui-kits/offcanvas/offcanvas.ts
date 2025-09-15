@@ -1,17 +1,17 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { NgbOffcanvasModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbOffcanvasModule } from "@ng-bootstrap/ng-bootstrap";
 
-import { BackdropWithScrolling } from './backdrop-with-scrolling/backdrop-with-scrolling';
-import { BottomOffcanvas } from './bottom-offcanvas/bottom-offcanvas';
-import { EnableBodyScrolling } from './enable-body-scrolling/enable-body-scrolling';
-import { LeftOffcanvas } from './left-offcanvas/left-offcanvas';
-import { RightOffcanvas } from './right-offcanvas/right-offcanvas';
-import { ToggleStaticOffcanvas } from './toggle-static-offcanvas/toggle-static-offcanvas';
-import { TopOffcanvas } from './top-offcanvas/top-offcanvas';
+import { BackdropWithScrolling } from "./backdrop-with-scrolling/backdrop-with-scrolling";
+import { BottomOffcanvas } from "./bottom-offcanvas/bottom-offcanvas";
+import { EnableBodyScrolling } from "./enable-body-scrolling/enable-body-scrolling";
+import { LeftOffcanvas } from "./left-offcanvas/left-offcanvas";
+import { RightOffcanvas } from "./right-offcanvas/right-offcanvas";
+import { ToggleStaticOffcanvas } from "./toggle-static-offcanvas/toggle-static-offcanvas";
+import { TopOffcanvas } from "./top-offcanvas/top-offcanvas";
 
 @Component({
-  selector: 'app-offcanvas',
+  selector: "app-offcanvas",
   imports: [
     NgbOffcanvasModule,
     TopOffcanvas,
@@ -22,7 +22,7 @@ import { TopOffcanvas } from './top-offcanvas/top-offcanvas';
     BackdropWithScrolling,
     ToggleStaticOffcanvas,
   ],
-  templateUrl: './offcanvas.html',
-  styleUrl: './offcanvas.scss',
+  templateUrl: "./offcanvas.html",
+  styleUrl: "./offcanvas.scss",
 })
 export class Offcanvas {}

@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-buttons-with-prefix',
+  selector: "app-buttons-with-prefix",
   imports: [],
-  templateUrl: './buttons-with-prefix.html',
-  styleUrls: ['./buttons-with-prefix.scss'],
+  templateUrl: "./buttons-with-prefix.html",
+  styleUrls: ["./buttons-with-prefix.scss"],
 })
 export class ButtonsWithPrefix {
   public value: number[] = [0, 0];

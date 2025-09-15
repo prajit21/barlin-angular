@@ -1,14 +1,14 @@
-import { Routes } from '@angular/router';
+import { Routes } from "@angular/router";
 
-import { Faq } from './faq';
+import { Faq } from "./faq";
 
 export default [
   {
-    path: '',
+    path: "",
     component: Faq,
     data: {
-      title: 'FAQ',
-      breadcrumb: 'FAQ',
+      title: "FAQ",
+      breadcrumb: "FAQ",
     },
   },
 ] as Routes;

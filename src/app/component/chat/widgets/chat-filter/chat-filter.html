@@ -4,27 +4,48 @@
       <span class="input-group-text">
         <app-feather-icon [icon]="'search'" [class]="'search-icon text-gray'" />
       </span>
-      <input class="form-control bg-transparent" type="text" placeholder="Search here..">
+      <input
+        class="form-control bg-transparent"
+        type="text"
+        placeholder="Search here.."
+      />
     </div>
   </div>
   <div class="advance-options">
-    <ul class="nav border-tab" ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
-      <li class="nav-item" [ngbNavItem]="1"><a class="nav-link" ngbNavLink>Chats</a>
+    <ul
+      class="nav border-tab"
+      ngbNav
+      #nav="ngbNav"
+      [(activeId)]="active"
+      class="nav-tabs"
+    >
+      <li class="nav-item" [ngbNavItem]="1">
+        <a class="nav-link" ngbNavLink>Chats</a>
         <ng-template ngbNavContent>
           <div class="common-space">
             <p>Recent chats</p>
-            <div class="header-top"><a class="btn badge-light-primary f-w-500" href="javascript:void(0)"><i
-                  class="fa fa-plus"></i></a></div>
+            <div class="header-top">
+              <a
+                class="btn badge-light-primary f-w-500"
+                href="javascript:void(0)"
+                ><i class="fa fa-plus"></i
+              ></a>
+            </div>
           </div>
           <ul class="chats-user custom-scrollbar">
             @for (item of chat; track item) {
             <li class="common-space">
               <div class="chat-time">
                 <div class="active-profile">
-                  <img class="img-fluid rounded-circle" [src]="item.image" alt="user">
+                  <img
+                    class="img-fluid rounded-circle"
+                    [src]="item.image"
+                    alt="user"
+                  />
                   <div class="status bg-success"></div>
                 </div>
-                <div> <span>{{item.name}}</span>
+                <div>
+                  <span>{{item.name}}</span>
                   <p>{{item.message}}</p>
                 </div>
               </div>
@@ -39,18 +60,26 @@
           </ul>
         </ng-template>
       </li>
-      <li class="nav-item" [ngbNavItem]="2"><a class="nav-link" ngbNavLink>Contacts</a>
+      <li class="nav-item" [ngbNavItem]="2">
+        <a class="nav-link" ngbNavLink>Contacts</a>
         <ng-template ngbNavContent>
           <div class="common-space">
             <p>Contacts</p>
             <div class="header-top">
-              <a class="btn badge-light-primary f-w-500" href="javascript:void(0)">
+              <a
+                class="btn badge-light-primary f-w-500"
+                href="javascript:void(0)"
+              >
                 <i class="fa fa-plus"></i>
               </a>
             </div>
           </div>
           <div class="search-contacts">
-            <input class="form-control" type="text" placeholder="Name and phone number">
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Name and phone number"
+            />
             <app-common-svg-icons [icon]="'stroke-search'" />
             <app-feather-icon [class]="'mic-search'" [icon]="'mic'" />
           </div>
@@ -62,25 +91,40 @@
               <li class="common-space">
                 <div class="chat-time">
                   @if (data.img) {
-                  <img class="img-fluid rounded-circle" [src]="data.img" alt="user">
+                  <img
+                    class="img-fluid rounded-circle"
+                    [src]="data.img"
+                    alt="user"
+                  />
+                  } @if (data.text) {
+                  <div class="custom-name bg-light-{{data.class}}">
+                    <p class="txt-{{data.class}} f-w-500">{{data.text}}</p>
+                  </div>
                   }
-                  @if (data.text) {
-                    <div class="custom-name bg-light-{{data.class}}">
-                      <p class="txt-{{data.class}} f-w-500">{{data.text}}</p>
-                    </div>
-                    }
                   <div>
                     <span>{{data.name}}</span>
                     <p>{{data.number}}</p>
                   </div>
                 </div>
                 <div class="contact-edit" (clickOutside)="data.active = false">
-                  <app-common-svg-icons [class]="'dropdown-toggle'" [icon]="'menubar'"
-                    (click)="open()" />
-                  <div class="dropdown-menu dropdown-menu-end chatFilter" [class.show]="data.active">
-                    <a class="dropdown-item" href="javascript:void(0)">View details</a>
-                    <a class="dropdown-item" href="javascript:void(0)">Send messages</a>
-                    <a class="dropdown-item" href="javascript:void(0)">Add to favorites</a>
+                  <app-common-svg-icons
+                    [class]="'dropdown-toggle'"
+                    [icon]="'menubar'"
+                    (click)="open()"
+                  />
+                  <div
+                    class="dropdown-menu dropdown-menu-end chatFilter"
+                    [class.show]="data.active"
+                  >
+                    <a class="dropdown-item" href="javascript:void(0)"
+                      >View details</a
+                    >
+                    <a class="dropdown-item" href="javascript:void(0)"
+                      >Send messages</a
+                    >
+                    <a class="dropdown-item" href="javascript:void(0)"
+                      >Add to favorites</a
+                    >
                   </div>
                 </div>
               </li>

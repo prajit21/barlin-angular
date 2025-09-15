@@ -1,43 +1,120 @@
-<div class="card"> 
-    <div class="card-header pb-0"> 
-      <h4>Navbar Scrollspy</h4>
-      <p class="f-m-light mt-1">
-          Add <code>data-bs-spy="scroll" </code>and <code>data-bs-target="#navId" </code>where navId is the unique id of the associated navigation. Scroll the area below the navbar and watch the active class change. </p>
-    </div>
-    <div class="card-body navbar-scrollspy">
-      <nav class="navbar bg-body-tertiary px-3 mb-3" id="navbar-scrollspy1">
-        <a class="navbar-brand" href="javascript:void(0)">
-          <img class="img-fluid for-light" src="assets/images/logo/logo-1.png" alt="logo">
-          <img class="img-fluid for-dark" src="assets/images/logo/logo.png" alt="logo">
-        </a>
-        <ul class="nav nav-pills" [ngbScrollSpyMenu]="s">
-          <li class="nav-item"><a class="nav-link" ngbScrollSpyItem="scrollspyHeading1">Section 1</a></li>
-          <li class="nav-item"><a class="nav-link" ngbScrollSpyItem="scrollspyHeading2">Section 2</a></li>
-          <li class="nav-item dropdown" ngbDropdown>
-            <a class="nav-link dropdown-toggle" ngbDropdownToggle  ngbScrollSpyItem="basic-scrollspyHeading">Dropdown</a>
-            <ul class="dropdown-menu" ngbDropdownMenu>
-              <li><a class="dropdown-item" ngbDropdownItem ngbScrollSpyItem="scrollspyHeading3" parent="basic-scrollspyHeading">Section 3</a></li>
-              <li><a class="dropdown-item" ngbDropdownItem ngbScrollSpyItem="scrollspyHeading4" parent="basic-scrollspyHeading">Section 4</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" ngbDropdownItem ngbScrollSpyItem="scrollspyHeading5" parent="basic-scrollspyHeading">Section 5</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <div class="scrollspy-example bg-body-tertiary p-3 rounded-2 custom-scrollbar" 
-      ngbScrollSpy #s="ngbScrollSpy" rootMargin="0px 0px -40%">
-        <h5 ngbScrollSpyFragment="scrollspyHeading1">Section 1</h5>
-        <p>For the scrollspy page, this is some placeholder content. Take note of the highlighted navigation link at the bottom of the page as you scroll down. It appears again and again in the component example. To highlight the scrolling and highlighting, we're going to keep adding more sample copy here.</p>
-        <h5 ngbScrollSpyFragment="scrollspyHeading2">Section 2</h5>
-        <p>The content that appears here is a placeholder for the scrollspy page. The relevant navigation link is highlighted as you scroll down the page. The component example contains repetitions of it. In order to highlight the scrolling and highlighting, we will continue to add more sample copy here.</p>
-        <h5 ngbScrollSpyFragment="scrollspyHeading3">Section 3</h5>
-        <p>This is some stuff that is meant to be on the scrollspy page. Keep in mind that the relevant navigation link is highlighted as you scroll down the page. The component example uses it repeatedly. Here, we continue to add sample copy to highlight the scrolling and highlighting.</p>
-        <h5 ngbScrollSpyFragment="scrollspyHeading4">Section 4</h5>
-        <p>This content is a stand-in for the scrollspy page. You'll notice that the relevant navigation link is highlighted as you scroll down the page. It appears again in the component example. Here, we'll continue to add sample copy to highlight the scrolling and highlighting.</p>
-        <h5 ngbScrollSpyFragment="scrollspyHeading5">Section 5</h5>
-        <p>For the scrollspy page, this is some placeholder content. Take note of the highlighted navigation link at the bottom of the page as you scroll down. It appears again and again in the component example. To highlight the scrolling and highlighting, we're going to keep adding more sample copy here.</p>
-      </div>
+<div class="card">
+  <div class="card-header pb-0">
+    <h4>Navbar Scrollspy</h4>
+    <p class="f-m-light mt-1">
+      Add <code>data-bs-spy="scroll" </code>and
+      <code>data-bs-target="#navId" </code>where navId is the unique id of the
+      associated navigation. Scroll the area below the navbar and watch the
+      active class change.
+    </p>
+  </div>
+  <div class="card-body navbar-scrollspy">
+    <nav class="navbar bg-body-tertiary px-3 mb-3" id="navbar-scrollspy1">
+      <a class="navbar-brand" href="javascript:void(0)">
+        <img
+          class="img-fluid for-light"
+          src="assets/images/logo/logo-1.png"
+          alt="logo"
+        />
+        <img
+          class="img-fluid for-dark"
+          src="assets/images/logo/logo.png"
+          alt="logo"
+        />
+      </a>
+      <ul class="nav nav-pills" [ngbScrollSpyMenu]="s">
+        <li class="nav-item">
+          <a class="nav-link" ngbScrollSpyItem="scrollspyHeading1">Section 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" ngbScrollSpyItem="scrollspyHeading2">Section 2</a>
+        </li>
+        <li class="nav-item dropdown" ngbDropdown>
+          <a
+            class="nav-link dropdown-toggle"
+            ngbDropdownToggle
+            ngbScrollSpyItem="basic-scrollspyHeading"
+            >Dropdown</a
+          >
+          <ul class="dropdown-menu" ngbDropdownMenu>
+            <li>
+              <a
+                class="dropdown-item"
+                ngbDropdownItem
+                ngbScrollSpyItem="scrollspyHeading3"
+                parent="basic-scrollspyHeading"
+                >Section 3</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                ngbDropdownItem
+                ngbScrollSpyItem="scrollspyHeading4"
+                parent="basic-scrollspyHeading"
+                >Section 4</a
+              >
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                ngbDropdownItem
+                ngbScrollSpyItem="scrollspyHeading5"
+                parent="basic-scrollspyHeading"
+                >Section 5</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div
+      class="scrollspy-example bg-body-tertiary p-3 rounded-2 custom-scrollbar"
+      ngbScrollSpy
+      #s="ngbScrollSpy"
+      rootMargin="0px 0px -40%"
+    >
+      <h5 ngbScrollSpyFragment="scrollspyHeading1">Section 1</h5>
+      <p>
+        For the scrollspy page, this is some placeholder content. Take note of
+        the highlighted navigation link at the bottom of the page as you scroll
+        down. It appears again and again in the component example. To highlight
+        the scrolling and highlighting, we're going to keep adding more sample
+        copy here.
+      </p>
+      <h5 ngbScrollSpyFragment="scrollspyHeading2">Section 2</h5>
+      <p>
+        The content that appears here is a placeholder for the scrollspy page.
+        The relevant navigation link is highlighted as you scroll down the page.
+        The component example contains repetitions of it. In order to highlight
+        the scrolling and highlighting, we will continue to add more sample copy
+        here.
+      </p>
+      <h5 ngbScrollSpyFragment="scrollspyHeading3">Section 3</h5>
+      <p>
+        This is some stuff that is meant to be on the scrollspy page. Keep in
+        mind that the relevant navigation link is highlighted as you scroll down
+        the page. The component example uses it repeatedly. Here, we continue to
+        add sample copy to highlight the scrolling and highlighting.
+      </p>
+      <h5 ngbScrollSpyFragment="scrollspyHeading4">Section 4</h5>
+      <p>
+        This content is a stand-in for the scrollspy page. You'll notice that
+        the relevant navigation link is highlighted as you scroll down the page.
+        It appears again in the component example. Here, we'll continue to add
+        sample copy to highlight the scrolling and highlighting.
+      </p>
+      <h5 ngbScrollSpyFragment="scrollspyHeading5">Section 5</h5>
+      <p>
+        For the scrollspy page, this is some placeholder content. Take note of
+        the highlighted navigation link at the bottom of the page as you scroll
+        down. It appears again and again in the component example. To highlight
+        the scrolling and highlighting, we're going to keep adding more sample
+        copy here.
+      </p>
     </div>
   </div>
+</div>

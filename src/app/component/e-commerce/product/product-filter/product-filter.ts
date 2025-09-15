@@ -1,17 +1,22 @@
-import { Component, input, output } from '@angular/core';
+import { Component, input, output } from "@angular/core";
 
-import { NgxSliderModule, Options } from '@angular-slider/ngx-slider';
-import { BarRatingModule } from 'ngx-bar-rating';
-import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
+import { NgxSliderModule, Options } from "@angular-slider/ngx-slider";
+import { BarRatingModule } from "ngx-bar-rating";
+import { CarouselModule, OwlOptions } from "ngx-owl-carousel-o";
 
-import * as data from '../../../../shared/data/data/ecommerce/ecommerce';
-import { ClickOutsideDirective } from '../../../../shared/directive/click-outside.directive';
+import * as data from "../../../../shared/data/data/ecommerce/ecommerce";
+import { ClickOutsideDirective } from "../../../../shared/directive/click-outside.directive";
 
 @Component({
-  selector: 'app-product-filter',
-  imports: [CarouselModule, BarRatingModule, NgxSliderModule, ClickOutsideDirective],
-  templateUrl: './product-filter.html',
-  styleUrls: ['./product-filter.scss'],
+  selector: "app-product-filter",
+  imports: [
+    CarouselModule,
+    BarRatingModule,
+    NgxSliderModule,
+    ClickOutsideDirective,
+  ],
+  templateUrl: "./product-filter.html",
+  styleUrls: ["./product-filter.scss"],
 })
 export class ProductFilter {
   public filterData = data.filterData;
@@ -34,7 +39,10 @@ export class ProductFilter {
     loop: true,
     dots: false,
     nav: true,
-    navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+    navText: [
+      "<i class='fa fa-chevron-left'></i>",
+      "<i class='fa fa-chevron-right'></i>",
+    ],
   };
 
   Outside(value: boolean) {

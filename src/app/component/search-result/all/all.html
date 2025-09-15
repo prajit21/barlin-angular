@@ -9,8 +9,8 @@
       <p>{{items.desc}}</p>
       <div class="star-ratings">
         <ul class="search-info">
-          @if (items.showRating) { 
-            <ngb-rating class="font-warning" [rate]="items.rating" />
+          @if (items.showRating) {
+          <ngb-rating class="font-warning" [rate]="items.rating" />
           }
           <li>{{items.votes}} votes</li>
           <li>{{items.type}}</li>
@@ -23,12 +23,25 @@
   <div class="col-12 m-t-30">
     <nav aria-label="...">
       <ul class="pagination pagination-primary justify-content-end">
-        <li class="page-item disabled"><a class="page-link" href="javascript:void(0)" tabindex="-1">Previous</a></li>
-        <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
-        <li class="page-item active"><a class="page-link" href="javascript:void(0)">2<span
-              class="sr-only">(current)</span></a></li>
-        <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
-        <li class="page-item"><a class="page-link" href="javascript:void(0)">Next</a></li>
+        <li class="page-item disabled">
+          <a class="page-link" href="javascript:void(0)" tabindex="-1"
+            >Previous</a
+          >
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="javascript:void(0)">1</a>
+        </li>
+        <li class="page-item active">
+          <a class="page-link" href="javascript:void(0)"
+            >2<span class="sr-only">(current)</span></a
+          >
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="javascript:void(0)">3</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="javascript:void(0)">Next</a>
+        </li>
       </ul>
     </nav>
   </div>

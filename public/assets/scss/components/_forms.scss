@@ -9,7 +9,7 @@
 }
 .form-space {
   margin-bottom: -10px;
-  >div {
+  > div {
     margin-bottom: 10px;
   }
 }
@@ -28,20 +28,20 @@
       font-weight: $form-placeholder-font-weight;
     }
   }
-  input[type=text],
-  input[type=email],
-  input[type=search],
-  input[type=password],
-  input[type=number],
-  input[type=tel],
-  input[type=date],
-  input[type=datetime-local],
-  input[type=time],
-  input[type=datetime-local],
-  input[type=month],
-  input[type=week],
-  input[type=url],
-  input[type=file],
+  input[type="text"],
+  input[type="email"],
+  input[type="search"],
+  input[type="password"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="datetime-local"],
+  input[type="time"],
+  input[type="datetime-local"],
+  input[type="month"],
+  input[type="week"],
+  input[type="url"],
+  input[type="file"],
   textarea,
   select {
     border-color: $light-gray;
@@ -58,7 +58,7 @@
       font-weight: $form-placeholder-font-weight;
     }
   }
-  input[type=file] {
+  input[type="file"] {
     height: auto;
   }
   select.form-control:not([size]):not([multiple]) {
@@ -238,10 +238,10 @@
       &:invalid {
         border-color: $danger-color;
       }
-      &:invalid~.form-check-label {
+      &:invalid ~ .form-check-label {
         color: $danger-color;
       }
-      &:valid~.form-check-label {
+      &:valid ~ .form-check-label {
         color: $success-color;
       }
       &:checked {
@@ -383,7 +383,7 @@
     label {
       margin-top: 0;
       &::before {
-        content: '';
+        content: "";
         width: 100%;
         height: 100%;
         margin-left: 1px;
@@ -398,13 +398,13 @@
     }
   }
   &.checkbox-primary {
-    input[type=checkbox]:checked {
-      +label::before {
+    input[type="checkbox"]:checked {
+      + label::before {
         color: transparent;
         border: 2px solid var(--theme-default);
       }
     }
-    input[type=checkbox] {
+    input[type="checkbox"] {
       opacity: 1;
     }
     .form-check-input {
@@ -414,7 +414,7 @@
           box-shadow: none;
         }
       }
-      &:checked[type=checkbox] {
+      &:checked[type="checkbox"] {
         background-image: none;
       }
     }
@@ -440,7 +440,7 @@
   gap: calc(8px + (16 - 8) * ((100vw - 320px) / (1920 - 320)));
   flex-wrap: wrap;
   justify-content: center;
-  @media (max-width:1200px) {
+  @media (max-width: 1200px) {
     justify-content: unset;
   }
   li {
@@ -453,10 +453,10 @@
     align-items: center;
     justify-content: center;
     max-width: 130px;
-    @media (max-width:1335px) {
+    @media (max-width: 1335px) {
       max-width: 113px;
     }
-    @media (max-width:1232px) {
+    @media (max-width: 1232px) {
       padding: 10px;
       max-width: 105px;
     }
@@ -475,13 +475,13 @@
       &:focus {
         box-shadow: none;
       }
-      &[type=radio] {
+      &[type="radio"] {
         opacity: 1;
       }
       &:checked {
         border: 2px solid var(--theme-default);
         background-color: transparent;
-        &[type=radio] {
+        &[type="radio"] {
           background-image: none;
           box-shadow: unset;
         }
@@ -595,7 +595,7 @@
     }
   }
   .form-floating {
-    >label {
+    > label {
       [dir="rtl"] & {
         left: unset;
         right: 0;

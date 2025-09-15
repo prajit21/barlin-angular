@@ -1,249 +1,257 @@
-import { Routes } from '@angular/router';
+import { Routes } from "@angular/router";
 
 export const content: Routes = [
   {
-    path: 'dashboard',
+    path: "dashboard",
     data: {
-      breadcrumb: 'Dashboard',
+      breadcrumb: "Dashboard",
     },
-    loadChildren: () => import('../../component/dashboard/dashboard.routes'),
+    loadChildren: () => import("../../component/dashboard/dashboard.routes"),
   },
   {
-    path: 'widgets',
+    path: "widgets",
     data: {
-      breadcrumb: 'Widgets',
+      breadcrumb: "Widgets",
     },
-    loadChildren: () => import('../../component/widgtes/widgets.routes'),
+    loadChildren: () => import("../../component/widgtes/widgets.routes"),
   },
   {
-    path: 'page-layout',
+    path: "page-layout",
     data: {
-      breadcrumb: 'Page Layout',
+      breadcrumb: "Page Layout",
     },
-    loadChildren: () => import('../../component/page-layout/page-layout.routes'),
+    loadChildren: () =>
+      import("../../component/page-layout/page-layout.routes"),
   },
   {
-    path: 'project',
+    path: "project",
     data: {
-      breadcrumb: 'Project',
+      breadcrumb: "Project",
     },
-    loadChildren: () => import('../../component/project/project.routes'),
+    loadChildren: () => import("../../component/project/project.routes"),
   },
   {
-    path: 'file-manager',
+    path: "file-manager",
     data: {
-      breadcrumb: 'Apps',
+      breadcrumb: "Apps",
     },
-    loadChildren: () => import('../../component/file-manager/file-manager.routes'),
+    loadChildren: () =>
+      import("../../component/file-manager/file-manager.routes"),
   },
   {
-    path: 'ecommerce',
+    path: "ecommerce",
     data: {
-      breadcrumb: 'Ecommerce',
+      breadcrumb: "Ecommerce",
     },
-    loadChildren: () => import('../../component/e-commerce/e-commerce.routes'),
+    loadChildren: () => import("../../component/e-commerce/e-commerce.routes"),
   },
   {
-    path: 'letter-box',
+    path: "letter-box",
     data: {
-      breadcrumb: 'Email',
+      breadcrumb: "Email",
     },
-    loadChildren: () => import('../../component/letter-box/letter-box.routes'),
+    loadChildren: () => import("../../component/letter-box/letter-box.routes"),
   },
   {
-    path: 'chat',
+    path: "chat",
     data: {
-      breadcrumb: 'Chat',
+      breadcrumb: "Chat",
     },
-    loadChildren: () => import('../../component/chat/chat.routes'),
+    loadChildren: () => import("../../component/chat/chat.routes"),
   },
   {
-    path: 'user',
+    path: "user",
     data: {
-      breadcrumb: 'Users',
+      breadcrumb: "Users",
     },
-    loadChildren: () => import('../../component/users/users.routes'),
+    loadChildren: () => import("../../component/users/users.routes"),
   },
   {
-    path: 'bookmarks',
+    path: "bookmarks",
     data: {
-      breadcrumb: 'Apps',
+      breadcrumb: "Apps",
     },
-    loadChildren: () => import('../../component/bookmark/bookmark.routes'),
+    loadChildren: () => import("../../component/bookmark/bookmark.routes"),
   },
   {
-    path: 'contact',
+    path: "contact",
     data: {
-      breadcrumb: 'Apps',
+      breadcrumb: "Apps",
     },
-    loadChildren: () => import('../../component/contact/contact.routes'),
+    loadChildren: () => import("../../component/contact/contact.routes"),
   },
   {
-    path: 'tasks',
+    path: "tasks",
     data: {
-      breadcrumb: 'Apps',
+      breadcrumb: "Apps",
     },
-    loadChildren: () => import('../../component/task/task.routes'),
+    loadChildren: () => import("../../component/task/task.routes"),
   },
   {
-    path: 'calender',
+    path: "calender",
     data: {
-      breadcrumb: 'Apps',
+      breadcrumb: "Apps",
     },
-    loadChildren: () => import('../../component/calendar/calendar.routes'),
+    loadChildren: () => import("../../component/calendar/calendar.routes"),
   },
   {
-    path: 'social-app',
+    path: "social-app",
     data: {
-      breadcrumb: 'Apps',
+      breadcrumb: "Apps",
     },
-    loadChildren: () => import('../../component/social-app/social-app.routes'),
+    loadChildren: () => import("../../component/social-app/social-app.routes"),
   },
   {
-    path: 'todo',
+    path: "todo",
     data: {
-      breadcrumb: 'Apps',
+      breadcrumb: "Apps",
     },
-    loadChildren: () => import('../../component/todo/todo.routes'),
+    loadChildren: () => import("../../component/todo/todo.routes"),
   },
   {
-    path: 'todo',
+    path: "todo",
     data: {
-      breadcrumb: 'Apps',
+      breadcrumb: "Apps",
     },
-    loadChildren: () => import('../../component/todo/todo.routes'),
+    loadChildren: () => import("../../component/todo/todo.routes"),
   },
   {
-    path: 'search-result',
+    path: "search-result",
     data: {
-      breadcrumb: 'Apps',
+      breadcrumb: "Apps",
     },
-    loadChildren: () => import('../../component/search-result/search-result.routes'),
+    loadChildren: () =>
+      import("../../component/search-result/search-result.routes"),
   },
   {
-    path: 'form-controls',
+    path: "form-controls",
     data: {
-      breadcrumb: 'Form Controls',
+      breadcrumb: "Form Controls",
     },
-    loadChildren: () => import('../../component/forms/form-controls/form-controls.routes'),
+    loadChildren: () =>
+      import("../../component/forms/form-controls/form-controls.routes"),
   },
   {
-    path: 'form-widgets',
+    path: "form-widgets",
     data: {
-      breadcrumb: 'Form Widgets',
+      breadcrumb: "Form Widgets",
     },
-    loadChildren: () => import('../../component/forms/form-widgets/form-widgets.routes'),
+    loadChildren: () =>
+      import("../../component/forms/form-widgets/form-widgets.routes"),
   },
   {
-    path: 'table',
+    path: "table",
     data: {
-      breadcrumb: 'Tables',
+      breadcrumb: "Tables",
     },
-    loadChildren: () => import('../../component/table/table.routes'),
+    loadChildren: () => import("../../component/table/table.routes"),
   },
   {
-    path: 'ui-kits',
+    path: "ui-kits",
     data: {
-      breadcrumb: 'Ui Kits',
+      breadcrumb: "Ui Kits",
     },
-    loadChildren: () => import('../../component/ui-kits/ui-kits.routes'),
+    loadChildren: () => import("../../component/ui-kits/ui-kits.routes"),
   },
   {
-    path: 'bonus-ui',
+    path: "bonus-ui",
     data: {
-      breadcrumb: 'Bonus Ui',
+      breadcrumb: "Bonus Ui",
     },
-    loadChildren: () => import('../../component/bonus-ui/bonus-ui.routes'),
+    loadChildren: () => import("../../component/bonus-ui/bonus-ui.routes"),
   },
   {
-    path: 'icons',
+    path: "icons",
     data: {
-      breadcrumb: 'Icons',
+      breadcrumb: "Icons",
     },
-    loadChildren: () => import('../../component/icons/icons.routes'),
+    loadChildren: () => import("../../component/icons/icons.routes"),
   },
   {
-    path: 'buttons',
+    path: "buttons",
     data: {
-      breadcrumb: 'Buttons',
+      breadcrumb: "Buttons",
     },
-    loadChildren: () => import('../../component/buttons/buttons.routes'),
+    loadChildren: () => import("../../component/buttons/buttons.routes"),
   },
   {
-    path: 'chart',
+    path: "chart",
     data: {
-      breadcrumb: 'Charts',
+      breadcrumb: "Charts",
     },
-    loadChildren: () => import('../../component/charts/charts.routes'),
+    loadChildren: () => import("../../component/charts/charts.routes"),
   },
   {
-    path: 'sample-page',
+    path: "sample-page",
     data: {
-      breadcrumb: 'Pages',
+      breadcrumb: "Pages",
     },
-    loadChildren: () => import('../../component/sample-page/sample-page.routes'),
+    loadChildren: () =>
+      import("../../component/sample-page/sample-page.routes"),
   },
   {
-    path: 'gallary',
+    path: "gallary",
     data: {
-      breadcrumb: 'Gallery',
+      breadcrumb: "Gallery",
     },
-    loadChildren: () => import('../../component/gallery/gallery.routes'),
+    loadChildren: () => import("../../component/gallery/gallery.routes"),
   },
   {
-    path: 'blog',
+    path: "blog",
     data: {
-      breadcrumb: 'Blog',
+      breadcrumb: "Blog",
     },
-    loadChildren: () => import('../../component/blog/blog.routes'),
+    loadChildren: () => import("../../component/blog/blog.routes"),
   },
   {
-    path: 'faq',
+    path: "faq",
     data: {
-      breadcrumb: 'Apps',
+      breadcrumb: "Apps",
     },
-    loadChildren: () => import('../../component/faq/faq.routes'),
+    loadChildren: () => import("../../component/faq/faq.routes"),
   },
   {
-    path: 'job-search',
+    path: "job-search",
     data: {
-      breadcrumb: 'Job Search',
+      breadcrumb: "Job Search",
     },
-    loadChildren: () => import('../../component/job-search/job-search.routes'),
+    loadChildren: () => import("../../component/job-search/job-search.routes"),
   },
   {
-    path: 'learning',
+    path: "learning",
     data: {
-      breadcrumb: 'Learning',
+      breadcrumb: "Learning",
     },
-    loadChildren: () => import('../../component/learning/learning-routing'),
+    loadChildren: () => import("../../component/learning/learning-routing"),
   },
   {
-    path: 'maps',
+    path: "maps",
     data: {
-      breadcrumb: 'Maps',
+      breadcrumb: "Maps",
     },
-    loadChildren: () => import('../../component/maps/maps.routes'),
+    loadChildren: () => import("../../component/maps/maps.routes"),
   },
   {
-    path: 'editors',
+    path: "editors",
     data: {
-      breadcrumb: 'Editors',
+      breadcrumb: "Editors",
     },
-    loadChildren: () => import('../../component/editors/editors.routes'),
+    loadChildren: () => import("../../component/editors/editors.routes"),
   },
   {
-    path: 'knowledgebase',
+    path: "knowledgebase",
     data: {
-      breadcrumb: 'Apps',
+      breadcrumb: "Apps",
     },
-    loadChildren: () => import('../../component/knowledgebase/knowledgebase.routes'),
+    loadChildren: () =>
+      import("../../component/knowledgebase/knowledgebase.routes"),
   },
   {
-    path: 'support-ticket',
+    path: "support-ticket",
     data: {
-      breadcrumb: 'Apps',
+      breadcrumb: "Apps",
     },
-    loadChildren: () => import('../../component/support-tickit/support-tickit.routes'),
+    loadChildren: () =>
+      import("../../component/support-tickit/support-tickit.routes"),
   },
 ];

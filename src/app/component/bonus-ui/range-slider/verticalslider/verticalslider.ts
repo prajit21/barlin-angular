@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { NgxSliderModule, Options } from '@angular-slider/ngx-slider';
+import { NgxSliderModule, Options } from "@angular-slider/ngx-slider";
 
 @Component({
-  selector: 'app-verticalslider',
+  selector: "app-verticalslider",
   imports: [NgxSliderModule],
-  templateUrl: './verticalslider.html',
-  styleUrl: './verticalslider.scss',
+  templateUrl: "./verticalslider.html",
+  styleUrl: "./verticalslider.scss",
 })
 export class Verticalslider {
   value: number = 5;

@@ -1,12 +1,12 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from "@angular/common";
+import { Component } from "@angular/core";
+import { FormGroup, ReactiveFormsModule } from "@angular/forms";
 
 @Component({
-  selector: 'app-tooltip-form',
+  selector: "app-tooltip-form",
   imports: [ReactiveFormsModule, CommonModule],
-  templateUrl: './tooltip-form.html',
-  styleUrls: ['./tooltip-form.scss'],
+  templateUrl: "./tooltip-form.html",
+  styleUrls: ["./tooltip-form.scss"],
 })
 export class TooltipForm {
   public validate = false;

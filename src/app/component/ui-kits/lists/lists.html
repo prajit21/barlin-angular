@@ -4,19 +4,18 @@
     <div class="col-xl-4" [class]="item.colClass">
       <div class="card">
         <div class="card-header pb-0">
-          <h4>{{item.title}} </h4>
+          <h4>{{item.title}}</h4>
           <p class="f-m-light mt-1" [innerHTML]="item.subTitle"></p>
         </div>
         <div class="card-body">
           <ul class="list-group" [class]="item.class">
             @for (items of item.data; track items) {
             <li class="list-group-item" [class]="items.class">
-               @if (items.icons) {
-                 <i class="icofont" [class]="items.icons"></i>
-                } @else {
-                 <i class="icofont icofont-arrow-right"></i>
-               }
-              {{items.name}}
+              @if (items.icons) {
+              <i class="icofont" [class]="items.icons"></i>
+              } @else {
+              <i class="icofont icofont-arrow-right"></i>
+              } {{items.name}}
             </li>
             }
           </ul>

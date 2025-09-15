@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { NgbScrollSpyModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbScrollSpyModule } from "@ng-bootstrap/ng-bootstrap";
 
-import { CommonSvgIcons } from '../../../../shared/component/common-svg-icons/common-svg-icons';
+import { CommonSvgIcons } from "../../../../shared/component/common-svg-icons/common-svg-icons";
 
 @Component({
-  selector: 'app-nested-scrollspy',
+  selector: "app-nested-scrollspy",
   imports: [NgbScrollSpyModule, CommonSvgIcons],
-  templateUrl: './nested-scrollspy.html',
-  styleUrl: './nested-scrollspy.scss',
+  templateUrl: "./nested-scrollspy.html",
+  styleUrl: "./nested-scrollspy.scss",
 })
 export class NestedScrollspy {}

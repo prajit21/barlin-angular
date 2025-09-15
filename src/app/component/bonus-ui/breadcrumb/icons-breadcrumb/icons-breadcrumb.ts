@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-icons-breadcrumb',
+  selector: "app-icons-breadcrumb",
   imports: [],
-  templateUrl: './icons-breadcrumb.html',
-  styleUrls: ['./icons-breadcrumb.scss'],
+  templateUrl: "./icons-breadcrumb.html",
+  styleUrls: ["./icons-breadcrumb.scss"],
 })
 export class IconsBreadcrumb {}

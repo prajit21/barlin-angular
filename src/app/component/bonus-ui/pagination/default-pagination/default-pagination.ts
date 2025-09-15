@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-default-pagination',
+  selector: "app-default-pagination",
   imports: [],
-  templateUrl: './default-pagination.html',
-  styleUrls: ['./default-pagination.scss'],
+  templateUrl: "./default-pagination.html",
+  styleUrls: ["./default-pagination.scss"],
 })
 export class DefaultPagination {}

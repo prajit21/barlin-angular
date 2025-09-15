@@ -1,10 +1,14 @@
-import { Directive, Input, input, output } from '@angular/core';
+import { Directive, Input, input, output } from "@angular/core";
 
-import { Table } from '../data/data/table/data-table';
+import { Table } from "../data/data/table/data-table";
 
-export type SortColumn = keyof Table | '';
-export type SortDirection = 'asc' | 'desc' | '';
-const rotate: { [key: string]: SortDirection } = { asc: 'desc', desc: '', '': 'asc' };
+export type SortColumn = keyof Table | "";
+export type SortDirection = "asc" | "desc" | "";
+const rotate: { [key: string]: SortDirection } = {
+  asc: "desc",
+  desc: "",
+  "": "asc",
+};
 
 export interface SortEvent {
   column: SortColumn;
@@ -12,16 +16,16 @@ export interface SortEvent {
 }
 
 @Directive({
-  selector: 'th[sortable]',
+  selector: "th[sortable]",
   host: {
-    '[class.asc]': 'direction === "asc"',
-    '[class.desc]': 'direction === "desc"',
-    '(click)': 'rotate()',
+    "[class.asc]": 'direction === "asc"',
+    "[class.desc]": 'direction === "desc"',
+    "(click)": "rotate()",
   },
 })
 export class BasicDataTableDirective {
-  readonly sortable = input<SortColumn>('');
-  @Input() direction: SortDirection = '';
+  readonly sortable = input<SortColumn>("");
+  @Input() direction: SortDirection = "";
   readonly sort = output<SortEvent>();
   rotate() {
     this.direction = rotate[this.direction];

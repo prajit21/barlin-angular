@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component } from "@angular/core";
+import { RouterModule } from "@angular/router";
 
-import { CommonRegisterForm } from '../widgets/common-register-form/common-register-form';
+import { CommonRegisterForm } from "../widgets/common-register-form/common-register-form";
 
 @Component({
-  selector: 'app-register-simple',
+  selector: "app-register-simple",
   imports: [CommonRegisterForm, RouterModule],
-  templateUrl: './register-simple.html',
-  styleUrl: './register-simple.scss',
+  templateUrl: "./register-simple.html",
+  styleUrl: "./register-simple.scss",
 })
 export class RegisterSimple {}

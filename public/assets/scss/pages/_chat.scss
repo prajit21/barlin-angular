@@ -1,4 +1,4 @@
-  /**=====================
+/**=====================
      14. Chat CSS Start
 ==========================**/
 .user-image {
@@ -18,7 +18,6 @@
   }
 }
 
-
 .left-sidebar-wrapper {
   padding: 20px;
   border-radius: 10px 0 0 10px;
@@ -28,10 +27,10 @@
 
   [dir="rtl"] & {
     border-left: unset;
-    border-radius: 0 10px 10px 0; 
+    border-radius: 0 10px 10px 0;
   }
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     border-radius: 10px;
   }
   .left-sidebar-chat {
@@ -42,7 +41,6 @@
 
   .left-sidebar-chat {
     .input-group {
-
       .input-group-text {
         background-color: var(--chart-progress-light);
         padding-right: 0;
@@ -56,7 +54,7 @@
           border-left: none;
           margin-right: unset;
           border-right: unset;
-          border-right: 1px solid  $gray-60 !important;
+          border-right: 1px solid $gray-60 !important;
         }
 
         svg {
@@ -65,7 +63,9 @@
         }
       }
 
-      > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+      > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(
+          .valid-feedback
+        ):not(.invalid-tooltip):not(.invalid-feedback) {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
       }
@@ -84,13 +84,11 @@
           border-color: var(--chart-dashed-border);
           box-shadow: unset;
         }
-
       }
     }
   }
 
   .advance-options {
-
     ul {
       display: flex;
       align-items: center;
@@ -113,7 +111,7 @@
               background-color: $white;
               font-weight: 500;
             }
-            &:active{
+            &:active {
               border-bottom: 0 !important;
               color: $theme-body-font-color;
             }
@@ -129,18 +127,17 @@
           padding: 16px 57px;
           text-decoration: unset;
 
-          @media (max-width:1855px) {
+          @media (max-width: 1855px) {
             padding: 16px 45px;
           }
 
-          @media (max-width:1663px) {
+          @media (max-width: 1663px) {
             padding: 16px 30px;
           }
 
-          @media (max-width:1423px) {
+          @media (max-width: 1423px) {
             padding: 16px 28px;
           }
-
 
           &:active,
           &.active {
@@ -188,7 +185,7 @@
           background-color: var(--light-slate);
         }
 
-        @media (max-width:1505px) {
+        @media (max-width: 1505px) {
           flex-wrap: wrap;
           gap: 1px;
         }
@@ -202,7 +199,7 @@
           gap: 10px;
           align-items: center;
 
-          >div {
+          > div {
             text-align: left;
 
             [dir="rtl"] & {
@@ -211,8 +208,8 @@
           }
         }
 
-        >div {
-          @media (max-width:1498px) and (min-width: 992px) {
+        > div {
+          @media (max-width: 1498px) and (min-width: 992px) {
             width: 100%;
             text-align: end;
 
@@ -226,7 +223,7 @@
   }
 }
 
-// common-profile 
+// common-profile
 .active-profile {
   position: relative;
 
@@ -234,7 +231,7 @@
     width: 42px;
     height: 42px;
 
-    @media (max-width:1650px) {
+    @media (max-width: 1650px) {
       width: 33px;
       height: 33px;
     }
@@ -254,7 +251,7 @@
       right: unset;
     }
 
-    @media (max-width:1600px) {
+    @media (max-width: 1600px) {
       width: 11px;
       height: 11px;
       border: 2px solid var(--white);
@@ -265,7 +262,6 @@
 // =================================
 
 .contact-edit {
-
   i {
     color: var(--chart-text-color);
     cursor: pointer;
@@ -281,7 +277,7 @@
     height: 18px;
     stroke: var(--chart-text-color);
 
-    @media (max-width:360px) {
+    @media (max-width: 360px) {
       width: 14px;
       height: 14px;
     }
@@ -307,19 +303,16 @@
     align-items: center;
     border-radius: 5px;
 
-    @media (max-width:360px) {
+    @media (max-width: 360px) {
       width: 32px;
       height: 32px;
     }
 
-    @media (max-width:340px) {
+    @media (max-width: 340px) {
       display: none;
     }
   }
-
 }
-
-
 
 // ===============================================
 
@@ -371,8 +364,7 @@
   height: 512px;
   overflow-y: auto;
 
-
-  >p {
+  > p {
     line-height: 0;
     margin: 0;
     padding: 12px 0;
@@ -395,13 +387,13 @@
           width: 42px;
           height: 42px;
 
-          @media (max-width:1650px) {
+          @media (max-width: 1650px) {
             width: 33px;
             height: 33px;
           }
         }
 
-        >div {
+        > div {
           span {
             color: var(--body-font-color);
           }
@@ -413,7 +405,6 @@
         height: 18px;
       }
     }
-
 
     &:last-child {
       .common-space {
@@ -470,7 +461,7 @@
           width: 42px;
           height: 42px;
 
-          @media (max-width:360px) {
+          @media (max-width: 360px) {
             width: 36px;
             height: 36px;
           }
@@ -498,12 +489,11 @@
           display: flex;
 
           li {
-
             img {
               border: 3px solid transparent;
             }
 
-            +li {
+            + li {
               margin-left: -12px;
 
               [dir="rtl"] & {
@@ -526,9 +516,7 @@
               height: 38px;
             }
 
-
-            @media (min-width:768px) and (max-width: 1199px) {
-
+            @media (min-width: 768px) and (max-width: 1199px) {
               &:nth-child(2),
               &:nth-child(3),
               &:nth-child(5),
@@ -537,8 +525,7 @@
               }
             }
 
-            @media (min-width:341px) and (max-width: 410px) {
-
+            @media (min-width: 341px) and (max-width: 410px) {
               &:nth-child(2),
               &:nth-child(3),
               &:nth-child(5),
@@ -549,9 +536,8 @@
           }
         }
 
-        >div {
-          @media (max-width:1045px) {
-
+        > div {
+          @media (max-width: 1045px) {
             span,
             p {
               display: none;
@@ -560,11 +546,10 @@
         }
       }
     }
-
   }
 }
 
-// chats 
+// chats
 .msger-chat {
   flex: 1;
   overflow-y: auto;
@@ -636,7 +621,6 @@
       min-width: 16px;
       min-height: 16px;
     }
-
   }
 
   .msg-bubble {
@@ -670,7 +654,6 @@
       min-width: 16px;
       min-height: 16px;
     }
-
   }
 }
 
@@ -792,7 +775,7 @@
 .fg-emoji-container {
   left: calc(10px + (1405 - 10) * ((100vw - 320px) / (1920 - 320))) !important;
 
-  @media (min-width:860px) and (max-width:945px) {
+  @media (min-width: 860px) and (max-width: 945px) {
     left: 417px !important;
 
     [dir="rtl"] & {
@@ -801,7 +784,7 @@
     }
   }
 
-  @media (min-width:686px) and (max-width:860px) {
+  @media (min-width: 686px) and (max-width: 860px) {
     left: 360px !important;
 
     [dir="rtl"] & {
@@ -810,7 +793,7 @@
     }
   }
 
-  @media (min-width: 588px) and (max-width:770px) {
+  @media (min-width: 588px) and (max-width: 770px) {
     left: 200px !important;
 
     [dir="rtl"] & {
@@ -819,7 +802,7 @@
     }
   }
 
-  @media (min-width:546px) and (max-width: 588px) {
+  @media (min-width: 546px) and (max-width: 588px) {
     left: 144px !important;
 
     [dir="rtl"] & {
@@ -828,7 +811,7 @@
     }
   }
 
-  @media (min-width:500px) and (max-width: 546px) {
+  @media (min-width: 500px) and (max-width: 546px) {
     left: 88px !important;
 
     [dir="rtl"] & {
@@ -837,7 +820,7 @@
     }
   }
 
-  @media (max-width:500px) {
+  @media (max-width: 500px) {
     left: 22px !important;
     width: 262px !important;
 
@@ -850,8 +833,6 @@
   .fg-emoji-nav {
     background-color: var(--chart-text-color);
   }
-
-
 
   #fg-emoji-picker-move {
     display: none;
@@ -895,7 +876,6 @@
   }
 }
 
-
 .msger-send-btn {
   margin-left: 10px;
   background: var(--theme-default);
@@ -913,7 +893,6 @@
     margin-right: 10px;
   }
 
-
   svg {
     width: 1px;
     height: 12px;
@@ -928,7 +907,7 @@
   align-items: center;
   border-radius: 50px;
 
-  @media (max-width:1650px) {
+  @media (max-width: 1650px) {
     width: 33px;
     height: 33px;
   }

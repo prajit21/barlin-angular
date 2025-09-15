@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbNavModule } from "@ng-bootstrap/ng-bootstrap";
 
-import * as Data from '../../../../shared/data/data/ui-kits/tab';
+import * as Data from "../../../../shared/data/data/ui-kits/tab";
 
 @Component({
-  selector: 'app-material-style-tabs',
+  selector: "app-material-style-tabs",
   imports: [NgbNavModule],
-  templateUrl: './material-style-tabs.html',
-  styleUrls: ['./material-style-tabs.scss'],
+  templateUrl: "./material-style-tabs.html",
+  styleUrls: ["./material-style-tabs.scss"],
 })
 export class MaterialStyleTabs {
   public active = 1;

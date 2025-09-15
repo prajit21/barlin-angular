@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-animation',
+  selector: "app-animation",
   imports: [],
-  templateUrl: './animation.html',
-  styleUrl: './animation.scss',
+  templateUrl: "./animation.html",
+  styleUrl: "./animation.scss",
 })
 export class Animation {}

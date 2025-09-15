@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-net-banking',
+  selector: "app-net-banking",
   imports: [],
-  templateUrl: './net-banking.html',
-  styleUrls: ['./net-banking.scss'],
+  templateUrl: "./net-banking.html",
+  styleUrls: ["./net-banking.scss"],
 })
 export class NetBanking {}

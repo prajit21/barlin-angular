@@ -1,13 +1,34 @@
-<div class="d-flex align-items-center profile-media"><img class="b-r-6 img-40"
-    src="assets/images/dashboard/profile.png" alt="">
-  <div class="flex-grow-1"><span>Ava Davis</span>
+<div class="d-flex align-items-center profile-media">
+  <img class="b-r-6 img-40" src="assets/images/dashboard/profile.png" alt="" />
+  <div class="flex-grow-1">
+    <span>Ava Davis</span>
     <p class="mb-0">Web Designer</p>
   </div>
 </div>
 <ul class="profile-dropdown onhover-show-div">
-  <li><a [routerLink]="['/user/users-profile']"><app-feather-icon [icon]="'user'" /><span>Account </span></a></li>
-  <li><a [routerLink]="['/letter-box']"><app-feather-icon [icon]="'mail'" /><span>Inbox</span></a></li>
-  <li><a [routerLink]="['/tasks']"><app-feather-icon [icon]="'file-text'" /><span>Taskboard</span></a></li>
-  <li><a [routerLink]="['/user/edit-profile']"><app-feather-icon [icon]="'settings'" /><span>Settings</span></a></li>
-  <li><a (click)="logOut()"><app-feather-icon [icon]="'log-in'" /><span>Log Out</span></a></li>
+  <li>
+    <a [routerLink]="['/user/users-profile']"
+      ><app-feather-icon [icon]="'user'" /><span>Account </span></a
+    >
+  </li>
+  <li>
+    <a [routerLink]="['/letter-box']"
+      ><app-feather-icon [icon]="'mail'" /><span>Inbox</span></a
+    >
+  </li>
+  <li>
+    <a [routerLink]="['/tasks']"
+      ><app-feather-icon [icon]="'file-text'" /><span>Taskboard</span></a
+    >
+  </li>
+  <li>
+    <a [routerLink]="['/user/edit-profile']"
+      ><app-feather-icon [icon]="'settings'" /><span>Settings</span></a
+    >
+  </li>
+  <li>
+    <a (click)="logOut()"
+      ><app-feather-icon [icon]="'log-in'" /><span>Log Out</span></a
+    >
+  </li>
 </ul>

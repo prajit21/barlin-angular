@@ -1,15 +1,18 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject } from "@angular/core";
 
-import { NgbAccordionConfig, NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
+import {
+  NgbAccordionConfig,
+  NgbAccordionModule,
+} from "@ng-bootstrap/ng-bootstrap";
 
-import { FeatherIcon } from '../../../shared/component/feather-icon/feather-icon';
-import { questionData } from '../../../shared/data/data/faq';
+import { FeatherIcon } from "../../../shared/component/feather-icon/feather-icon";
+import { questionData } from "../../../shared/data/data/faq";
 
 @Component({
-  selector: 'app-questions',
+  selector: "app-questions",
   imports: [FeatherIcon, NgbAccordionModule],
-  templateUrl: './questions.html',
-  styleUrls: ['./questions.scss'],
+  templateUrl: "./questions.html",
+  styleUrls: ["./questions.scss"],
 })
 export class Questions {
   public config = inject(NgbAccordionConfig);

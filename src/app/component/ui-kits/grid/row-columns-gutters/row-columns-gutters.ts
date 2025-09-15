@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-row-columns-gutters',
+  selector: "app-row-columns-gutters",
   imports: [],
-  templateUrl: './row-columns-gutters.html',
-  styleUrl: './row-columns-gutters.scss',
+  templateUrl: "./row-columns-gutters.html",
+  styleUrl: "./row-columns-gutters.scss",
 })
 export class RowColumnsGutters {}

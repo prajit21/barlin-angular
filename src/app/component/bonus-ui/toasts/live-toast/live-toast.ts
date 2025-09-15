@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-live-toast',
+  selector: "app-live-toast",
   imports: [],
-  templateUrl: './live-toast.html',
-  styleUrls: ['./live-toast.scss'],
+  templateUrl: "./live-toast.html",
+  styleUrls: ["./live-toast.scss"],
 })
 export class LiveToast {
   public topRightShow: boolean = false;

@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-horizontal-editable-divider',
+  selector: "app-horizontal-editable-divider",
   imports: [],
-  templateUrl: './horizontal-editable-divider.html',
-  styleUrl: './horizontal-editable-divider.scss',
+  templateUrl: "./horizontal-editable-divider.html",
+  styleUrl: "./horizontal-editable-divider.scss",
 })
 export class HorizontalEditableDivider {}

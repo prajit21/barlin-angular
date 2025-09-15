@@ -2,7 +2,7 @@
      62. Responsive CSS Start
 ==========================**/
 /* ========= min and max scss for 1200 to 1366 screen ========= */
-@media (max-width:1800px) {
+@media (max-width: 1800px) {
   .todo-wrap {
     .todo-list-body {
       .task-container {
@@ -50,7 +50,7 @@
           width: auto;
           margin: 0 auto;
         }
-        >div {
+        > div {
           z-index: 2;
           background-color: rgba(255, 255, 255, 0.75);
           background-blend-mode: overlay;
@@ -148,7 +148,7 @@
         tbody {
           tr {
             td {
-              &:nth-child(n+2) {
+              &:nth-child(n + 2) {
                 min-width: 180px;
               }
             }
@@ -163,7 +163,7 @@
         tbody {
           tr {
             td {
-              &:nth-child(n+2) {
+              &:nth-child(n + 2) {
                 min-width: 240px;
               }
             }
@@ -239,8 +239,8 @@
     flex: 0 0 100%;
     max-width: 100%;
   }
-  #circlechart{
-    margin:  30px 0;
+  #circlechart {
+    margin: 30px 0;
   }
   .badge-heading {
     h1,
@@ -305,11 +305,11 @@
       }
     }
   }
-  .file-manager{
-    .folder{
-      .folder-box{
-        p{
-          span{
+  .file-manager {
+    .folder {
+      .folder-box {
+        p {
+          span {
             float: unset;
             display: block;
           }
@@ -381,7 +381,7 @@
       }
     }
     .card-footer {
-      >div {
+      > div {
         h3 {
           font-size: 18px;
         }
@@ -687,7 +687,7 @@
   // alert page
   .alert-dismissible {
     strong {
-      &~p {
+      & ~ p {
         display: inline;
       }
     }
@@ -1057,7 +1057,7 @@
     }
   }
   .blog-sidebar {
-    >div {
+    > div {
       &:last-child {
         .card {
           margin-bottom: 0;
@@ -1120,7 +1120,7 @@
       .faq-accordion.default-according {
         margin-bottom: 0;
         .row {
-          >div {
+          > div {
             &:last-child {
               .card {
                 margin-bottom: 0;
@@ -1132,10 +1132,10 @@
     }
   }
   .row {
-    &.learning-block{
-      >div{
-        &:first-child{
-          order:2;
+    &.learning-block {
+      > div {
+        &:first-child {
+          order: 2;
         }
       }
     }
@@ -1172,16 +1172,16 @@
       padding: 0.375rem 1.25rem;
     }
   }
-  .link-section>div {
+  .link-section > div {
     &.active {
-      >h6 {
+      > h6 {
         &:before {
           content: "\f107";
           transition: content 0.3s ease;
         }
       }
     }
-    >h6 {
+    > h6 {
       position: relative;
       &:before {
         content: "\f105";
@@ -1211,7 +1211,7 @@
         .nav-right {
           position: unset;
           padding: 0;
-          >ul {
+          > ul {
             li {
               .submenu {
                 li {
@@ -1287,7 +1287,7 @@
   .typography {
     .row {
       div {
-        &+div {
+        & + div {
           margin-top: 30px;
         }
       }
@@ -1301,7 +1301,7 @@
       margin-bottom: 10px;
     }
     .docs-toggles {
-      >.dropdown {
+      > .dropdown {
         margin-bottom: 0;
       }
     }
@@ -1333,7 +1333,7 @@
     &.dataTables_wrapper {
       div {
         &.dataTables_paginate {
-          &~.dataTables_filter {
+          & ~ .dataTables_filter {
             display: block;
             width: 100%;
             margin-top: 20px;
@@ -1356,7 +1356,7 @@
   .custom-card {
     .card-profile {
       .card-footer {
-        >div {
+        > div {
           h3 {
             font-size: 18px;
           }
@@ -1447,7 +1447,7 @@
   }
   // eccommerce product
   .product-table {
-    table.dataTable thead>tr>th {
+    table.dataTable thead > tr > th {
       padding-right: 50px;
     }
   }
@@ -1523,7 +1523,7 @@
     }
     .chat-history {
       .call-content {
-        >div {
+        > div {
           padding-top: 70px;
         }
       }
@@ -1559,7 +1559,7 @@
     }
     .row {
       .col-xl-3 {
-        &+.col-xl-3 {
+        & + .col-xl-3 {
           padding-right: 15px;
         }
       }
@@ -1677,8 +1677,8 @@
     .page-header {
       .header-wrapper {
         .nav-right {
-          >ul {
-            >li {
+          > ul {
+            > li {
               .profile-media {
                 .flex-grow-1 {
                   display: none;
@@ -1761,7 +1761,7 @@
                 li {
                   .sidebar-link {
                     &.active {
-                      ~.sidebar-submenu {
+                      ~ .sidebar-submenu {
                         display: none !important;
                       }
                     }
@@ -1901,7 +1901,8 @@
           th {
             padding: 4px !important;
             min-width: 92px !important;
-            &::after, &::before {
+            &::after,
+            &::before {
               bottom: 4px !important;
             }
           }
@@ -1948,7 +1949,7 @@
             margin-right: 8px;
             text-align: center;
             padding: 8px 10px;
-            [dir="rtl"] & { 
+            [dir="rtl"] & {
               margin-right: unset;
               margin-left: 8px;
             }
@@ -2048,7 +2049,7 @@
             top: 10px;
           }
         }
-        >.mobile-toggle {
+        > .mobile-toggle {
           cursor: pointer;
           display: flex;
           align-items: center;
@@ -2100,7 +2101,7 @@
   .crm-activity {
     > {
       li {
-        +li {
+        + li {
           margin-top: 10px;
           padding-top: 10px;
         }
@@ -2157,13 +2158,13 @@
     }
   }
   .details-about {
-    +.details-about {
+    + .details-about {
       margin-top: 20px;
     }
   }
   .activity-log {
     .my-activity {
-      +.my-activity {
+      + .my-activity {
         margin-top: 20px;
       }
     }
@@ -2271,37 +2272,37 @@
   }
   .typography {
     .h1 {
-      @media (max-width:1200px) {
+      @media (max-width: 1200px) {
         font-size: calc(16px + (34 - 16) * ((100vw - 320px) / (1200 - 320)));
       }
     }
     .h2 {
       font-size: 30px;
-      @media (max-width:1200px) {
+      @media (max-width: 1200px) {
         font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1200 - 320)));
       }
     }
     .h3 {
       font-size: 22px;
-      @media (max-width:1200px) {
+      @media (max-width: 1200px) {
         font-size: calc(17px + (22 - 17) * ((100vw - 320px) / (1200 - 320)));
       }
     }
     .h4 {
       font-size: 20px;
-      @media (max-width:1200px) {
+      @media (max-width: 1200px) {
         font-size: calc(15px + (20 - 15) * ((100vw - 320px) / (1200 - 320)));
       }
     }
     .h5 {
       font-size: 18px;
-      @media (max-width:1200px) {
+      @media (max-width: 1200px) {
         font-size: calc(13px + (18 - 13) * ((100vw - 320px) / (1200 - 320)));
       }
     }
     .h6 {
       font-size: 15px;
-      @media (max-width:1200px) {
+      @media (max-width: 1200px) {
         font-size: calc(12px + (15 - 12) * ((100vw - 320px) / (1200 - 320)));
       }
     }
@@ -2335,7 +2336,7 @@
     .basic-calendar {
       .external-events {
         .fc-event {
-          &+.fc-event {
+          & + .fc-event {
             margin-top: 10px;
           }
         }
@@ -2345,7 +2346,7 @@
   .owl-theme {
     .owl-nav {
       &.disabled {
-        &+.owl-dots {
+        & + .owl-dots {
           margin-bottom: -10px;
           margin-top: 15px;
         }
@@ -2467,7 +2468,7 @@
           padding: 11px 18px;
           width: 50px;
         }
-        +li {
+        + li {
           a {
             padding-left: 65px;
             [dir="rtl"] & {
@@ -2500,7 +2501,7 @@
     margin-bottom: 20px;
   }
   .tab-content {
-    ~.nav-tabs {
+    ~ .nav-tabs {
       &.border-tab {
         margin-top: 20px;
       }
@@ -2518,13 +2519,13 @@
   // search page
   .search-page {
     .info-block {
-      +.info-block {
+      + .info-block {
         padding-top: 20px;
         margin-top: 20px;
       }
     }
     #video-links {
-      .embed-responsive+.embed-responsive {
+      .embed-responsive + .embed-responsive {
         margin-top: 20px;
       }
     }
@@ -2535,7 +2536,7 @@
   .gallery-with-description {
     margin-bottom: -20px;
     a {
-      >div {
+      > div {
         margin-bottom: 20px;
       }
     }
@@ -2618,7 +2619,7 @@
   }
   // summer-note page
   .click2edit {
-    &~.note-editor {
+    & ~ .note-editor {
       &.note-frame {
         margin-bottom: 20px;
       }
@@ -2838,8 +2839,8 @@
       .page-header {
         .header-wrapper {
           .nav-right {
-            >ul {
-              >li {
+            > ul {
+              > li {
                 margin-right: -2px;
               }
             }
@@ -2855,7 +2856,7 @@
     .owl-carousel {
       .product-box {
         &.row {
-          >div {
+          > div {
             width: auto;
           }
         }
@@ -2870,7 +2871,7 @@
   .form-inline {
     .form-group:not(.form-control-search) {
       width: 100%;
-      +.form-group {
+      + .form-group {
         margin-top: 10px;
       }
       input {
@@ -2897,7 +2898,7 @@
           &:first-child {
             padding-right: 25px;
           }
-          +li {
+          + li {
             padding-left: 25px;
           }
         }
@@ -2905,7 +2906,7 @@
     }
   }
   .footer-copyright {
-    ~div {
+    ~ div {
       text-align: center;
       .heart {
         text-align: center;
@@ -2988,7 +2989,7 @@
     }
     .chat-history {
       .call-content {
-        >div {
+        > div {
           padding-top: 40px;
           height: auto;
         }
@@ -3020,7 +3021,7 @@
   }
   .form-builder-2-header {
     flex-wrap: wrap;
-    >div {
+    > div {
       width: 100%;
       margin-top: 10px;
       nav {
@@ -3065,7 +3066,7 @@
       &.ge-editing {
         .ge-tools-drawer {
           margin: 10px 0 0 10px;
-          >a {
+          > a {
             padding: 0 5px;
           }
         }
@@ -3242,15 +3243,15 @@
         margin-bottom: 10px;
       }
       .fc-toolbar {
-        >div {
+        > div {
           display: block !important;
           float: none !important;
         }
-        >* {
+        > * {
           :first-child {
             font-size: 18px;
           }
-          >* {
+          > * {
             float: none !important;
           }
         }
@@ -3425,7 +3426,7 @@
   .icon-hover-bottom {
     .icon-popup {
       display: block;
-      >.icon-last {
+      > .icon-last {
         display: block;
         margin-top: 15px;
         .form-inline {
@@ -3812,7 +3813,8 @@
     .dataTables_wrapper {
       .dataTables_paginate {
         .paginate_button {
-          &.previous, &.next {
+          &.previous,
+          &.next {
             border: 1px solid $light-gray !important;
             &::before {
               line-height: 1;
@@ -3837,13 +3839,13 @@
       }
     }
   }
-  .page-wrapper{
-    &.compact-wrapper{
-      .page-body-wrapper{
-        .sidebar-wrapper{
-          .sidebar-main{
-            .sidebar-list{
-              &.mega-menu{
+  .page-wrapper {
+    &.compact-wrapper {
+      .page-body-wrapper {
+        .sidebar-wrapper {
+          .sidebar-main {
+            .sidebar-list {
+              &.mega-menu {
                 padding-left: 0;
                 padding-right: 0;
               }
@@ -3917,8 +3919,8 @@
   }
   .date-picker {
     .theme-form {
-      >.row {
-        >div {
+      > .row {
+        > div {
           &:last-child {
             margin-top: 0;
           }
@@ -3933,10 +3935,10 @@
   }
   .form-bookmark {
     .row {
-      >div {
+      > div {
         .row {
-          >.col-sm-6 {
-            +.col-sm-6 {
+          > .col-sm-6 {
+            + .col-sm-6 {
               margin-top: 10px;
             }
           }
@@ -3977,7 +3979,7 @@
         top: 8px;
       }
     }
-    >div {
+    > div {
       width: 100%;
       text-align: center;
       padding: 15px;
@@ -4025,7 +4027,7 @@
     .btn-showcase {
       .btn {
         width: 100%;
-        +.btn {
+        + .btn {
           margin-left: 0;
           margin-top: 5px;
         }
@@ -4041,7 +4043,7 @@
             width: 16px;
           }
         }
-        &+li {
+        & + li {
           margin-left: 5px;
         }
       }
@@ -4067,7 +4069,7 @@
   }
   .page-wrapper {
     .page-body-wrapper {
-      .page-title>.row {
+      .page-title > .row {
         .col-6 {
           &:first-child {
             display: block;
@@ -4119,7 +4121,7 @@
               .simplebar-mask {
                 .simplebar-content-wrapper {
                   .simplebar-content {
-                    >li {
+                    > li {
                       margin-right: 0;
                     }
                   }
@@ -4134,7 +4136,7 @@
       .header-wrapper {
         padding: 12px 15px !important;
         .nav-right {
-          >ul {
+          > ul {
             top: 58px;
             .search-form {
               i {
@@ -4151,7 +4153,7 @@
               }
             }
           }
-          >ul {
+          > ul {
             li {
               .flag-icon {
                 font-size: 14px !important;
@@ -4456,7 +4458,7 @@
       margin-bottom: 15px;
     }
   }
-  .details-about+.details-about {
+  .details-about + .details-about {
     margin-top: 15px;
   }
   .your-details-xs {
@@ -4476,7 +4478,7 @@
   }
   .activity-log {
     .my-activity {
-      +.my-activity {
+      + .my-activity {
         margin-top: 15px;
       }
     }
@@ -4495,7 +4497,7 @@
   .chat-box {
     .chat-history {
       .call-content {
-        >div {
+        > div {
           padding-top: 30px;
         }
       }
@@ -4624,7 +4626,7 @@
     margin-bottom: 10px;
   }
   .tab-content {
-    ~.nav-tabs {
+    ~ .nav-tabs {
       &.border-tab {
         margin-top: 10px;
       }
@@ -4650,7 +4652,7 @@
         height: 30px;
         font-size: 13px;
       }
-      &:nth-child(n+2) {
+      &:nth-child(n + 2) {
         margin-left: 5px;
         [dir="rtl"] & {
           margin-left: unset;
@@ -4736,11 +4738,11 @@
   }
   div {
     &.table-responsive {
-      >div {
+      > div {
         &.dataTables_wrapper {
-          >div {
+          > div {
             &.row {
-              >div {
+              > div {
                 &[class^="col-"] {
                   &:last-child {
                     padding-left: 0 !important;
@@ -4890,9 +4892,9 @@
       .blog-social {
         margin-top: 15px;
         li {
-          &+li {
+          & + li {
             padding-left: 17px;
-            >span {
+            > span {
               display: none;
             }
           }
@@ -4927,7 +4929,7 @@
     height: 320px;
   }
   .gallery {
-    >a {
+    > a {
       margin-bottom: 15px;
       text-align: center;
     }
@@ -4973,22 +4975,10 @@
     }
   }
   /* alert responsive css start here */
-  $alert-name: primary,
-    secondary,
-    success,
-    danger,
-    warning,
-    info,
-    light,
-    dark;
-  $alert-color: var(--theme-default),
-    $secondary-color,
-    $success-color,
-    $danger-color,
-    $warning-color,
-    $info-color,
-    $light-color,
-    $dark-color;
+  $alert-name: primary, secondary, success, danger, warning, info, light, dark;
+  $alert-color:
+    var(--theme-default), $secondary-color, $success-color, $danger-color,
+    $warning-color, $info-color, $light-color, $dark-color;
   @each $var in $alert-name {
     $i: index($alert-name, $var);
     .alert-#{$var}.inverse {
@@ -5042,7 +5032,7 @@
   //user card
   .custom-card {
     .card-footer {
-      >div {
+      > div {
         h6 {
           font-size: 14px;
           font-weight: 600;
@@ -5061,7 +5051,7 @@
       }
     }
     a.fc-more {
-      font-size: .70em;
+      font-size: 0.7em;
     }
   }
   // megaoption page responsive scss
@@ -5316,7 +5306,7 @@
   }
   // summer-note page
   .click2edit {
-    &~.note-editor {
+    & ~ .note-editor {
       &.note-frame {
         margin-bottom: 15px;
       }
@@ -5341,7 +5331,7 @@
   // gallery-with-description page
   .gallery-with-description {
     a {
-      >div {
+      > div {
         margin-bottom: 15px;
       }
     }
@@ -5466,7 +5456,7 @@
   }
   .pagination-lg {
     .page-link {
-      font-size: 1.0rem;
+      font-size: 1rem;
     }
   }
   h6 {
@@ -5475,7 +5465,7 @@
   .prooduct-details-box {
     .flex-grow-1 {
       margin-left: 6px !important;
-      [dir = "rtl"] & {
+      [dir="rtl"] & {
         margin-right: 6px !important;
       }
     }
@@ -5507,7 +5497,7 @@
         }
       }
     }
-    >div:not(.chart-clock-main) {
+    > div:not(.chart-clock-main) {
       canvas {
         width: 245px !important;
         height: 245px !important;
@@ -5518,7 +5508,7 @@
     .action-bar {
       .btn {
         width: 100%;
-        &+.btn {
+        & + .btn {
           margin-top: 10px;
         }
       }
@@ -5570,7 +5560,7 @@
   .custom-card {
     padding: 0;
     .card-footer {
-      >div {
+      > div {
         h3 {
           font-size: 20px;
         }
@@ -5603,8 +5593,8 @@
           font-size: 14px;
         }
       }
-      >span {
-        &+span {
+      > span {
+        & + span {
           display: none;
         }
       }
@@ -5791,8 +5781,8 @@
       display: none;
     }
     span {
-      +span {
-        +span {
+      + span {
+        + span {
           padding: 15px;
         }
       }
@@ -5806,7 +5796,7 @@
     &.compact-sidebar {
       .page-body-wrapper {
         div.sidebar-wrapper {
-          >div {
+          > div {
             width: 112px;
           }
           .sidebar-main {
@@ -5826,7 +5816,7 @@
     &.compact-small {
       .page-body-wrapper {
         div.sidebar-wrapper {
-          >div {
+          > div {
             width: 80px;
           }
           .sidebar-main {
@@ -5905,7 +5895,7 @@
         li {
           span {
             margin-left: 2px !important;
-            [dir = "rtl"] & {
+            [dir="rtl"] & {
               margin-left: 0 !important;
               margin-right: 2px !important;
             }
@@ -5927,7 +5917,7 @@
     .btn {
       padding: 4px 8px;
     }
-    >.d-flex {
+    > .d-flex {
       padding: 15px;
       display: block !important;
       .flex-grow-1 {
@@ -6036,7 +6026,7 @@
       }
     }
     .card-footer {
-      >div {
+      > div {
         h6 {
           font-size: 12px;
         }
@@ -6283,7 +6273,7 @@
   // calender page
   .calendar-wrap {
     a.fc-more {
-      font-size: .59em;
+      font-size: 0.59em;
     }
     .fc {
       th {

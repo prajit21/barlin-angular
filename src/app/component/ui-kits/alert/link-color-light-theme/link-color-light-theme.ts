@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbAlertModule } from "@ng-bootstrap/ng-bootstrap";
 
-import { linkColorLightTheme } from '../../../../shared/data/data/ui-kits/alert';
+import { linkColorLightTheme } from "../../../../shared/data/data/ui-kits/alert";
 
 @Component({
-  selector: 'app-link-color-light-theme',
+  selector: "app-link-color-light-theme",
   imports: [NgbAlertModule],
-  templateUrl: './link-color-light-theme.html',
-  styleUrl: './link-color-light-theme.scss',
+  templateUrl: "./link-color-light-theme.html",
+  styleUrl: "./link-color-light-theme.scss",
 })
 export class LinkColorLightTheme {
   public linkColorLightTheme = linkColorLightTheme;

@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { CommonSvgIcons } from '../../../../../shared/component/common-svg-icons/common-svg-icons';
+import { CommonSvgIcons } from "../../../../../shared/component/common-svg-icons/common-svg-icons";
 
 @Component({
-  selector: 'app-shipping',
+  selector: "app-shipping",
   imports: [CommonSvgIcons],
-  templateUrl: './shipping.html',
-  styleUrls: ['./shipping.scss'],
+  templateUrl: "./shipping.html",
+  styleUrls: ["./shipping.scss"],
 })
 export class Shipping {}

@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { TaskData } from './task-data/task-data';
-import { TaskFilter } from './task-filter/task-filter';
-import * as data from '../../shared/data/data/tasks';
+import { TaskData } from "./task-data/task-data";
+import { TaskFilter } from "./task-filter/task-filter";
+import * as data from "../../shared/data/data/tasks";
 
 @Component({
-  selector: 'app-task',
+  selector: "app-task",
   imports: [TaskData, TaskFilter],
-  templateUrl: './task.html',
-  styleUrl: './task.scss',
+  templateUrl: "./task.html",
+  styleUrl: "./task.scss",
 })
 export class Task {
   public selectedId: number;

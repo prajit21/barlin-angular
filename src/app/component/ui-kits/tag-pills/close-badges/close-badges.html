@@ -1,19 +1,22 @@
 <div class="card">
-    <div class="card-header pb-0">
-      <h4>Close Badges</h4>
-      <p class="f-m-light mt-1">
-        Use<code> badge-l-*</code>classes to provide background-colors and <code>border-* </code>classes to provide
-        border-colors.</p>
-    </div> 
-    <div class="card-body">
-      <div class="badge-spacing image-badges">
-         @for (item of closeBadges; track item) {
-           <span class="badge common-align txt-{{item.class}} rounded-pill badge-l-{{item.class}} rounded-pill border border-{{item.class}}">{{item.class | titlecase}}
-             <a href="javascript:void(0)">
-              <app-feather-icon [class]="item.iconClass" [icon]="'x-circle'" />
-              </a>
-            </span>
-          }
-      </div>
+  <div class="card-header pb-0">
+    <h4>Close Badges</h4>
+    <p class="f-m-light mt-1">
+      Use<code> badge-l-*</code>classes to provide background-colors and
+      <code>border-* </code>classes to provide border-colors.
+    </p>
+  </div>
+  <div class="card-body">
+    <div class="badge-spacing image-badges">
+      @for (item of closeBadges; track item) {
+      <span
+        class="badge common-align txt-{{item.class}} rounded-pill badge-l-{{item.class}} rounded-pill border border-{{item.class}}"
+        >{{item.class | titlecase}}
+        <a href="javascript:void(0)">
+          <app-feather-icon [class]="item.iconClass" [icon]="'x-circle'" />
+        </a>
+      </span>
+      }
     </div>
   </div>
+</div>

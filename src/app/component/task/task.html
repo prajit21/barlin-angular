@@ -1,12 +1,12 @@
 <div class="container-fluid">
-    <div class="email-wrap bookmark-wrap">
-        <div class="row">
-            <div class="col-xl-3 box-col-6">
-                <app-task-filter (selectedId)="getId($event)" [data]="taskData" />
-            </div>
-            <div class="col-xl-9 col-md-12 box-col-12">
-                <app-task-data [selectedId]="selectedId" [data]="taskData" />
-            </div>
-        </div>
+  <div class="email-wrap bookmark-wrap">
+    <div class="row">
+      <div class="col-xl-3 box-col-6">
+        <app-task-filter (selectedId)="getId($event)" [data]="taskData" />
+      </div>
+      <div class="col-xl-9 col-md-12 box-col-12">
+        <app-task-data [selectedId]="selectedId" [data]="taskData" />
+      </div>
     </div>
+  </div>
 </div>

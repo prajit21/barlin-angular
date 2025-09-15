@@ -17,10 +17,10 @@
           margin-bottom: -2px;
           @media (max-width: 767px) {
             margin-top: 0;
-          } 
+          }
           @media (max-width: 575px) {
             margin-top: -5px;
-          } 
+          }
         }
         .desc {
           margin-top: 0 !important;
@@ -30,7 +30,7 @@
           @media (max-width: 767px) {
             padding: 10px 5px;
             height: unset !important;
-          } 
+          }
           &.active {
             text-decoration: underline;
             text-underline-offset: 2px;
@@ -46,28 +46,28 @@
           @media (max-width: 767px) {
             left: 53%;
             [dir="rtl"] & {
-							right: 53%;
-						}
+              right: 53%;
+            }
           }
           @media (max-width: 575px) {
             left: 57%;
             [dir="rtl"] & {
-							right: 57%;
-						}
+              right: 57%;
+            }
           }
         }
         .share-icons {
           left: 50% !important;
           top: 77px;
-          transform: translate(-50%);  
+          transform: translate(-50%);
           @media (max-width: 767px) {
             top: -25px;
             right: 0;
             left: unset !important;
             transform: unset;
-          } 
+          }
           li {
-            margin: 0 ;
+            margin: 0;
             .social-icon {
               width: 40px;
               height: 40px;
@@ -129,7 +129,7 @@
     }
   }
   .card-footer {
-    >div {
+    > div {
       h3 {
         font-size: 16px;
       }
@@ -294,13 +294,13 @@
   }
   .flex-grow-1 {
     padding: 30px;
-    border: 1px solid rgba($semi-dark , 0.28);
+    border: 1px solid rgba($semi-dark, 0.28);
     position: relative;
     p {
       margin-top: 5px;
     }
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       top: 19px;
       right: 100%;
@@ -308,7 +308,7 @@
       border-right: 7px solid $semi-dark;
     }
     &:after {
-      content: '';
+      content: "";
       position: absolute;
       top: 19px;
       right: 100%;
@@ -373,7 +373,7 @@
       }
     }
     .social-status {
-      content: '';
+      content: "";
       position: absolute;
       width: 12px;
       height: 12px;
@@ -397,7 +397,7 @@
         margin-bottom: 5px;
       }
       span {
-        +span {
+        + span {
           color: $light-text;
         }
       }
@@ -422,7 +422,7 @@
   }
 }
 .details-about {
-  +.details-about {
+  + .details-about {
     margin-top: 30px;
   }
   .your-details {
@@ -459,7 +459,7 @@
 }
 .activity-log {
   .my-activity {
-    +.my-activity {
+    + .my-activity {
       margin-top: 30px;
     }
     p {

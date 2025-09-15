@@ -1,43 +1,45 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 @Component({
-  selector: 'app-ajax-request-movie',
+  selector: "app-ajax-request-movie",
   imports: [],
-  templateUrl: './ajax-request-movie.html',
-  styleUrls: ['./ajax-request-movie.scss'],
+  templateUrl: "./ajax-request-movie.html",
+  styleUrls: ["./ajax-request-movie.scss"],
 })
 export class AJAXRequestMovie {
   ajaxMovieAlert() {
     Swal.fire({
       text: 'Search for a movie. e.g. "Herry Poter".',
-      input: 'text',
-      confirmButtonText: 'Search!',
-      confirmButtonColor: 'var(--theme-default)',
+      input: "text",
+      confirmButtonText: "Search!",
+      confirmButtonColor: "var(--theme-default)",
     })
-      .then(name => {
+      .then((name) => {
         if (!name) throw null;
-        return fetch(`https://itunes.apple.com/search?term=${name.value}&entity=movie`);
+        return fetch(
+          `https://itunes.apple.com/search?term=${name.value}&entity=movie`,
+        );
       })
-      .then(results => {
+      .then((results) => {
         return results.json();
       })
-      .then(json => {
+      .then((json) => {
         const movie = json.results[0];
         const name = movie.trackName;
         const imageURL = movie.artworkUrl100;
 
         Swal.fire({
-          title: 'Top result:',
+          title: "Top result:",
           text: name,
           imageUrl: imageURL,
-          confirmButtonColor: 'var(--theme-default)',
+          confirmButtonColor: "var(--theme-default)",
         });
       })
-      .catch(err => {
+      .catch((err) => {
         if (err) {
-          Swal.fire('Oh noes!', 'The AJAX request failed!', 'error');
+          Swal.fire("Oh noes!", "The AJAX request failed!", "error");
         } else {
           Swal.close();
         }

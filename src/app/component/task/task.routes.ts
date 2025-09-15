@@ -1,14 +1,14 @@
-import { Routes } from '@angular/router';
+import { Routes } from "@angular/router";
 
-import { Task } from './task';
+import { Task } from "./task";
 
 export default [
   {
-    path: '',
+    path: "",
     component: Task,
     data: {
-      title: 'Tasks',
-      breadcrumb: 'Tasks',
+      title: "Tasks",
+      breadcrumb: "Tasks",
     },
   },
 ] as Routes;

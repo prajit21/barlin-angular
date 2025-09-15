@@ -1,12 +1,12 @@
-import { Component, input } from '@angular/core';
+import { Component, input } from "@angular/core";
 
-import * as feather from 'feather-icons';
+import * as feather from "feather-icons";
 
 @Component({
-  selector: 'app-feather-icon',
+  selector: "app-feather-icon",
   imports: [],
-  templateUrl: './feather-icon.html',
-  styleUrl: './feather-icon.scss',
+  templateUrl: "./feather-icon.html",
+  styleUrl: "./feather-icon.scss",
 })
 export class FeatherIcon {
   readonly icon = input<string>();

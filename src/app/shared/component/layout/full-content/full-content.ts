@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component } from "@angular/core";
+import { RouterModule } from "@angular/router";
 
 @Component({
-  selector: 'app-full-content',
+  selector: "app-full-content",
   imports: [RouterModule],
-  templateUrl: './full-content.html',
-  styleUrl: './full-content.scss',
+  templateUrl: "./full-content.html",
+  styleUrl: "./full-content.scss",
 })
 export class FullContent {}

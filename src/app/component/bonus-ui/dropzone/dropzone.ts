@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { DefaultFileUpload } from './default-file-upload/default-file-upload';
-import { ImagePreview } from './image-preview/image-preview';
-import { MultiFileUpload } from './multi-file-upload/multi-file-upload';
-import { SingleFileUpload } from './single-file-upload/single-file-upload';
+import { DefaultFileUpload } from "./default-file-upload/default-file-upload";
+import { ImagePreview } from "./image-preview/image-preview";
+import { MultiFileUpload } from "./multi-file-upload/multi-file-upload";
+import { SingleFileUpload } from "./single-file-upload/single-file-upload";
 
 @Component({
-  selector: 'app-dropzone',
+  selector: "app-dropzone",
   imports: [DefaultFileUpload, ImagePreview, MultiFileUpload, SingleFileUpload],
-  templateUrl: './dropzone.html',
-  styleUrls: ['./dropzone.scss'],
+  templateUrl: "./dropzone.html",
+  styleUrls: ["./dropzone.scss"],
 })
 export class Dropzone {}

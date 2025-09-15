@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-font-style',
+  selector: "app-font-style",
   imports: [],
-  templateUrl: './font-style.html',
-  styleUrls: ['./font-style.scss'],
+  templateUrl: "./font-style.html",
+  styleUrls: ["./font-style.scss"],
 })
 export class FontStyle {}

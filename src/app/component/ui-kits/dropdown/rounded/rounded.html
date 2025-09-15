@@ -1,22 +1,36 @@
-<div class="card height-equal" style="min-height: 162.203px;">
-    <div class="card-header pb-0">
-        <h4>Rounded Dropdowns</h4>
-        <p class="f-m-light mt-1">Use <code>rounded-pill </code>class through to change rounded dropdowns.</p>
+<div class="card height-equal" style="min-height: 162.203px">
+  <div class="card-header pb-0">
+    <h4>Rounded Dropdowns</h4>
+    <p class="f-m-light mt-1">
+      Use <code>rounded-pill </code>class through to change rounded dropdowns.
+    </p>
+  </div>
+  <div class="card-body rtl-dropdown">
+    <div class="common-flex">
+      @for (allData of roundedDropdownData; track allData) {
+      <div class="btn-group" ngbDropdown>
+        <button
+          class="btn btn-{{allData.colorClass}} rounded-pill dropdown-toggle"
+          type="button"
+          ngbDropdownToggle
+        >
+          {{allData.title}}
+        </button>
+        <ul class="dropdown-menu dropdown-block" ngbDropdownMenu>
+          <li>
+            <a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem
+              >Dark</a
+            >
+            <a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem
+              >Light</a
+            >
+            <a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem
+              >Lighter</a
+            >
+          </li>
+        </ul>
+      </div>
+      }
     </div>
-    <div class="card-body rtl-dropdown">
-        <div class="common-flex">
-            @for (allData of roundedDropdownData; track allData) {
-            <div class="btn-group" ngbDropdown>
-                <button class="btn btn-{{allData.colorClass}} rounded-pill dropdown-toggle" type="button" ngbDropdownToggle>{{allData.title}}</button>
-                <ul class="dropdown-menu dropdown-block" ngbDropdownMenu>
-                    <li>
-                        <a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Dark</a>
-                        <a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Light</a>
-                        <a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Lighter</a>
-                    </li>
-                </ul>
-            </div>
-            }
-        </div>
-    </div>
+  </div>
 </div>

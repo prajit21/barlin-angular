@@ -1,15 +1,15 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject } from "@angular/core";
 
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 
-import { FeatherIcon } from '../../../../../shared/component/feather-icon/feather-icon';
-import * as Data from '../../../../../shared/data/data/ui-kits/ui-modal';
+import { FeatherIcon } from "../../../../../shared/component/feather-icon/feather-icon";
+import * as Data from "../../../../../shared/data/data/ui-kits/ui-modal";
 
 @Component({
-  selector: 'app-full-screen',
+  selector: "app-full-screen",
   imports: [FeatherIcon],
-  templateUrl: './full-screen.html',
-  styleUrls: ['./full-screen.scss'],
+  templateUrl: "./full-screen.html",
+  styleUrls: ["./full-screen.scss"],
 })
 export class FullScreen {
   public modalData = Data.modalData;

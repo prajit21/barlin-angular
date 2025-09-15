@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { NgApexchartsModule } from 'ng-apexcharts';
+import { NgApexchartsModule } from "ng-apexcharts";
 
-import { salesOverview } from '../../../../shared/data/chart/widgets';
+import { salesOverview } from "../../../../shared/data/chart/widgets";
 
 @Component({
-  selector: 'app-sales-overview',
+  selector: "app-sales-overview",
   imports: [NgApexchartsModule],
-  templateUrl: './sales-overview.html',
-  styleUrl: './sales-overview.scss',
+  templateUrl: "./sales-overview.html",
+  styleUrl: "./sales-overview.scss",
 })
 export class SalesOverview {
   public salesOverview = salesOverview;

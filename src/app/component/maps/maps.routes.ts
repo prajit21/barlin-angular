@@ -1,23 +1,23 @@
-import { Routes } from '@angular/router';
+import { Routes } from "@angular/router";
 
-import { GoogleMaps } from './google-map/google-map';
-import { LeafletMap } from './leaflet-map/leaflet-map';
+import { GoogleMaps } from "./google-map/google-map";
+import { LeafletMap } from "./leaflet-map/leaflet-map";
 
 export default [
   {
-    path: 'google-map',
+    path: "google-map",
     component: GoogleMaps,
     data: {
-      title: 'Google Map',
-      breadcrumb: 'Google Map',
+      title: "Google Map",
+      breadcrumb: "Google Map",
     },
   },
   {
-    path: 'leaflet-map',
+    path: "leaflet-map",
     component: LeafletMap,
     data: {
-      title: 'Leaflet Map',
-      breadcrumb: 'Leaflet Map',
+      title: "Leaflet Map",
+      breadcrumb: "Leaflet Map",
     },
   },
 ] as Routes;

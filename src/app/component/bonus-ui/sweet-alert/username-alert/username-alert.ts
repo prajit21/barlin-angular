@@ -1,24 +1,24 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 @Component({
-  selector: 'app-username-alert',
+  selector: "app-username-alert",
   imports: [],
-  templateUrl: './username-alert.html',
-  styleUrls: ['./username-alert.scss'],
+  templateUrl: "./username-alert.html",
+  styleUrls: ["./username-alert.scss"],
 })
 export class UsernameAlert {
   usernameAlert() {
     Swal.fire({
-      text: 'Please! Submit Your Username :',
-      confirmButtonColor: 'var(--theme-default)',
-      input: 'text',
-    }).then(result => {
+      text: "Please! Submit Your Username :",
+      confirmButtonColor: "var(--theme-default)",
+      input: "text",
+    }).then((result) => {
       if (result.value) {
         Swal.fire({
-          text: 'Your name is :' + result.value,
-          confirmButtonColor: 'var(--theme-default)',
+          text: "Your name is :" + result.value,
+          confirmButtonColor: "var(--theme-default)",
         });
       }
     });

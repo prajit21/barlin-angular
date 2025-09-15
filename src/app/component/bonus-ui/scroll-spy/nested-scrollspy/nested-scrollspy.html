@@ -1,79 +1,146 @@
 <div class="card">
-    <div class="card-header pb-0"> 
-      <h4>Nested Scrollspy</h4>
-      <p class="f-m-light mt-1">
-         Scrollspy also works with nested <code>.navs</code> if a nested <code>.nav </code>is <code>.active</code>, it's parents will also be <code>.active</code>. Scroll the area next to the navbar and watch the active class change.</p>
-    </div>
-    <div class="card-body nested-scrollspy">
-      <div class="row g-4">
-        <div class="col-xxl-3 col-lg-4 col-md-5">
-          <nav class="h-100 nested-scrollspy-menu flex-column align-items-stretch" [ngbScrollSpyMenu]="spy">
+  <div class="card-header pb-0">
+    <h4>Nested Scrollspy</h4>
+    <p class="f-m-light mt-1">
+      Scrollspy also works with nested <code>.navs</code> if a nested
+      <code>.nav </code>is <code>.active</code>, it's parents will also be
+      <code>.active</code>. Scroll the area next to the navbar and watch the
+      active class change.
+    </p>
+  </div>
+  <div class="card-body nested-scrollspy">
+    <div class="row g-4">
+      <div class="col-xxl-3 col-lg-4 col-md-5">
+        <nav
+          class="h-100 nested-scrollspy-menu flex-column align-items-stretch"
+          [ngbScrollSpyMenu]="spy"
+        >
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link" ngbScrollSpyItem="item-1">Experience</a>
             <nav class="nav nav-pills flex-column">
-              <a class="nav-link" ngbScrollSpyItem="item-1">Experience</a>
-              <nav class="nav nav-pills flex-column">
-                <a class="nav-link ms-3 my-1" ngbScrollSpyItem="item-1-1">Web Development </a>
-                <a class="nav-link ms-3 my-1" ngbScrollSpyItem="item-1-2">Cyber Security</a></nav>
-                <a class="nav-link" ngbScrollSpyItem="item-2">Get in Touch</a>
-                <a class="nav-link" ngbScrollSpyItem="item-3">Projects</a>
-              <nav class="nav nav-pills flex-column">
-                <a class="nav-link ms-3 my-1" ngbScrollSpyItem="item-3-1">Group Projects</a>
-                <a class="nav-link ms-3 my-1" ngbScrollSpyItem="item-3-2">Individual Projects</a></nav>
+              <a class="nav-link ms-3 my-1" ngbScrollSpyItem="item-1-1"
+                >Web Development
+              </a>
+              <a class="nav-link ms-3 my-1" ngbScrollSpyItem="item-1-2"
+                >Cyber Security</a
+              >
+            </nav>
+            <a class="nav-link" ngbScrollSpyItem="item-2">Get in Touch</a>
+            <a class="nav-link" ngbScrollSpyItem="item-3">Projects</a>
+            <nav class="nav nav-pills flex-column">
+              <a class="nav-link ms-3 my-1" ngbScrollSpyItem="item-3-1"
+                >Group Projects</a
+              >
+              <a class="nav-link ms-3 my-1" ngbScrollSpyItem="item-3-2"
+                >Individual Projects</a
+              >
             </nav>
           </nav>
-        </div>
-        <div class="col-xxl-9 col-lg-8 col-md-7">
-          <div class="scrollspy-example-2 custom-scrollbar" ngbScrollSpy #spy="ngbScrollSpy">
-            <div>
-              <h5 ngbScrollSpyFragment="item-1">Experience</h5>
-              <div class="common-align gap-3">
-                <div class="flex-shrink-0">
-                  <app-common-svg-icons [icon]="'experience-scrollspy'" />
-                </div>
-                <div class="flex-grow-1">
-                  <p>This content is a stand-in for the scrollspy page. You'll notice that the relevant navigation link is highlighted as you scroll down the page. It appears again in the component example. Here, we'll continue to add sample copy to highlight the scrolling and highlighting.</p>
-                </div>
+        </nav>
+      </div>
+      <div class="col-xxl-9 col-lg-8 col-md-7">
+        <div
+          class="scrollspy-example-2 custom-scrollbar"
+          ngbScrollSpy
+          #spy="ngbScrollSpy"
+        >
+          <div>
+            <h5 ngbScrollSpyFragment="item-1">Experience</h5>
+            <div class="common-align gap-3">
+              <div class="flex-shrink-0">
+                <app-common-svg-icons [icon]="'experience-scrollspy'" />
+              </div>
+              <div class="flex-grow-1">
+                <p>
+                  This content is a stand-in for the scrollspy page. You'll
+                  notice that the relevant navigation link is highlighted as you
+                  scroll down the page. It appears again in the component
+                  example. Here, we'll continue to add sample copy to highlight
+                  the scrolling and highlighting.
+                </p>
               </div>
             </div>
-            <div>
-              <h6 ngbScrollSpyFragment="item-1-1"> Experience / Web Development </h6>
-              <p>This is some stuff that is meant to be on the scrollspy page. Keep in mind that the relevant navigation link is highlighted as you scroll down the page. The component example uses it repeatedly. Here, we continue to add sample copy to highlight the scrolling and highlighting.</p>
-            </div>
-            <div>
-              <h6 ngbScrollSpyFragment="item-1-2"> Experience / Cyber Security</h6>
-              <p>For the scrollspy page, this is some placeholder content. Take note of the highlighted navigation link at the bottom of the page as you scroll down. It appears again and again in the component example. To highlight the scrolling and highlighting, we're going to keep adding more sample copy here.</p>
-            </div>
-            <div>
-              <h5 ngbScrollSpyFragment="item-2">Get in Touch</h5>
-              <div class="common-align gap-3">
-                <div class="flex-shrink-0">
-                  <app-common-svg-icons [icon]="'contact-us'" />
-                </div>
-                <div class="flex-grow-1">
-                  <p>The content that appears here is a placeholder for the scrollspy page. The relevant navigation link is highlighted as you scroll down the page. The component example contains repetitions of it. In order to highlight the scrolling and highlighting, we will continue to add more sample copy here.</p>
-                </div>
+          </div>
+          <div>
+            <h6 ngbScrollSpyFragment="item-1-1">
+              Experience / Web Development
+            </h6>
+            <p>
+              This is some stuff that is meant to be on the scrollspy page. Keep
+              in mind that the relevant navigation link is highlighted as you
+              scroll down the page. The component example uses it repeatedly.
+              Here, we continue to add sample copy to highlight the scrolling
+              and highlighting.
+            </p>
+          </div>
+          <div>
+            <h6 ngbScrollSpyFragment="item-1-2">Experience / Cyber Security</h6>
+            <p>
+              For the scrollspy page, this is some placeholder content. Take
+              note of the highlighted navigation link at the bottom of the page
+              as you scroll down. It appears again and again in the component
+              example. To highlight the scrolling and highlighting, we're going
+              to keep adding more sample copy here.
+            </p>
+          </div>
+          <div>
+            <h5 ngbScrollSpyFragment="item-2">Get in Touch</h5>
+            <div class="common-align gap-3">
+              <div class="flex-shrink-0">
+                <app-common-svg-icons [icon]="'contact-us'" />
+              </div>
+              <div class="flex-grow-1">
+                <p>
+                  The content that appears here is a placeholder for the
+                  scrollspy page. The relevant navigation link is highlighted as
+                  you scroll down the page. The component example contains
+                  repetitions of it. In order to highlight the scrolling and
+                  highlighting, we will continue to add more sample copy here.
+                </p>
               </div>
             </div>
-            <div>
-              <h5 ngbScrollSpyFragment="item-3">Projects</h5>
-              <div class="common-align gap-3">
-                <div class="flex-shrink-0">
-                  <app-common-svg-icons [icon]="'project-info'" />
-                </div>
-                <div class="flex-grow-1">
-                  <p>This content is a stand-in for the scrollspy page. You'll notice that the relevant navigation link is highlighted as you scroll down the page. It appears again in the component example. Here, we'll continue to add sample copy to highlight the scrolling and highlighting.</p>
-                </div>
+          </div>
+          <div>
+            <h5 ngbScrollSpyFragment="item-3">Projects</h5>
+            <div class="common-align gap-3">
+              <div class="flex-shrink-0">
+                <app-common-svg-icons [icon]="'project-info'" />
+              </div>
+              <div class="flex-grow-1">
+                <p>
+                  This content is a stand-in for the scrollspy page. You'll
+                  notice that the relevant navigation link is highlighted as you
+                  scroll down the page. It appears again in the component
+                  example. Here, we'll continue to add sample copy to highlight
+                  the scrolling and highlighting.
+                </p>
               </div>
             </div>
-            <div>
-              <h6 ngbScrollSpyFragment="item-3-1">Projects / Group Projects</h6>
-              <p>This content is a stand-in for the scrollspy page. You'll notice that the relevant navigation link is highlighted as you scroll down the page. It appears again in the component example. Here, we'll continue to add sample copy to highlight the scrolling and highlighting.</p>
-            </div>
-            <div>
-              <h6 ngbScrollSpyFragment="item-3-2">Projects / Individual Projects</h6>
-              <p>For the scrollspy page, this is some placeholder content. Take note of the highlighted navigation link at the bottom of the page as you scroll down. It appears again and again in the component example. To highlight the scrolling and highlighting, we're going to keep adding more sample copy here.</p>
-            </div>
+          </div>
+          <div>
+            <h6 ngbScrollSpyFragment="item-3-1">Projects / Group Projects</h6>
+            <p>
+              This content is a stand-in for the scrollspy page. You'll notice
+              that the relevant navigation link is highlighted as you scroll
+              down the page. It appears again in the component example. Here,
+              we'll continue to add sample copy to highlight the scrolling and
+              highlighting.
+            </p>
+          </div>
+          <div>
+            <h6 ngbScrollSpyFragment="item-3-2">
+              Projects / Individual Projects
+            </h6>
+            <p>
+              For the scrollspy page, this is some placeholder content. Take
+              note of the highlighted navigation link at the bottom of the page
+              as you scroll down. It appears again and again in the component
+              example. To highlight the scrolling and highlighting, we're going
+              to keep adding more sample copy here.
+            </p>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>

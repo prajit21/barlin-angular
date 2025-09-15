@@ -123,7 +123,7 @@
       }
     }
     .currency-widget {
-      div[class*=bg-light-] {
+      div[class*="bg-light-"] {
         display: none;
       }
     }
@@ -173,7 +173,7 @@
     .apache-cotainer-large,
     #line-visual,
     #line-visulH {
-      >div,
+      > div,
       canvas {
         width: 100% !important;
       }
@@ -193,20 +193,20 @@
         }
       }
     }
-  .page-wrapper {
-    .page-header {
-      .header-wrapper {
-        padding: 15px 30px;
-        .nav-right {
-          > ul {
-            > li {
-              margin-right: 8px;
+    .page-wrapper {
+      .page-header {
+        .header-wrapper {
+          padding: 15px 30px;
+          .nav-right {
+            > ul {
+              > li {
+                margin-right: 8px;
+              }
             }
           }
         }
       }
     }
-  }
     .page-wrapper,
     &.page-wrapper {
       &.box-layout {
@@ -220,13 +220,13 @@
             top: $box-layout-space;
             border-radius: 10px 0 0 10px;
             &.close_icon {
-              ~footer {
+              ~ footer {
                 width: 1280px;
                 margin-left: 0px;
                 padding-left: 100px !important;
                 border-radius: 0 0 10px 10px;
               }
-              ~.footer-fix {
+              ~ .footer-fix {
                 padding-left: 0;
               }
               &:hover {
@@ -294,8 +294,8 @@
                   }
                   a {
                     &.active {
-                      ~.sidebar-submenu,
-                      ~.mega-menu-container {
+                      ~ .sidebar-submenu,
+                      ~ .mega-menu-container {
                         animation: unset;
                       }
                     }
@@ -447,7 +447,7 @@
                   height: calc(100vh - 316px);
                 }
               }
-              ~footer {
+              ~ footer {
                 width: 1280px;
                 left: 50%;
                 margin-left: 0;
@@ -595,7 +595,7 @@
               align-items: center;
               justify-content: center;
               min-width: 300px;
-              >div {
+              > div {
                 z-index: 8;
                 background-color: rgba(255, 255, 255, 0.75);
                 background-blend-mode: overlay;
@@ -679,7 +679,7 @@
       }
       ul {
         &.close_icon {
-          >li {
+          > li {
             label {
               padding: 0;
               &:after {
@@ -730,7 +730,7 @@
           .bitcoin-content {
             .bitcoin-numbers {
               h6 {
-                font-size: 14PX;
+                font-size: 14px;
               }
             }
             &.text-right {
@@ -850,7 +850,7 @@
             }
           }
         }
-        >div {
+        > div {
           &:last-child {
             .card {
               margin-bottom: 0;
@@ -925,7 +925,7 @@
             padding-left: 12px;
           }
           .col-xl-3 {
-            +.col-xl-3 {
+            + .col-xl-3 {
               padding-right: 12px;
             }
           }
@@ -1042,9 +1042,11 @@
       }
       .recent-order {
         table {
-          thead, tbody {
+          thead,
+          tbody {
             tr {
-              th, td {
+              th,
+              td {
                 &:nth-child(4) {
                   display: none;
                 }
@@ -1107,9 +1109,11 @@
       }
       .last-order {
         table {
-          thead, tbody {
+          thead,
+          tbody {
             tr {
-              th, td {
+              th,
+              td {
                 &:last-child {
                   display: none;
                 }

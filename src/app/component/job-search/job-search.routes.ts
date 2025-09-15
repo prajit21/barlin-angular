@@ -1,41 +1,41 @@
-import { Routes } from '@angular/router';
+import { Routes } from "@angular/router";
 
-import { JobApply } from './job-apply/job-apply';
-import { JobDetails } from './job-details/job-details';
-import { JobSearchCardview } from './job-search-cardview/job-search-cardview';
-import { JobSearchListview } from './job-search-listview/job-search-listview';
+import { JobApply } from "./job-apply/job-apply";
+import { JobDetails } from "./job-details/job-details";
+import { JobSearchCardview } from "./job-search-cardview/job-search-cardview";
+import { JobSearchListview } from "./job-search-listview/job-search-listview";
 
 export default [
   {
-    path: 'cards-view',
+    path: "cards-view",
     component: JobSearchCardview,
     data: {
-      title: 'Cards View',
-      breadcrumb: 'Cards View',
+      title: "Cards View",
+      breadcrumb: "Cards View",
     },
   },
   {
-    path: 'list-view',
+    path: "list-view",
     component: JobSearchListview,
     data: {
-      title: 'List View',
-      breadcrumb: 'List View',
+      title: "List View",
+      breadcrumb: "List View",
     },
   },
   {
-    path: 'job-details',
+    path: "job-details",
     component: JobDetails,
     data: {
-      title: 'Job Details',
-      breadcrumb: 'Job Details',
+      title: "Job Details",
+      breadcrumb: "Job Details",
     },
   },
   {
-    path: 'apply',
+    path: "apply",
     component: JobApply,
     data: {
-      title: 'Apply',
-      breadcrumb: 'Apply',
+      title: "Apply",
+      breadcrumb: "Apply",
     },
   },
 ] as Routes;

@@ -1,14 +1,14 @@
-import { Routes } from '@angular/router';
+import { Routes } from "@angular/router";
 
-import { SamplePage } from './sample-page';
+import { SamplePage } from "./sample-page";
 
 export default [
   {
-    path: '',
+    path: "",
     component: SamplePage,
     data: {
-      title: 'Sample Page',
-      breadcrumb: 'Sample Page',
+      title: "Sample Page",
+      breadcrumb: "Sample Page",
     },
   },
 ] as Routes;

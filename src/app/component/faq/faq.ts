@@ -1,20 +1,20 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { CommanData } from './comman-data/comman-data';
-import { FeaturedTutorials } from './featured-tutorials/featured-tutorials';
-import { LatestArticlesVideos } from './latest-articles-videos/latest-articles-videos';
-import { LatestUpdates } from './latest-updates/latest-updates';
-import { Navigation } from './navigation/navigation';
-import { Questions } from './questions/questions';
-import { SearchArticles } from './search-articles/search-articles';
+import { CommanData } from "./comman-data/comman-data";
+import { FeaturedTutorials } from "./featured-tutorials/featured-tutorials";
+import { LatestArticlesVideos } from "./latest-articles-videos/latest-articles-videos";
+import { LatestUpdates } from "./latest-updates/latest-updates";
+import { Navigation } from "./navigation/navigation";
+import { Questions } from "./questions/questions";
+import { SearchArticles } from "./search-articles/search-articles";
 import {
   articlesAndVideosData,
   commanTopData,
   featuredTutorialData,
-} from '../../shared/data/data/faq';
+} from "../../shared/data/data/faq";
 
 @Component({
-  selector: 'app-faq',
+  selector: "app-faq",
   imports: [
     Questions,
     SearchArticles,
@@ -24,8 +24,8 @@ import {
     LatestArticlesVideos,
     CommanData,
   ],
-  templateUrl: './faq.html',
-  styleUrls: ['./faq.scss'],
+  templateUrl: "./faq.html",
+  styleUrls: ["./faq.scss"],
 })
 export class Faq {
   public commanData = commanTopData;

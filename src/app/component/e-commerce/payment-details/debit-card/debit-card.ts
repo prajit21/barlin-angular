@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-debit-card',
+  selector: "app-debit-card",
   imports: [],
-  templateUrl: './debit-card.html',
-  styleUrls: ['./debit-card.scss'],
+  templateUrl: "./debit-card.html",
+  styleUrls: ["./debit-card.scss"],
 })
 export class DebitCard {}

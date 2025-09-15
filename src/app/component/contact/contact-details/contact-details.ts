@@ -1,19 +1,19 @@
-import { CommonModule } from '@angular/common';
-import { Component, input, inject } from '@angular/core';
+import { CommonModule } from "@angular/common";
+import { Component, input, inject } from "@angular/core";
 
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import Swal from 'sweetalert2';
+import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
+import Swal from "sweetalert2";
 
-import { EditForm } from './edit-form/edit-form';
-import { contactDetails, contacts } from '../../../shared/data/data/contacts';
-import { History } from '../widgets/history/history';
-import { PrintPreview } from '../widgets/print-preview/print-preview';
+import { EditForm } from "./edit-form/edit-form";
+import { contactDetails, contacts } from "../../../shared/data/data/contacts";
+import { History } from "../widgets/history/history";
+import { PrintPreview } from "../widgets/print-preview/print-preview";
 
 @Component({
-  selector: 'app-contact-details',
+  selector: "app-contact-details",
   imports: [EditForm, History, CommonModule],
-  templateUrl: './contact-details.html',
-  styleUrl: './contact-details.scss',
+  templateUrl: "./contact-details.html",
+  styleUrl: "./contact-details.scss",
 })
 export class ContactDetails {
   readonly activeTab = input<string>();
@@ -28,7 +28,7 @@ export class ContactDetails {
   private modal = inject(NgbModal);
 
   ngOnChanges() {
-    this.data()?.filter(data => {
+    this.data()?.filter((data) => {
       if (data.value == this.activeTab()) {
         if (data.data) {
           this.contactDetails = data.data;
@@ -50,7 +50,7 @@ export class ContactDetails {
   changeDetails(details: contactDetails) {
     this.editContactDetails = details;
     if (!details.active) {
-      this.data()?.filter(data => {
+      this.data()?.filter((data) => {
         data.data?.forEach((subData: { active: boolean }) => {
           if (data.data?.includes(details)) {
             subData.active = false;
@@ -63,12 +63,12 @@ export class ContactDetails {
 
   deleteContact(value: contactDetails, index: number) {
     Swal.fire({
-      text: 'This contact will be deleted from your Personal Contacts and from the chat list too.',
-      title: 'Are you sure?',
-      icon: 'warning',
+      text: "This contact will be deleted from your Personal Contacts and from the chat list too.",
+      title: "Are you sure?",
+      icon: "warning",
       showCancelButton: true,
-      cancelButtonColor: '#EFEFEE !important',
-      confirmButtonColor: 'var(--theme-default)',
+      cancelButtonColor: "#EFEFEE !important",
+      confirmButtonColor: "var(--theme-default)",
     }).then((result: { isConfirmed: boolean; isDenied: boolean }) => {
       if (result.isConfirmed) {
         this.contactDetails.splice(this.contactDetails.indexOf(value), 1);
@@ -81,7 +81,7 @@ export class ContactDetails {
           this.contactDetails[index].active = true;
         }
       } else {
-        Swal.fire('', 'Your contact is safe!');
+        Swal.fire("", "Your contact is safe!");
       }
     });
   }
@@ -92,9 +92,9 @@ export class ContactDetails {
 
   printContact(details: contactDetails) {
     const print = this.modal.open(PrintPreview, {
-      size: 'm',
+      size: "m",
       centered: true,
-      windowClass: 'modal-bookmark',
+      windowClass: "modal-bookmark",
     });
     print.componentInstance.printDetails = details;
   }

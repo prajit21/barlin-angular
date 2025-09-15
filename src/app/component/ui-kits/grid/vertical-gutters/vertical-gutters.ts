@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-vertical-gutters',
+  selector: "app-vertical-gutters",
   imports: [],
-  templateUrl: './vertical-gutters.html',
-  styleUrl: './vertical-gutters.scss',
+  templateUrl: "./vertical-gutters.html",
+  styleUrl: "./vertical-gutters.scss",
 })
 export class VerticalGutters {}

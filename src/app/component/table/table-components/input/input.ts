@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-input',
+  selector: "app-input",
   imports: [],
-  templateUrl: './input.html',
-  styleUrls: ['./input.scss'],
+  templateUrl: "./input.html",
+  styleUrls: ["./input.scss"],
 })
 export class Input {}

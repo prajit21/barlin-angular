@@ -1,14 +1,14 @@
-import { Routes } from '@angular/router';
+import { Routes } from "@angular/router";
 
-import { FileManager } from './file-manager';
+import { FileManager } from "./file-manager";
 
 export default [
   {
-    path: '',
+    path: "",
     component: FileManager,
     data: {
-      title: 'File Manager',
-      breadcrumb: 'File Manager',
+      title: "File Manager",
+      breadcrumb: "File Manager",
     },
   },
 ] as Routes;

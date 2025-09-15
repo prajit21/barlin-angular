@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-date-time',
+  selector: "app-date-time",
   imports: [],
-  templateUrl: './date-time.html',
-  styleUrls: ['./date-time.scss'],
+  templateUrl: "./date-time.html",
+  styleUrls: ["./date-time.scss"],
 })
 export class DateTime {}

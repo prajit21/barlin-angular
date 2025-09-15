@@ -1,17 +1,29 @@
 <div class="card">
-    <div class="card-header pb-0">
-        <div class="header-top">
-            <h4>Learning Summary<span class="f-14 f-w-500 ms-1 f-light">(80% activity growth)</span></h4>
-            <app-dropdown [data]="dropdownList" />
-
-        </div>
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h4>
+        Learning Summary<span class="f-14 f-w-500 ms-1 f-light"
+          >(80% activity growth)</span
+        >
+      </h4>
+      <app-dropdown [data]="dropdownList" />
     </div>
-    <div class="card-body pb-0">
-        <div id="learning-chart" [style.min-height]="height() ? '335px':'0px'">
-            <apx-chart [series]="learningSummary.series" [chart]="learningSummary.chart" [grid]="learningSummary.grid"
-                [colors]="learningSummary.colors" [stroke]="learningSummary.stroke" [markers]="learningSummary.markers"
-                [tooltip]="learningSummary.tooltip" [xaxis]="learningSummary.xaxis" [fill]="learningSummary.fill"
-                [yaxis]="learningSummary.yaxis" [legend]="learningSummary.legend" />
-        </div>
+  </div>
+  <div class="card-body pb-0">
+    <div id="learning-chart" [style.min-height]="height() ? '335px':'0px'">
+      <apx-chart
+        [series]="learningSummary.series"
+        [chart]="learningSummary.chart"
+        [grid]="learningSummary.grid"
+        [colors]="learningSummary.colors"
+        [stroke]="learningSummary.stroke"
+        [markers]="learningSummary.markers"
+        [tooltip]="learningSummary.tooltip"
+        [xaxis]="learningSummary.xaxis"
+        [fill]="learningSummary.fill"
+        [yaxis]="learningSummary.yaxis"
+        [legend]="learningSummary.legend"
+      />
     </div>
+  </div>
 </div>

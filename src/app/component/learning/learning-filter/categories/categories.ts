@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCollapseModule } from "@ng-bootstrap/ng-bootstrap";
 
-import { Category } from '../../../../shared/data/data/learning';
+import { Category } from "../../../../shared/data/data/learning";
 
 @Component({
-  selector: 'app-categories',
+  selector: "app-categories",
   imports: [NgbCollapseModule],
-  templateUrl: './categories.html',
-  styleUrls: ['./categories.scss'],
+  templateUrl: "./categories.html",
+  styleUrls: ["./categories.scss"],
 })
 export class Categories {
   public Categories = Category;

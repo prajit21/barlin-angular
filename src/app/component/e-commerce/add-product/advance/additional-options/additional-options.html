@@ -6,20 +6,30 @@
           <div class="col-sm-6">
             <div class="row custom-input">
               <div class="col-12">
-                <label class="form-label" for="tagTitle">Additional Tag Title</label>
+                <label class="form-label" for="tagTitle"
+                  >Additional Tag Title</label
+                >
               </div>
               <div class="col-12">
-                <input class="form-control" id="tagTitle" type="text">
-                <p class="f-light">Add a new tag title. Keywords should be simple and accurate.
+                <input class="form-control" id="tagTitle" type="text" />
+                <p class="f-light">
+                  Add a new tag title. Keywords should be simple and accurate.
                 </p>
               </div>
             </div>
           </div>
           <div class="col-sm-6">
             <div class="row product-tag">
-              <label class="form-label col-12" for="basic-tags1">Specific Tags</label>
+              <label class="form-label col-12" for="basic-tags1"
+                >Specific Tags</label
+              >
               <div class="col-12">
-                <tag-input [(ngModel)]='items' [editable]="true" class="form-control" name="editor" />
+                <tag-input
+                  [(ngModel)]="items"
+                  [editable]="true"
+                  class="form-control"
+                  name="editor"
+                />
               </div>
             </div>
           </div>
@@ -28,10 +38,16 @@
               <div class="col-12">
                 <label class="form-label col-12">Additional Description</label>
                 <div class="toolbar-box">
-                  <angular-editor [placeholder]="'Enter text here...'" [(ngModel)]="htmlContent" name="editor" />
+                  <angular-editor
+                    [placeholder]="'Enter text here...'"
+                    [(ngModel)]="htmlContent"
+                    name="editor"
+                  />
                 </div>
-                <p class="f-light">Enhance your SEO ranking with an added tag description for
-                  the product.</p>
+                <p class="f-light">
+                  Enhance your SEO ranking with an added tag description for the
+                  product.
+                </p>
               </div>
             </div>
           </div>
@@ -46,7 +62,8 @@
         </div>
       </button>
       <button class="btn">
-        <div class="d-flex align-items-center gap-sm-2 gap-1">Next
+        <div class="d-flex align-items-center gap-sm-2 gap-1">
+          Next
           <app-common-svg-icons [icon]="'front-arrow'" />
         </div>
       </button>

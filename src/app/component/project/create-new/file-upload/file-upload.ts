@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { DropzoneConfigInterface, DropzoneModule } from 'ngx-dropzone-wrapper';
+import { DropzoneConfigInterface, DropzoneModule } from "ngx-dropzone-wrapper";
 
 @Component({
-  selector: 'app-file-upload',
+  selector: "app-file-upload",
   imports: [DropzoneModule],
-  templateUrl: './file-upload.html',
-  styleUrls: ['./file-upload.scss'],
+  templateUrl: "./file-upload.html",
+  styleUrls: ["./file-upload.scss"],
 })
 export class FileUpload {
   public text =
@@ -14,7 +14,7 @@ export class FileUpload {
 
   public config: DropzoneConfigInterface = {
     clickable: true,
-    url: 'https://httpbin.org/post',
+    url: "https://httpbin.org/post",
     addRemoveLinks: true,
     parallelUploads: 1,
   };

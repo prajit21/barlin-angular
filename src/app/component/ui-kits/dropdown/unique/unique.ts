@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDropdownModule } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
-  selector: 'app-unique',
+  selector: "app-unique",
   imports: [NgbDropdownModule],
-  templateUrl: './unique.html',
-  styleUrls: ['./unique.scss'],
+  templateUrl: "./unique.html",
+  styleUrls: ["./unique.scss"],
 })
 export class Unique {}

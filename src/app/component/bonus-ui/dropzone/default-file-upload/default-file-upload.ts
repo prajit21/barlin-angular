@@ -1,22 +1,22 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { DropzoneConfigInterface, DropzoneModule } from 'ngx-dropzone-wrapper';
+import { DropzoneConfigInterface, DropzoneModule } from "ngx-dropzone-wrapper";
 
 @Component({
-  selector: 'app-default-file-upload',
+  selector: "app-default-file-upload",
   imports: [DropzoneModule],
-  templateUrl: './default-file-upload.html',
-  styleUrls: ['./default-file-upload.scss'],
+  templateUrl: "./default-file-upload.html",
+  styleUrls: ["./default-file-upload.scss"],
 })
 export class DefaultFileUpload {
   public imageConfig: DropzoneConfigInterface = {
     clickable: true,
-    url: 'https://httpbin.org/post',
+    url: "https://httpbin.org/post",
     addRemoveLinks: true,
     parallelUploads: 1,
   };
 
-  public text = 'Drag & Drop your files or Browse';
+  public text = "Drag & Drop your files or Browse";
 
   onUploadError(_args: DropzoneConfigInterface): void {}
 

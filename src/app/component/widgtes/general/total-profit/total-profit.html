@@ -1,26 +1,35 @@
 <div class="card online-order">
-    <div class="card-header pb-0">
-        <div class="d-flex">
-            <div class="order bg-light-success">
-                <app-common-svg-icons [icon]="'increased'" />
-            </div>
-            <div class="arrow-chart">
-                <app-common-svg-icons [icon]="'arrow-chart-up'" />
-                <span class="font-success">+8.2%</span>
-            </div>
-        </div>
-        <div class="online"><span>Total Profit</span>
-            <h4 class="num-counter">85,478</h4>
-        </div>
+  <div class="card-header pb-0">
+    <div class="d-flex">
+      <div class="order bg-light-success">
+        <app-common-svg-icons [icon]="'increased'" />
+      </div>
+      <div class="arrow-chart">
+        <app-common-svg-icons [icon]="'arrow-chart-up'" />
+        <span class="font-success">+8.2%</span>
+      </div>
     </div>
-    <div class="card-body pt-0 ps-2 pe-2">
-        <div class="revenue" id="Revenue-chart">
-            <div class="offline-chart" id="offline-chart">
-                <apx-chart [series]="offlineSales.series" [chart]="offlineSales.chart"
-                [plotOptions]="offlineSales.plotOptions" [dataLabels]="offlineSales.dataLabels"
-                [grid]="offlineSales.grid" [xaxis]="offlineSales.xaxis" [legend]="offlineSales.legend"
-                [yaxis]="offlineSales.yaxis" [colors]="offlineSales.colors" />
-            </div>
-        </div>
+    <div class="online">
+      <span>Total Profit</span>
+      <h4 class="num-counter">85,478</h4>
     </div>
+  </div>
+  <div class="card-body pt-0 ps-2 pe-2">
+    <div class="revenue" id="Revenue-chart">
+      <div class="offline-chart" id="offline-chart">
+        <apx-chart
+          [series]="offlineSales.series"
+          [chart]="offlineSales.chart"
+          [fill]="offlineSales.fill"
+          [dataLabels]="offlineSales.dataLabels"
+          [grid]="offlineSales.grid"
+          [xaxis]="offlineSales.xaxis"
+          [stroke]="offlineSales.stroke"
+          [yaxis]="offlineSales.yaxis"
+          [colors]="offlineSales.colors"
+          [markers]="offlineSales.markers"
+        />
+      </div>
+    </div>
+  </div>
 </div>

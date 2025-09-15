@@ -23,7 +23,7 @@
   width: 320px;
   z-index: 9;
   background-color: $white;
-  transition: .5s;
+  transition: 0.5s;
   box-shadow: 0 0 9px rgba(191, 191, 191, 0.36);
   [dir="rtl"] & {
     right: unset;
@@ -42,7 +42,7 @@
   }
   &.show {
     right: 0;
-    transition: .3s;
+    transition: 0.3s;
     [dir="rtl"] & {
       right: unset;
       left: 0;
@@ -50,14 +50,14 @@
   }
 }
 .history-details {
-  >div {
+  > div {
     padding: 30px 0;
   }
-  .text-center{
+  .text-center {
     display: flex;
     align-items: center;
     justify-content: center;
-    i{
+    i {
       margin: 0 6px;
     }
   }
@@ -161,7 +161,7 @@
             a {
               font-size: 13px;
             }
-            +li {
+            + li {
               padding-left: 10px;
               margin-left: 5px;
               border-left: 2px solid $light-color;
@@ -189,7 +189,7 @@
             padding-bottom: 0;
             margin-bottom: 0;
           }
-          >span {
+          > span {
             float: right;
           }
         }
@@ -212,7 +212,7 @@
     .nav-link,
     .show {
       &.active,
-      >.nav-link {
+      > .nav-link {
         background-color: rgba($primary-color, 0.07);
         color: $theme-body-font-color;
         border-right: 2px solid var(--theme-default);
@@ -232,7 +232,7 @@
           border-radius: 7px !important;
         }
       }
-      +.nav-link {
+      + .nav-link {
         border-top: 1px solid $light-semi-gray;
       }
     }
@@ -338,13 +338,13 @@
   .contact-options {
     form {
       .row {
-        >div {
+        > div {
           .row {
-            >div {
-              >div {
+            > div {
+              > div {
                 margin-bottom: 0;
               }
-              +div {
+              + div {
                 margin-top: 15px;
               }
             }

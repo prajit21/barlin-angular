@@ -1,14 +1,14 @@
-import { Routes } from '@angular/router';
+import { Routes } from "@angular/router";
 
-import { Contact } from './contact';
+import { Contact } from "./contact";
 
 export default [
   {
-    path: '',
+    path: "",
     component: Contact,
     data: {
-      title: 'Contacts',
-      breadcrumb: 'Contacts',
+      title: "Contacts",
+      breadcrumb: "Contacts",
     },
   },
 ] as Routes;

@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { NgbProgressbarModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbProgressbarModule } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
-  selector: 'app-multiple-bars',
+  selector: "app-multiple-bars",
   imports: [NgbProgressbarModule],
-  templateUrl: './multiple-bars.html',
-  styleUrl: './multiple-bars.scss',
+  templateUrl: "./multiple-bars.html",
+  styleUrl: "./multiple-bars.scss",
 })
 export class MultipleBars {}

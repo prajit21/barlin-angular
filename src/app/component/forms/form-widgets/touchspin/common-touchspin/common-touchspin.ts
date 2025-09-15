@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import * as data from '../.././../../../shared/data/data/forms/form-widgets';
+import * as data from "../.././../../../shared/data/data/forms/form-widgets";
 
 @Component({
-  selector: 'app-common-touchspin',
+  selector: "app-common-touchspin",
   imports: [],
-  templateUrl: './common-touchspin.html',
-  styleUrls: ['./common-touchspin.scss'],
+  templateUrl: "./common-touchspin.html",
+  styleUrls: ["./common-touchspin.scss"],
 })
 export class CommonTouchspin {
   public touchspinData = data.touchspin;

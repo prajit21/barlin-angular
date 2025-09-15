@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-colored-headings',
+  selector: "app-colored-headings",
   imports: [],
-  templateUrl: './colored-headings.html',
-  styleUrls: ['./colored-headings.scss'],
+  templateUrl: "./colored-headings.html",
+  styleUrls: ["./colored-headings.scss"],
 })
 export class ColoredHeadings {}

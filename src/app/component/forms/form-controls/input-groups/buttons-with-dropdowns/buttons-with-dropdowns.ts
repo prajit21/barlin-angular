@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDropdownModule } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
-  selector: 'app-buttons-with-dropdowns',
+  selector: "app-buttons-with-dropdowns",
   imports: [NgbDropdownModule],
-  templateUrl: './buttons-with-dropdowns.html',
-  styleUrls: ['./buttons-with-dropdowns.scss'],
+  templateUrl: "./buttons-with-dropdowns.html",
+  styleUrls: ["./buttons-with-dropdowns.scss"],
 })
 export class ButtonsWithDropdowns {
   public isShow: boolean = false;

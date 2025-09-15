@@ -1,47 +1,47 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 @Component({
-  selector: 'app-pikachu-alert',
+  selector: "app-pikachu-alert",
   imports: [],
-  templateUrl: './pikachu-alert.html',
-  styleUrls: ['./pikachu-alert.scss'],
+  templateUrl: "./pikachu-alert.html",
+  styleUrls: ["./pikachu-alert.scss"],
 })
 export class PikachuAlert {
   pikachuAlert() {
     Swal.fire({
-      text: 'A wild Pikachu appeared! What do you want to do?',
+      text: "A wild Pikachu appeared! What do you want to do?",
       showDenyButton: true,
       showCancelButton: true,
-      cancelButtonColor: '#EFEFEE !important',
-      confirmButtonColor: 'var(--theme-default)',
-      denyButtonColor: 'var(--theme-default)',
-      cancelButtonText: 'Run away!',
-      confirmButtonText: 'Throw Pokeball!',
-      denyButtonText: 'Defeat',
+      cancelButtonColor: "#EFEFEE !important",
+      confirmButtonColor: "var(--theme-default)",
+      denyButtonColor: "var(--theme-default)",
+      cancelButtonText: "Run away!",
+      confirmButtonText: "Throw Pokeball!",
+      denyButtonText: "Defeat",
       customClass: {
-        cancelButton: 'order-1',
-        confirmButton: 'order-2',
-        denyButton: 'order-3',
+        cancelButton: "order-1",
+        confirmButton: "order-2",
+        denyButton: "order-3",
       },
-    }).then(result => {
+    }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire({
-          title: 'Yeah!',
-          text: 'Pikachu was caught!',
-          icon: 'success',
-          confirmButtonColor: 'var(--theme-default)',
+          title: "Yeah!",
+          text: "Pikachu was caught!",
+          icon: "success",
+          confirmButtonColor: "var(--theme-default)",
         });
       } else if (result.isDenied) {
         Swal.fire({
-          text: 'Pikachu fainted! You gained 500 XP!',
-          confirmButtonColor: 'var(--theme-default)',
+          text: "Pikachu fainted! You gained 500 XP!",
+          confirmButtonColor: "var(--theme-default)",
         });
       } else {
         Swal.fire({
-          text: 'Got away safely!',
-          confirmButtonColor: 'var(--theme-default)',
+          text: "Got away safely!",
+          confirmButtonColor: "var(--theme-default)",
         });
       }
     });

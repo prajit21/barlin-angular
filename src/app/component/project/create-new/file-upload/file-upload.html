@@ -1,9 +1,14 @@
 <div class="col">
-    <div class="mb-3">
-        <label>Upload project file</label>
-        <form>
-            <dropzone [config]="config" [message]="text" (error)="onUploadError($event)"
-                (success)="onUploadSuccess($event)" [classList]="'custom-dropzone'" />
-        </form>
-    </div>
+  <div class="mb-3">
+    <label>Upload project file</label>
+    <form>
+      <dropzone
+        [config]="config"
+        [message]="text"
+        (error)="onUploadError($event)"
+        (success)="onUploadSuccess($event)"
+        [classList]="'custom-dropzone'"
+      />
+    </form>
+  </div>
 </div>

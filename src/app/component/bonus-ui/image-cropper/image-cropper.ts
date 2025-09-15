@@ -1,17 +1,21 @@
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 
-import { ImageCroppedEvent, ImageCropperComponent, ImageTransform } from 'ngx-image-cropper';
+import {
+  ImageCroppedEvent,
+  ImageCropperComponent,
+  ImageTransform,
+} from "ngx-image-cropper";
 
 @Component({
-  selector: 'app-image-cropper',
+  selector: "app-image-cropper",
   imports: [FormsModule, ImageCropperComponent],
-  templateUrl: './image-cropper.html',
-  styleUrls: ['./image-cropper.scss'],
+  templateUrl: "./image-cropper.html",
+  styleUrls: ["./image-cropper.scss"],
 })
 export class ImageCrop {
   public imageChangedEvent: Event | null = null;
-  public croppedImage: string | null | undefined = '';
+  public croppedImage: string | null | undefined = "";
   public canvasRotation = 0;
   public rotation = 0;
   public scale = 1;

@@ -1,12 +1,12 @@
-import { SupportTickit } from './support-tickit';
+import { SupportTickit } from "./support-tickit";
 
 export default [
   {
-    path: '',
+    path: "",
     component: SupportTickit,
     data: {
-      title: 'Support Ticket',
-      breadcrumb: 'Support Ticket',
+      title: "Support Ticket",
+      breadcrumb: "Support Ticket",
     },
   },
 ];

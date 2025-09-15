@@ -1,17 +1,17 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject } from "@angular/core";
 
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 
-import { ExtraLarge } from './extra-large/extra-large';
-import { FullScreen } from './full-screen/full-screen';
-import { Large } from './large/large';
-import { Small } from './small/small';
+import { ExtraLarge } from "./extra-large/extra-large";
+import { FullScreen } from "./full-screen/full-screen";
+import { Large } from "./large/large";
+import { Small } from "./small/small";
 
 @Component({
-  selector: 'app-sizes-modal',
+  selector: "app-sizes-modal",
   imports: [],
-  templateUrl: './sizes-modal.html',
-  styleUrls: ['./sizes-modal.scss'],
+  templateUrl: "./sizes-modal.html",
+  styleUrls: ["./sizes-modal.scss"],
 })
 export class SizesModal {
   private modal = inject(NgbModal);
@@ -21,14 +21,14 @@ export class SizesModal {
   }
 
   extraLargeModal() {
-    this.modal.open(ExtraLarge, { size: 'xl' });
+    this.modal.open(ExtraLarge, { size: "xl" });
   }
 
   largeModal() {
-    this.modal.open(Large, { size: 'lg' });
+    this.modal.open(Large, { size: "lg" });
   }
 
   smallModal() {
-    this.modal.open(Small, { size: 'sm' });
+    this.modal.open(Small, { size: "sm" });
   }
 }

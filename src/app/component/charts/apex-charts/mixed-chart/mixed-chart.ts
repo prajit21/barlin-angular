@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { NgApexchartsModule } from 'ng-apexcharts';
+import { NgApexchartsModule } from "ng-apexcharts";
 
-import { mixedChart } from '../../../../shared/data/chart/charts/apex-chart';
+import { mixedChart } from "../../../../shared/data/chart/charts/apex-chart";
 
 @Component({
-  selector: 'app-mixed-chart',
+  selector: "app-mixed-chart",
   imports: [NgApexchartsModule],
-  templateUrl: './mixed-chart.html',
-  styleUrls: ['./mixed-chart.scss'],
+  templateUrl: "./mixed-chart.html",
+  styleUrls: ["./mixed-chart.scss"],
 })
 export class MixedChart {
   public mixedChart = mixedChart;

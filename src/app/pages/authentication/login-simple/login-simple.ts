@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component } from "@angular/core";
+import { RouterModule } from "@angular/router";
 
-import { CommonLoginForm } from '../widgets/common-login-form/common-login-form';
+import { CommonLoginForm } from "../widgets/common-login-form/common-login-form";
 
 @Component({
-  selector: 'app-login-simple',
+  selector: "app-login-simple",
   imports: [CommonLoginForm, RouterModule],
-  templateUrl: './login-simple.html',
-  styleUrl: './login-simple.scss',
+  templateUrl: "./login-simple.html",
+  styleUrl: "./login-simple.scss",
 })
 export class LoginSimple {}

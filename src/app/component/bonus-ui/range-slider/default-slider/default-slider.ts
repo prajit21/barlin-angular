@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { NgxSliderModule, Options } from '@angular-slider/ngx-slider';
+import { NgxSliderModule, Options } from "@angular-slider/ngx-slider";
 
 @Component({
-  selector: 'app-default-slider',
+  selector: "app-default-slider",
   imports: [NgxSliderModule],
-  templateUrl: './default-slider.html',
-  styleUrls: ['./default-slider.scss'],
+  templateUrl: "./default-slider.html",
+  styleUrls: ["./default-slider.scss"],
 })
 export class DefaultSlider {
   public value: number = 550;

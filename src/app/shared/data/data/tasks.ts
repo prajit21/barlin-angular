@@ -22,56 +22,57 @@ export interface select {
 export const taskData: tasks[] = [
   {
     title_id: 1,
-    title: 'Created By Me',
+    title: "Created By Me",
     status: true,
     data: [
       {
         id: 1,
-        title: 'Client meeting',
-        collection: 'General',
+        title: "Client meeting",
+        collection: "General",
         description:
-          'Documentation that is used to explain regarding some attributes of an object.',
+          "Documentation that is used to explain regarding some attributes of an object.",
       },
       {
         id: 2,
-        title: 'Plan webinar',
-        collection: 'General',
+        title: "Plan webinar",
+        collection: "General",
         description:
-          'kanban board is one of the tools that can be used to implement kanban to manage.',
+          "kanban board is one of the tools that can be used to implement kanban to manage.",
       },
       {
         id: 3,
-        title: 'Email newsletter',
-        description: 'There is some Console error in user profile page.',
-        collection: 'General',
+        title: "Email newsletter",
+        description: "There is some Console error in user profile page.",
+        collection: "General",
       },
       {
         id: 4,
-        title: 'Publish podcast',
-        description: 'Clone the theme test data file from the GitHub repository.',
-        collection: 'General',
+        title: "Publish podcast",
+        description:
+          "Clone the theme test data file from the GitHub repository.",
+        collection: "General",
       },
       {
         id: 5,
-        title: 'Lunch website',
+        title: "Lunch website",
         description:
-          'Documentation that is used to explain regarding some attributes of an object to the client.',
-        collection: 'General',
+          "Documentation that is used to explain regarding some attributes of an object to the client.",
+        collection: "General",
       },
 
       {
         id: 6,
-        title: 'Client meeting',
+        title: "Client meeting",
         description:
-          'Digital News Report shows that podcasting is now a worldwide that has become one of the hottest topic.',
-        collection: 'General',
+          "Digital News Report shows that podcasting is now a worldwide that has become one of the hottest topic.",
+        collection: "General",
       },
       {
         id: 7,
-        title: 'Plan webinar',
+        title: "Plan webinar",
         description:
-          'There are many tools available for testing websites, we’ve chosen classics: Chrome dev tools.',
-        collection: 'General',
+          "There are many tools available for testing websites, we’ve chosen classics: Chrome dev tools.",
+        collection: "General",
       },
     ],
   },
@@ -84,129 +85,131 @@ export const taskData: tasks[] = [
   {
     title_id: 3,
     status: false,
-    title: 'Delayed Tasks',
+    title: "Delayed Tasks",
     data: [],
   },
   {
     title_id: 4,
     status: false,
-    title: 'Upcoming Tasks',
+    title: "Upcoming Tasks",
     data: [],
   },
   {
     title_id: 5,
     status: false,
-    title: 'This Week Tasks',
+    title: "This Week Tasks",
     data: [],
   },
   {
     title_id: 6,
     status: false,
-    title: 'This Month Tasks',
+    title: "This Month Tasks",
     data: [],
   },
   {
     title_id: 7,
-    title: 'Assigned To Me',
+    title: "Assigned To Me",
     status: false,
     data: [
       {
         id: 1,
-        title: 'Client meeting',
-        collection: 'General    ',
+        title: "Client meeting",
+        collection: "General    ",
         description:
-          'Documentation that is used to explain regarding some attributes of an object.',
+          "Documentation that is used to explain regarding some attributes of an object.",
       },
       {
         id: 2,
-        title: 'Plan webinar',
-        collection: 'General',
+        title: "Plan webinar",
+        collection: "General",
         description:
-          'kanban board is one of the tools that can be used to implement kanban to manage.',
+          "kanban board is one of the tools that can be used to implement kanban to manage.",
       },
       {
         id: 3,
-        title: 'Email newsletter',
-        description: 'There is some Console error in user profile page.',
-        collection: 'General',
+        title: "Email newsletter",
+        description: "There is some Console error in user profile page.",
+        collection: "General",
       },
       {
         id: 4,
-        title: 'Publish podcast',
-        description: 'Clone the theme test data file from the GitHub repository.',
-        collection: 'General',
+        title: "Publish podcast",
+        description:
+          "Clone the theme test data file from the GitHub repository.",
+        collection: "General",
       },
       {
         id: 5,
-        title: 'Lunch website ',
+        title: "Lunch website ",
         description:
-          'Documentation that is used to explain regarding some attributes of an object to the client.',
-        collection: 'General',
+          "Documentation that is used to explain regarding some attributes of an object to the client.",
+        collection: "General",
       },
     ],
   },
   {
     title_id: 8,
-    title: 'My Tasks',
+    title: "My Tasks",
     status: false,
     data: [
       {
         id: 1,
-        title: 'Client meeting',
-        collection: 'General',
+        title: "Client meeting",
+        collection: "General",
         description:
-          'Documentation that is used to explain regarding some attributes of an object.',
+          "Documentation that is used to explain regarding some attributes of an object.",
       },
       {
         id: 2,
-        title: 'Plan webinar',
-        collection: 'General',
+        title: "Plan webinar",
+        collection: "General",
         description:
-          'kanban board is one of the tools that can be used to implement kanban to manage.',
+          "kanban board is one of the tools that can be used to implement kanban to manage.",
       },
       {
         id: 3,
-        title: 'Email newsletter',
-        description: 'There is some Console error in user profile page.',
-        collection: 'General',
+        title: "Email newsletter",
+        description: "There is some Console error in user profile page.",
+        collection: "General",
       },
       {
         id: 4,
-        title: 'Publish podcast',
-        description: 'Clone the theme test data file from the GitHub repository.',
-        collection: 'General',
+        title: "Publish podcast",
+        description:
+          "Clone the theme test data file from the GitHub repository.",
+        collection: "General",
       },
       {
         id: 5,
-        title: 'Lunch website',
+        title: "Lunch website",
         description:
-          'Documentation that is used to explain regarding some attributes of an object to the client.',
-        collection: 'General',
+          "Documentation that is used to explain regarding some attributes of an object to the client.",
+        collection: "General",
       },
     ],
   },
   {
     title_id: 9,
     status: false,
-    title: 'Notification',
+    title: "Notification",
     data: [],
   },
   {
     title_id: 10,
     status: false,
-    title: 'Newsletter',
+    title: "Newsletter",
     data: [],
   },
   {
     title_id: 11,
     status: false,
-    title: 'Business',
+    title: "Business",
     data: [],
   },
   {
     title_id: 12,
     status: false,
-    title: 'Holidays',
+    title: "Holidays",
     data: [],
   },
 ];

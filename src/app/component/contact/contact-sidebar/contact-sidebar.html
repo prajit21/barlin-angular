@@ -1,34 +1,60 @@
 <div class="md-sidebar" (clickOutside)="isOpen = false">
-  <a class="btn btn-primary md-sidebar-toggle" href="javascript:void(0)" (click)="isOpen =!isOpen">contact filter</a>
-  <div class="md-sidebar-aside job-left-aside custom-scrollbar" [class.open]="isOpen">
+  <a
+    class="btn btn-primary md-sidebar-toggle"
+    href="javascript:void(0)"
+    (click)="isOpen =!isOpen"
+    >contact filter</a
+  >
+  <div
+    class="md-sidebar-aside job-left-aside custom-scrollbar"
+    [class.open]="isOpen"
+  >
     <div class="email-left-aside">
       <div class="card">
         <div class="card-body">
           <div class="email-app-sidebar left-bookmark">
             <div class="d-flex">
               <div class="media-size-email">
-                <img class="me-3 rounded-circle" src="assets/images/user/user.png" alt="">
+                <img
+                  class="me-3 rounded-circle"
+                  src="assets/images/user/user.png"
+                  alt=""
+                />
               </div>
               <div class="flex-grow-1">
                 <h4>MARK JENCO</h4>
                 <p>Markjecno&#64;gmail.com</p>
               </div>
             </div>
-            <ul class="nav main-menu custom-scrollbar contact-options" role="tablist">
-              @for (item of data(); track item;let ind = $index) {
-              @if (ind === 0) {
+            <ul
+              class="nav main-menu custom-scrollbar contact-options"
+              role="tablist"
+            >
+              @for (item of data(); track item;let ind = $index) { @if (ind ===
+              0) {
               <li class="nav-item" (click)="openModal('contact')">
-                <button class="badge-light-primary btn-block btn-mail w-100" type="button">
-                  <app-feather-icon [icon]="'users'" />New Contacts</button>
+                <button
+                  class="badge-light-primary btn-block btn-mail w-100"
+                  type="button"
+                >
+                  <app-feather-icon [icon]="'users'" />New Contacts
+                </button>
               </li>
               <li class="nav-item"><span class="main-title">Views</span></li>
+              } @if (ind === 1) {
+              <li (click)="openModal('category')">
+                <button class="btn btn-category" type="button">
+                  <span class="title"> + Add Category</span>
+                </button>
+              </li>
               }
-              @if (ind === 1) { 
-                <li (click)="openModal('category')">
-                  <button class="btn btn-category" type="button"><span class="title"> + Add Category</span></button>
-                </li>
-              }
-              <li><a class="active"><span class="title" (click)="changeTab(item.value)"> {{item.title}}</span></a></li>
+              <li>
+                <a class="active"
+                  ><span class="title" (click)="changeTab(item.value)">
+                    {{item.title}}</span
+                  ></a
+                >
+              </li>
               }
             </ul>
           </div>

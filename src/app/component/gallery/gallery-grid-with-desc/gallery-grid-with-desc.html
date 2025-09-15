@@ -1,24 +1,27 @@
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="card">
-                <div class="card-header pb-0">
-                    <h4>IMAGE GALLERY WITH DESCRIPTION</h4>
-                </div>
-                <div class="my-gallery card-body row gallery-with-description" gallerize>
-                    @for (imgData of galleryGridWithDesc; track imgData) {
-                    <figure class="col-xl-3 col-sm-6">
-                        <a href="javascript:void(0)">
-                            <img [src]="imgData.srcUrl" alt="Image description">
-                            <div class="caption">
-                                <h4>{{imgData.title}}</h4>
-                                <p>{{imgData.text}}</p>
-                            </div>
-                        </a>
-                    </figure>
-                    }
-                </div>
-            </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header pb-0">
+          <h4>IMAGE GALLERY WITH DESCRIPTION</h4>
         </div>
+        <div
+          class="my-gallery card-body row gallery-with-description"
+          gallerize
+        >
+          @for (imgData of galleryGridWithDesc; track imgData) {
+          <figure class="col-xl-3 col-sm-6">
+            <a href="javascript:void(0)">
+              <img [src]="imgData.srcUrl" alt="Image description" />
+              <div class="caption">
+                <h4>{{imgData.title}}</h4>
+                <p>{{imgData.text}}</p>
+              </div>
+            </a>
+          </figure>
+          }
+        </div>
+      </div>
     </div>
+  </div>
 </div>

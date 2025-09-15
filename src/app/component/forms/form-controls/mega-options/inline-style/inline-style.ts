@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import * as data from '../../../../../shared/data/data/forms/forms-controls';
+import * as data from "../../../../../shared/data/data/forms/forms-controls";
 
 @Component({
-  selector: 'app-inline-style',
+  selector: "app-inline-style",
   imports: [],
-  templateUrl: './inline-style.html',
-  styleUrls: ['./inline-style.scss'],
+  templateUrl: "./inline-style.html",
+  styleUrls: ["./inline-style.scss"],
 })
 export class InlineStyle {
   public inlineStyle = data.inlineStyle;

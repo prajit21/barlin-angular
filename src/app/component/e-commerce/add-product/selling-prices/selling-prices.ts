@@ -1,14 +1,19 @@
-import { CommonModule } from '@angular/common';
-import { Component, output } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { CommonModule } from "@angular/common";
+import { Component, output } from "@angular/core";
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from "@angular/forms";
 
-import { CommonSvgIcons } from '../../../../shared/component/common-svg-icons/common-svg-icons';
+import { CommonSvgIcons } from "../../../../shared/component/common-svg-icons/common-svg-icons";
 
 @Component({
-  selector: 'app-selling-prices',
+  selector: "app-selling-prices",
   imports: [CommonSvgIcons, CommonModule, ReactiveFormsModule],
-  templateUrl: './selling-prices.html',
-  styleUrls: ['./selling-prices.scss'],
+  templateUrl: "./selling-prices.html",
+  styleUrls: ["./selling-prices.scss"],
 })
 export class SellingPrices {
   readonly activeSteps = output<number>();
@@ -19,10 +24,10 @@ export class SellingPrices {
 
   constructor() {
     this.sellingForm = new FormGroup({
-      initial_Cost: new FormControl('', Validators.required),
-      selling_Price: new FormControl('', Validators.required),
-      choose_Your_Currency: new FormControl('', Validators.required),
-      product_Stocks: new FormControl('', Validators.required),
+      initial_Cost: new FormControl("", Validators.required),
+      selling_Price: new FormControl("", Validators.required),
+      choose_Your_Currency: new FormControl("", Validators.required),
+      product_Stocks: new FormControl("", Validators.required),
     });
   }
 
@@ -40,15 +45,15 @@ export class SellingPrices {
   }
 
   get initialCost() {
-    return this.sellingForm.get('initial_Cost');
+    return this.sellingForm.get("initial_Cost");
   }
   get sellingPrice() {
-    return this.sellingForm.get('selling_Price');
+    return this.sellingForm.get("selling_Price");
   }
   get chooseYourCurrency() {
-    return this.sellingForm.get('choose_Your_Currency');
+    return this.sellingForm.get("choose_Your_Currency");
   }
   get productStocks() {
-    return this.sellingForm.get('product_Stocks');
+    return this.sellingForm.get("product_Stocks");
   }
 }

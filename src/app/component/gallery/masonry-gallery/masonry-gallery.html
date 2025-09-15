@@ -6,12 +6,21 @@
           <h4>MASONRY GALLERY</h4>
         </div>
         <div class="card-body photoswipe-pb-responsive">
-          <div class="my-gallery row grid gallery" id="aniimated-thumbnials" gallerize>
+          <div
+            class="my-gallery row grid gallery"
+            id="aniimated-thumbnials"
+            gallerize
+          >
             <ngx-masonry [options]="masonryOptions" [ordered]="true">
               @for (image of dummyPictures; track image; ) {
               <div class="col-md-3 col-sm-6 grid-item" ngxMasonryItem>
                 <a href="javascript:void(0)" itemprop="contentUrl">
-                  <img class="img-thumbnail" [src]="image.image_url" itemprop="thumbnail" alt="Image description">
+                  <img
+                    class="img-thumbnail"
+                    [src]="image.image_url"
+                    itemprop="thumbnail"
+                    alt="Image description"
+                  />
                 </a>
               </div>
               }

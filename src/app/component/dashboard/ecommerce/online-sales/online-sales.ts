@@ -1,15 +1,15 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { NgApexchartsModule } from 'ng-apexcharts';
+import { NgApexchartsModule } from "ng-apexcharts";
 
-import { CommonSvgIcons } from '../../../../shared/component/common-svg-icons/common-svg-icons';
-import { onlineSales } from '../../../../shared/data/chart/dashboard';
+import { CommonSvgIcons } from "../../../../shared/component/common-svg-icons/common-svg-icons";
+import { onlineSales } from "../../../../shared/data/chart/dashboard";
 
 @Component({
-  selector: 'app-online-sales',
+  selector: "app-online-sales",
   imports: [CommonSvgIcons, NgApexchartsModule],
-  templateUrl: './online-sales.html',
-  styleUrl: './online-sales.scss',
+  templateUrl: "./online-sales.html",
+  styleUrl: "./online-sales.scss",
 })
 export class OnlineSales {
   public onlineSales = onlineSales;

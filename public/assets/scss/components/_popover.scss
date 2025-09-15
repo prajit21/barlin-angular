@@ -30,7 +30,7 @@
 }
 .svg-tooltip {
   .common-flex {
-    >div {
+    > div {
       width: 50px;
       height: 50px;
       display: flex;
@@ -54,7 +54,7 @@
   }
   &.light-bg-tooltip {
     .common-flex {
-      >div {
+      > div {
         border: 0;
       }
     }

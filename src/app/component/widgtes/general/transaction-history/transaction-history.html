@@ -1,34 +1,35 @@
 <div class="card transaction-history">
-    <div class="card-header pb-0">
-        <div class="header-top">
-            <h4>Transaction History</h4>
-            <app-dropdown [data]="dropdownList" />
-        </div>
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h4>Transaction History</h4>
+      <app-dropdown [data]="dropdownList" />
     </div>
-    <div class="card-body">
-        <div class="table-responsive custom-scrollbar">
-            <table class="table display" style="width:100%">
-                <tbody>
-                    @for (item of transactionHistory; track item) {
-                    <tr>
-                        <td>
-                            <div class="d-flex">
-                                <span class="bg-light-{{item.color}} history">
-                                    <app-common-svg-icons [icon]="item.icon" />
-                                </span>
-                                <div class="flex-grow-1 ms-2">
-                                    <a [routerLink]="['/ecommerce/product-list']"><span>{{item.title}}</span>
-                                        <h5>{{item.date_time}}</h5>
-                                    </a>
-                                </div>
-                            </div>
-                        </td>
-                        <td>{{item.status}}</td>
-                        <td>+ ${{item.price}}</td>
-                    </tr>
-                    }
-                </tbody>
-            </table>
-        </div>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive custom-scrollbar">
+      <table class="table display" style="width: 100%">
+        <tbody>
+          @for (item of transactionHistory; track item) {
+          <tr>
+            <td>
+              <div class="d-flex">
+                <span class="bg-light-{{item.color}} history">
+                  <app-common-svg-icons [icon]="item.icon" />
+                </span>
+                <div class="flex-grow-1 ms-2">
+                  <a [routerLink]="['/ecommerce/product-list']"
+                    ><span>{{item.title}}</span>
+                    <h5>{{item.date_time}}</h5>
+                  </a>
+                </div>
+              </div>
+            </td>
+            <td>{{item.status}}</td>
+            <td>+ ${{item.price}}</td>
+          </tr>
+          }
+        </tbody>
+      </table>
     </div>
+  </div>
 </div>

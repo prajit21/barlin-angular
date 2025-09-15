@@ -1,16 +1,38 @@
 <div class="card height-equal">
-    <div class="card-header pb-0">
-      <h4>Large Progress Bars</h4>
-      <p class="f-m-light mt-1">Use <code> lg-progress-bar</code> class to change progress size to large.</p>
-    </div>
-    <div class="card-body progress-showcase">
-      <div class="row">
-        <div class="col">
-          <ngb-progressbar class="mb-3" [showValue]="true" type="primary" [value]="25"  />
-          <ngb-progressbar class="mb-3" [showValue]="true" type="secondary" [value]="50" />
-          <ngb-progressbar class="mb-3" [showValue]="true" type="success" [value]="75"  />
-          <ngb-progressbar class="mb-3" [showValue]="true" type="info" [value]="100" />
-        </div>
+  <div class="card-header pb-0">
+    <h4>Large Progress Bars</h4>
+    <p class="f-m-light mt-1">
+      Use <code> lg-progress-bar</code> class to change progress size to large.
+    </p>
+  </div>
+  <div class="card-body progress-showcase">
+    <div class="row">
+      <div class="col">
+        <ngb-progressbar
+          class="mb-3"
+          [showValue]="true"
+          type="primary"
+          [value]="25"
+        />
+        <ngb-progressbar
+          class="mb-3"
+          [showValue]="true"
+          type="secondary"
+          [value]="50"
+        />
+        <ngb-progressbar
+          class="mb-3"
+          [showValue]="true"
+          type="success"
+          [value]="75"
+        />
+        <ngb-progressbar
+          class="mb-3"
+          [showValue]="true"
+          type="info"
+          [value]="100"
+        />
       </div>
     </div>
   </div>
+</div>

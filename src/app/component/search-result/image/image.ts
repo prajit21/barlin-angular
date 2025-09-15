@@ -1,15 +1,21 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject } from "@angular/core";
 
-import { Gallery, GalleryItem, ImageItem, ImageSize, ThumbnailsPosition } from 'ng-gallery';
-import { Lightbox, LightboxModule } from 'ng-gallery/lightbox';
+import {
+  Gallery,
+  GalleryItem,
+  ImageItem,
+  ImageSize,
+  ThumbnailsPosition,
+} from "ng-gallery";
+import { Lightbox, LightboxModule } from "ng-gallery/lightbox";
 
-import * as data from '../../../shared/data/data/social-app';
+import * as data from "../../../shared/data/data/social-app";
 
 @Component({
-  selector: 'app-image',
+  selector: "app-image",
   imports: [LightboxModule],
-  templateUrl: './image.html',
-  styleUrl: './image.scss',
+  templateUrl: "./image.html",
+  styleUrl: "./image.scss",
 })
 export class Image {
   public gallery = inject(Gallery);
@@ -20,10 +26,10 @@ export class Image {
 
   ngOnInit() {
     this.items = this.photosData.map(
-      item => new ImageItem({ src: item.srcUrl, thumb: item.previewUrl }),
+      (item) => new ImageItem({ src: item.srcUrl, thumb: item.previewUrl }),
     );
 
-    const lightboxRef = this.gallery.ref('lightbox');
+    const lightboxRef = this.gallery.ref("lightbox");
 
     lightboxRef.setConfig({
       imageSize: ImageSize.Cover,

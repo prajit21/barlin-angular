@@ -1,14 +1,14 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject } from "@angular/core";
 
-import { NgbRatingConfig, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbRatingConfig, NgbRatingModule } from "@ng-bootstrap/ng-bootstrap";
 
-import * as data from '../../../shared/data/data/search-result';
+import * as data from "../../../shared/data/data/search-result";
 
 @Component({
-  selector: 'app-all',
+  selector: "app-all",
   imports: [NgbRatingModule],
-  templateUrl: './all.html',
-  styleUrl: './all.scss',
+  templateUrl: "./all.html",
+  styleUrl: "./all.scss",
 })
 export class All {
   public config = inject(NgbRatingConfig);

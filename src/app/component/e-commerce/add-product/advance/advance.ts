@@ -1,18 +1,18 @@
-import { CommonModule } from '@angular/common';
-import { Component, output } from '@angular/core';
+import { CommonModule } from "@angular/common";
+import { Component, output } from "@angular/core";
 
-import { AdditionalOptions } from './additional-options/additional-options';
-import { Inventory } from './inventory/inventory';
-import { Shipping } from './shipping/shipping';
+import { AdditionalOptions } from "./additional-options/additional-options";
+import { Inventory } from "./inventory/inventory";
+import { Shipping } from "./shipping/shipping";
 
 @Component({
-  selector: 'app-advance',
+  selector: "app-advance",
   imports: [AdditionalOptions, Inventory, Shipping, CommonModule],
-  templateUrl: './advance.html',
-  styleUrls: ['./advance.scss'],
+  templateUrl: "./advance.html",
+  styleUrls: ["./advance.scss"],
 })
 export class Advance {
-  public activeTab = 'inventory';
+  public activeTab = "inventory";
   readonly activeSteps = output<number>();
   public activeStep: number = 5;
 

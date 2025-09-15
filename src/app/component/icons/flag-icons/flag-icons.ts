@@ -1,15 +1,15 @@
-import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { CommonModule } from "@angular/common";
+import { Component, inject } from "@angular/core";
 
-import { ToastrService } from 'ngx-toastr';
+import { ToastrService } from "ngx-toastr";
 
-import { icon } from '../../../shared/data/data/icons/flag-icon';
+import { icon } from "../../../shared/data/data/icons/flag-icon";
 
 @Component({
-  selector: 'app-flag-icons',
+  selector: "app-flag-icons",
   imports: [CommonModule],
-  templateUrl: './flag-icons.html',
-  styleUrls: ['./flag-icons.scss'],
+  templateUrl: "./flag-icons.html",
+  styleUrls: ["./flag-icons.scss"],
 })
 export class FlagIcons {
   public icon = icon;
@@ -26,21 +26,25 @@ export class FlagIcons {
   }
 
   copyText(val: string) {
-    let selBox = document.createElement('textarea');
-    selBox.style.position = 'fixed';
-    selBox.style.left = '0';
-    selBox.style.top = '0';
-    selBox.style.opacity = '0';
+    let selBox = document.createElement("textarea");
+    selBox.style.position = "fixed";
+    selBox.style.left = "0";
+    selBox.style.top = "0";
+    selBox.style.opacity = "0";
     selBox.value = '<i class="flag-icon flag-icon-' + val + '"></i>';
     document.body.appendChild(selBox);
     selBox.focus();
     selBox.select();
-    document.execCommand('copy');
+    document.execCommand("copy");
     document.body.removeChild(selBox);
-    this.toastrService.show('<p class="mb-0 mt-1">Code Copied to clipboard</p>', '', {
-      closeButton: true,
-      enableHtml: true,
-      positionClass: 'toast-bottom-right',
-    });
+    this.toastrService.show(
+      '<p class="mb-0 mt-1">Code Copied to clipboard</p>',
+      "",
+      {
+        closeButton: true,
+        enableHtml: true,
+        positionClass: "toast-bottom-right",
+      },
+    );
   }
 }

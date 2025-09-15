@@ -1,24 +1,29 @@
 <div class="card">
-    <div class="card-header pb-0">
-        <div class="header-top">
-            <h4>Recent Activity</h4>
-            <app-dropdown [data]="dropdownList" />
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h4>Recent Activity</h4>
+      <app-dropdown [data]="dropdownList" />
+    </div>
+  </div>
+  <div class="card-body latest-activity">
+    <ul>
+      @for (item of recentActivity; track item ; let index = $index) {
+      <li class="d-flex align-items-center">
+        <div
+          class="flex-shrink-0"
+          [ngClass]="index%2 ? 'bg-light-secondary':'bg-light-primary'"
+        >
+          <app-common-svg-icons [class]="item.class" [icon]="item.icon" />
         </div>
-    </div>
-    <div class="card-body latest-activity">
-        <ul>
-            @for (item of recentActivity; track item ; let index = $index) {
-            <li class="d-flex align-items-center">
-                <div class="flex-shrink-0 " [ngClass]="index%2 ? 'bg-light-secondary':'bg-light-primary'">
-                    <app-common-svg-icons [class]="item.class" [icon]="item.icon" />
-                </div>
-                <div class="flex-grow-1"><a [routerLink]="['/tasks']">
-                        <h6>{{item.title}}</h6>
-                    </a>
-                    <p>{{item.description}}</p>
-                </div><span>{{item.dateTime}}</span>
-            </li>
-            }
-        </ul>
-    </div>
+        <div class="flex-grow-1">
+          <a [routerLink]="['/tasks']">
+            <h6>{{item.title}}</h6>
+          </a>
+          <p>{{item.description}}</p>
+        </div>
+        <span>{{item.dateTime}}</span>
+      </li>
+      }
+    </ul>
+  </div>
 </div>

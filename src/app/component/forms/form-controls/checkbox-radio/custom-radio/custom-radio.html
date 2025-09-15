@@ -1,8 +1,10 @@
 <div class="card">
   <div class="card-header pb-0">
-    <h4>Custom radio </h4>
+    <h4>Custom radio</h4>
     <p class="f-m-light mt-1">
-      Use the <code>.form-check-input </code>and <code>.form-check-label </code>for radios.</p>
+      Use the <code>.form-check-input </code>and
+      <code>.form-check-label </code>for radios.
+    </p>
   </div>
   <div class="card-body">
     <div class="row g-3">
@@ -11,9 +13,17 @@
           <h6 class="sub-title">Bordered Radio</h6>
           @for (item of BorderedRadio; track item) {
           <div class="form-check radio radio-{{item.class}}">
-            <input class="form-check-input" [id]="item.id" type="radio" name="radio1" value="option1"
-              [checked]="item.check">
-            <label class="form-check-label" [for]="item.id">{{item.text}} </label>
+            <input
+              class="form-check-input"
+              [id]="item.id"
+              type="radio"
+              name="radio1"
+              value="option1"
+              [checked]="item.check"
+            />
+            <label class="form-check-label" [for]="item.id"
+              >{{item.text}}
+            </label>
           </div>
           }
         </div>
@@ -25,9 +35,17 @@
             <ul class="radio-wrapper">
               @for (item of IconsRadio; track item) {
               <li>
-                <input class="form-check-input" [id]="item.id" type="radio" name="radio2" value="option2">
-                <label class="form-check-label" [for]="item.id"><i
-                    class="fa fa-{{item.icon}}"></i><span>{{item.text}}</span></label>
+                <input
+                  class="form-check-input"
+                  [id]="item.id"
+                  type="radio"
+                  name="radio2"
+                  value="option2"
+                />
+                <label class="form-check-label" [for]="item.id"
+                  ><i class="fa fa-{{item.icon}}"></i
+                  ><span>{{item.text}}</span></label
+                >
               </li>
               }
             </ul>
@@ -35,13 +53,23 @@
         </div>
       </div>
       <div class="col-xl-4 col-sm-6">
-        <div class="card-wrapper border rounded-3 fill-radios h-100 checkbox-checked">
+        <div
+          class="card-wrapper border rounded-3 fill-radios h-100 checkbox-checked"
+        >
           <h6 class="sub-title">Filled Radio</h6>
           @for (item of FilledRadio; track item) {
           <div class="form-check radio radio-{{item.color}}">
-            <input class="form-check-input" [id]="item.id" type="radio" name="radio3" value="option1"
-              [checked]="item.check">
-            <label class="form-check-label" [for]="item.id">{{item.text}}</label>
+            <input
+              class="form-check-input"
+              [id]="item.id"
+              type="radio"
+              name="radio3"
+              value="option1"
+              [checked]="item.check"
+            />
+            <label class="form-check-label" [for]="item.id"
+              >{{item.text}}</label
+            >
           </div>
           }
         </div>

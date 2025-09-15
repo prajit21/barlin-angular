@@ -1,22 +1,28 @@
-import { CommonModule } from '@angular/common';
-import { Component, output } from '@angular/core';
+import { CommonModule } from "@angular/common";
+import { Component, output } from "@angular/core";
 import {
   FormControl,
   FormGroup,
   FormsModule,
   ReactiveFormsModule,
   Validators,
-} from '@angular/forms';
+} from "@angular/forms";
 
-import { Editor, NgxEditorModule } from 'ngx-editor';
+import { Editor, NgxEditorModule } from "ngx-editor";
 
-import { CommonSvgIcons } from '../../../../shared/component/common-svg-icons/common-svg-icons';
+import { CommonSvgIcons } from "../../../../shared/component/common-svg-icons/common-svg-icons";
 
 @Component({
-  selector: 'app-add-product-details',
-  imports: [NgxEditorModule, ReactiveFormsModule, CommonSvgIcons, CommonModule, FormsModule],
-  templateUrl: './add-product-details.html',
-  styleUrls: ['./add-product-details.scss'],
+  selector: "app-add-product-details",
+  imports: [
+    NgxEditorModule,
+    ReactiveFormsModule,
+    CommonSvgIcons,
+    CommonModule,
+    FormsModule,
+  ],
+  templateUrl: "./add-product-details.html",
+  styleUrls: ["./add-product-details.scss"],
 })
 export class AddProductDetails {
   public activeStep: number = 1;
@@ -24,13 +30,13 @@ export class AddProductDetails {
   public productForm: FormGroup;
   public editor: Editor;
 
-  public html = '';
+  public html = "";
   readonly activeSteps = output<number>();
 
   constructor() {
     this.productForm = new FormGroup({
-      productTitle: new FormControl('', Validators.required),
-      text: new FormControl(''),
+      productTitle: new FormControl("", Validators.required),
+      text: new FormControl(""),
     });
   }
 
@@ -47,7 +53,7 @@ export class AddProductDetails {
   }
 
   get productTitle() {
-    return this.productForm.get('product_Title');
+    return this.productForm.get("product_Title");
   }
 
   ngOnDestroy(): void {

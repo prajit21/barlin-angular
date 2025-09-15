@@ -25,7 +25,7 @@
 }
 .upcoming-course {
   .d-flex {
-    +.d-flex {
+    + .d-flex {
       margin-top: 15px;
     }
   }
@@ -37,7 +37,7 @@
   .learning-comment {
     margin-left: -14px !important;
     float: left !important;
-    [dir = "rtl"] & {
+    [dir="rtl"] & {
       margin-right: -14px !important;
       margin-left: 0 !important;
       float: right !important;
@@ -50,7 +50,7 @@
           &:first-child {
             padding-right: 30px;
           }
-          +li {
+          + li {
             padding-left: 30px;
           }
         }
@@ -64,7 +64,7 @@
   }
   .upcoming-course {
     .d-flex {
-      +.d-flex {
+      + .d-flex {
         margin-top: 20px;
       }
     }
@@ -76,7 +76,7 @@
   }
   .upcoming-course {
     .d-flex {
-      +.d-flex {
+      + .d-flex {
         margin-top: 15px;
       }
     }

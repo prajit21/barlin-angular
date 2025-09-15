@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 
 export interface Config {
   settings: setting;
@@ -18,21 +18,21 @@ interface colors {
 }
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class LayoutService {
   public isOpen: boolean = false;
 
   public config: Config = {
     settings: {
-      layout_type: 'ltr',
-      mix_layout: 'light',
-      sidebar_type: 'compact-wrapper',
-      icon: 'fill-svg',
+      layout_type: "ltr",
+      mix_layout: "light",
+      sidebar_type: "compact-wrapper",
+      icon: "fill-svg",
     },
     color: {
-      primary_color: '#2A5699',
-      secondary_color: '#EA6F4E',
+      primary_color: "#2A5699",
+      secondary_color: "#EA6F4E",
     },
   };
 }

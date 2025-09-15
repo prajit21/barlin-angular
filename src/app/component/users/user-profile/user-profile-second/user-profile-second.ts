@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-user-profile-second',
+  selector: "app-user-profile-second",
   imports: [],
-  templateUrl: './user-profile-second.html',
-  styleUrls: ['./user-profile-second.scss'],
+  templateUrl: "./user-profile-second.html",
+  styleUrls: ["./user-profile-second.scss"],
 })
 export class UserProfileSecond {}

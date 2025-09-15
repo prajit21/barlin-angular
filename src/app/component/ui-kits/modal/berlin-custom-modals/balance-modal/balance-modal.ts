@@ -1,16 +1,16 @@
-import { Component, inject } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, inject } from "@angular/core";
+import { RouterModule } from "@angular/router";
 
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 
-import { CommonSvgIcons } from '../../../../../shared/component/common-svg-icons/common-svg-icons';
-import { FeatherIcon } from '../../../../../shared/component/feather-icon/feather-icon';
+import { CommonSvgIcons } from "../../../../../shared/component/common-svg-icons/common-svg-icons";
+import { FeatherIcon } from "../../../../../shared/component/feather-icon/feather-icon";
 
 @Component({
-  selector: 'app-balance-modal',
+  selector: "app-balance-modal",
   imports: [CommonSvgIcons, FeatherIcon, RouterModule],
-  templateUrl: './balance-modal.html',
-  styleUrls: ['./balance-modal.scss'],
+  templateUrl: "./balance-modal.html",
+  styleUrls: ["./balance-modal.scss"],
 })
 export class BalanceModal {
   private modal = inject(NgbModal);

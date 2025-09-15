@@ -1,20 +1,20 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 @Component({
-  selector: 'app-danger-alert',
+  selector: "app-danger-alert",
   imports: [],
-  templateUrl: './danger-alert.html',
-  styleUrls: ['./danger-alert.scss'],
+  templateUrl: "./danger-alert.html",
+  styleUrls: ["./danger-alert.scss"],
 })
 export class DangerAlert {
   dangerALert() {
     Swal.fire({
       title: "It's danger",
-      text: 'Something went wrong!',
-      icon: 'error',
-      confirmButtonColor: 'var(--theme-default)',
+      text: "Something went wrong!",
+      icon: "error",
+      confirmButtonColor: "var(--theme-default)",
     });
   }
 }

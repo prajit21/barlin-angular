@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { BarRatingModule } from 'ngx-bar-rating';
+import { BarRatingModule } from "ngx-bar-rating";
 
 @Component({
-  selector: 'app-movie-rating',
+  selector: "app-movie-rating",
   imports: [BarRatingModule],
-  templateUrl: './movie-rating.html',
-  styleUrls: ['./movie-rating.scss'],
+  templateUrl: "./movie-rating.html",
+  styleUrls: ["./movie-rating.scss"],
 })
 export class MovieRating {
   public movieRate = 2;

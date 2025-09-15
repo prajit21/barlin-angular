@@ -2,21 +2,36 @@
   <div class="card-header pb-0">
     <h4>Static Backdrop Modal</h4>
     <p class="f-m-light mt-1">
-      When backdrop is set to static, the modal will not close when clicking outside of it. Click the button below to
-      try it.</p>
+      When backdrop is set to static, the modal will not close when clicking
+      outside of it. Click the button below to try it.
+    </p>
   </div>
   <div class="card-body">
-    <button class="btn btn-primary" type="button" (click)="openStaticModal(staticContent)">Static Backdrop Modal</button>
+    <button
+      class="btn btn-primary"
+      type="button"
+      (click)="openStaticModal(staticContent)"
+    >
+      Static Backdrop Modal
+    </button>
     <!-- Modal-->
     <ng-template #staticContent let-modal>
       <div class="modal-body">
         <div class="modal-toggle-wrapper">
           <ul class="modal-img">
-            <li> <img src="assets/images/gif/time.gif" alt="alarm"></li>
+            <li><img src="assets/images/gif/time.gif" alt="alarm" /></li>
           </ul>
           <h4 class="text-center pb-2">Failed to establish a connection.</h4>
-          <p class="text-center">Getting back in touch in <b class="txt-warning">14 seconds...</b></p>
-          <button class="btn btn-warning d-flex m-auto" type="button" (click)="close()">Close </button>
+          <p class="text-center">
+            Getting back in touch in <b class="txt-warning">14 seconds...</b>
+          </p>
+          <button
+            class="btn btn-warning d-flex m-auto"
+            type="button"
+            (click)="close()"
+          >
+            Close
+          </button>
         </div>
       </div>
     </ng-template>

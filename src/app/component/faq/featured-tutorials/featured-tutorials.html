@@ -6,7 +6,7 @@
   <div class="col-xxl-3 col-md-6 box-col-6">
     <div class="card features-faq product-box">
       <div class="faq-image product-img">
-        <img class="img-fluid" [src]="featuredData.img " alt="">
+        <img class="img-fluid" [src]="featuredData.img " alt="" />
         <div class="product-hover">
           <ul>
             <li><i class="icon-link"></i></li>
@@ -18,7 +18,8 @@
         <h4>{{featuredData.post}}</h4>
         <p>{{featuredData.desc}}</p>
       </div>
-      <div class="card-footer"><span>{{featuredData.date}}</span>
+      <div class="card-footer">
+        <span>{{featuredData.date}}</span>
         <span class="pull-right">
           <ngb-rating class="font-primary" [rate]="featuredData.rating" />
         </span>

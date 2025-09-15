@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDropdownModule } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
-  selector: 'app-dark',
+  selector: "app-dark",
   imports: [NgbDropdownModule],
-  templateUrl: './dark.html',
-  styleUrls: ['./dark.scss'],
+  templateUrl: "./dark.html",
+  styleUrls: ["./dark.scss"],
 })
 export class Dark {}

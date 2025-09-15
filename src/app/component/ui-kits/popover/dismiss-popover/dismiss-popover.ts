@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbPopoverModule } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
-  selector: 'app-dismiss-popover',
+  selector: "app-dismiss-popover",
   imports: [NgbPopoverModule],
-  templateUrl: './dismiss-popover.html',
-  styleUrl: './dismiss-popover.scss',
+  templateUrl: "./dismiss-popover.html",
+  styleUrl: "./dismiss-popover.scss",
 })
 export class DismissPopover {}

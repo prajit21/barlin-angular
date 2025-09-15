@@ -1,8 +1,8 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject } from "@angular/core";
 
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateService } from "@ngx-translate/core";
 
-import { NavigationService } from '../../../service/navigation.service';
+import { NavigationService } from "../../../service/navigation.service";
 
 interface languageList {
   language: string;
@@ -12,10 +12,10 @@ interface languageList {
 }
 
 @Component({
-  selector: 'app-language',
+  selector: "app-language",
   imports: [],
-  templateUrl: './language.html',
-  styleUrls: ['./language.scss'],
+  templateUrl: "./language.html",
+  styleUrls: ["./language.scss"],
 })
 export class Language {
   public navServices = inject(NavigationService);
@@ -24,33 +24,33 @@ export class Language {
   public language: boolean = false;
 
   public selectedLanguage: languageList = {
-    language: 'English',
-    code: 'en',
-    icon: 'us',
+    language: "English",
+    code: "en",
+    icon: "us",
   };
 
   public languages: languageList[] = [
     {
-      language: 'English',
-      code: 'en',
-      type: 'US',
-      icon: 'us',
+      language: "English",
+      code: "en",
+      type: "US",
+      icon: "us",
     },
     {
-      language: 'Español',
-      code: 'es',
-      icon: 'es',
+      language: "Español",
+      code: "es",
+      icon: "es",
     },
     {
-      language: 'Français',
-      code: 'fr',
-      icon: 'fr',
+      language: "Français",
+      code: "fr",
+      icon: "fr",
     },
     {
-      language: 'Português',
-      code: 'pt',
-      type: 'BR',
-      icon: 'pt',
+      language: "Português",
+      code: "pt",
+      type: "BR",
+      icon: "pt",
     },
   ];
 

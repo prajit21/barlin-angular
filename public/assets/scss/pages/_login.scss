@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  background: url('../../images/login/login_bg.jpg');
+  background: url("../../images/login/login_bg.jpg");
   background-position: center;
   padding: 30px 12px;
   .logo {
@@ -20,7 +20,7 @@
       line-height: 1;
       padding: 10px 12px;
       margin: 0;
-      &+.btn {
+      & + .btn {
         margin-left: 5px;
       }
       svg {
@@ -72,14 +72,14 @@
           position: absolute;
           width: 65%;
           height: 2px;
-          background-color: rgba($primary-color,0.1);
+          background-color: rgba($primary-color, 0.1);
           top: 9px;
           z-index: 0;
           right: 0;
         }
       }
       input {
-        background-color: rgba($primary-color,0.1);
+        background-color: rgba($primary-color, 0.1);
         transition: all 0.3s ease;
         &::-webkit-input-placeholder {
           color: $light-text;
@@ -96,7 +96,7 @@
         font-size: 14px;
         color: $dark-gray;
         a {
-          [dir = "rtl"] & {
+          [dir="rtl"] & {
             margin-right: 0 !important;
             margin-left: 5px !important;
           }

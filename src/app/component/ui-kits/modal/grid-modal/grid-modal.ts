@@ -1,12 +1,12 @@
-import { Component, TemplateRef, inject } from '@angular/core';
+import { Component, TemplateRef, inject } from "@angular/core";
 
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
-  selector: 'app-grid-modal',
+  selector: "app-grid-modal",
   imports: [],
-  templateUrl: './grid-modal.html',
-  styleUrl: './grid-modal.scss',
+  templateUrl: "./grid-modal.html",
+  styleUrl: "./grid-modal.scss",
 })
 export class GridModal {
   public modalService = inject(NgbModal);

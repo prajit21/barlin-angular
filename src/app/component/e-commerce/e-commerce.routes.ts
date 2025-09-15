@@ -1,104 +1,104 @@
-import { Routes } from '@angular/router';
+import { Routes } from "@angular/router";
 
-import { AddProduct } from './add-product/add-product';
-import { Cart } from './cart/cart';
-import { Checkout } from './checkout/checkout';
-import { InvoiceSix } from './invoice/invoice-six/invoice-six';
-import { OrderHistory } from './order-history/order-history';
-import { PaymentDetails } from './payment-details/payment-details';
-import { Pricing } from './pricing/pricing';
-import { Product } from './product/product';
-import { ProductList } from './product-list/product-list';
-import { ProductPage } from './product-page/product-page';
-import { Wishlist } from './wishlist/wishlist';
+import { AddProduct } from "./add-product/add-product";
+import { Cart } from "./cart/cart";
+import { Checkout } from "./checkout/checkout";
+import { InvoiceSix } from "./invoice/invoice-six/invoice-six";
+import { OrderHistory } from "./order-history/order-history";
+import { PaymentDetails } from "./payment-details/payment-details";
+import { Pricing } from "./pricing/pricing";
+import { Product } from "./product/product";
+import { ProductList } from "./product-list/product-list";
+import { ProductPage } from "./product-page/product-page";
+import { Wishlist } from "./wishlist/wishlist";
 
 export default [
   {
-    path: 'add-products',
+    path: "add-products",
     component: AddProduct,
     data: {
-      title: 'Add-Product',
-      breadcrumb: 'Add-Product',
+      title: "Add-Product",
+      breadcrumb: "Add-Product",
     },
   },
   {
-    path: 'products',
+    path: "products",
     component: Product,
     data: {
-      title: 'Product',
-      breadcrumb: 'Product',
+      title: "Product",
+      breadcrumb: "Product",
     },
   },
   {
-    path: 'product-page',
+    path: "product-page",
     component: ProductPage,
     data: {
-      title: 'Product Page',
-      breadcrumb: 'Product Page',
+      title: "Product Page",
+      breadcrumb: "Product Page",
     },
   },
   {
-    path: 'product-list',
+    path: "product-list",
     component: ProductList,
     data: {
-      title: 'Product list',
-      breadcrumb: 'Product list',
+      title: "Product list",
+      breadcrumb: "Product list",
     },
   },
   {
-    path: 'payment-detail',
+    path: "payment-detail",
     component: PaymentDetails,
     data: {
-      title: 'Payment Details',
-      breadcrumb: 'Payment Details',
+      title: "Payment Details",
+      breadcrumb: "Payment Details",
     },
   },
   {
-    path: 'cart',
+    path: "cart",
     component: Cart,
     data: {
-      title: 'Cart',
-      breadcrumb: 'Cart',
+      title: "Cart",
+      breadcrumb: "Cart",
     },
   },
   {
-    path: 'wishlist',
+    path: "wishlist",
     component: Wishlist,
     data: {
-      title: 'Wishlist',
-      breadcrumb: 'Wishlist',
+      title: "Wishlist",
+      breadcrumb: "Wishlist",
     },
   },
   {
-    path: 'checkout',
+    path: "checkout",
     component: Checkout,
     data: {
-      title: 'Checkout',
-      breadcrumb: 'Checkout',
+      title: "Checkout",
+      breadcrumb: "Checkout",
     },
   },
   {
-    path: 'pricing',
+    path: "pricing",
     component: Pricing,
     data: {
-      title: 'Pricing',
-      breadcrumb: 'Pricing',
+      title: "Pricing",
+      breadcrumb: "Pricing",
     },
   },
   {
-    path: 'order-history',
+    path: "order-history",
     component: OrderHistory,
     data: {
-      title: 'Recent Orders',
-      breadcrumb: 'Recent Orders',
+      title: "Recent Orders",
+      breadcrumb: "Recent Orders",
     },
   },
   {
-    path: 'invoice/invoice-6',
+    path: "invoice/invoice-6",
     component: InvoiceSix,
     data: {
-      title: 'Invoice',
-      breadcrumb: 'Invoice',
+      title: "Invoice",
+      breadcrumb: "Invoice",
     },
   },
 ] as Routes;

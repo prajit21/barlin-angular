@@ -1,32 +1,32 @@
 <div class="card">
-    <div class="card-header pb-0">
-        <div class="header-top">
-            <h4>Sale Statistic</h4>
-            <app-dropdown [data]="dropdownList"></app-dropdown>
-        </div>
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h4>Sale Statistic</h4>
+      <app-dropdown [data]="dropdownList"></app-dropdown>
     </div>
-    <div class="card-body revenue-order">
-        <ul class="d-flex align-item-center gap-2">
-            <li> <span class="bg-primary"> </span>Pending</li>
-            <li> <span class="bg-secondary"> </span>Completed</li>
-        </ul>
-        <div id="general-revenue-order">
-            <apx-chart
-               [series]="saleStatistic.series"
-               [chart]="saleStatistic.chart"
-               [stroke]="saleStatistic.stroke"
-               [grid]="saleStatistic.grid"
-               [plotOptions]="saleStatistic.plotOptions"
-               [colors]="saleStatistic.colors"
-               [fill]="saleStatistic.fill"
-               [labels]="saleStatistic.labels"
-               [xaxis]="saleStatistic.xaxis"
-               [markers]="saleStatistic.markers"
-               [legend]="saleStatistic.legend"
-               [yaxis]="saleStatistic.yaxis"
-               [tooltip]="saleStatistic.tooltip"
-             >
-             </apx-chart>
-        </div>
+  </div>
+  <div class="card-body revenue-order">
+    <ul class="d-flex align-item-center gap-2">
+      <li><span class="bg-primary"> </span>Pending</li>
+      <li><span class="bg-secondary"> </span>Completed</li>
+    </ul>
+    <div id="general-revenue-order">
+      <apx-chart
+        [series]="saleStatistic.series"
+        [chart]="saleStatistic.chart"
+        [stroke]="saleStatistic.stroke"
+        [grid]="saleStatistic.grid"
+        [plotOptions]="saleStatistic.plotOptions"
+        [colors]="saleStatistic.colors"
+        [fill]="saleStatistic.fill"
+        [labels]="saleStatistic.labels"
+        [xaxis]="saleStatistic.xaxis"
+        [markers]="saleStatistic.markers"
+        [legend]="saleStatistic.legend"
+        [yaxis]="saleStatistic.yaxis"
+        [tooltip]="saleStatistic.tooltip"
+      >
+      </apx-chart>
     </div>
+  </div>
 </div>

@@ -1,14 +1,14 @@
-import { Routes } from '@angular/router';
+import { Routes } from "@angular/router";
 
-import { LetterBox } from './letter-box';
+import { LetterBox } from "./letter-box";
 
 export default [
   {
-    path: '',
+    path: "",
     component: LetterBox,
     data: {
-      title: 'Letter Box',
-      breadcrumb: 'Letter Box',
+      title: "Letter Box",
+      breadcrumb: "Letter Box",
     },
   },
 ] as Routes;

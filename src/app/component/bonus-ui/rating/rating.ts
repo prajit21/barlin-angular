@@ -1,16 +1,23 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { CurrentRating } from './current-rating/current-rating';
-import { HorizontalRating } from './horizontal-rating/horizontal-rating';
-import { MovieRating } from './movie-rating/movie-rating';
-import { NumberRating } from './number-rating/number-rating';
-import { SquareRating } from './square-rating/square-rating';
-import { StarRating } from './star-rating/star-rating';
+import { CurrentRating } from "./current-rating/current-rating";
+import { HorizontalRating } from "./horizontal-rating/horizontal-rating";
+import { MovieRating } from "./movie-rating/movie-rating";
+import { NumberRating } from "./number-rating/number-rating";
+import { SquareRating } from "./square-rating/square-rating";
+import { StarRating } from "./star-rating/star-rating";
 
 @Component({
-  selector: 'app-rating',
-  imports: [CurrentRating, HorizontalRating, MovieRating, NumberRating, SquareRating, StarRating],
-  templateUrl: './rating.html',
-  styleUrls: ['./rating.scss'],
+  selector: "app-rating",
+  imports: [
+    CurrentRating,
+    HorizontalRating,
+    MovieRating,
+    NumberRating,
+    SquareRating,
+    StarRating,
+  ],
+  templateUrl: "./rating.html",
+  styleUrls: ["./rating.scss"],
 })
 export class Rating {}

@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { NgxSliderModule, Options } from '@angular-slider/ngx-slider';
+import { NgxSliderModule, Options } from "@angular-slider/ngx-slider";
 
 @Component({
-  selector: 'app-disabled-slider',
+  selector: "app-disabled-slider",
   imports: [NgxSliderModule],
-  templateUrl: './disabled-slider.html',
-  styleUrls: ['./disabled-slider.scss'],
+  templateUrl: "./disabled-slider.html",
+  styleUrls: ["./disabled-slider.scss"],
 })
 export class DisabledSlider {
   public value: number = 550;

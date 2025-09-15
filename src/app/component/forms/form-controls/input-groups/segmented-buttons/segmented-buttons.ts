@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDropdownModule } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
-  selector: 'app-segmented-buttons',
+  selector: "app-segmented-buttons",
   imports: [NgbDropdownModule],
-  templateUrl: './segmented-buttons.html',
-  styleUrls: ['./segmented-buttons.scss'],
+  templateUrl: "./segmented-buttons.html",
+  styleUrls: ["./segmented-buttons.scss"],
 })
 export class SegmentedButtons {
   public isShow: boolean = false;

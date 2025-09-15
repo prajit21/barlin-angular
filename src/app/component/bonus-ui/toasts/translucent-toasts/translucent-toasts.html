@@ -1,23 +1,33 @@
 <div class="card overflow-hidden">
-    <div class="card-header pb-0">
-        <h4>Translucent Toasts</h4>
-        <p class="f-m-light mt-1">
-            Use the <code>.hide </code>class through hide toast and <code>.show </code>class through visible toast and
-            given directions.<code>[toast-*]</code> through change icons colors.</p>
-    </div>
-    <div class="card-body toast-rtl bg-dark">
-        <div class="toast-container position-static">
-            @for (data of translucentToastsData; track data) {
-            <div class="toast show" [class.show]="data.show">  
-                <div class="toast-header">
-                    <app-feather-icon [class]="data.iconColor" [icon]="'disc'" />
-                    <strong class="me-auto">{{data.title}}</strong><small
-                        class="d-sm-block d-none" [class]="data.msgColor">{{data.time}}</small>
-                    <button class="btn-close" type="button" (click)="close(data.id)"></button>
-                </div>
-                <div class="toast-body toast-dark"> {{data.bodyText}}</div>
-            </div>
-            }
+  <div class="card-header pb-0">
+    <h4>Translucent Toasts</h4>
+    <p class="f-m-light mt-1">
+      Use the <code>.hide </code>class through hide toast and
+      <code>.show </code>class through visible toast and given directions.<code
+        >[toast-*]</code
+      >
+      through change icons colors.
+    </p>
+  </div>
+  <div class="card-body toast-rtl bg-dark">
+    <div class="toast-container position-static">
+      @for (data of translucentToastsData; track data) {
+      <div class="toast show" [class.show]="data.show">
+        <div class="toast-header">
+          <app-feather-icon [class]="data.iconColor" [icon]="'disc'" />
+          <strong class="me-auto">{{data.title}}</strong
+          ><small class="d-sm-block d-none" [class]="data.msgColor"
+            >{{data.time}}</small
+          >
+          <button
+            class="btn-close"
+            type="button"
+            (click)="close(data.id)"
+          ></button>
         </div>
+        <div class="toast-body toast-dark">{{data.bodyText}}</div>
+      </div>
+      }
     </div>
+  </div>
 </div>

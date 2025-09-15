@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbAlertModule } from "@ng-bootstrap/ng-bootstrap";
 
-import { FeatherIcon } from '../../../../shared/component/feather-icon/feather-icon';
+import { FeatherIcon } from "../../../../shared/component/feather-icon/feather-icon";
 
 @Component({
-  selector: 'app-outline-dark-light-alerts',
+  selector: "app-outline-dark-light-alerts",
   imports: [FeatherIcon, NgbAlertModule],
-  templateUrl: './outline-dark-light-alerts.html',
-  styleUrls: ['./outline-dark-light-alerts.scss'],
+  templateUrl: "./outline-dark-light-alerts.html",
+  styleUrls: ["./outline-dark-light-alerts.scss"],
 })
 export class OutlineDarkLightAlerts {
   public isPrimary = true;

@@ -6,18 +6,28 @@
   <h6 class="f-18 mb-0 dropdown-title">Notifications</h6>
   <ul>
     <li class="d-flex align-items-center">
-      <div class="flex-shrink-0 bg-light-primary"><app-feather-icon [class]="'stroke-primary'"
-          [icon]="'truck'" /></div>
+      <div class="flex-shrink-0 bg-light-primary">
+        <app-feather-icon [class]="'stroke-primary'" [icon]="'truck'" />
+      </div>
       <div class="flex-grow-1">
-        <p><a [routerLink]="['/ecommerce/order-history']">Delivery processing </a><span class="pull-right">6 hr</span></p>
+        <p>
+          <a [routerLink]="['/ecommerce/order-history']">Delivery processing </a
+          ><span class="pull-right">6 hr</span>
+        </p>
       </div>
     </li>
     <li class="d-flex align-items-center">
       <div class="flex-shrink-0 bg-light-secondary">
-        <app-feather-icon [class]="'stroke-secondary'" [icon]="'shopping-cart'" />
+        <app-feather-icon
+          [class]="'stroke-secondary'"
+          [icon]="'shopping-cart'"
+        />
       </div>
       <div class="flex-grow-1">
-        <p><a [routerLink]="['/ecommerce/cart']">Order Complete</a><span class="pull-right">3 hr</span></p>
+        <p>
+          <a [routerLink]="['/ecommerce/cart']">Order Complete</a
+          ><span class="pull-right">3 hr</span>
+        </p>
       </div>
     </li>
     <li class="d-flex align-items-center">
@@ -25,7 +35,11 @@
         <app-feather-icon [class]="'stroke-success'" [icon]="'file-text'" />
       </div>
       <div class="flex-grow-1">
-        <p><a [routerLink]="['/ecommerce/invoice/invoice-6']">Tickets Generated</a><span class="pull-right">1 hr</span></p>
+        <p>
+          <a [routerLink]="['/ecommerce/invoice/invoice-6']"
+            >Tickets Generated</a
+          ><span class="pull-right">1 hr</span>
+        </p>
       </div>
     </li>
     <li class="d-flex align-items-center">
@@ -33,9 +47,16 @@
         <app-feather-icon [class]="'stroke-warning'" [icon]="'send'" />
       </div>
       <div class="flex-grow-1">
-        <p><a [routerLink]="['/letter-box']">Delivery Complete</a><span class="pull-right">45 min</span></p>
+        <p>
+          <a [routerLink]="['/letter-box']">Delivery Complete</a
+          ><span class="pull-right">45 min</span>
+        </p>
       </div>
     </li>
-    <li> <a class="btn btn-primary w-100" [routerLink]="['/chat/private-chat']">Check All</a></li>
+    <li>
+      <a class="btn btn-primary w-100" [routerLink]="['/chat/private-chat']"
+        >Check All</a
+      >
+    </li>
   </ul>
 </div>

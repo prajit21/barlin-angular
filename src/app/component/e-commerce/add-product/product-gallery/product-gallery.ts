@@ -1,15 +1,15 @@
-import { Component, output } from '@angular/core';
+import { Component, output } from "@angular/core";
 
-import { DropzoneConfigInterface, DropzoneModule } from 'ngx-dropzone-wrapper';
-import Swal from 'sweetalert2';
+import { DropzoneConfigInterface, DropzoneModule } from "ngx-dropzone-wrapper";
+import Swal from "sweetalert2";
 
-import { CommonSvgIcons } from '../../../../shared/component/common-svg-icons/common-svg-icons';
+import { CommonSvgIcons } from "../../../../shared/component/common-svg-icons/common-svg-icons";
 
 @Component({
-  selector: 'app-product-gallery',
+  selector: "app-product-gallery",
   imports: [DropzoneModule, CommonSvgIcons],
-  templateUrl: './product-gallery.html',
-  styleUrls: ['./product-gallery.scss'],
+  templateUrl: "./product-gallery.html",
+  styleUrls: ["./product-gallery.scss"],
 })
 export class ProductGallery {
   readonly activeSteps = output<number>();
@@ -22,17 +22,17 @@ export class ProductGallery {
 
   public imageConfig: DropzoneConfigInterface = {
     clickable: true,
-    url: 'https://httpbin.org/post',
+    url: "https://httpbin.org/post",
     addRemoveLinks: true,
-    acceptedFiles: 'image/*',
+    acceptedFiles: "image/*",
     maxFiles: 1,
   };
 
   public galleryConfig: DropzoneConfigInterface = {
     clickable: true,
-    url: 'https://httpbin.org/post',
+    url: "https://httpbin.org/post",
     addRemoveLinks: true,
-    acceptedFiles: 'image/*',
+    acceptedFiles: "image/*",
     uploadMultiple: true,
   };
 
@@ -47,13 +47,13 @@ export class ProductGallery {
   next() {
     if (this.image.length === 0) {
       Swal.fire({
-        title: 'Please upload product image',
-        confirmButtonColor: 'var(--theme-default)',
+        title: "Please upload product image",
+        confirmButtonColor: "var(--theme-default)",
       });
     } else if (this.gallery.length === 0) {
       Swal.fire({
-        title: 'Please upload product gallery',
-        confirmButtonColor: 'var(--theme-default)',
+        title: "Please upload product gallery",
+        confirmButtonColor: "var(--theme-default)",
       });
     } else {
       const number = this.activeStep + 1;

@@ -1,21 +1,21 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 @Component({
-  selector: 'app-auto-close-timer',
+  selector: "app-auto-close-timer",
   imports: [],
-  templateUrl: './auto-close-timer.html',
-  styleUrls: ['./auto-close-timer.scss'],
+  templateUrl: "./auto-close-timer.html",
+  styleUrls: ["./auto-close-timer.scss"],
 })
 export class AutoCloseTimer {
   timerAlert() {
     Swal.fire({
-      title: 'Auto close alert!',
-      text: 'just a wait! I will close in 30 second!',
+      title: "Auto close alert!",
+      text: "just a wait! I will close in 30 second!",
       timer: 3000,
       showConfirmButton: false,
-      background: 'rgba(49, 50, 45, 0.2)',
+      background: "rgba(49, 50, 45, 0.2)",
     });
   }
 }

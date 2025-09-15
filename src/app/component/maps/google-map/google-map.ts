@@ -1,5 +1,5 @@
-import { Component, viewChild } from '@angular/core';
-import { GoogleMap, GoogleMapsModule, MapMarker } from '@angular/google-maps';
+import { Component, viewChild } from "@angular/core";
+import { GoogleMap, GoogleMapsModule, MapMarker } from "@angular/google-maps";
 
 interface Marker {
   position: google.maps.LatLngLiteral;
@@ -9,10 +9,10 @@ interface Marker {
   title?: string;
 }
 @Component({
-  selector: 'app-google-map',
+  selector: "app-google-map",
   imports: [GoogleMapsModule],
-  templateUrl: './google-map.html',
-  styleUrls: ['./google-map.scss'],
+  templateUrl: "./google-map.html",
+  styleUrls: ["./google-map.scss"],
 })
 export class GoogleMaps {
   public markers: Marker[];
@@ -30,8 +30,8 @@ export class GoogleMaps {
         lng: 139.731,
       },
       label: {
-        color: 'black',
-        text: 'Madrid',
+        color: "black",
+        text: "Madrid",
       },
       Option: {
         draggable: true,
@@ -45,8 +45,8 @@ export class GoogleMaps {
         lng: 2.3112233,
       },
       label: {
-        color: 'black',
-        text: 'Paris',
+        color: "black",
+        text: "Paris",
       },
       Option: {
         draggable: true,

@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-border-warning-state',
+  selector: "app-border-warning-state",
   imports: [],
-  templateUrl: './border-warning-state.html',
-  styleUrls: ['./border-warning-state.scss'],
+  templateUrl: "./border-warning-state.html",
+  styleUrls: ["./border-warning-state.scss"],
 })
 export class BorderWarningState {}

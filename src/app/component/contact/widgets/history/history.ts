@@ -1,10 +1,10 @@
-import { Component, output } from '@angular/core';
+import { Component, output } from "@angular/core";
 
 @Component({
-  selector: 'app-history',
+  selector: "app-history",
   imports: [],
-  templateUrl: './history.html',
-  styleUrl: './history.scss',
+  templateUrl: "./history.html",
+  styleUrl: "./history.scss",
 })
 export class History {
   readonly closeHistory = output<boolean>();

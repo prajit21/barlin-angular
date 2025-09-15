@@ -1,24 +1,33 @@
-<div class="card height-equal" style="min-height: 162.203px;">
-    <div class="card-header pb-0">
-        <h4>Basic Dropdowns</h4>
-        <p class="f-m-light mt-1">
-            To create any dropdown, use the <code>dat-bs-toggle="dropdown" </code>attribute.</p>
+<div class="card height-equal" style="min-height: 162.203px">
+  <div class="card-header pb-0">
+    <h4>Basic Dropdowns</h4>
+    <p class="f-m-light mt-1">
+      To create any dropdown, use the
+      <code>dat-bs-toggle="dropdown" </code>attribute.
+    </p>
+  </div>
+  <div class="card-body rtl-dropdown">
+    <div class="common-flex">
+      @for (allData of basicDropdownData; track allData) {
+      <div class="btn-group" ngbDropdown>
+        <button
+          class="btn btn-{{allData.colorClass}} dropdown-toggle"
+          type="button"
+          ngbDropdownToggle
+        >
+          {{allData.title}}
+        </button>
+        <ul class="dropdown-menu dropdown-block" ngbDropdownMenu>
+          @for (items of allData.dropdownItem; track items) {
+          <li>
+            <a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem
+              >{{items.item}}</a
+            >
+          </li>
+          }
+        </ul>
+      </div>
+      }
     </div>
-    <div class="card-body rtl-dropdown">   
-        <div class="common-flex">
-            @for (allData of basicDropdownData; track allData) {
-            <div class="btn-group" ngbDropdown>
-                <button class="btn btn-{{allData.colorClass}} dropdown-toggle" type="button"
-                    ngbDropdownToggle>{{allData.title}}</button>
-                <ul class="dropdown-menu dropdown-block" ngbDropdownMenu>
-                    @for (items of allData.dropdownItem; track items) {
-                    <li>
-                        <a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>{{items.item}}</a>
-                    </li>
-                    }
-                </ul>
-            </div>
-            }
-        </div>
-    </div>
+  </div>
 </div>

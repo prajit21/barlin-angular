@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-initial-letter-avatar',
+  selector: "app-initial-letter-avatar",
   imports: [],
-  templateUrl: './initial-letter-avatar.html',
-  styleUrl: './initial-letter-avatar.scss',
+  templateUrl: "./initial-letter-avatar.html",
+  styleUrl: "./initial-letter-avatar.scss",
 })
 export class InitialLetterAvatar {}

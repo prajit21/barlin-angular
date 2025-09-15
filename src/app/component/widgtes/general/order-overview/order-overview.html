@@ -1,38 +1,42 @@
 <div class="card order-overview">
-    <div class="card-header pb-0">
-        <div class="header-top">
-            <h4>Order Overview</h4>
-            <app-dropdown [data]="dropdownList" />
-        </div>
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h4>Order Overview</h4>
+      <app-dropdown [data]="dropdownList" />
     </div>
-    <div class="card-body pb-0">
-        <div class="d-flex">
-            <h2 class="me-2">($3,512,201)</h2>
-            <h5>Total Revenue</h5>
-        </div>
-        <div class="total-revenue">
-            <div class="d-flex">
-                <h6 class="me-2">40</h6><span>(Online Order)</span>
-            </div>
-            <ngb-progressbar class="mb-3" type="primary" [value]="50" />
-        </div>
-        <div class="total-revenue">
-            <div class="d-flex">
-                <h6 class="me-2">60</h6><span>(Offline Order)</span>
-            </div>
-            <ngb-progressbar class="mb-3" type="secondary" [value]="70" />
-        </div>
-        <div class="total-revenue">
-            <div class="d-flex">
-                <h6 class="me-2">20</h6><span>(Cash On Delivery)</span>
-            </div>
-            <ngb-progressbar class="mb-3" type="success" [value]="30" />
-        </div>
-        <div class="total-revenue">
-            <div class="d-flex">
-                <h6 class="me-2">50</h6><span>(Return Order)</span>
-            </div>
-            <ngb-progressbar class="mb-3" type="warning" [value]="50" />
-        </div>
+  </div>
+  <div class="card-body pb-0">
+    <div class="d-flex">
+      <h2 class="me-2">($3,512,201)</h2>
+      <h5>Total Revenue</h5>
     </div>
+    <div class="total-revenue">
+      <div class="d-flex">
+        <h6 class="me-2">40</h6>
+        <span>(Online Order)</span>
+      </div>
+      <ngb-progressbar class="mb-3" type="primary" [value]="50" />
+    </div>
+    <div class="total-revenue">
+      <div class="d-flex">
+        <h6 class="me-2">60</h6>
+        <span>(Offline Order)</span>
+      </div>
+      <ngb-progressbar class="mb-3" type="secondary" [value]="70" />
+    </div>
+    <div class="total-revenue">
+      <div class="d-flex">
+        <h6 class="me-2">20</h6>
+        <span>(Cash On Delivery)</span>
+      </div>
+      <ngb-progressbar class="mb-3" type="success" [value]="30" />
+    </div>
+    <div class="total-revenue">
+      <div class="d-flex">
+        <h6 class="me-2">50</h6>
+        <span>(Return Order)</span>
+      </div>
+      <ngb-progressbar class="mb-3" type="warning" [value]="50" />
+    </div>
+  </div>
 </div>

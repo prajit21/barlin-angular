@@ -1,36 +1,47 @@
 <div class="card">
-    <div class="card-header pb-0">
-        <div class="header-top">
-            <h4>Orders by Countries</h4>
-            <app-dropdown [data]="dropdownList" />
-        </div>
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h4>Orders by Countries</h4>
+      <app-dropdown [data]="dropdownList" />
     </div>
-    <div class="card-body sales-countries">
-        <div class="table-responsive custom-scrollbar">
-            <table class="table display">
-                <tbody>
-                    @for (item of ordersCountries; track item ; let index = $index) {
-                    <tr>
-                        <td>
-                            <div class="d-flex align-items-center gap-3">
-                                <div class="flex-shrink-0"> <span>{{item.country_code}}</span></div>
-                                <div class="flex-grow-1"> <a [routerLink]="['/ecommerce/products']">
-                                        <h6>{{item.product}}</h6>
-                                    </a><span>{{item.country}}</span></div>
-                            </div>
-                        </td>
-                        <td> <span [ngClass]="index%2 ? 'font-secondary':'font-primary'"
-                                class=" f-w-500">{{item.percentage}}%
-                                <app-feather-icon [icon]="index%2 ?'chevron-down':'chevron-up'" />
-                            </span></td>
-                        <td>{{item.date}}</td>
-                        <td>
-                            <h6>{{item.sale}}k</h6><span>Sales</span>
-                        </td>
-                    </tr>
-                    }
-                </tbody>
-            </table>
-        </div>
+  </div>
+  <div class="card-body sales-countries">
+    <div class="table-responsive custom-scrollbar">
+      <table class="table display">
+        <tbody>
+          @for (item of ordersCountries; track item ; let index = $index) {
+          <tr>
+            <td>
+              <div class="d-flex align-items-center gap-3">
+                <div class="flex-shrink-0">
+                  <span>{{item.country_code}}</span>
+                </div>
+                <div class="flex-grow-1">
+                  <a [routerLink]="['/ecommerce/products']">
+                    <h6>{{item.product}}</h6> </a
+                  ><span>{{item.country}}</span>
+                </div>
+              </div>
+            </td>
+            <td>
+              <span
+                [ngClass]="index%2 ? 'font-secondary':'font-primary'"
+                class="f-w-500"
+                >{{item.percentage}}%
+                <app-feather-icon
+                  [icon]="index%2 ?'chevron-down':'chevron-up'"
+                />
+              </span>
+            </td>
+            <td>{{item.date}}</td>
+            <td>
+              <h6>{{item.sale}}k</h6>
+              <span>Sales</span>
+            </td>
+          </tr>
+          }
+        </tbody>
+      </table>
     </div>
+  </div>
 </div>

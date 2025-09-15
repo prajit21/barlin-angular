@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component } from "@angular/core";
+import { RouterModule } from "@angular/router";
 
 @Component({
-  selector: 'app-reset-password',
+  selector: "app-reset-password",
   imports: [RouterModule],
-  templateUrl: './reset-password.html',
-  styleUrl: './reset-password.scss',
+  templateUrl: "./reset-password.html",
+  styleUrl: "./reset-password.scss",
 })
 export class ResetPassword {
   public isShow: boolean = false;

@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbPopoverModule } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
-  selector: 'app-popover-direction',
+  selector: "app-popover-direction",
   imports: [NgbPopoverModule],
-  templateUrl: './popover-direction.html',
-  styleUrls: ['./popover-direction.scss'],
+  templateUrl: "./popover-direction.html",
+  styleUrls: ["./popover-direction.scss"],
 })
 export class PopoverDirection {}

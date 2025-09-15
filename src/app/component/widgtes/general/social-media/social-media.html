@@ -1,24 +1,33 @@
 <div class="card social-widget widget-hover">
-    <div class="card-body">
-        <div class="d-flex align-items-center justify-content-between">
-            <div class="d-flex align-items-center gap-2">
-                <div class="social-icons">
-                    <img [src]="data().image_url" alt="facebook icon">
-                </div>
-                <span class="f-w-500">{{data().name}}</span>
-            </div>
-            <span class="font-{{data().class}} social-number">{{data().count}}</span>
+  <div class="card-body">
+    <div class="d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-2">
+        <div class="social-icons">
+          <img [src]="data()?.image_url" alt="facebook icon" />
         </div>
-        <div class="social-content">
-            <div>
-                <h5 class="mb-1">{{data().friends}}</h5><span class="f-light f-w-500">{{data().title}}</span>
-            </div>
-            <div class="social-chart">
-                <div id="radial-facebook">
-                    <apx-chart [series]="data().chart.series" [chart]="data().chart.chart" 
-                        [plotOptions]="data().chart.plotOptions" [colors]="data().chart.colors" />
-                </div>
-            </div>
-        </div>
+        <span class="f-w-500">{{data()?.name}}</span>
+      </div>
+      <span class="font-{{data()?.class}} social-number"
+        >{{data()?.count}}</span
+      >
     </div>
+    <div class="social-content">
+      <div>
+        <h5 class="mb-1">{{data()?.friends}}</h5>
+        <span class="f-light f-w-500">{{data()?.title}}</span>
+      </div>
+      <div class="social-chart">
+        <div id="radial-facebook">
+          <apx-chart
+            [series]="data()?.chart?.series!"
+            [chart]="data()?.chart?.chart!"
+            [plotOptions]="data()?.chart?.plotOptions!"
+            [colors]="data()?.chart?.colors!"
+            [stroke]="data()?.chart?.stroke!"
+            [responsive]="data()?.chart?.responsive!"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,15 +1,20 @@
-import { CommonModule } from '@angular/common';
-import { Component, SimpleChanges, input } from '@angular/core';
+import { CommonModule } from "@angular/common";
+import { Component, SimpleChanges, input } from "@angular/core";
 
-import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbPaginationModule } from "@ng-bootstrap/ng-bootstrap";
 
-import { CommonSvgIcons } from '../../../shared/component/common-svg-icons/common-svg-icons';
-import { letterBox, letterBoxFilter, tabData } from '../../../shared/data/data/email';
-import { ClickOutsideDirective } from '../../../shared/directive/click-outside.directive';
-import { InterviewMail } from '../widgets/interview-mail/interview-mail';
+import { CommonSvgIcons } from "../../../shared/component/common-svg-icons/common-svg-icons";
+import {
+  letterBox,
+  letterBoxdata,
+  letterBoxFilter,
+  tabData,
+} from "../../../shared/data/data/email";
+import { ClickOutsideDirective } from "../../../shared/directive/click-outside.directive";
+import { InterviewMail } from "../widgets/interview-mail/interview-mail";
 
 @Component({
-  selector: 'app-right-aside',
+  selector: "app-right-aside",
   imports: [
     CommonModule,
     CommonSvgIcons,
@@ -17,8 +22,8 @@ import { InterviewMail } from '../widgets/interview-mail/interview-mail';
     ClickOutsideDirective,
     InterviewMail,
   ],
-  templateUrl: './right-aside.html',
-  styleUrl: './right-aside.scss',
+  templateUrl: "./right-aside.html",
+  styleUrl: "./right-aside.scss",
 })
 export class RightAside {
   readonly selectedId = input<number>();
@@ -27,12 +32,12 @@ export class RightAside {
   public currentPage = 1;
   public isShow: boolean = false;
   public isOpne: boolean = false;
-  public openTab: string = 'promotion';
+  public openTab: string = "promotion";
   public tabData = tabData;
   public getEmailData: letterBox;
 
   ngOnInit() {
-    this.filterData.map(data => {
+    this.filterData.map((data) => {
       if (data.status) {
         this.getEmailData = data;
       }
@@ -40,8 +45,8 @@ export class RightAside {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    this.filterData.map(data => {
-      if (data.id === changes['selectedId'].currentValue) {
+    this.filterData.map((data) => {
+      if (data.id === changes["selectedId"].currentValue) {
         this.getEmailData = data;
       }
     });
@@ -51,30 +56,19 @@ export class RightAside {
     this.openTab = value;
   }
 
-  deleteEmail(item: any, name: string) {
-    this.filterData.forEach(data => {
-      if (data.id == this.getEmailData.id) {
-        data.data.forEach(element => {
-          if (this.filterData)
-            if (element.name == name) {
-              data.data.splice(item, 1);
-            }
-        });
+  deleteEmail(item: letterBoxdata, name: string) {
+    this.filterData.forEach((data) => {
+      if (data.id === this.getEmailData.id) {
+        data.data = data.data.filter(
+          (element) => element.name !== name || element.id !== item.id,
+        );
       }
     });
   }
 
-  // deleteEmail(item: letterBoxdata, name: string) {
-  //   this.filterData.forEach(data => {
-  //     if (data.id === this.getEmailData.id) {
-  //       data.data = data.data.filter(element => element.name !== name || element.id !== item.id);
-  //     }
-  //   });
-  // }
-
   bookMark(id: number) {
-    this.filterData.forEach(list => {
-      list.data.forEach(items => {
+    this.filterData.forEach((list) => {
+      list.data.forEach((items) => {
         if (items.id === id) {
           items.active = !items.active;
           items.isOpens = !items.isOpens;

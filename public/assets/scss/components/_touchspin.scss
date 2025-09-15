@@ -33,7 +33,7 @@
           font-weight: normal;
         }
 
-        >.btn {
+        > .btn {
           display: block;
           float: none;
           width: 100%;
@@ -75,7 +75,7 @@
     height: 32px;
   }
 
-  input[type='number'] {
+  input[type="number"] {
     width: 85px;
     padding: 3px;
     text-align: center;
@@ -94,9 +94,7 @@
   }
 }
 
-
 .pre-post-touchspin {
-
   .decrement-touchspin,
   .increment-touchspin,
   .input-group-text {
@@ -118,21 +116,24 @@
     width: auto;
 
     .input-touchspin {
-      @media (max-width:768px) {
+      @media (max-width: 768px) {
         width: 100px;
       }
     }
   }
 
   &.bg-touchspin {
-    button[type='button'] {
+    button[type="button"] {
       border: 1px solid var(--course-light-btn);
       border-width: 2px;
       text-align: center;
     }
   }
 
-  .input-group> :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  .input-group
+    > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(
+      .valid-feedback
+    ):not(.invalid-tooltip):not(.invalid-feedback) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
@@ -148,7 +149,6 @@
       &.input-touchspin {
         border-radius: 15px;
       }
-
     }
   }
 }
@@ -161,7 +161,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 

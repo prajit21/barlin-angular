@@ -23,7 +23,7 @@
           input {
             width: 240px;
             background-color: $white;
-            box-shadow: 0 5px 21px rgba(0, 0, 0, 0.10);
+            box-shadow: 0 5px 21px rgba(0, 0, 0, 0.1);
           }
 
           &.open {
@@ -59,7 +59,7 @@
         }
       }
 
-      +li {
+      + li {
         margin-left: 10px;
       }
 
@@ -98,7 +98,7 @@
 
   &:before {
     position: fixed;
-    content: '';
+    content: "";
     background-color: rgba(0, 0, 0, 0.5);
     height: 100%;
     width: 100%;

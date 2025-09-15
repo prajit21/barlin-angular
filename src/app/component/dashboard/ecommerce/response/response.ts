@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { NgbProgressbarModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbProgressbarModule } from "@ng-bootstrap/ng-bootstrap";
 
-import { CommonSvgIcons } from '../../../../shared/component/common-svg-icons/common-svg-icons';
+import { CommonSvgIcons } from "../../../../shared/component/common-svg-icons/common-svg-icons";
 
 @Component({
-  selector: 'app-response',
+  selector: "app-response",
   imports: [CommonSvgIcons, NgbProgressbarModule],
-  templateUrl: './response.html',
-  styleUrl: './response.scss',
+  templateUrl: "./response.html",
+  styleUrl: "./response.scss",
 })
 export class Response {}

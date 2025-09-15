@@ -1,58 +1,97 @@
 <div class="card">
   <div class="card-header pb-0">
     <h4>Bottom Tabs</h4>
-    <p class="mt-1 f-m-light">Use of the<code> active </code> class on the<code> nav-link</code>. It is possible to
-      build a arrow tab with the <code>new-item</code> class. </p>
+    <p class="mt-1 f-m-light">
+      Use of the<code> active </code> class on the<code> nav-link</code>. It is
+      possible to build a arrow tab with the <code>new-item</code> class.
+    </p>
   </div>
   <div class="card-body">
     <div class="bg-navbar bottom-navbar">
       <div class="tab-content" [ngbNavOutlet]="nav"></div>
-      <ul class="nav nav-pills nav-primary" ngbNav #nav="ngbNav" [(activeId)]="active">
+      <ul
+        class="nav nav-pills nav-primary"
+        ngbNav
+        #nav="ngbNav"
+        [(activeId)]="active"
+      >
         <li [ngbNavItem]="1" class="nav-item">
-          <a ngbNavLink class="nav-link"><img src="assets/images/tree/html.png" alt="">CSS</a>
+          <a ngbNavLink class="nav-link"
+            ><img src="assets/images/tree/html.png" alt="" />CSS</a
+          >
           <ng-template ngbNavContent>
-            <div class="common-flex"><img src="assets/images/tree/html.png" alt="">
-              <H5>CSS</H5>
+            <div class="common-flex">
+              <img src="assets/images/tree/html.png" alt="" />
+              <h5>CSS</h5>
             </div>
-            <div class="tab-paragraph"><i class="fa fa-arrow-circle-o-right"></i>
-              <P>"One of the three main web technologies is CSS. The terms "cascading" and "style," with cascading
-                indicating how one style can cascade from another, are actually the key to understanding CSS, which stands
-                for Cascading Style Sheets."</P>
+            <div class="tab-paragraph">
+              <i class="fa fa-arrow-circle-o-right"></i>
+              <p>
+                "One of the three main web technologies is CSS. The terms
+                "cascading" and "style," with cascading indicating how one style
+                can cascade from another, are actually the key to understanding
+                CSS, which stands for Cascading Style Sheets."
+              </p>
             </div>
-            <div class="tab-paragraph"><i class="fa fa-arrow-circle-o-right"></i>
-              <p>To specify how HTML code will appear on a website, utilize CSS.</p>
+            <div class="tab-paragraph">
+              <i class="fa fa-arrow-circle-o-right"></i>
+              <p>
+                To specify how HTML code will appear on a website, utilize CSS.
+              </p>
             </div>
           </ng-template>
         </li>
         <li [ngbNavItem]="2" class="nav-item">
-          <a ngbNavLink class="nav-link"><img src="assets/images/tree/vendor.png" alt="">Vendors</a>
+          <a ngbNavLink class="nav-link"
+            ><img src="assets/images/tree/vendor.png" alt="" />Vendors</a
+          >
           <ng-template ngbNavContent>
-            <div class="common-flex"><img src="assets/images/tree/vendor.png" alt="">
-              <H5>Vendors</H5>
+            <div class="common-flex">
+              <img src="assets/images/tree/vendor.png" alt="" />
+              <h5>Vendors</h5>
             </div>
-            <div class="tab-paragraph"><i class="fa fa-arrow-circle-o-right"></i>
-              <P>To improve the development of your website, find a carefully chosen list of premier suppliers. Use our
-                dependable network to locate the ideal partners for the accomplishment of your project.</P>
+            <div class="tab-paragraph">
+              <i class="fa fa-arrow-circle-o-right"></i>
+              <p>
+                To improve the development of your website, find a carefully
+                chosen list of premier suppliers. Use our dependable network to
+                locate the ideal partners for the accomplishment of your
+                project.
+              </p>
             </div>
-            <div class="tab-paragraph"><i class="fa fa-arrow-circle-o-right"></i>
-              <p>Cutting-edge design tools, or specialized services, our curated list ensures you have access to the best
-                resources for a seamless and successful website development experience.</p>
+            <div class="tab-paragraph">
+              <i class="fa fa-arrow-circle-o-right"></i>
+              <p>
+                Cutting-edge design tools, or specialized services, our curated
+                list ensures you have access to the best resources for a
+                seamless and successful website development experience.
+              </p>
             </div>
           </ng-template>
         </li>
         <li [ngbNavItem]="3" class="nav-item">
-          <a ngbNavLink class="nav-link"><img src="assets/images/tree/js.png" alt="">Javascript</a>
+          <a ngbNavLink class="nav-link"
+            ><img src="assets/images/tree/js.png" alt="" />Javascript</a
+          >
           <ng-template ngbNavContent>
-            <div class="common-flex"><img src="assets/images/tree/js.png" alt="">
-              <H5>Javascript</H5>
+            <div class="common-flex">
+              <img src="assets/images/tree/js.png" alt="" />
+              <h5>Javascript</h5>
             </div>
-            <div class="tab-paragraph"><i class="fa fa-arrow-circle-o-right"></i>
-              <P>Development of interactive and adaptable websites is made possible by JavaScript, the web's dynamic
-                programming language.</P>
+            <div class="tab-paragraph">
+              <i class="fa fa-arrow-circle-o-right"></i>
+              <p>
+                Development of interactive and adaptable websites is made
+                possible by JavaScript, the web's dynamic programming language.
+              </p>
             </div>
-            <div class="tab-paragraph"><i class="fa fa-arrow-circle-o-right"></i>
-              <p>Building strong and interactive online apps requires JavaScript, which is essential for everything from
-                enabling asynchronous requests to designing captivating user interfaces.</p>
+            <div class="tab-paragraph">
+              <i class="fa fa-arrow-circle-o-right"></i>
+              <p>
+                Building strong and interactive online apps requires JavaScript,
+                which is essential for everything from enabling asynchronous
+                requests to designing captivating user interfaces.
+              </p>
             </div>
           </ng-template>
         </li>

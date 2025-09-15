@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbPopoverModule } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
-  selector: 'app-disabled-elements',
+  selector: "app-disabled-elements",
   imports: [NgbPopoverModule],
-  templateUrl: './disabled-elements.html',
-  styleUrl: './disabled-elements.scss',
+  templateUrl: "./disabled-elements.html",
+  styleUrl: "./disabled-elements.scss",
 })
 export class DisabledElements {}

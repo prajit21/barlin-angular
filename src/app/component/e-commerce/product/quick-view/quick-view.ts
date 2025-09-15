@@ -1,15 +1,15 @@
-import { Component, TemplateRef, viewChild, inject } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, TemplateRef, viewChild, inject } from "@angular/core";
+import { RouterModule } from "@angular/router";
 
-import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalDismissReasons, NgbModal } from "@ng-bootstrap/ng-bootstrap";
 
-import { Products } from '../../../../shared/modal/product.model';
+import { Products } from "../../../../shared/modal/product.model";
 
 @Component({
-  selector: 'app-quick-view',
+  selector: "app-quick-view",
   imports: [RouterModule],
-  templateUrl: './quick-view.html',
-  styleUrls: ['./quick-view.scss'],
+  templateUrl: "./quick-view.html",
+  styleUrls: ["./quick-view.scss"],
 })
 export class QuickView {
   public productDetail: Products;
@@ -17,7 +17,7 @@ export class QuickView {
   public closeResult: string;
   public modalOpen: boolean = false;
 
-  readonly productModal = viewChild<TemplateRef<Products>>('productModal');
+  readonly productModal = viewChild<TemplateRef<Products>>("productModal");
 
   public modalService = inject(NgbModal);
 
@@ -26,15 +26,15 @@ export class QuickView {
     this.modalOpen = true;
     this.modalService
       .open(this.productModal(), {
-        ariaLabelledBy: 'Confirmation-Modal',
+        ariaLabelledBy: "Confirmation-Modal",
         centered: true,
-        windowClass: 'modal-lg modal-dialog-centered',
+        windowClass: "modal-lg modal-dialog-centered",
       })
       .result.then(
-        result => {
+        (result) => {
           `Result ${result}`;
         },
-        reason => {
+        (reason) => {
           this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
         },
       );
@@ -42,9 +42,9 @@ export class QuickView {
 
   private getDismissReason(reason: ModalDismissReasons): string {
     if (reason === ModalDismissReasons.ESC) {
-      return 'by pressing ESC';
+      return "by pressing ESC";
     } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-      return 'by clicking on a backdrop';
+      return "by clicking on a backdrop";
     } else {
       return `with: ${reason}`;
     }

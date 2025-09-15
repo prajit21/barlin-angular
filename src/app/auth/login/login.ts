@@ -1,14 +1,19 @@
-import { Component, inject } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Router, RouterModule } from '@angular/router';
+import { Component, inject } from "@angular/core";
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from "@angular/forms";
+import { Router, RouterModule } from "@angular/router";
 
-import { FeatherIcon } from '../../shared/component/feather-icon/feather-icon';
+import { FeatherIcon } from "../../shared/component/feather-icon/feather-icon";
 
 @Component({
-  selector: 'app-login',
+  selector: "app-login",
   imports: [RouterModule, ReactiveFormsModule, FeatherIcon],
-  templateUrl: './login.html',
-  styleUrl: './login.scss',
+  templateUrl: "./login.html",
+  styleUrl: "./login.scss",
 })
 export class Login {
   public router = inject(Router);
@@ -17,28 +22,31 @@ export class Login {
   public loginForm: FormGroup;
 
   constructor() {
-    const userData = localStorage.getItem('user');
+    const userData = localStorage.getItem("user");
     if (userData?.length != null) {
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(["/dashboard"]);
     }
     this.loginForm = new FormGroup({
-      email: new FormControl('Test@gmail.com', [Validators.required, Validators.email]),
-      password: new FormControl('test123', Validators.required),
+      email: new FormControl("Test@gmail.com", [
+        Validators.required,
+        Validators.email,
+      ]),
+      password: new FormControl("test123", Validators.required),
     });
   }
 
   login() {
     if (
-      this.loginForm.value['email'] == 'Test@gmail.com' &&
-      this.loginForm.value['password'] == 'test123'
+      this.loginForm.value["email"] == "Test@gmail.com" &&
+      this.loginForm.value["password"] == "test123"
     ) {
       let user = {
-        email: 'Test@gmail.com',
-        password: 'test123',
-        name: 'test user',
+        email: "Test@gmail.com",
+        password: "test123",
+        name: "test user",
       };
-      localStorage.setItem('user', JSON.stringify(user));
-      this.router.navigate(['/dashboard/default']);
+      localStorage.setItem("user", JSON.stringify(user));
+      this.router.navigate(["/dashboard/default"]);
     }
   }
 }

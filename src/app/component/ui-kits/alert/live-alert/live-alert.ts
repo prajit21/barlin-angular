@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-live-alert',
+  selector: "app-live-alert",
   imports: [],
-  templateUrl: './live-alert.html',
-  styleUrls: ['./live-alert.scss'],
+  templateUrl: "./live-alert.html",
+  styleUrls: ["./live-alert.scss"],
 })
 export class LiveAlert {
   public array: number[] = [];

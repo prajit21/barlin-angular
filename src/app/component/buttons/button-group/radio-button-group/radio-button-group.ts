@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { radioButton } from '../../../../shared/data/data/buttons/button-group';
+import { radioButton } from "../../../../shared/data/data/buttons/button-group";
 
 @Component({
-  selector: 'app-radio-button-group',
-  templateUrl: './radio-button-group.html',
-  styleUrls: ['./radio-button-group.scss'],
+  selector: "app-radio-button-group",
+  templateUrl: "./radio-button-group.html",
+  styleUrls: ["./radio-button-group.scss"],
   imports: [],
 })
 export class RadioButtonGroup {

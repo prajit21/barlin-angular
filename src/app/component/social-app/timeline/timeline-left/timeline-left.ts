@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { ActivityFeed } from './activity-feed/activity-feed';
-import { MutualFriends } from './mutual-friends/mutual-friends';
-import { MyProfile } from './my-profile/my-profile';
+import { ActivityFeed } from "./activity-feed/activity-feed";
+import { MutualFriends } from "./mutual-friends/mutual-friends";
+import { MyProfile } from "./my-profile/my-profile";
 
 @Component({
-  selector: 'app-timeline-left',
+  selector: "app-timeline-left",
   imports: [MyProfile, MutualFriends, ActivityFeed],
-  templateUrl: './timeline-left.html',
-  styleUrl: './timeline-left.scss',
+  templateUrl: "./timeline-left.html",
+  styleUrl: "./timeline-left.scss",
 })
 export class TimelineLeft {}

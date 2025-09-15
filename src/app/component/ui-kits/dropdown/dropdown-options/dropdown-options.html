@@ -1,31 +1,74 @@
 <div class="card">
   <div class="card-header pb-0">
-    <h4> Dropdown options</h4>
-    <p class="f-m-light mt-1">Use <code>data-bs-offset </code> or <code>data-bs-reference</code> to change the location of the dropdown.</p>
+    <h4>Dropdown options</h4>
+    <p class="f-m-light mt-1">
+      Use <code>data-bs-offset </code> or <code>data-bs-reference</code> to
+      change the location of the dropdown.
+    </p>
   </div>
   <div class="card-body">
     <div class="common-flex dropdown-option">
       <div class="dropdown" ngbDropdown>
-        <button class="btn btn-secondary dropdown-toggle border text-white" type="button" ngbDropdownToggle>Offset</button>
+        <button
+          class="btn btn-secondary dropdown-toggle border text-white"
+          type="button"
+          ngbDropdownToggle
+        >
+          Offset
+        </button>
         <ul class="dropdown-menu" ngbDropdownMenu>
-          <li><a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Action</a></li>
-          <li><a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Another action</a></li>
-          <li><a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Something else here</a></li>
+          <li>
+            <a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem
+              >Action</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem
+              >Another action</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem
+              >Something else here</a
+            >
+          </li>
         </ul>
       </div>
       <div class="btn-group" ngbDropdown>
-        <button class="btn btn-secondary" type="button" ngbDropdownToggle>Reference</button>
-        <button class="btn btn-secondary dropdown-toggle dropdown-toggle-split" type="button" ngbDropdownToggle>
+        <button class="btn btn-secondary" type="button" ngbDropdownToggle>
+          Reference
+        </button>
+        <button
+          class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+          type="button"
+          ngbDropdownToggle
+        >
           <span class="visually-hidden">Toggle Dropdown</span>
         </button>
         <ul class="dropdown-menu" ngbDropdownMenu>
-          <li><a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Action</a></li>
-          <li><a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Another action</a></li>
-          <li><a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Something else here</a></li>
           <li>
-            <hr class="dropdown-divider">
+            <a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem
+              >Action</a
+            >
           </li>
-          <li><a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Separated link</a></li>
+          <li>
+            <a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem
+              >Another action</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem
+              >Something else here</a
+            >
+          </li>
+          <li>
+            <hr class="dropdown-divider" />
+          </li>
+          <li>
+            <a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem
+              >Separated link</a
+            >
+          </li>
         </ul>
       </div>
     </div>

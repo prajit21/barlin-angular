@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { CarouselModule } from 'ngx-owl-carousel-o';
+import { CarouselModule } from "ngx-owl-carousel-o";
 
-import * as Data from '../../../../shared/data/data/bonus-ui/owl-carousel';
+import * as Data from "../../../../shared/data/data/bonus-ui/owl-carousel";
 
 @Component({
-  selector: 'app-cross-fade',
+  selector: "app-cross-fade",
   imports: [CarouselModule],
-  templateUrl: './cross-fade.html',
-  styleUrls: ['./cross-fade.scss'],
+  templateUrl: "./cross-fade.html",
+  styleUrls: ["./cross-fade.scss"],
 })
 export class CrossFade {
   public crossFadeOptions = Data.crossFadeOptions;

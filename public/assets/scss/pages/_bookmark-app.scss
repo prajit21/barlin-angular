@@ -10,8 +10,8 @@
 .bookmark-wrap {
   .details-bookmark {
     .row {
-      >div {
-        +div {
+      > div {
+        + div {
           padding-right: 15px !important;
         }
       }
@@ -66,7 +66,7 @@
           height: 18px;
           vertical-align: middle;
         }
-        >.main-title {
+        > .main-title {
           color: var(--theme-default);
           font-weight: 500;
           margin-bottom: 5px;
@@ -85,7 +85,7 @@
           }
         }
         a {
-          >.title {
+          > .title {
             text-transform: capitalize;
           }
           &:hover {
@@ -103,7 +103,7 @@
       .btn {
         border-top-left-radius: 0 !important;
         border-bottom-left-radius: 0 !important;
-        [dir = "rtl"] & {
+        [dir="rtl"] & {
           border-top-left-radius: 5px !important;
           border-bottom-left-radius: 5px !important;
         }
@@ -118,7 +118,7 @@
     line-height: 1 !important;
     font-weight: 500;
     &:hover {
-      background-color: $transparent-color  !important;
+      background-color: $transparent-color !important;
     }
   }
   input {
@@ -223,7 +223,7 @@
             ul {
               li {
                 display: inline-block;
-                +li {
+                + li {
                   margin-left: 5px;
                 }
                 svg {
@@ -255,9 +255,9 @@
     }
     &.list-bookmark {
       .row {
-        >div {
+        > div {
           flex: 0 0 100%;
-          max-width: 100%
+          max-width: 100%;
         }
       }
       .bookmark-card {
@@ -308,7 +308,7 @@
               margin-bottom: -5px;
               &::after {
                 position: absolute;
-                content: '-';
+                content: "-";
                 right: 0;
                 color: $dark-gray;
               }
@@ -344,9 +344,9 @@
         ul {
           li {
             display: inline-block;
-            +li {
+            + li {
               margin-left: 5px;
-              [dir = "rtl"] & {
+              [dir="rtl"] & {
                 margin-left: unset;
                 margin-right: 5px;
               }
@@ -356,7 +356,7 @@
       }
     }
     .tab-pane {
-      >.card {
+      > .card {
         box-shadow: none;
       }
     }
@@ -393,7 +393,7 @@
     overflow-y: hidden;
   }
 }
-// responsive 
+// responsive
 @media only screen and (max-width: 1660px) {
   .bookmark-tabcontent {
     .details-bookmark {

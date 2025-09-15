@@ -1,38 +1,38 @@
 <div class="container-fluid">
-    <div class="user-profile">
-        <div class="row">
-            <div class="col-xl-4 col-md-6">
-                @for (data of sizingData; track data) {
-                <app-common-avatars [data]="data" />
-                }
-            </div>
-            <div class="col-xl-4 col-md-6">
-                @for (data of statusIndicatorData; track data) {
-                <app-common-avatars [data]="data" />
-                }
-            </div>
-            <div class="col-xl-4 col-md-6">
-                @for (data of shapeData; track data) {
-                <app-common-avatars [data]="data" />
-                }
-            </div>
-            <div class="col-md-6">
-                @for (data of ratioData; track data) {
-                <app-common-avatars [data]="data" />
-                }
-            </div>
-            <div class="col-xl-6">
-                <app-grouping />
-            </div>
-            <div class="col-xl-4 col-md-6 box-col-6">
-             <app-badge-indicator />
-            </div>
-            <div class="col-xl-4 col-md-6 box-col-6">
-                 <app-initial-letter-avatar />
-            </div>
-            <div class="col-xl-4 box-col-6">
-              <app-animated-avatar />
-            </div>
-        </div>
+  <div class="user-profile">
+    <div class="row">
+      <div class="col-xl-4 col-md-6">
+        @for (data of sizingData; track data) {
+        <app-common-avatars [data]="data" />
+        }
+      </div>
+      <div class="col-xl-4 col-md-6">
+        @for (data of statusIndicatorData; track data) {
+        <app-common-avatars [data]="data" />
+        }
+      </div>
+      <div class="col-xl-4 col-md-6">
+        @for (data of shapeData; track data) {
+        <app-common-avatars [data]="data" />
+        }
+      </div>
+      <div class="col-md-6">
+        @for (data of ratioData; track data) {
+        <app-common-avatars [data]="data" />
+        }
+      </div>
+      <div class="col-xl-6">
+        <app-grouping />
+      </div>
+      <div class="col-xl-4 col-md-6 box-col-6">
+        <app-badge-indicator />
+      </div>
+      <div class="col-xl-4 col-md-6 box-col-6">
+        <app-initial-letter-avatar />
+      </div>
+      <div class="col-xl-4 box-col-6">
+        <app-animated-avatar />
+      </div>
     </div>
+  </div>
 </div>

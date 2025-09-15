@@ -1,23 +1,28 @@
-import { CommonModule, DecimalPipe } from '@angular/common';
-import { Component, inject, viewChildren } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { CommonModule, DecimalPipe } from "@angular/common";
+import { Component, inject, viewChildren } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 
-import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
-import { Observable } from 'rxjs';
+import { NgbPaginationModule } from "@ng-bootstrap/ng-bootstrap";
+import { Observable } from "rxjs";
 
-import { supportDB } from '../../../shared/data/data/support-tickit';
+import { supportDB } from "../../../shared/data/data/support-tickit";
 import {
   SortEvent,
   SupportTicketDirective,
-} from '../../../shared/directive/support-ticket.directive';
-import { SupportTicketService } from '../../../shared/service/support-ticket.service';
+} from "../../../shared/directive/support-ticket.directive";
+import { SupportTicketService } from "../../../shared/service/support-ticket.service";
 
 @Component({
-  selector: 'app-data-table',
-  imports: [CommonModule, NgbPaginationModule, FormsModule, SupportTicketDirective],
+  selector: "app-data-table",
+  imports: [
+    CommonModule,
+    NgbPaginationModule,
+    FormsModule,
+    SupportTicketDirective,
+  ],
   providers: [SupportTicketService, DecimalPipe],
-  templateUrl: './data-table.html',
-  styleUrls: ['./data-table.scss'],
+  templateUrl: "./data-table.html",
+  styleUrls: ["./data-table.scss"],
 })
 export class DataTable {
   public service = inject(SupportTicketService);
@@ -34,7 +39,7 @@ export class DataTable {
   }
 
   ngOnInit() {
-    this.service.support$.subscribe(data => {
+    this.service.support$.subscribe((data) => {
       if (data) {
         this.supportData = data;
       }
@@ -42,9 +47,9 @@ export class DataTable {
   }
 
   onSort({ column, direction }: SortEvent) {
-    this.headers().forEach(header => {
+    this.headers().forEach((header) => {
       if (header.sortable() !== column) {
-        header.direction = '';
+        header.direction = "";
       }
     });
 

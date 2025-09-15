@@ -1,24 +1,24 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 @Component({
-  selector: 'app-questions-alert',
+  selector: "app-questions-alert",
   imports: [],
-  templateUrl: './questions-alert.html',
-  styleUrls: ['./questions-alert.scss'],
+  templateUrl: "./questions-alert.html",
+  styleUrls: ["./questions-alert.scss"],
 })
 export class QuestionsAlert {
   questionALert() {
     Swal.fire({
-      text: 'Are you sure you want to do this?',
+      text: "Are you sure you want to do this?",
       showCancelButton: true,
-      confirmButtonText: 'Aww yiss!',
-      cancelButtonText: 'Oh  noez!',
-      confirmButtonColor: 'var(--theme-default)',
+      confirmButtonText: "Aww yiss!",
+      cancelButtonText: "Oh  noez!",
+      confirmButtonColor: "var(--theme-default)",
       customClass: {
-        confirmButton: 'order-2',
-        cancelButton: 'order-1',
+        confirmButton: "order-2",
+        cancelButton: "order-1",
       },
     });
   }

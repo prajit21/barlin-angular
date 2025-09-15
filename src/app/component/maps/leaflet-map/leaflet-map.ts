@@ -1,16 +1,16 @@
-import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { CommonModule } from "@angular/common";
+import { HttpClient } from "@angular/common/http";
+import { Component, inject } from "@angular/core";
 
-import { LeafletModule } from '@bluehalo/ngx-leaflet';
-import { GeoJsonObject } from 'geojson';
-import * as L from 'leaflet';
+import { LeafletModule } from "@bluehalo/ngx-leaflet";
+import { GeoJsonObject } from "geojson";
+import * as L from "leaflet";
 
 @Component({
-  selector: 'app-leaflet-map',
+  selector: "app-leaflet-map",
   imports: [CommonModule, LeafletModule],
-  templateUrl: './leaflet-map.html',
-  styleUrls: ['./leaflet-map.scss'],
+  templateUrl: "./leaflet-map.html",
+  styleUrls: ["./leaflet-map.scss"],
 })
 export class LeafletMap {
   private http = inject(HttpClient);
@@ -18,9 +18,9 @@ export class LeafletMap {
   //First map options
   options1 = {
     layers: [
-      L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 18,
-        attribution: '...',
+        attribution: "...",
       }),
     ],
     zoom: 5,
@@ -29,18 +29,24 @@ export class LeafletMap {
 
   layersControl = {
     baseLayers: {
-      'Open Street Map': L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 18,
-        attribution: '...',
-      }),
-      'Open Cycle Map': L.tileLayer('http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png', {
-        maxZoom: 18,
-        attribution: '...',
-      }),
+      "Open Street Map": L.tileLayer(
+        "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+        {
+          maxZoom: 18,
+          attribution: "...",
+        },
+      ),
+      "Open Cycle Map": L.tileLayer(
+        "http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png",
+        {
+          maxZoom: 18,
+          attribution: "...",
+        },
+      ),
     },
     overlays: {
-      'Big Circle': L.circle([46.95, -122], { radius: 5000 }),
-      'Big Square': L.polygon([
+      "Big Circle": L.circle([46.95, -122], { radius: 5000 }),
+      "Big Square": L.polygon([
         [46.8, -121.55],
         [46.9, -121.55],
         [46.9, -121.7],
@@ -52,9 +58,9 @@ export class LeafletMap {
   //Second map
   options2 = {
     layers: [
-      L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 50,
-        attribution: '...',
+        attribution: "...",
       }),
     ],
     zoom: 5,
@@ -66,9 +72,9 @@ export class LeafletMap {
   json: GeoJsonObject | GeoJsonObject[] | null | undefined;
   options3 = {
     layers: [
-      L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 18,
-        attribution: '',
+        attribution: "",
       }),
     ],
     zoom: 7,
@@ -76,8 +82,8 @@ export class LeafletMap {
   };
   onMapReady(map: L.Map) {
     this.http
-      .get<GeoJsonObject | GeoJsonObject[]>('assets/data/map/polygon.json')
-      .subscribe(json => {
+      .get<GeoJsonObject | GeoJsonObject[]>("assets/data/map/polygon.json")
+      .subscribe((json) => {
         this.json = json;
         L.geoJSON(this.json).addTo(map);
       });
@@ -90,7 +96,7 @@ export class LeafletMap {
     lon: 90.412521,
   };
 
-  popupText = 'Some popup text';
+  popupText = "Some popup text";
 
   markerIcon = {
     icon: L.icon({
@@ -98,16 +104,16 @@ export class LeafletMap {
       iconAnchor: [10, 41],
       popupAnchor: [2, -40],
       // specify the path here
-      iconUrl: 'assets/images/marker-icon.png',
-      shadowUrl: 'assets/images/marker-shadow.png',
+      iconUrl: "assets/images/marker-icon.png",
+      shadowUrl: "assets/images/marker-shadow.png",
     }),
   };
 
   options4 = {
     layers: [
-      L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 18,
-        attribution: '',
+        attribution: "",
       }),
     ],
     zoom: 5,
